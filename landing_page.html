@@ -1,0 +1,90 @@
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+  <h4 align="center"><b>Persons</b></h4>
+</div>
+<semantic-carousel
+query="
+prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+SELECT distinct ?subject ?thumbnail ?label WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+$subject  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
+$subject <http://www.cidoc-crm.org/cidoc-crm/P48_has_preffered_identifier> ?id .
+?id rdfs:label ?label
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:300px;">
+    <div style="width:280px;height:280px;margin: 50px auto;" class="text-center">
+      <img src="{{thumbnail.value}}" style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative; border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>'
+
+></semantic-carousel>
+<br>
+<br>
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:20px;width: 33%;display:inline;">
+  <h4 align="center"><b>BuiltWorks</b></h4>
+</div>
+<semantic-carousel
+query="
+prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+SELECT ?subject ?label WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+$subject  rdfs:label ?label .
+
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:280px;">
+    <div style="width:250px;height:300px;margin: 50px auto;" class="text-center">
+      <img src="http://www.iconarchive.com/download/i91910/icons8/windows-8/Travel-Us-Capitol.ico" style="max-height:230px; max-width:300px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative;  border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>
+'
+
+></semantic-carousel>
+<semantic-carousel
+query="
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmarch: <http://www.tobedetermined.org/CRMarch/>
+PREFIX frbr: <http://www.cidoc-crm.org/frbr/>
+SELECT ?value ?label
+WHERE {
+$subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
+$subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value .
+
+?value rdfs:label ?label.
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{value.value}}">
+  <div class="panel-body" style="height:280px;">
+    <div style="width:250px;height:300px;margin: 50px auto;" class="text-center">
+      <img src="http://www.iconarchive.com/download/i91910/icons8/windows-8/Travel-Us-Capitol.ico" style="max-height:230px; max-width:300px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative;  border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>
+'
+
+></semantic-carousel>
