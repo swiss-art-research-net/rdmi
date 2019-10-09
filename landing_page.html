@@ -64,7 +64,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX crmarch: <http://www.tobedetermined.org/CRMarch/>
 PREFIX frbr: <http://www.cidoc-crm.org/frbr/>
-SELECT ?value ?label
+SELECT ?value ?label ?subject
 WHERE {
 $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
 $subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value .
@@ -74,12 +74,9 @@ $subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value .
 options='{ "infinite": true, "slidesToShow": 3 }'
 tuple-template= '
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
-  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{value.value}}">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
   <div class="panel-body" style="height:280px;">
-    <div style="width:250px;height:300px;margin: 50px auto;" class="text-center">
-      <img src="http://www.iconarchive.com/download/i91910/icons8/windows-8/Travel-Us-Capitol.ico" style="max-height:230px; max-width:300px; margin: 10 auto;" class="img-rounded">
-    </div>
-  </div>
+ 
   <div class="panel-footer" style="position: relative;  border: none;    margin: 20px;">
     {{label.value}}
   </div>
