@@ -20,6 +20,7 @@ The entities described in the data use version 6.2 of the [CIDOC-CRM ontology](h
 | Oeuvres            	|                                                          	|
 | Projects           	|                                                          	|
 
+
    
     
 ## Vocabularies and patterns
@@ -52,13 +53,14 @@ A series of vocabularies and patterns have been used across the resource. The ta
 | Shared         	| Techniques                     	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300053003>                                 	|
 | Shared         	| Conservation Event - Type      	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300053003>                                 	|
 | Shared         	| Conservation Event - technique 	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300053003>                                 	|
+| Shared         	| Uncertainty               	|                                  	| expressed with a type from the uncertainty vocabulary <https://github.com/swiss-art-research-net/vocab/tree/master/uncertainty>                                    	|
 | Event          	| Objects Employed               	| "Letters" or Any type of objects 	| narrower concepts of <http://vocab.getty.edu/aat/300230425> ?                               	|
 | Person         	| Honorific                      	|                                  	| Narrower concepts of <http://vocab.getty.edu/page/aat/300417193>                            	|
 | Person         	| Gender                         	|                                  	| Narrower concepts of <http://vocab.getty.edu/page/aat/300055146>                            	|
-| Person         	| Nationality                    	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300111079>                                	|
+| Person         	| Nationality                    	|                                  	| Type from  <https://github.com/swiss-art-research-net/vocab/tree/master/nationalities>                                	|
 | Person         	| Cultural Affiliation           	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300111079>                                 	|
 | Person         	| Languages                      	|                                  	| glottolog                                                                                 	|
-| Person         	| Occupation/General Role        	| "Sculptor", "Playwright"         	| Narrower concepts of <http://vocab.getty.edu/aat/300024980>                                 	|
+| Person         	| Occupation/General Role        	| "Sculptor", "Playwright"         	| Type from  <https://github.com/swiss-art-research-net/vocab/tree/master/occupation>                                 	|
 | Person         	| Relation Type                  	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300024979>                                 	|
 | Person         	| Field of Activity              	| "Book History"                   	| Narrower concepts of <http://vocab.getty.edu/aat/300054134>                                 	|
 | Person         	| Educational training           	|                                  	| For the Education E55 Type the URI <http://vocab.getty.edu/aat/300054360> should be used. 	|
