@@ -56,7 +56,7 @@ A series of vocabularies and patterns have been used across the resource. The ta
 | Shared         	| Uncertainty               	|                                  	| expressed with a type from the uncertainty vocabulary <https://github.com/swiss-art-research-net/vocab/tree/master/uncertainty>                                    	|
 | Event          	| Objects Employed               	| "Letters" or Any type of objects 	| narrower concepts of <http://vocab.getty.edu/aat/300230425> ?                               	|
 | Person         	| Honorific                      	|                                  	| Narrower concepts of <http://vocab.getty.edu/page/aat/300417193>                            	|
-| Person         	| Gender                         	|                                  	| Narrower concepts of <http://vocab.getty.edu/page/aat/300055146>                            	|
+| Person         	| Gender                         	|                                  	| Narrower concepts of <http://vocab.getty.edu/page/aat/300055146>          ~~‌~~                  	|
 | Person         	| Nationality                    	|                                  	| Type from  <https://github.com/swiss-art-research-net/vocab/tree/master/nationalities>                                	|
 | Person         	| Cultural Affiliation           	|                                  	| Narrower concepts of <http://vocab.getty.edu/aat/300111079>                                 	|
 | Person         	| Languages                      	|                                  	| glottolog                                                                                 	|
