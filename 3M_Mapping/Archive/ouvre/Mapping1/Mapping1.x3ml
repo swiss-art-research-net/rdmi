@@ -33,7 +33,7 @@
             <target_info>
                 <target_schema schema_file="CRMpc___30-09-2019092915___9647___01-10-2019070842___238___19-11-2019125207___13334.rdfs" type="rdfs " version="1.0">CRMpc</target_schema>
                 <namespaces>
-                    <namespace prefix="crmpc" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+                    <namespace prefix="crmpc" uri="http://www.cidoc-crm.org/crmpc/"/>
                 </namespaces>
             </target_info>
             <target_info>
