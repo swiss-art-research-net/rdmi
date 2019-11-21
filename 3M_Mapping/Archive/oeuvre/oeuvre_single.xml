@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<objects>
+  <oeu>
+    <_version>4</_version>
+    <_id>16344</_id>
+    <_system_object_id>79905</_system_object_id>
+    <_standard>
+      <en-US>[Oeuvre (built/unbuilt)]</en-US>
+      <de-DE>Scana AG (heute Hilcona AG) : Lagerhalle [Oeuvre (realisiert/nicht realisiert)]</de-DE>
+    </_standard>
+    <_exported_at>2019-11-18T23:16:03+01:00</_exported_at>
+    <oeo_uuid type="string">002F15A1-C308-431D-ABC3-E446C0A9AEE7</oeo_uuid>
+    <oeu_appellation type="text_l10n_oneline">
+      <de-DE>Scana AG (heute Hilcona AG) : Lagerhalle</de-DE>
+    </oeu_appellation>
+    <oeu_description type="text_l10n">
+      <de-DE>Zwei Varianten mit 8 + 2 (oder 4) Industrieschalen 20 x 22 bzw. 20 x 20 m, 4320 (oder 5120) m2.</de-DE>
+    </oeu_description>
+    <_nested__oeu__production_actor>
+      <oeu__production_actor>
+        <actor_role>
+          <act_role>
+            <_version>1</_version>
+            <_id>84</_id>
+            <_system_object_id>49949</_system_object_id>
+            <_standard>
+              <de-DE>Ingenieur</de-DE>
+            </_standard>
+            <act_role_uuid type="string">E430768F-28E8-4779-8910-F8DDB2B839DC</act_role_uuid>
+            <act_role_name_display type="text_l10n_oneline">
+              <de-DE>Ingenieur</de-DE>
+            </act_role_name_display>
+          </act_role>
+        </actor_role>
+        <actor>
+          <act>
+            <_version>3</_version>
+            <_id>28184</_id>
+            <_system_object_id>54908</_system_object_id>
+            <_standard>
+              <en-US>(Swiss engineer, born 1926)</en-US>
+              <de-DE>Isler, Heinz (Schweizer Ingenieur, geboren 1926)</de-DE>
+            </_standard>
+          </act>
+        </actor>
+      </oeu__production_actor>
+    </_nested__oeu__production_actor>
+    <oeu_production_timespan type="daterange">
+      <from>1962</from>
+      <to>1962</to>
+    </oeu_production_timespan>
+  </oeu>
+</objects>
