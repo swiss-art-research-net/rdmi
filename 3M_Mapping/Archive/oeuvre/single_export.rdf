@@ -2,59 +2,68 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:crmpc="http://www.cidoc-crm.org/crmpc/"
     xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+    xmlns:sari="https://www.resources.swissartresearch.net"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:crmarch="http://www.tobedetermined.org/CRMarch/"
+    xmlns:crmdig="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"
+    xmlns:cpr="https://www.schema.swissartresearch.net/cpr/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:crmdig="http://www.ics.forth.gr/isl/CRMdig/"
-    xmlns:frbr="http://iflastandards.info/ns/fr/frbr/frbroo/"
-    xmlns:sari="https://resource.swissartresearch.net/">
-  <frbr:F27_Work_Conception rdf:about="uuid:AA">
-    <crm:P4_has_time-span>
-      <crm:E52_Time-Span rdf:about="uuid:AG">
-        <crm:P82b_end_of_the_end xml:lang="en">1962</crm:P82b_end_of_the_end>
-      </crm:E52_Time-Span>
-    </crm:P4_has_time-span>
+    xmlns:frbr="http://iflastandards.info/ns/fr/frbr/frbroo/">
+  <cpr:CC9_Oeuvre rdf:about="uuid:AA">
+    <cpr:cp2_had_executing_team>
+      <cpr:CC8_Maitrise_d_Oeuvre rdf:about="uuid:AI">
+        <crm:P107_has_current_or_former_member>
+          <crm:E74_Group rdf:about="uuid:AJ">
+            <crm:P107_has_current_or_former_member>
+              <crm:E39_Actor rdf:about="https://www.resources.swissartresearch.netqdt8j1uycldk">
+                <rdfs:label>Isler, Heinz (Schweizer Ingenieur, geboren 1926)</rdfs:label>
+              </crm:E39_Actor>
+            </crm:P107_has_current_or_former_member>
+          </crm:E74_Group>
+        </crm:P107_has_current_or_former_member>
+      </cpr:CC8_Maitrise_d_Oeuvre>
+    </cpr:cp2_had_executing_team>
     <crm:P4_has_time-span>
       <crm:E52_Time-Span rdf:about="uuid:AF">
-        <crm:P82a_begin_of_the_begin xml:lang="en">1962</crm:P82a_begin_of_the_begin>
+        <crm:P82b_end_of_the_end xml:lang="en">1974</crm:P82b_end_of_the_end>
       </crm:E52_Time-Span>
     </crm:P4_has_time-span>
-    <frbr:R16_initiated>
-      <frbr:F1_Work rdf:about="uuid:AD">
-        <crmpc:P01i_is_domain_of>
-          <crmpc:PC14_carried_out_by rdf:about="uuid:AE">
-            <crmpc:P14.1_in_the_role_of>
-              <crmpc:E55_Type rdf:about="https://resource.swissartresearch.net/1jxzwmapgmgdf">
-                <rdfs:label>Ingenieur</rdfs:label>
-              </crmpc:E55_Type>
-            </crmpc:P14.1_in_the_role_of>
-          </crmpc:PC14_carried_out_by>
-        </crmpc:P01i_is_domain_of>
-      </frbr:F1_Work>
-    </frbr:R16_initiated>
-    <crm:P11_had_participant>
-      <crm:E39_Actor rdf:about="https://resource.swissartresearch.net/qdt8j1uycldk">
-        <rdfs:label>Isler, Heinz (Schweizer Ingenieur, geboren 1926)</rdfs:label>
-      </crm:E39_Actor>
-    </crm:P11_had_participant>
-    <crm:P129i_is_subject_of>
-      <crm:E73_Information_Object rdf:about="uuid:AC">
-        <crm:P3_has_note xml:lang="en">Zwei Varianten mit 8 + 2 (oder 4) Industrieschalen 20 x 22 bzw. 20 x 20 m, 4320 (oder 5120) m2.</crm:P3_has_note>
-      </crm:E73_Information_Object>
-    </crm:P129i_is_subject_of>
-    <crm:P2_has_type>
-      <crm:E55_Type rdf:about="https://resource.swissartresearch.net/1jei6kbo4gler">
-        <rdfs:label>Scana AG (heute Hilcona AG) : Lagerhalle [Oeuvre (realisiert/nicht realisiert)]</rdfs:label>
-      </crm:E55_Type>
-    </crm:P2_has_type>
+    <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
+    <crm:P33_used_specific_technique>
+      <cpr:CC18_Architectural_Activity_Plan rdf:about="uuid:AG">
+        <cpr:cp4_projects>
+          <cpr:CC12_Event_Trigger_Template rdf:about="uuid:AH">
+            <cpr:cp8_stipulates_place>
+              <crm:E53_Place rdf:about="https://www.resources.swissartresearch.neturv5rdorbn00">
+                <rdfs:label>Graz</rdfs:label>
+              </crm:E53_Place>
+            </cpr:cp8_stipulates_place>
+          </cpr:CC12_Event_Trigger_Template>
+        </cpr:cp4_projects>
+      </cpr:CC18_Architectural_Activity_Plan>
+    </crm:P33_used_specific_technique>
     <crm:P1_is_identified_by>
-      <crm:E41_Appellation rdf:about="https://resource.swissartresearch.net/t8cwoyuyu59s">
-        <rdfs:label>Scana AG (heute Hilcona AG) : Lagerhalle</rdfs:label>
+      <crm:E41_Appellation rdf:about="https://www.resources.swissartresearch.neturv5rfa8weus">
+        <rdfs:label>Moden Müller : Lagerhallen : Neubau</rdfs:label>
       </crm:E41_Appellation>
     </crm:P1_is_identified_by>
     <crm:P1_is_identified_by>
       <crm:E42_Identifier rdf:about="uuid:AB"/>
     </crm:P1_is_identified_by>
-  </frbr:F27_Work_Conception>
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="uuid:AC">
+        <rdfs:label>0034D833-930B-4B55-844A-82F920A9DEEF</rdfs:label>
+      </crm:E42_Identifier>
+    </crm:P1_is_identified_by>
+    <crm:P4_has_time-span>
+      <crm:E52_Time-Span rdf:about="uuid:AE">
+        <crm:P82a_begin_of_the_begin xml:lang="en">1973</crm:P82a_begin_of_the_begin>
+      </crm:E52_Time-Span>
+    </crm:P4_has_time-span>
+    <crm:P129i_is_subject_of>
+      <crm:E73_Information_Object rdf:about="uuid:AD">
+        <crm:P3_has_note xml:lang="en">12 Industrieschalen je 20 x 20 m</crm:P3_has_note>
+      </crm:E73_Information_Object>
+    </crm:P129i_is_subject_of>
+  </cpr:CC9_Oeuvre>
 </rdf:RDF>
 

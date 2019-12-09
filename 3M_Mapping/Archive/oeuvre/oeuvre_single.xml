@@ -1,21 +1,35 @@
 <?xml version="1.0"?>
 <objects>
-  <oeu>
-    <_version>4</_version>
-    <_id>16344</_id>
-    <_system_object_id>79905</_system_object_id>
+<oeu>
+    <_version>5</_version>
+    <_id>16345</_id>
+    <_system_object_id>79906</_system_object_id>
     <_standard>
       <en-US>[Oeuvre (built/unbuilt)]</en-US>
-      <de-DE>Scana AG (heute Hilcona AG) : Lagerhalle [Oeuvre (realisiert/nicht realisiert)]</de-DE>
+      <de-DE>Moden M&#xFC;ller : Lagerhallen : Neubau [Oeuvre (realisiert/nicht realisiert)]</de-DE>
     </_standard>
     <_exported_at>2019-11-18T23:16:03+01:00</_exported_at>
-    <oeo_uuid type="string">002F15A1-C308-431D-ABC3-E446C0A9AEE7</oeo_uuid>
+    <oeo_uuid type="string">0034D833-930B-4B55-844A-82F920A9DEEF  </oeo_uuid>
     <oeu_appellation type="text_l10n_oneline">
-      <de-DE>Scana AG (heute Hilcona AG) : Lagerhalle</de-DE>
+      <de-DE>Moden M&#xFC;ller : Lagerhallen : Neubau</de-DE>
     </oeu_appellation>
     <oeu_description type="text_l10n">
-      <de-DE>Zwei Varianten mit 8 + 2 (oder 4) Industrieschalen 20 x 22 bzw. 20 x 20 m, 4320 (oder 5120) m2.</de-DE>
+      <de-DE>12 Industrieschalen je 20 x 20 m</de-DE>
     </oeu_description>
+    <_nested__oeu__production_place>
+      <oeu__production_place>
+        <place>
+          <pl>
+            <_version>1</_version>
+            <_id>1539</_id>
+            <_system_object_id>9527</_system_object_id>
+            <_standard>
+              <de-DE>Graz</de-DE>
+            </_standard>
+          </pl>
+        </place>
+      </oeu__production_place>
+    </_nested__oeu__production_place>
     <_nested__oeu__production_actor>
       <oeu__production_actor>
         <actor_role>
@@ -46,8 +60,8 @@
       </oeu__production_actor>
     </_nested__oeu__production_actor>
     <oeu_production_timespan type="daterange">
-      <from>1962</from>
-      <to>1962</to>
+      <from>1973</from>
+      <to>1974</to>
     </oeu_production_timespan>
   </oeu>
 </objects>
