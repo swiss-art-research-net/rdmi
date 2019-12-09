@@ -8,13 +8,50 @@
     xmlns:cpr="https://www.schema.swissartresearch.net/cpr/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:frbr="http://iflastandards.info/ns/fr/frbr/frbroo/">
-  <cpr:CC9_Oeuvre rdf:about="uuid:AA">
+  <cpr:CC9_Oeuvre rdf:about="urn:uuid:921ececd-feba-4060-a64c-66793c00857a">
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="urn:uuid:20c07984-4362-41db-9b35-f14f7fd2b627"/>
+    </crm:P1_is_identified_by>
+    <crm:P4_has_time-span>
+      <crm:E52_Time-Span rdf:about="urn:uuid:36d59b0a-87e1-45a6-ad0a-f0e05a29e3ed">
+        <crm:P82a_begin_of_the_begin xml:lang="en">1973</crm:P82a_begin_of_the_begin>
+      </crm:E52_Time-Span>
+    </crm:P4_has_time-span>
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="urn:uuid:67ee6b42-1bab-4f1d-b1b9-28ff8e4f2c2f">
+        <rdfs:label>0034D833-930B-4B55-844A-82F920A9DEEF</rdfs:label>
+      </crm:E42_Identifier>
+    </crm:P1_is_identified_by>
+    <crm:P33_used_specific_technique>
+      <cpr:CC18_Architectural_Activity_Plan rdf:about="urn:uuid:dbcd5e22-a591-4d15-9aea-e54fa2ccb478">
+        <cpr:cp4_projects>
+          <cpr:CC12_Event_Trigger_Template rdf:about="urn:uuid:52d97d2c-84e4-401d-a3c7-a682966181da">
+            <cpr:cp8_stipulates_place>
+              <crm:E53_Place rdf:about="https://www.resources.swissartresearch.netPlace/F5089827-5B22-306B-905B-007FD152C623">
+                <rdfs:label>Graz</rdfs:label>
+              </crm:E53_Place>
+            </cpr:cp8_stipulates_place>
+          </cpr:CC12_Event_Trigger_Template>
+        </cpr:cp4_projects>
+      </cpr:CC18_Architectural_Activity_Plan>
+    </crm:P33_used_specific_technique>
+    <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
+    <crm:P1_is_identified_by>
+      <crm:E41_Appellation rdf:about="https://www.resources.swissartresearch.netOuvre/Appellation/F18443A3-480A-3F83-84C4-75DBBB135CC6">
+        <rdfs:label>Moden Müller : Lagerhallen : Neubau</rdfs:label>
+      </crm:E41_Appellation>
+    </crm:P1_is_identified_by>
+    <crm:P129i_is_subject_of>
+      <crm:E73_Information_Object rdf:about="urn:uuid:9c7020dc-9d1e-4a79-ba5e-ae3b29e1fb7c">
+        <crm:P3_has_note xml:lang="en">12 Industrieschalen je 20 x 20 m</crm:P3_has_note>
+      </crm:E73_Information_Object>
+    </crm:P129i_is_subject_of>
     <cpr:cp2_had_executing_team>
-      <cpr:CC8_Maitrise_d_Oeuvre rdf:about="uuid:AI">
+      <cpr:CC8_Maitrise_d_Oeuvre rdf:about="urn:uuid:a9d48e1d-68f4-4e49-a352-ca835387860c">
         <crm:P107_has_current_or_former_member>
-          <crm:E74_Group rdf:about="uuid:AJ">
+          <crm:E74_Group rdf:about="urn:uuid:f8878ed3-2a77-44ae-9107-30e2c505fd7a">
             <crm:P107_has_current_or_former_member>
-              <crm:E39_Actor rdf:about="https://www.resources.swissartresearch.netqdt8j1uycldk">
+              <crm:E39_Actor rdf:about="https://www.resources.swissartresearch.netActor/Appellation/CF5C886C-8DCC-3221-8FD4-CF52EA45773A">
                 <rdfs:label>Isler, Heinz (Schweizer Ingenieur, geboren 1926)</rdfs:label>
               </crm:E39_Actor>
             </crm:P107_has_current_or_former_member>
@@ -23,47 +60,10 @@
       </cpr:CC8_Maitrise_d_Oeuvre>
     </cpr:cp2_had_executing_team>
     <crm:P4_has_time-span>
-      <crm:E52_Time-Span rdf:about="uuid:AF">
+      <crm:E52_Time-Span rdf:about="urn:uuid:991ecbc9-ba4c-495e-b728-b0bb36a465e4">
         <crm:P82b_end_of_the_end xml:lang="en">1974</crm:P82b_end_of_the_end>
       </crm:E52_Time-Span>
     </crm:P4_has_time-span>
-    <rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
-    <crm:P33_used_specific_technique>
-      <cpr:CC18_Architectural_Activity_Plan rdf:about="uuid:AG">
-        <cpr:cp4_projects>
-          <cpr:CC12_Event_Trigger_Template rdf:about="uuid:AH">
-            <cpr:cp8_stipulates_place>
-              <crm:E53_Place rdf:about="https://www.resources.swissartresearch.neturv5rdorbn00">
-                <rdfs:label>Graz</rdfs:label>
-              </crm:E53_Place>
-            </cpr:cp8_stipulates_place>
-          </cpr:CC12_Event_Trigger_Template>
-        </cpr:cp4_projects>
-      </cpr:CC18_Architectural_Activity_Plan>
-    </crm:P33_used_specific_technique>
-    <crm:P1_is_identified_by>
-      <crm:E41_Appellation rdf:about="https://www.resources.swissartresearch.neturv5rfa8weus">
-        <rdfs:label>Moden Müller : Lagerhallen : Neubau</rdfs:label>
-      </crm:E41_Appellation>
-    </crm:P1_is_identified_by>
-    <crm:P1_is_identified_by>
-      <crm:E42_Identifier rdf:about="uuid:AB"/>
-    </crm:P1_is_identified_by>
-    <crm:P1_is_identified_by>
-      <crm:E42_Identifier rdf:about="uuid:AC">
-        <rdfs:label>0034D833-930B-4B55-844A-82F920A9DEEF</rdfs:label>
-      </crm:E42_Identifier>
-    </crm:P1_is_identified_by>
-    <crm:P4_has_time-span>
-      <crm:E52_Time-Span rdf:about="uuid:AE">
-        <crm:P82a_begin_of_the_begin xml:lang="en">1973</crm:P82a_begin_of_the_begin>
-      </crm:E52_Time-Span>
-    </crm:P4_has_time-span>
-    <crm:P129i_is_subject_of>
-      <crm:E73_Information_Object rdf:about="uuid:AD">
-        <crm:P3_has_note xml:lang="en">12 Industrieschalen je 20 x 20 m</crm:P3_has_note>
-      </crm:E73_Information_Object>
-    </crm:P129i_is_subject_of>
   </cpr:CC9_Oeuvre>
 </rdf:RDF>
 

@@ -3,96 +3,90 @@
 <generator_policy>
   <!-- Concept entity -->
   <generator name="ConceptURI" prefix="sari" shorten="yes">
-    <pattern>Concept/{term}</pattern>
+    <pattern>fieldDefinition/{term}</pattern>
   </generator>
   <generator name="ConceptURI_2step" prefix="sari" shorten="yes">
-    <pattern>Concept/{term}/{term1}</pattern>
+    <pattern>fieldDefinition/{term}/{term1}</pattern>
   </generator>
   <generator name="ConceptURI_3step" prefix="sari" shorten="yes">
-    <pattern>Concept/{term}/{term1}/{term2}</pattern>
+    <pattern>fieldDefinition/{term}/{term1}/{term2}</pattern>
   </generator>
   <generator name="ConceptAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Concept/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Appellation/{term}</pattern>
   </generator>
   <!-- Places entity -->
   <generator name="PlaceURI" prefix="sari" shorten="yes">
-    <pattern>Place/{term}</pattern>
+    <pattern>fieldDefinition/Place/{term}</pattern>
   </generator>
   <generator name="PlaceAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Place/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Place/Appellation/{term}</pattern>
   </generator>
   <generator name="PlaceAppellationAddressURI" prefix="sari" shorten="yes">
-    <pattern>Place/Appellation/{mainaddress}-{postcode}-{country}</pattern>
+    <pattern>fieldDefinition/Place/Appellation/{mainaddress}-{postcode}-{country}</pattern>
   </generator>
   <generator name="PlaceAppLatLong" prefix="sari" shorten="yes">
-    <pattern>Place/Appellation/{lat}-{long}</pattern>
-  </generator>
-  <!-- Built work entity -->
-  <generator name="BuiltWorkURI" prefix="sari" shorten="yes">
-    <pattern>BuiltWork/{term}</pattern>
-  </generator>
-  <generator name="BuiltWorkAppellationURI" prefix="sari" shorten="yes">
-    <pattern>BuiltWork/Appellation/{term}</pattern>
-  </generator>
-  <!-- Art work entity -->
-  <generator name="ArtWorkURI" prefix="sari" shorten="yes">
-    <pattern>ArtWork/{term}</pattern>
-  </generator>
-  <generator name="ArtWorkAppellationURI" prefix="sari" shorten="yes">
-    <pattern>ArtWork/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Place/Appellation/{lat}-{long}</pattern>
   </generator>
   <!-- Person entity -->
   <generator name="PersonURI" prefix="sari" shorten="yes">
-    <pattern>Person/{term}</pattern>
+    <pattern>fieldDefinition/Person/{term}</pattern>
   </generator>
   <generator name="PersonAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Person/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Person/Appellation/{term}</pattern>
   </generator>
   <!-- Groups entity -->
   <generator name="GroupsURI" prefix="sari" shorten="yes">
-    <pattern>Groups/{term}</pattern>
-  </generator>
-  <!-- Project entity -->
-  <generator name="ProjectURI" prefix="sari" shorten="yes">
-    <pattern>Project/{term}</pattern>
-  </generator>
-  <generator name="ProjectAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Project/Appellation/{term}</pattern>
-  </generator>
-  <!-- Ouvre entity -->
-  <generator name="OuvreURI" prefix="sari" shorten="yes">
-    <pattern>Ouvre/{term}</pattern>
-  </generator>
-  <generator name="OuvreAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Ouvre/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Groups/{term}</pattern>
   </generator>
   <!-- Actor entity -->
   <generator name="ActorURI" prefix="sari" shorten="yes">
-    <pattern>Actor/{term}</pattern>
+    <pattern>fieldDefinition/Actor/{term}</pattern>
   </generator>
   <generator name="ActorTwoNameMergeURI" prefix="sari" shorten="yes">
-    <pattern>Actor/{firstName}_{LastName}</pattern>
+    <pattern>fieldDefinition/Actor/{firstName}_{LastName}</pattern>
   </generator>
   <generator name="ActorAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Actor/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Actor/Appellation/{term}</pattern>
+  </generator>
+  <!-- Crator -->
+  <generator name="CreatorURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Creator/{term}</pattern>
+  </generator>
+  <generator name="CreatorAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Creator/Appellation/{term}</pattern>
+  </generator>
+  <!-- Participant -->
+  <generator name="ParticipantURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Participant/{term}</pattern>
+  </generator>
+  <generator name="ParticipantAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Participant/Appellation/{term}</pattern>
   </generator>
   <!-- Event entity -->
   <generator name="EventURI" prefix="sari" shorten="yes">
-    <pattern>Event/{term}</pattern>
+    <pattern>fieldDefinition/Event/{term}</pattern>
   </generator>
   <generator name="EventAppellationURI" prefix="sari" shorten="yes">
-    <pattern>Event/Appellation/{term}</pattern>
+    <pattern>fieldDefinition/Event/Appellation/{term}</pattern>
   </generator>
-  <!-- Digital Object entity -->
-  <generator name="DigitalObjectURI" prefix="sari" shorten="yes">
-    <pattern>DigitalObject/{term}</pattern>
+  <!-- Time Span -->
+  <generator name="TimeSpanURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Start_Date/{term}</pattern>
   </generator>
-  <generator name="DigitalObjectAppellationURI" prefix="sari" shorten="yes">
-    <pattern>DigitalObject/Appellation/{term}</pattern>
+  <generator name="TimeSpanURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/End_Date/{term}</pattern>
   </generator>
-  <!-- Bibliographic item entity -->
-  <generator name="BibliographicItemURI" prefix="sari" shorten="yes">
-    <pattern>BibliographicItem/{term}</pattern>
+  <!-- ID -->
+  <generator name="IDURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Id/{term}</pattern>
+  </generator>
+  <!-- Title -->
+  <generator name="TitleURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Title/{term}</pattern>
+  </generator>
+  <!-- Type -->
+  <generator name="TypeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Type/{term}</pattern>
   </generator>
   <!-- Thing entity -->
   <generator name="ThingURI" prefix="sari" shorten="yes">
