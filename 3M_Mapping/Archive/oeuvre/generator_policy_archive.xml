@@ -27,12 +27,64 @@
   <generator name="PlaceAppLatLong" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Place/Appellation/{lat}-{long}</pattern>
   </generator>
+  <!-- Project -->
+  <generator name="ProjectNameURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Project_Name/{term}</pattern>
+  </generator>
+  <generator name="Project_AlternativeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Alternative_Name/{term}</pattern>
+  </generator>
+  <generator name="Projected_FunctionURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Projected_Function/{term}</pattern>
+  </generator>
+  <generator name="Project_StartURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Project_Start_Date/{term}</pattern>
+  </generator>
+  <generator name="Project_EndURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Project_End_Date/{term}</pattern>
+  </generator>
+  <generator name="FinalProjectStatusURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Final_Status/{term}</pattern>
+  </generator>
+  <generator name="ProjectedPlaceURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Projected_Place/{term}</pattern>
+  </generator>
+    <!-- Oeuvre -->
+  <generator name="OeuvreNameURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Name/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_AlternativeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Alternative_Name/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_FunctionURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Function/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_StartURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Start_Date/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_EndURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_End_Date/{term}</pattern>
+  </generator>
+  <generator name="FinalOeuvreStatusURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Final_Status/{term}</pattern>
+  </generator>
+  <generator name="OeuvreedPlaceURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Place/{term}</pattern>
+  </generator>
   <!-- Person entity -->
   <generator name="PersonURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Person/{term}</pattern>
   </generator>
   <generator name="PersonAppellationURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Person/Appellation/{term}</pattern>
+  </generator>
+  <!-- MOA -->
+  <generator name="MoaURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/MOA/{term}</pattern>
+  </generator>
+  <!-- MOE -->
+  <generator name="MoeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/MOE/{term}</pattern>
   </generator>
   <!-- Groups entity -->
   <generator name="GroupsURI" prefix="sari" shorten="yes">
@@ -70,14 +122,14 @@
     <pattern>fieldDefinition/Event/Appellation/{term}</pattern>
   </generator>
   <!-- Time Span -->
-  <generator name="TimeSpanURI" prefix="sari" shorten="yes">
+  <generator name="TimeSpanStartURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Start_Date/{term}</pattern>
   </generator>
-  <generator name="TimeSpanURI" prefix="sari" shorten="yes">
+  <generator name="TimeSpanEndURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/End_Date/{term}</pattern>
   </generator>
   <!-- ID -->
-  <generator name="IDURI" prefix="sari" shorten="yes">
+  <generator name="IdURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Id/{term}</pattern>
   </generator>
   <!-- Title -->
