@@ -49,7 +49,7 @@
   <generator name="ProjectedPlaceURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Projected_Place/{term}</pattern>
   </generator>
-    <!-- Oeuvre -->
+  <!-- Oeuvre -->
   <generator name="OeuvreNameURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Oeuvre_Name/{term}</pattern>
   </generator>
