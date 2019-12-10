@@ -1,0 +1,58 @@
+@prefix sari:  <https://www.resources.swissartresearch.net/> .
+@prefix cpr:   <https://www.schema.swissartresearch.net/cpr/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix crmpc: <http://www.cidoc-crm.org/crmpc/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix frbr:  <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<uuid:AA>  a                        frbr:F27_Work_Conception , cpr:CC9_Oeuvre ;
+        crm:P1_is_identified_by     sari:t4q4w8mbupus , sari:1if114tux8zsh ;
+        crm:P33_used_specific_technique
+                <uuid:AD> ;
+        crm:P4_has_time-span        <uuid:AC> , <uuid:AB> ;
+        cpr:cp2_had_executing_team  <uuid:AH> , <uuid:AF> .
+
+<uuid:AF>  a    cpr:CC8_Maitrise_d_Oeuvre ;
+        crm:P107_has_current_or_former_member
+                <uuid:AG> .
+
+<uuid:AD>  a              cpr:CC18_Architectural_Activity_Plan ;
+        cpr:cp4_projects  <uuid:AE> .
+
+sari:t4q4w8mbupus  a  crm:E41_Appellation ;
+        rdfs:label  "Druckerei Sedelmayr" .
+
+<uuid:AI>  a    crm:E74_Group ;
+        crm:P107_has_current_or_former_member
+                sari:qeewvai4um9c .
+
+sari:1if114tux8zsh  a  crm:E42_Identifier .
+
+<uuid:AB>  a                         crm:E52_Time-Span ;
+        crm:P82a_begin_of_the_begin  "1956"@en .
+
+<uuid:AG>  a    crm:E74_Group ;
+        crm:P107_has_current_or_former_member
+                sari:qeewvai4um9c .
+
+<uuid:AE>  a                      cpr:CC12_Event_Trigger_Template ;
+        cpr:cp8_stipulates_place  sari:urk2noh5flnl .
+
+sari:qeewvai4um9c  a  crm:E39_Actor ;
+        rdfs:label  "Trösch, Hans (Schweizer Architekt, 1924-2002)" , "Isler, Heinz (Schweizer Ingenieur, geboren 1926)" .
+
+sari:urk2noh5flnl  a  crm:E53_Place ;
+        rdfs:label  "Dornbirn" .
+
+<uuid:AC>  a                     crm:E52_Time-Span ;
+        crm:P82b_end_of_the_end  "1957-03"@en .
+
+<uuid:AH>  a    cpr:CC8_Maitrise_d_Oeuvre ;
+        crm:P107_has_current_or_former_member
+                <uuid:AI> .
+
+

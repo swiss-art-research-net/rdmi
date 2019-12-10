@@ -1,0 +1,203 @@
+<!-- sari Generator Policy file v1.0 -->
+<!-- Author: Matteo Lorenzini ETH-GTA -->
+<generator_policy>
+  <!-- Concept entity -->
+  <generator name="ConceptURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/{term}</pattern>
+  </generator>
+  <generator name="ConceptURI_2step" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/{term}/{term1}</pattern>
+  </generator>
+  <generator name="ConceptURI_3step" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/{term}/{term1}/{term2}</pattern>
+  </generator>
+  <generator name="ConceptAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Appellation/{term}</pattern>
+  </generator>
+  <!-- Places entity -->
+  <generator name="PlaceURI" prefix="sari" shorten="no">
+    <pattern>fieldDefinition/Place/{term}</pattern>
+  </generator>
+  <generator name="PlaceAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Place/Appellation/{term}</pattern>
+  </generator>
+  <generator name="PlaceAppellationAddressURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Place/Appellation/{mainaddress}-{postcode}-{country}</pattern>
+  </generator>
+  <generator name="PlaceAppLatLong" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Place/Appellation/{lat}-{long}</pattern>
+  </generator>
+  <!-- Project -->
+  <generator name="ProjectNameURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Project_Name/{term}</pattern>
+  </generator>
+  <generator name="Project_AlternativeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Alternative_Name/{term}</pattern>
+  </generator>
+  <generator name="Projected_FunctionURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Projected_Function/{term}</pattern>
+  </generator>
+  <generator name="Project_StartURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Project_Start_Date/{term}</pattern>
+  </generator>
+  <generator name="Project_EndURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Project_End_Date/{term}</pattern>
+  </generator>
+  <generator name="FinalProjectStatusURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Final_Status/{term}</pattern>
+  </generator>
+  <generator name="ProjectedPlaceURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Projected_Place/{term}</pattern>
+  </generator>
+  <!-- Oeuvre -->
+  <generator name="OeuvreURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre/{term}</pattern>
+  </generator>
+  <generator name="OeuvreNameURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Name/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_AlternativeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Alternative_Name/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_FunctionURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Function/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_StartURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Start_Date/{term}</pattern>
+  </generator>
+  <generator name="Oeuvre_EndURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_End_Date/{term}</pattern>
+  </generator>
+  <generator name="FinalOeuvreStatusURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Final_Status/{term}</pattern>
+  </generator>
+  <generator name="OeuvreedPlaceURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre_Place/{term}</pattern>
+  </generator>
+  <!-- Person entity -->
+  <generator name="PersonURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Person/{term}</pattern>
+  </generator>
+  <generator name="PersonAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Person/Appellation/{term}</pattern>
+  </generator>
+  <!-- MOA -->
+  <generator name="MoaURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/MOA/{term}</pattern>
+  </generator>
+  <!-- MOE -->
+  <generator name="MoeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/MOE/{term}</pattern>
+  </generator>
+  <!-- Groups entity -->
+  <generator name="GroupsURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Groups/{term}</pattern>
+  </generator>
+  <!-- Actor entity -->
+  <generator name="ActorURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Actor/{term}</pattern>
+  </generator>
+  <generator name="ActorTwoNameMergeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Actor/{firstName}_{LastName}</pattern>
+  </generator>
+  <generator name="ActorAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Actor/Appellation/{term}</pattern>
+  </generator>
+  <!-- Crator -->
+  <generator name="CreatorURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Creator/{term}</pattern>
+  </generator>
+  <generator name="CreatorAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Creator/Appellation/{term}</pattern>
+  </generator>
+  <!-- Participant -->
+  <generator name="ParticipantURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Participant/{term}</pattern>
+  </generator>
+  <generator name="ParticipantAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Participant/Appellation/{term}</pattern>
+  </generator>
+  <!-- Event entity -->
+  <generator name="EventURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Event/{term}</pattern>
+  </generator>
+  <generator name="EventAppellationURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Event/Appellation/{term}</pattern>
+  </generator>
+  <!-- Time Span -->
+  <generator name="TimeSpanStartURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Start_Date/{term}</pattern>
+  </generator>
+  <generator name="TimeSpanEndURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/End_Date/{term}</pattern>
+  </generator>
+  <!-- ID -->
+  <generator name="IdURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Id/{term}</pattern>
+  </generator>
+  <!-- Title -->
+  <generator name="TitleURI" prefix="sari" shorten="no">
+    <pattern>fieldDefinition/Title/{term}</pattern>
+  </generator>
+  <!-- Type -->
+  <generator name="TypeURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Type/{term}</pattern>
+  </generator>
+  <!-- Thing entity -->
+  <generator name="ThingURI" prefix="sari" shorten="yes">
+    <pattern>Thing/{term}</pattern>
+  </generator>
+  <generator name="ThingAppellationURI" prefix="sari" shorten="yes">
+    <pattern>Thing/Appellation/{term}</pattern>
+  </generator>
+  <generator name="OneLevelCustomURI" prefix="sari" shorten="yes">
+    <pattern>{level1}/{term}</pattern>
+  </generator>
+  <generator name="TwoLevelCustomURI" prefix="sari" shorten="yes">
+    <pattern>{level1}/{level2}/{term}</pattern>
+  </generator>
+  <generator name="OneLevelCustomURIwCount" prefix="sari" shorten="yes">
+    <pattern>{level1}/{count}/{term}</pattern>
+  </generator>
+  <generator name="TwoLevelCustomURIwCount" prefix="sari" shorten="yes">
+    <pattern>{level1}/{level2}/{count}/{term}</pattern>
+  </generator>
+  <generator name="SimpleLabel">
+    <pattern>{label}</pattern>
+  </generator>
+  <generator name="CompositeLabel">
+    <pattern>{label} {text}</pattern>
+  </generator>
+  <generator name="CompositeVerLabel">
+    <pattern>{label} Ver {text}</pattern>
+  </generator>
+  <generator name="LatLong">
+    <pattern>({lat} {long})</pattern>
+  </generator>
+  <generator name="AddressLabel">
+    <pattern>{term},{term2},{term3},{term4}</pattern>
+  </generator>
+  <generator name="GermanDateTime">
+    <custom generatorClass="gr.forth.GermanDate">
+      <set-arg name="bound" type="constant"/>
+      <set-arg name="text"/>
+    </custom>
+  </generator>
+  <generator name="URIorUUID">
+    <custom generatorClass="gr.forth.URIorUUID">
+      <set-arg name="text"/>
+    </custom>
+  </generator>
+  <generator name="ConcatMultipleTerms">
+    <custom generatorClass="gr.forth.ConcatMultipleTerms">
+      <set-arg name="prefix" type="constant"/>
+      <set-arg name="sameTermsDelim" type="constant"/>
+      <set-arg name="diffTermsDelim" type="constant"/>
+      <set-arg name="text1"/>
+      <set-arg name="text2"/>
+      <set-arg name="text3"/>
+      <set-arg name="text4"/>
+      <set-arg name="text5"/>
+    </custom>
+  </generator>
+</generator_policy>
