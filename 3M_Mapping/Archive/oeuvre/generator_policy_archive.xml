@@ -15,7 +15,7 @@
     <pattern>fieldDefinition/Appellation/{term}</pattern>
   </generator>
   <!-- Places entity -->
-  <generator name="PlaceURI" prefix="sari" shorten="yes">
+  <generator name="PlaceURI" prefix="sari" shorten="no">
     <pattern>fieldDefinition/Place/{term}</pattern>
   </generator>
   <generator name="PlaceAppellationURI" prefix="sari" shorten="yes">
@@ -50,6 +50,9 @@
     <pattern>fieldDefinition/Projected_Place/{term}</pattern>
   </generator>
   <!-- Oeuvre -->
+  <generator name="OeuvreURI" prefix="sari" shorten="yes">
+    <pattern>fieldDefinition/Oeuvre/{term}</pattern>
+  </generator>
   <generator name="OeuvreNameURI" prefix="sari" shorten="yes">
     <pattern>fieldDefinition/Oeuvre_Name/{term}</pattern>
   </generator>
@@ -133,7 +136,7 @@
     <pattern>fieldDefinition/Id/{term}</pattern>
   </generator>
   <!-- Title -->
-  <generator name="TitleURI" prefix="sari" shorten="yes">
+  <generator name="TitleURI" prefix="sari" shorten="no">
     <pattern>fieldDefinition/Title/{term}</pattern>
   </generator>
   <!-- Type -->
