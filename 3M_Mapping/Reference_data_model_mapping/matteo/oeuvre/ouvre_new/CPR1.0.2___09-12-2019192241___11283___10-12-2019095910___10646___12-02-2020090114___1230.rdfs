@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+CPR 1.0 Encoded in RDFS
+
+***
+
+Updated Dec 3, 2019 by Matteo Lorenzini
+
+Changed named of ontology from Archi-Onto to Creative Processes Representation (CPR). Changed labelling convention for classes and properties from AR for classes and on for properties to CC for classes and cp for properties. 
+
+****
+
+RDFS created by George Bruseker and Anais Guillem, July 24, 2019
+
+Encoding Rules:
+1. The RDF spelling rules do not allow blanks. Hence we have replaced them by underscores.
+   The blank between the concept identifier and concept name is replaced by underscore too.
+   For instance "PE1_Service" or "PP1_currently_offers".
+
+2. RDF does not allow to instantiate properties beginning from a range value.
+   Therefore, each CRMpe property is represented as two RDFS properties.
+   For instance "PP1 currently offers(is currently offered by)" is represented as:
+   "PP1_currently offers" for the domain to range direction and "PP1i_is_currently_offered_by" for the range to domain direction.
+
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xml:base="https://www.schema.swissartresearch.net/cpr/" xml:lang="en">
+
+
+<rdfs:Class rdf:about="CC1_Architectural_Model">
+	<rdfs:subClassOf rdf:resource="CC5_Architectural_Formulation"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="CC2_Construction">
+	<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E12_Production"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC3_Execution_Concept">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC4_Construction_Plan">
+	<rdfs:subClassOf rdf:resource="CC5_Architectural_Formulation"/>
+</rdfs:Class>
+<rdfs:Class  rdf:about="CC5_Architectural_Formulation">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    <rdfs:subClassOf rdf:resource="CC18_Architectural_Activity_plan"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC6_Archictectural_Program">
+	<rdfs:subClassOf rdf:resource="CC5_Architectural_Formulation"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC7_Maitrise_d_Ouvrage">
+	<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC8_Maitrise_d_Oeuvre">
+	<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC9_Oeuvre">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Expression"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC10_Mission">
+	<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC11_Object_Trigger_Template">
+	<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC12_Event_Trigger_Template">
+	<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC13_Design_Concept">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC14_Programmation">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC15_Design_Conception">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC16_Construction_Planning">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
+</rdfs:Class>
+
+<rdfs:Class  rdf:about="CC17_Projective_Requirements">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="CC18_Architectural_Activity_Plan">
+	<rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="CC19_Assessment">
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment"/>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+</rdfs:Class>
+
+<rdf:Property rdf:about="cp1_had_client_team">
+	<rdfs:domain rdf:resource="CC9_Oeuvre"/>
+	<rdfs:range rdf:resource="CC7_Maitrise_d_Ouvrage"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp1i_was_client_team_of">
+	<rdfs:domain rdf:resource="CC7_Maitrise_d_Ouvrage"/>
+	<rdfs:range rdf:resource="CC9_Oeuvre"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp2_had_executing_team">
+	<rdfs:domain rdf:resource="CC9_Oeuvre"/>
+	<rdfs:range rdf:resource="CC8_Maitrise_d_Oeuvre"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp2i_was_executing_team_of">
+	<rdfs:domain rdf:resource="CC8_Maitrise_d_Oeuvre"/>
+	<rdfs:range rdf:resource="CC9_Oeuvre"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp3_was_undertaken_by">
+	<rdfs:domain rdf:resource="CC10_Mission"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+</rdf:Property>
+
+
+<rdf:Property rdf:about="cp3i_undertook">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
+	<rdfs:range rdf:resource="CC10_Mission"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp4_projects">
+	<rdfs:domain rdf:resource="CC18_Architectural_Activity_Plan"/>
+	<rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp4i_was_projected_by">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+    <rdfs:range rdf:resource="CC18_CCchitectural_Activity_Plan"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp5_stipulates_type_of_object_outcome">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp5i_is_type_of_object_outcome_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+
+<rdf:Property rdf:about="cp6_stipulates_event_type">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp6i_is_type_of_event_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp7_stipulates_actor_type">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp7i_is_actor_type_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp8_stipulates_place">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp8i_is_place_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp9_stipulates_time_span">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp9i_is_time_span_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+
+<rdf:Property rdf:about="cp10_stipulates_actor">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp10i_is_actor_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp11_stipulates_equipment">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp11i_is_equipment_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S10_Material_Substantial"/>
+    <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp12_stipulates_particular_method">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp12_is_particular_method_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp13_stipulates_budget">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp13i_is_budget_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp14_stipulates_object_outcome">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:target rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp14i_is_object_outcome_stipulated_by">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp15_stipulates_sub_event">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+	<rdfs:target rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp15i_is_sub_event_stipulated_by">
+	<rdfs:domain rdf:resource="CC12_Event_Trigger_Template"/>
+    <rdfs:range rdf:resource="CC12_Event_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp16_stipulates_material">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp16i_is_material_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    <rdfs:range rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp17_stipulates_site">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E27_Site"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp17i_is_site_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E27_Site"/>
+    <rdfs:range rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp18_stipulates_dimension">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp18i_is_dimension_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <rdfs:range rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp19_stipulates_function">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp19i_is_function_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:range rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp20_stipulates_reference">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp20i_is_reference_stipulated_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+    <rdfs:range rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp21_stipulates_part">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+	<rdfs:target rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp21i_is_part_stipulated_by">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+    <rdfs:range rdf:resource="CC11_Object_Trigger_Template"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp22_assessed">
+	<rdfs:domain rdf:resource="CC19_Assessment"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp22i_was_assessed_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+    <rdfs:range rdf:resource="CC19_Assessment"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp23_assigned">
+	<rdfs:domain rdf:resource="CC19_Assessment"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp23i_was_assigned_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:range rdf:resource="CC19_Assessment"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp24_produced_revision">
+	<rdfs:domain rdf:resource="CC19_Assessment"/>
+	<rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Information_Object"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp24i_was_revision_produced_by">
+	<rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+    <rdfs:range rdf:resource="CC19_Assessment"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp25_concerns_extant_object">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+    <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="cp25i_is_object_of_concern_of">
+	<rdfs:domain rdf:resource="CC11_Object_Trigger_Template"/>
+    <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+</rdf:Property>
+    
+</rdf:RDF>

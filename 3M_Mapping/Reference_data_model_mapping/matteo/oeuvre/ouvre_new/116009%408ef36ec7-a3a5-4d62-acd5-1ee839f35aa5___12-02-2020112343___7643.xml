@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+  <oeu>
+    <_version>2</_version>
+    <_id>21365</_id>
+    <_system_object_id>116009</_system_object_id>
+    <_standard>
+      <de-DE>Druckerei Sedlmayr [Oeuvre]</de-DE>
+      <en-US>[Oeuvre]</en-US>
+    </_standard>
+    <_objecttype>oeu</_objecttype>
+    <_global_object_id>116009@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+    <_uuid>001b5f9d-1eca-4fcb-866c-309fd3ba2c96</_uuid>
+    <pool id="4">
+      <de-DE>gta Research Portal</de-DE>
+      <en-US>gta Research Portal</en-US>
+    </pool>
+    <_exported_at>2020-02-12T07:48:18+01:00</_exported_at>
+    <_mask>oeu__all_fields</_mask>
+    <_last_modified>2020-01-16T20:57:46Z</_last_modified>
+    <_created>2020-01-16T20:54:28Z</_created>
+    <owner type="user">
+      <id>1</id>
+      <displayname>Root</displayname>
+    </owner>
+    <collections/>
+    <_urls>
+      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/001b5f9d-1eca-4fcb-866c-309fd3ba2c96</url>
+      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/116009</url>
+    </_urls>
+    <oeu_uuid >CEC05C7A-E960-4AEF-9ACD-81F7BD0922DE</oeu_uuid>
+    <oeu_uuid_hierarchical />
+    <oeu_nc_name >
+      <de-DE>Druckerei Sedlmayr</de-DE>
+    </oeu_nc_name>
+    <oeu_nc_type>
+      <oeu_type>
+        <_version>3</_version>
+        <_id>1</_id>
+        <_system_object_id>63559</_system_object_id>
+        <_standard>
+          <de-DE>Oeuvre</de-DE>
+          <en-US>Oeuvre</en-US>
+        </_standard>
+        <_objecttype>oeu_type</_objecttype>
+        <_global_object_id>63559@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>a321550f-d644-4ebc-9e41-93bac85aded7</_uuid>
+        <oeu_type_appellation >
+          <de-DE>Oeuvre</de-DE>
+          <en-US>Oeuvre</en-US>
+        </oeu_type_appellation>
+        <oeu_type_desription >
+          <de-DE>Ein gesamtes Werk, alle zugehörigen Projekte und gebauten Objekte umfassend</de-DE>
+        </oeu_type_desription>
+      </oeu_type>
+    </oeu_nc_type>
+    <oeu_descr_legacy_person >Ingenieur: Heinz Isler; Architekt: Leo Hermann (Dornbirn); Bauherr: Druckerei Sedlmayr; Ausführung (Baumeisterarbeiten): Alfred Kunz &amp; Co. Bludenz</oeu_descr_legacy_person>
+    <oeu_descr_legacy_places >Objektort: Lustenauer Strasse 79 / Am Anger, Dornbirn</oeu_descr_legacy_places>
+    <oeu_descr_legacy_chronology >ausgeführt 1963; Schadenbegutachtung 1980</oeu_descr_legacy_chronology>
+    <oeu_descr_description_scientificcomment >
+      <de-DE>3 Industrie-Schalen 22 x 22 m, 1488 m2.</de-DE>
+    </oeu_descr_description_scientificcomment>
+    <oeu_descr_description_notes>Büronummer: alt 44.</oeu_descr_description_notes>
+    <oeu_subst_surface_dimension />
+    <oeu_loc_coordinates />
+  </oeu>
+</objects>
