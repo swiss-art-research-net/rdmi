@@ -1,0 +1,1132 @@
+<?xml version="1.0"?>
+<objects>
+  <oeu>
+    <_version>2</_version>
+    <_id>22438</_id>
+    <_system_object_id>149838</_system_object_id>
+    <_standard>
+      <de-DE>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN [Gebautes Werk]</de-DE>
+      <en-US>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH [Built Work]</en-US>
+    </_standard>
+    <_objecttype>oeu</_objecttype>
+    <_global_object_id>149838@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+    <_uuid>5016055e-e0fe-48a7-bdd8-beecc457f1ee</_uuid>
+    <pool id="9">
+      <de-DE>Test Datasets</de-DE>
+    </pool>
+    <_exported_at>2020-02-12T16:16:49+01:00</_exported_at>
+    <_mask>oeu__all_fields</_mask>
+    <_last_modified>2020-02-11T13:26:17Z</_last_modified>
+    <_created>2020-02-11T13:25:16Z</_created>
+    <owner type="user">
+      <id>1</id>
+      <displayname>Root</displayname>
+    </owner>
+    <tags>
+      <tag id="7">
+        <name>
+          <de-DE>New</de-DE>
+          <en-US>New</en-US>
+        </name>
+      </tag>
+    </tags>
+    <collections/>
+    <_urls>
+      <url type="deep-link">https://collections.gta.arch.ethz.ch/api/v1/objects/uuid/5016055e-e0fe-48a7-bdd8-beecc457f1ee</url>
+      <url type="easydb-id">https://collections.gta.arch.ethz.ch/detail/149838</url>
+    </_urls>
+    <oeu_uuid type="string"/>
+    <oeu_uuid_hierarchical type="string"/>
+    <oeu_nc_name type="text_l10n_oneline">
+      <de-DE>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</de-DE>
+      <en-US>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</en-US>
+    </oeu_nc_name>
+    <oeu_nc_type>
+      <oeu_type>
+        <_version>2</_version>
+        <_id>3</_id>
+        <_id_parent>1</_id_parent>
+        <_system_object_id>63561</_system_object_id>
+        <_standard>
+          <de-DE>Gebautes Werk</de-DE>
+          <en-US>Built Work</en-US>
+        </_standard>
+        <_objecttype>oeu_type</_objecttype>
+        <_global_object_id>63561@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>80f6d96b-a8c0-412e-b15a-ecdc4ed62bbd</_uuid>
+        <oeu_type_appellation type="text_l10n_oneline">
+          <de-DE>Gebautes Werk</de-DE>
+          <en-US>Built Work</en-US>
+        </oeu_type_appellation>
+        <oeu_type_desription type="text_l10n">
+          <de-DE>Ein (gebautes) Werk</de-DE>
+        </oeu_type_desription>
+      </oeu_type>
+    </oeu_nc_type>
+    <_nested__oeu__oeu_nc_name_alt>
+      <oeu__oeu_nc_name_alt>
+        <oeu_nc_name_alt_literal type="text_oneline">ALTERNATIVE NAME DE</oeu_nc_name_alt_literal>
+        <oeu_nc_name_alt_lang>
+          <generic_lang>
+            <_version>2</_version>
+            <_id>1</_id>
+            <_system_object_id>111398</_system_object_id>
+            <_standard>
+              <de-DE>de</de-DE>
+              <en-US>de</en-US>
+              <es-ES>de</es-ES>
+              <it-IT>de</it-IT>
+              <fr-FR>de</fr-FR>
+            </_standard>
+            <_objecttype>generic_lang</_objecttype>
+            <_global_object_id>111398@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>f7ce12e8-cd7c-47f1-a9f5-be8534826427</_uuid>
+            <generic_lang_uuid type="string"/>
+            <generic_lang_akronym type="string">de</generic_lang_akronym>
+            <generic_lang_name type="text_l10n_oneline">
+              <de-DE>Deutsch</de-DE>
+              <en-US>German</en-US>
+            </generic_lang_name>
+          </generic_lang>
+        </oeu_nc_name_alt_lang>
+        <oeu_nc_name_alt_used_by>
+          <act>
+            <_version>3</_version>
+            <_id>21364</_id>
+            <_system_object_id>43200</_system_object_id>
+            <_standard>
+              <de-DE>gta Archiv / ETH Z&#xFC;rich</de-DE>
+              <en-US>gta Archiv / ETH Z&#xFC;rich</en-US>
+              <es-ES>gta Archiv / ETH Z&#xFC;rich</es-ES>
+              <it-IT>gta Archiv / ETH Z&#xFC;rich</it-IT>
+              <fr-FR>gta Archiv / ETH Z&#xFC;rich</fr-FR>
+            </_standard>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>43200@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>1af21122-1011-48e6-bf9a-15dc6e539953</_uuid>
+            <pool id="2">
+              <de-DE>Standard-Pool</de-DE>
+              <en-US>Default pool</en-US>
+            </pool>
+            <act_uuid type="string">7AFB9A34-FAF0-4B38-A1A0-745B4348F656</act_uuid>
+            <act_name_display type="text_l10n_oneline">
+              <de-DE>gta Archiv / ETH Z&#xFC;rich</de-DE>
+            </act_name_display>
+            <act_type type="string">E40_LegalBody</act_type>
+            <act_migrationlog_source>
+              <act_migrationlog_source>
+                <_version>2</_version>
+                <_id>1</_id>
+                <_system_object_id>111454</_system_object_id>
+                <_standard>
+                  <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+                  <en-US>grp Authoritative Dataset (Batch A)</en-US>
+                  <es-ES>grp Authoritative Dataset (Batch A)</es-ES>
+                  <it-IT>grp Authoritative Dataset (Batch A)</it-IT>
+                  <fr-FR>grp Authoritative Dataset (Batch A)</fr-FR>
+                </_standard>
+                <_objecttype>act_migrationlog_source</_objecttype>
+                <_global_object_id>111454@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>8c487dca-286b-45f3-af9e-79fc6bb22c10</_uuid>
+                <act_migrationlog_source type="string"/>
+              </act_migrationlog_source>
+            </act_migrationlog_source>
+            <act_dc_editorial_note type="text_oneline"/>
+            <act_dc_chekbox_uncertain_alignement type="text_oneline"/>
+            <act_dc_chekbox_duplicate type="text_oneline"/>
+            <act_dc_chekbox_type type="text_oneline"/>
+            <act_uuid_manual type="string"/>
+            <act_type_crm>
+              <act_type_crm>
+                <_version>1</_version>
+                <_id>3</_id>
+                <_id_parent>2</_id_parent>
+                <_system_object_id>111416</_system_object_id>
+                <_standard>
+                  <de-DE>E40_LegalBody</de-DE>
+                  <en-US>E40_LegalBody</en-US>
+                  <es-ES>E40_LegalBody</es-ES>
+                  <it-IT>E40_LegalBody</it-IT>
+                  <fr-FR>E40_LegalBody</fr-FR>
+                </_standard>
+                <_objecttype>act_type_crm</_objecttype>
+                <_global_object_id>111416@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>61cffc99-8db8-49c5-9607-a2ec959b465d</_uuid>
+                <act_type_crm_uri type="string"/>
+                <act_type_crm_name type="text_oneline">E40_LegalBody</act_type_crm_name>
+              </act_type_crm>
+            </act_type_crm>
+            <act_name type="text_oneline">gta Archiv / ETH Z&#xFC;rich</act_name>
+            <act_name_lang>
+              <generic_lang>
+                <_version>2</_version>
+                <_id>1</_id>
+                <_system_object_id>111398</_system_object_id>
+                <_standard>
+                  <de-DE>de</de-DE>
+                  <en-US>de</en-US>
+                  <es-ES>de</es-ES>
+                  <it-IT>de</it-IT>
+                  <fr-FR>de</fr-FR>
+                </_standard>
+                <_objecttype>generic_lang</_objecttype>
+                <_global_object_id>111398@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>f7ce12e8-cd7c-47f1-a9f5-be8534826427</_uuid>
+                <generic_lang_uuid type="string"/>
+                <generic_lang_akronym type="string">de</generic_lang_akronym>
+                <generic_lang_name type="text_l10n_oneline">
+                  <de-DE>Deutsch</de-DE>
+                  <en-US>German</en-US>
+                </generic_lang_name>
+              </generic_lang>
+            </act_name_lang>
+            <act_honname type="text_oneline"/>
+            <act_person_gender_source type="text_oneline"/>
+            <act_identifier_gnd type="string"/>
+            <act_identifier_sikart type="string"/>
+            <act_identifier_ulan type="string"/>
+            <act_identifier_wikidata type="string"/>
+            <act_identifier_wikipedia type="string"/>
+          </act>
+        </oeu_nc_name_alt_used_by>
+        <oeu_nc_name_alt_type>
+          <generic_identifier_type>
+            <_version>1</_version>
+            <_id>5</_id>
+            <_id_parent>2</_id_parent>
+            <_system_object_id>145853</_system_object_id>
+            <_standard>
+              <de-DE>B&#xFC;ronummer</de-DE>
+              <en-US>Owner's Identifier</en-US>
+            </_standard>
+            <_objecttype>generic_identifier_type</_objecttype>
+            <_global_object_id>145853@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>4f6550c3-a8ab-4635-9383-cbdf00245185</_uuid>
+            <generic_identifier_type_name type="text_l10n_oneline">
+              <de-DE>B&#xFC;ronummer</de-DE>
+              <en-US>Owner's Identifier</en-US>
+            </generic_identifier_type_name>
+          </generic_identifier_type>
+        </oeu_nc_name_alt_type>
+      </oeu__oeu_nc_name_alt>
+      <oeu__oeu_nc_name_alt>
+        <oeu_nc_name_alt_literal type="text_oneline">ALTERNATIVE NAME FR</oeu_nc_name_alt_literal>
+        <oeu_nc_name_alt_lang>
+          <generic_lang>
+            <_version>2</_version>
+            <_id>4</_id>
+            <_system_object_id>111435</_system_object_id>
+            <_standard>
+              <de-DE>fr</de-DE>
+              <en-US>fr</en-US>
+              <es-ES>fr</es-ES>
+              <it-IT>fr</it-IT>
+              <fr-FR>fr</fr-FR>
+            </_standard>
+            <_objecttype>generic_lang</_objecttype>
+            <_global_object_id>111435@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>21242efd-1103-46c8-b60e-f16f9ad5530e</_uuid>
+            <generic_lang_uuid type="string"/>
+            <generic_lang_akronym type="string">fr</generic_lang_akronym>
+            <generic_lang_name type="text_l10n_oneline">
+              <de-DE>Franz&#xF6;sisch</de-DE>
+              <en-US>French</en-US>
+              <fr-FR>fran&#xE7;ais</fr-FR>
+            </generic_lang_name>
+          </generic_lang>
+        </oeu_nc_name_alt_lang>
+        <oeu_nc_name_alt_used_by>
+          <act>
+            <_version>3</_version>
+            <_id>21363</_id>
+            <_system_object_id>43199</_system_object_id>
+            <_standard>
+              <de-DE>Swiss Art Research Infrastrucrture (SARI)</de-DE>
+              <en-US>Swiss Art Research Infrastrucrture (SARI)</en-US>
+              <es-ES>Swiss Art Research Infrastrucrture (SARI)</es-ES>
+              <it-IT>Swiss Art Research Infrastrucrture (SARI)</it-IT>
+              <fr-FR>Swiss Art Research Infrastrucrture (SARI)</fr-FR>
+            </_standard>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>43199@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>2ee50cc1-cb5b-4fa9-b022-174be3751433</_uuid>
+            <pool id="2">
+              <de-DE>Standard-Pool</de-DE>
+              <en-US>Default pool</en-US>
+            </pool>
+            <act_uuid type="string">3E1F990A-2368-4B81-9B05-10675779E790</act_uuid>
+            <act_name_display type="text_l10n_oneline">
+              <de-DE>Swiss Art Research Infrastrucrture (SARI)</de-DE>
+            </act_name_display>
+            <act_type type="string">E40_LegalBody</act_type>
+            <act_migrationlog_source>
+              <act_migrationlog_source>
+                <_version>2</_version>
+                <_id>1</_id>
+                <_system_object_id>111454</_system_object_id>
+                <_standard>
+                  <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+                  <en-US>grp Authoritative Dataset (Batch A)</en-US>
+                  <es-ES>grp Authoritative Dataset (Batch A)</es-ES>
+                  <it-IT>grp Authoritative Dataset (Batch A)</it-IT>
+                  <fr-FR>grp Authoritative Dataset (Batch A)</fr-FR>
+                </_standard>
+                <_objecttype>act_migrationlog_source</_objecttype>
+                <_global_object_id>111454@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>8c487dca-286b-45f3-af9e-79fc6bb22c10</_uuid>
+                <act_migrationlog_source type="string"/>
+              </act_migrationlog_source>
+            </act_migrationlog_source>
+            <act_dc_editorial_note type="text_oneline"/>
+            <act_dc_chekbox_uncertain_alignement type="text_oneline"/>
+            <act_dc_chekbox_duplicate type="text_oneline"/>
+            <act_dc_chekbox_type type="text_oneline"/>
+            <act_uuid_manual type="string"/>
+            <act_type_crm>
+              <act_type_crm>
+                <_version>1</_version>
+                <_id>3</_id>
+                <_id_parent>2</_id_parent>
+                <_system_object_id>111416</_system_object_id>
+                <_standard>
+                  <de-DE>E40_LegalBody</de-DE>
+                  <en-US>E40_LegalBody</en-US>
+                  <es-ES>E40_LegalBody</es-ES>
+                  <it-IT>E40_LegalBody</it-IT>
+                  <fr-FR>E40_LegalBody</fr-FR>
+                </_standard>
+                <_objecttype>act_type_crm</_objecttype>
+                <_global_object_id>111416@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>61cffc99-8db8-49c5-9607-a2ec959b465d</_uuid>
+                <act_type_crm_uri type="string"/>
+                <act_type_crm_name type="text_oneline">E40_LegalBody</act_type_crm_name>
+              </act_type_crm>
+            </act_type_crm>
+            <act_name type="text_oneline">Swiss Art Research Infrastrucrture (SARI)</act_name>
+            <act_name_lang>
+              <generic_lang>
+                <_version>2</_version>
+                <_id>5</_id>
+                <_system_object_id>111438</_system_object_id>
+                <_standard>
+                  <de-DE>en</de-DE>
+                  <en-US>en</en-US>
+                  <es-ES>en</es-ES>
+                  <it-IT>en</it-IT>
+                  <fr-FR>en</fr-FR>
+                </_standard>
+                <_objecttype>generic_lang</_objecttype>
+                <_global_object_id>111438@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>0178b42d-0f3f-4132-9e1d-f85425789823</_uuid>
+                <generic_lang_uuid type="string"/>
+                <generic_lang_akronym type="string">en</generic_lang_akronym>
+                <generic_lang_name type="text_l10n_oneline">
+                  <de-DE>Englisch</de-DE>
+                  <en-US>English</en-US>
+                </generic_lang_name>
+              </generic_lang>
+            </act_name_lang>
+            <act_honname type="text_oneline"/>
+            <act_person_gender_source type="text_oneline"/>
+            <act_identifier_gnd type="string"/>
+            <act_identifier_sikart type="string"/>
+            <act_identifier_ulan type="string"/>
+            <act_identifier_wikidata type="string"/>
+            <act_identifier_wikipedia type="string"/>
+          </act>
+        </oeu_nc_name_alt_used_by>
+        <oeu_nc_name_alt_used_timepan type="daterange">
+          <from>2012-02-01</from>
+          <to>2016-02-29</to>
+        </oeu_nc_name_alt_used_timepan>
+      </oeu__oeu_nc_name_alt>
+    </_nested__oeu__oeu_nc_name_alt>
+    <_nested__oeu__oeu_nc_identifier>
+      <oeu__oeu_nc_identifier>
+        <oeu_nc_identifier_literal type="string">IDENTIFIER</oeu_nc_identifier_literal>
+        <oeu_nc_identifier_type>
+          <generic_identifier_type>
+            <_version>1</_version>
+            <_id>5</_id>
+            <_id_parent>2</_id_parent>
+            <_system_object_id>145853</_system_object_id>
+            <_standard>
+              <de-DE>B&#xFC;ronummer</de-DE>
+              <en-US>Owner's Identifier</en-US>
+            </_standard>
+            <_objecttype>generic_identifier_type</_objecttype>
+            <_global_object_id>145853@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>4f6550c3-a8ab-4635-9383-cbdf00245185</_uuid>
+            <generic_identifier_type_name type="text_l10n_oneline">
+              <de-DE>B&#xFC;ronummer</de-DE>
+              <en-US>Owner's Identifier</en-US>
+            </generic_identifier_type_name>
+          </generic_identifier_type>
+        </oeu_nc_identifier_type>
+        <oeu_nc_identifier_usedby>
+          <act>
+            <_version>3</_version>
+            <_id>22250</_id>
+            <_system_object_id>44086</_system_object_id>
+            <_standard>
+              <de-DE>B&#xFC;ro Isler (Individualisierte K&#xF6;rperschaft)</de-DE>
+              <en-US>B&#xFC;ro Isler (Individualised Legal Body)</en-US>
+              <es-ES>B&#xFC;ro Isler</es-ES>
+              <it-IT>B&#xFC;ro Isler</it-IT>
+              <fr-FR>B&#xFC;ro Isler</fr-FR>
+            </_standard>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>44086@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>9d15ebcf-5a9b-4093-9dab-ff95f710b5fd</_uuid>
+            <pool id="2">
+              <de-DE>Standard-Pool</de-DE>
+              <en-US>Default pool</en-US>
+            </pool>
+            <act_uuid type="string">621257EA-8DBF-4656-BB87-7A331D1BC2EC</act_uuid>
+            <act_name_display type="text_l10n_oneline">
+              <de-DE>B&#xFC;ro Isler</de-DE>
+            </act_name_display>
+            <act_description_bioshort type="text_l10n_oneline">
+              <de-DE>Individualisierte K&#xF6;rperschaft</de-DE>
+              <en-US>Identified Legal Body</en-US>
+            </act_description_bioshort>
+            <act_type type="string">E40_LegalBody</act_type>
+            <act_migrationlog_source>
+              <act_migrationlog_source>
+                <_version>2</_version>
+                <_id>1</_id>
+                <_system_object_id>111454</_system_object_id>
+                <_standard>
+                  <de-DE>grp Authoritative Dataset (Batch A)</de-DE>
+                  <en-US>grp Authoritative Dataset (Batch A)</en-US>
+                  <es-ES>grp Authoritative Dataset (Batch A)</es-ES>
+                  <it-IT>grp Authoritative Dataset (Batch A)</it-IT>
+                  <fr-FR>grp Authoritative Dataset (Batch A)</fr-FR>
+                </_standard>
+                <_objecttype>act_migrationlog_source</_objecttype>
+                <_global_object_id>111454@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>8c487dca-286b-45f3-af9e-79fc6bb22c10</_uuid>
+                <act_migrationlog_source type="string"/>
+              </act_migrationlog_source>
+            </act_migrationlog_source>
+            <act_dc_editorial_note type="text_oneline"/>
+            <act_dc_chekbox_uncertain_alignement type="text_oneline"/>
+            <act_dc_chekbox_duplicate type="text_oneline"/>
+            <act_dc_chekbox_type type="text_oneline"/>
+            <act_uuid_manual type="string"/>
+            <act_type_crm>
+              <act_type_crm>
+                <_version>1</_version>
+                <_id>3</_id>
+                <_id_parent>2</_id_parent>
+                <_system_object_id>111416</_system_object_id>
+                <_standard>
+                  <de-DE>E40_LegalBody</de-DE>
+                  <en-US>E40_LegalBody</en-US>
+                  <es-ES>E40_LegalBody</es-ES>
+                  <it-IT>E40_LegalBody</it-IT>
+                  <fr-FR>E40_LegalBody</fr-FR>
+                </_standard>
+                <_objecttype>act_type_crm</_objecttype>
+                <_global_object_id>111416@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>61cffc99-8db8-49c5-9607-a2ec959b465d</_uuid>
+                <act_type_crm_uri type="string"/>
+                <act_type_crm_name type="text_oneline">E40_LegalBody</act_type_crm_name>
+              </act_type_crm>
+            </act_type_crm>
+            <act_name type="text_oneline">B&#xFC;ro Isler</act_name>
+            <act_honname type="text_oneline"/>
+            <act_person_gender_source type="text_oneline"/>
+            <act_identifier_gnd type="string"/>
+            <act_identifier_sikart type="string"/>
+            <act_identifier_ulan type="string"/>
+            <act_identifier_wikidata type="string"/>
+            <act_identifier_wikipedia type="string"/>
+            <_nested__act__act_descr_short>
+              <act__act_descr_short>
+                <act_descr_short type="text_l10n_oneline">
+                  <de-DE>Individualisierte K&#xF6;rperschaft</de-DE>
+                  <en-US>Individualised Legal Body</en-US>
+                </act_descr_short>
+                <act_descr_short_source>
+                  <generic_contributor>
+                    <_version>1</_version>
+                    <_id>6</_id>
+                    <_system_object_id>125083</_system_object_id>
+                    <_standard>
+                      <de-DE>gta Research Portal</de-DE>
+                      <en-US>gta Research Portal</en-US>
+                    </_standard>
+                    <_objecttype>generic_contributor</_objecttype>
+                    <_global_object_id>125083@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                    <_uuid>a9fae7f3-2b3f-47ad-b776-5ace153294e7</_uuid>
+                    <generic_contributor_uri type="string"/>
+                    <generic_contributor_name type="text_l10n_oneline">
+                      <de-DE>gta Research Portal</de-DE>
+                      <en-US>gta Research Portal</en-US>
+                    </generic_contributor_name>
+                  </generic_contributor>
+                </act_descr_short_source>
+              </act__act_descr_short>
+            </_nested__act__act_descr_short>
+          </act>
+        </oeu_nc_identifier_usedby>
+      </oeu__oeu_nc_identifier>
+    </_nested__oeu__oeu_nc_identifier>
+    <_nested__oeu__oeu_ar_creation>
+      <oeu__oeu_ar_creation>
+        <oeu_ar_creation_actor>
+          <act>
+            <_version>11</_version>
+            <_id>28184</_id>
+            <_system_object_id>54908</_system_object_id>
+            <_standard>
+              <de-DE>Isler, Heinz (Schweizer Ingenieur, geboren 1926)</de-DE>
+              <en-US>Isler, Heinz (Swiss engineer, born 1926)</en-US>
+              <es-ES>Isler, Heinz</es-ES>
+              <it-IT>Isler, Heinz</it-IT>
+              <fr-FR>Isler, Heinz</fr-FR>
+            </_standard>
+            <_objecttype>act</_objecttype>
+            <_global_object_id>54908@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>40c02a93-9a52-482a-9175-9b1a1eb7cbfd</_uuid>
+            <pool id="5">
+              <de-DE>alch</de-DE>
+              <en-US>alch</en-US>
+            </pool>
+            <act_uuid type="string">386EAC1B-8A8B-4F91-9E4C-319A289B9091</act_uuid>
+            <act_name_display type="text_l10n_oneline">
+              <de-DE>Isler, Heinz</de-DE>
+            </act_name_display>
+            <act_description_bioshort type="text_l10n_oneline">
+              <de-DE>Schweizer Ingenieur, geboren 1926</de-DE>
+              <en-US>Swiss engineer, born 1926</en-US>
+            </act_description_bioshort>
+            <act_type type="string"/>
+            <act_migrationlog_source>
+              <act_migrationlog_source>
+                <_version>2</_version>
+                <_id>3</_id>
+                <_system_object_id>111481</_system_object_id>
+                <_standard>
+                  <de-DE>grp Authoritative Dataset (Batch B)</de-DE>
+                  <en-US>grp Authoritative Dataset (Batch B)</en-US>
+                  <es-ES>grp Authoritative Dataset (Batch B)</es-ES>
+                  <it-IT>grp Authoritative Dataset (Batch B)</it-IT>
+                  <fr-FR>grp Authoritative Dataset (Batch B)</fr-FR>
+                </_standard>
+                <_objecttype>act_migrationlog_source</_objecttype>
+                <_global_object_id>111481@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>d61d5b55-8dfc-4beb-8e0f-df3b09b39f8e</_uuid>
+                <act_migrationlog_source type="string"/>
+              </act_migrationlog_source>
+            </act_migrationlog_source>
+            <act_dc_editorial_note type="text_oneline"/>
+            <act_dc_chekbox_uncertain_alignement type="text_oneline"/>
+            <act_dc_chekbox_duplicate type="text_oneline"/>
+            <act_dc_chekbox_type type="text_oneline"/>
+            <act_uuid_manual type="string"/>
+            <act_type_crm>
+              <act_type_crm>
+                <_version>1</_version>
+                <_id>1</_id>
+                <_system_object_id>111414</_system_object_id>
+                <_standard>
+                  <de-DE>E21_Person</de-DE>
+                  <en-US>E21_Person</en-US>
+                  <es-ES>E21_Person</es-ES>
+                  <it-IT>E21_Person</it-IT>
+                  <fr-FR>E21_Person</fr-FR>
+                </_standard>
+                <_objecttype>act_type_crm</_objecttype>
+                <_global_object_id>111414@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>0838e425-d5ac-4037-b612-e472b3510fe1</_uuid>
+                <act_type_crm_uri type="string"/>
+                <act_type_crm_name type="text_oneline">E21_Person</act_type_crm_name>
+              </act_type_crm>
+            </act_type_crm>
+            <act_name type="text_oneline">Isler, Heinz</act_name>
+            <act_honname type="text_oneline"/>
+            <act_person_gender>
+              <act_person_gender>
+                <_version>3</_version>
+                <_id>1</_id>
+                <_system_object_id>111395</_system_object_id>
+                <_standard>
+                  <de-DE>m&#xE4;nnlich</de-DE>
+                  <en-US>male</en-US>
+                </_standard>
+                <_objecttype>act_person_gender</_objecttype>
+                <_global_object_id>111395@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>3a9a5fbc-c290-4e9f-bec5-f13588e088cc</_uuid>
+                <act_person_gender_uuid type="string"/>
+                <act_person_gender_name type="text_l10n_oneline">
+                  <de-DE>m&#xE4;nnlich</de-DE>
+                  <en-US>male</en-US>
+                </act_person_gender_name>
+                <act_person_gender_aat_uri type="string">http://vocab.getty.edu/aat/300189559</act_person_gender_aat_uri>
+              </act_person_gender>
+            </act_person_gender>
+            <act_person_gender_source type="text_oneline">SARI</act_person_gender_source>
+            <act_identifier_gnd type="string"/>
+            <act_identifier_sikart type="string"/>
+            <act_identifier_ulan type="string"/>
+            <act_identifier_wikidata type="string"/>
+            <act_identifier_wikipedia type="string"/>
+            <_nested__act__act_descr_short>
+              <act__act_descr_short>
+                <act_descr_short type="text_l10n_oneline">
+                  <de-DE>Schweizer Ingenieur, geboren 1926</de-DE>
+                  <en-US>Swiss engineer, born 1926</en-US>
+                </act_descr_short>
+                <act_descr_short_source>
+                  <generic_contributor>
+                    <_version>1</_version>
+                    <_id>2</_id>
+                    <_system_object_id>111475</_system_object_id>
+                    <_standard>
+                      <de-DE>SARI</de-DE>
+                      <en-US>SARI</en-US>
+                    </_standard>
+                    <_objecttype>generic_contributor</_objecttype>
+                    <_global_object_id>111475@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                    <_uuid>972907d6-bd01-4bba-bf2b-180416e5e947</_uuid>
+                    <generic_contributor_uri type="string"/>
+                    <generic_contributor_name type="text_l10n_oneline">
+                      <de-DE>SARI</de-DE>
+                      <en-US>SARI</en-US>
+                    </generic_contributor_name>
+                  </generic_contributor>
+                </act_descr_short_source>
+              </act__act_descr_short>
+            </_nested__act__act_descr_short>
+            <_nested__act__act_nat>
+              <act__act_nat>
+                <act_nat>
+                  <act_nat>
+                    <_version>1</_version>
+                    <_id>33</_id>
+                    <_system_object_id>111093</_system_object_id>
+                    <_standard>
+                      <de-DE>Schweizerisch</de-DE>
+                      <en-US>Swiss</en-US>
+                    </_standard>
+                    <_objecttype>act_nat</_objecttype>
+                    <_global_object_id>111093@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                    <_uuid>3752fd5a-05f4-458a-bed6-762c8a48b7f0</_uuid>
+                    <act_nat_uuid type="string">7F880909-6694-485F-8109-71CAB0FE1C88</act_nat_uuid>
+                    <act_nat_name type="text_l10n_oneline">
+                      <de-DE>Schweizerisch</de-DE>
+                      <en-US>Swiss </en-US>
+                    </act_nat_name>
+                    <act_nat_aat_uri type="string"/>
+                  </act_nat>
+                </act_nat>
+              </act__act_nat>
+            </_nested__act__act_nat>
+            <_nested__act__act_social_inst>
+              <act__act_social_inst>
+                <act_social_inst_institution>
+                  <act>
+                    <_id>22250</_id>
+                    <_objecttype>act</_objecttype>
+                    <!--_skipped_table_loop-->
+                  </act>
+                </act_social_inst_institution>
+                <act_social_inst_role>
+                  <generic_role>
+                    <_version>1</_version>
+                    <_id>11</_id>
+                    <_id_parent>4</_id_parent>
+                    <_system_object_id>111482</_system_object_id>
+                    <_standard>
+                      <de-DE>Gr&#xFC;nder</de-DE>
+                      <en-US>Founder</en-US>
+                    </_standard>
+                    <_objecttype>generic_role</_objecttype>
+                    <_global_object_id>111482@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                    <_uuid>ecd5272c-3838-49da-b604-314902b3e39b</_uuid>
+                    <generic_role_uuid type="string"/>
+                    <generic_role_name type="text_l10n_oneline">
+                      <de-DE>Gr&#xFC;nder</de-DE>
+                      <en-US>Founder</en-US>
+                    </generic_role_name>
+                    <generic_role_sari type="string"/>
+                  </generic_role>
+                </act_social_inst_role>
+              </act__act_social_inst>
+            </_nested__act__act_social_inst>
+            <_nested__act__act_activity_occupation>
+              <act__act_activity_occupation>
+                <act_occ>
+                  <act_occ>
+                    <_version>1</_version>
+                    <_id>270</_id>
+                    <_system_object_id>111204</_system_object_id>
+                    <_standard>
+                      <de-DE>Ingenieurin</de-DE>
+                      <en-US>engeneer</en-US>
+                    </_standard>
+                    <_objecttype>act_occ</_objecttype>
+                    <_global_object_id>111204@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                    <_uuid>253a2656-2c14-4976-b8d5-e87e8bc6756d</_uuid>
+                    <act_occ_uuid type="string"/>
+                    <act_occ_name type="text_l10n_oneline">
+                      <de-DE>Ingenieurin</de-DE>
+                      <en-US>engeneer</en-US>
+                    </act_occ_name>
+                    <act_occ_aat_uri type="string"/>
+                  </act_occ>
+                </act_occ>
+              </act__act_activity_occupation>
+            </_nested__act__act_activity_occupation>
+          </act>
+        </oeu_ar_creation_actor>
+        <oeu_ar_creation_actor_role>
+          <act_role>
+            <_version>1</_version>
+            <_id>84</_id>
+            <_system_object_id>49949</_system_object_id>
+            <_standard>
+              <de-DE>Ingenieur</de-DE>
+            </_standard>
+            <_objecttype>act_role</_objecttype>
+            <_global_object_id>49949@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>a1e1d619-d742-4f8f-930e-5d08c297bae6</_uuid>
+            <act_role_uuid type="string">E430768F-28E8-4779-8910-F8DDB2B839DC</act_role_uuid>
+            <act_role_name_display type="text_l10n_oneline">
+              <de-DE>Ingenieur</de-DE>
+            </act_role_name_display>
+          </act_role>
+        </oeu_ar_creation_actor_role>
+      </oeu__oeu_ar_creation>
+    </_nested__oeu__oeu_ar_creation>
+    <oeu_descr_legacy_person type="text"/>
+    <oeu_descr_legacy_places type="text"/>
+    <oeu_descr_legacy_chronology type="text"/>
+    <oeu_exist_construct_place>
+      <pl>
+        <_version>6</_version>
+        <_id>37001</_id>
+        <_id_parent>36942</_id_parent>
+        <_system_object_id>103121</_system_object_id>
+        <_standard>
+          <de-DE>Deitingen [Siedlung]</de-DE>
+          <en-US>Deitingen [inhabited places]</en-US>
+          <es-ES>Deitingen</es-ES>
+          <it-IT>Deitingen</it-IT>
+          <fr-FR>Deitingen</fr-FR>
+        </_standard>
+        <_objecttype>pl</_objecttype>
+        <_global_object_id>103121@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>9e1101f8-b27e-42b5-b568-d91d2899a808</_uuid>
+        <pool id="4">
+          <de-DE>gta Research Portal</de-DE>
+          <en-US>gta Research Portal</en-US>
+        </pool>
+        <pl_uuid type="string">5B231501-0C3D-4A73-B8E0-027B2E057554</pl_uuid>
+        <pl_dc_note type="text"/>
+        <pl_dc_note_duplicate type="string"/>
+        <pl_dc_note_misspelled_nowcorrect_duplicate type="string"/>
+        <pl_dc_note_misspelled_nowcorrect type="string"/>
+        <pl_dc_note_tgn_type type="string"/>
+        <pl_dc_note_tgn_failure type="string"/>
+        <_nested__pl__pl_nc_name>
+          <pl__pl_nc_name>
+            <pl_nc_name_literal type="text_oneline">Deitingen</pl_nc_name_literal>
+            <pl_nc_name_source>
+              <generic_contributor>
+                <_version>1</_version>
+                <_id>5</_id>
+                <_system_object_id>125082</_system_object_id>
+                <_standard>
+                  <de-DE>J. Paul Getty Trust</de-DE>
+                  <en-US>J. Paul Getty Trust</en-US>
+                </_standard>
+                <_objecttype>generic_contributor</_objecttype>
+                <_global_object_id>125082@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>be74de9a-aa23-4a95-97e8-69f0569f783e</_uuid>
+                <generic_contributor_uri type="string"/>
+                <generic_contributor_name type="text_l10n_oneline">
+                  <de-DE>J. Paul Getty Trust</de-DE>
+                  <en-US>J. Paul Getty Trust</en-US>
+                </generic_contributor_name>
+              </generic_contributor>
+            </pl_nc_name_source>
+          </pl__pl_nc_name>
+        </_nested__pl__pl_nc_name>
+        <_nested__pl__pl_nc_type>
+          <pl__pl_nc_type>
+            <pl_nc_type>
+              <pl_type>
+                <_version>3</_version>
+                <_id>1</_id>
+                <_system_object_id>123094</_system_object_id>
+                <_standard>
+                  <de-DE>Siedlung</de-DE>
+                  <en-US>inhabited places</en-US>
+                </_standard>
+                <_objecttype>pl_type</_objecttype>
+                <_global_object_id>123094@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>d70ec8cc-04f8-4c72-85de-4b3beb5fbc6a</_uuid>
+                <pl_type_uuid type="text_oneline">8FED0B59-B1CA-44BB-B6AD-7DEBDC293924</pl_type_uuid>
+                <pl_type_name type="text_l10n_oneline">
+                  <de-DE>Siedlung</de-DE>
+                  <en-US>inhabited places</en-US>
+                </pl_type_name>
+                <custom name="pl_type_aat_plain" type="custom:base.custom-data-type-link.link">
+                  <string name="url">http://vocab.getty.edu/aat/300008347</string>
+                  <string name="tld">edu</string>
+                  <string name="hostname">vocab.getty.edu</string>
+                  <object name="_fulltext">
+                    <string name="string">http://vocab.getty.edu/aat/300008347</string>
+                  </object>
+                  <object name="_standard">
+                    <string name="text">http://vocab.getty.edu/aat/300008347</string>
+                  </object>
+                </custom>
+                <pl_type_aat_uri type="string">http://vocab.getty.edu/aat/300008347</pl_type_aat_uri>
+                <custom name="pl_type_aat" type="custom:base.custom-data-type-getty.getty">
+                  <string name="conceptURI">http://vocab.getty.edu/aat/300008347</string>
+                  <object name="_fulltext">
+                    <string name="string">inhabited places</string>
+                  </object>
+                  <object name="_standard">
+                    <string name="text">inhabited places</string>
+                  </object>
+                  <string name="conceptName">inhabited places</string>
+                  <string name="conceptFulltext">inhabited places</string>
+                </custom>
+              </pl_type>
+            </pl_nc_type>
+          </pl__pl_nc_type>
+        </_nested__pl__pl_nc_type>
+        <custom name="pl_nc_indentifier_wikidata" type="custom:base.custom-data-type-link.link">
+          <string name="url">https://www.wikidata.org/entity/Q66142</string>
+          <string name="tld">org</string>
+          <string name="hostname">www.wikidata.org</string>
+          <object name="_fulltext">
+            <string name="string">https://www.wikidata.org/entity/Q66142</string>
+          </object>
+          <object name="_standard">
+            <string name="text">https://www.wikidata.org/entity/Q66142</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_wikidata_source type="text_oneline">sari-rds (wd:Q66142)</pl_nc_indentifier_wikidata_source>
+        <custom name="pl_nc_indentifier_geonames" type="custom:base.custom-data-type-link.link">
+          <string name="url">https://www.geonames.org/2661036</string>
+          <string name="tld">org</string>
+          <string name="hostname">www.geonames.org</string>
+          <object name="_fulltext">
+            <string name="string">https://www.geonames.org/2661036</string>
+          </object>
+          <object name="_standard">
+            <string name="text">https://www.geonames.org/2661036</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_geonames_source type="text_oneline">wd:Q66142</pl_nc_indentifier_geonames_source>
+        <pl_nc_indentifier_swisstopo_source type="text_oneline"/>
+        <pl_nc_indentifier_gnd_source type="text_oneline"/>
+        <custom name="pl_nc_indentifier_viaf" type="custom:base.custom-data-type-link.link">
+          <string name="url">http://viaf.org/viaf/234309117</string>
+          <string name="tld">org</string>
+          <string name="hostname">viaf.org</string>
+          <object name="_fulltext">
+            <string name="string">http://viaf.org/viaf/234309117</string>
+          </object>
+          <object name="_standard">
+            <string name="text">http://viaf.org/viaf/234309117</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_viaf_source type="text_oneline">wd:Q66142</pl_nc_indentifier_viaf_source>
+        <custom name="pl_nc_indentifier_dbpedia" type="custom:base.custom-data-type-link.link">
+          <string name="url">http://dbpedia.org/resource/Deitingen</string>
+          <string name="tld">org</string>
+          <string name="hostname">dbpedia.org</string>
+          <object name="_fulltext">
+            <string name="string">http://dbpedia.org/resource/Deitingen</string>
+          </object>
+          <object name="_standard">
+            <string name="text">http://dbpedia.org/resource/Deitingen</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_dbpedia_source type="text_oneline">wd:Q66142</pl_nc_indentifier_dbpedia_source>
+        <custom name="pl_nc_indentifier_tgn" type="custom:base.custom-data-type-link.link">
+          <string name="url">http://vocab.getty.edu/page/tgn/8705471</string>
+          <string name="tld">edu</string>
+          <string name="hostname">vocab.getty.edu</string>
+          <object name="_fulltext">
+            <string name="string">http://vocab.getty.edu/page/tgn/8705471</string>
+          </object>
+          <object name="_standard">
+            <string name="text">http://vocab.getty.edu/page/tgn/8705471</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_tgn_source type="text_oneline"/>
+        <pl_name_display type="text_oneline">Deitingen</pl_name_display>
+        <pl_parent_string type="text_oneline">Solothurn, Schweiz, Europe, World</pl_parent_string>
+        <pl_uuid_parent type="string"/>
+      </pl>
+    </oeu_exist_construct_place>
+    <oeu_exist_construct_timespan type="daterange">
+      <from>1999</from>
+      <to>2001</to>
+    </oeu_exist_construct_timespan>
+    <oeu_exist_destruct_place>
+      <pl>
+        <_version>6</_version>
+        <_id>37001</_id>
+        <_id_parent>36942</_id_parent>
+        <_system_object_id>103121</_system_object_id>
+        <_standard>
+          <de-DE>Deitingen [Siedlung]</de-DE>
+          <en-US>Deitingen [inhabited places]</en-US>
+          <es-ES>Deitingen</es-ES>
+          <it-IT>Deitingen</it-IT>
+          <fr-FR>Deitingen</fr-FR>
+        </_standard>
+        <_objecttype>pl</_objecttype>
+        <_global_object_id>103121@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+        <_uuid>9e1101f8-b27e-42b5-b568-d91d2899a808</_uuid>
+        <pool id="4">
+          <de-DE>gta Research Portal</de-DE>
+          <en-US>gta Research Portal</en-US>
+        </pool>
+        <pl_uuid type="string">5B231501-0C3D-4A73-B8E0-027B2E057554</pl_uuid>
+        <pl_dc_note type="text"/>
+        <pl_dc_note_duplicate type="string"/>
+        <pl_dc_note_misspelled_nowcorrect_duplicate type="string"/>
+        <pl_dc_note_misspelled_nowcorrect type="string"/>
+        <pl_dc_note_tgn_type type="string"/>
+        <pl_dc_note_tgn_failure type="string"/>
+        <_nested__pl__pl_nc_name>
+          <pl__pl_nc_name>
+            <pl_nc_name_literal type="text_oneline">Deitingen</pl_nc_name_literal>
+            <pl_nc_name_source>
+              <generic_contributor>
+                <_version>1</_version>
+                <_id>5</_id>
+                <_system_object_id>125082</_system_object_id>
+                <_standard>
+                  <de-DE>J. Paul Getty Trust</de-DE>
+                  <en-US>J. Paul Getty Trust</en-US>
+                </_standard>
+                <_objecttype>generic_contributor</_objecttype>
+                <_global_object_id>125082@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>be74de9a-aa23-4a95-97e8-69f0569f783e</_uuid>
+                <generic_contributor_uri type="string"/>
+                <generic_contributor_name type="text_l10n_oneline">
+                  <de-DE>J. Paul Getty Trust</de-DE>
+                  <en-US>J. Paul Getty Trust</en-US>
+                </generic_contributor_name>
+              </generic_contributor>
+            </pl_nc_name_source>
+          </pl__pl_nc_name>
+        </_nested__pl__pl_nc_name>
+        <_nested__pl__pl_nc_type>
+          <pl__pl_nc_type>
+            <pl_nc_type>
+              <pl_type>
+                <_version>3</_version>
+                <_id>1</_id>
+                <_system_object_id>123094</_system_object_id>
+                <_standard>
+                  <de-DE>Siedlung</de-DE>
+                  <en-US>inhabited places</en-US>
+                </_standard>
+                <_objecttype>pl_type</_objecttype>
+                <_global_object_id>123094@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+                <_uuid>d70ec8cc-04f8-4c72-85de-4b3beb5fbc6a</_uuid>
+                <pl_type_uuid type="text_oneline">8FED0B59-B1CA-44BB-B6AD-7DEBDC293924</pl_type_uuid>
+                <pl_type_name type="text_l10n_oneline">
+                  <de-DE>Siedlung</de-DE>
+                  <en-US>inhabited places</en-US>
+                </pl_type_name>
+                <custom name="pl_type_aat_plain" type="custom:base.custom-data-type-link.link">
+                  <string name="url">http://vocab.getty.edu/aat/300008347</string>
+                  <string name="tld">edu</string>
+                  <string name="hostname">vocab.getty.edu</string>
+                  <object name="_fulltext">
+                    <string name="string">http://vocab.getty.edu/aat/300008347</string>
+                  </object>
+                  <object name="_standard">
+                    <string name="text">http://vocab.getty.edu/aat/300008347</string>
+                  </object>
+                </custom>
+                <pl_type_aat_uri type="string">http://vocab.getty.edu/aat/300008347</pl_type_aat_uri>
+                <custom name="pl_type_aat" type="custom:base.custom-data-type-getty.getty">
+                  <string name="conceptURI">http://vocab.getty.edu/aat/300008347</string>
+                  <object name="_fulltext">
+                    <string name="string">inhabited places</string>
+                  </object>
+                  <object name="_standard">
+                    <string name="text">inhabited places</string>
+                  </object>
+                  <string name="conceptName">inhabited places</string>
+                  <string name="conceptFulltext">inhabited places</string>
+                </custom>
+              </pl_type>
+            </pl_nc_type>
+          </pl__pl_nc_type>
+        </_nested__pl__pl_nc_type>
+        <custom name="pl_nc_indentifier_wikidata" type="custom:base.custom-data-type-link.link">
+          <string name="url">https://www.wikidata.org/entity/Q66142</string>
+          <string name="tld">org</string>
+          <string name="hostname">www.wikidata.org</string>
+          <object name="_fulltext">
+            <string name="string">https://www.wikidata.org/entity/Q66142</string>
+          </object>
+          <object name="_standard">
+            <string name="text">https://www.wikidata.org/entity/Q66142</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_wikidata_source type="text_oneline">sari-rds (wd:Q66142)</pl_nc_indentifier_wikidata_source>
+        <custom name="pl_nc_indentifier_geonames" type="custom:base.custom-data-type-link.link">
+          <string name="url">https://www.geonames.org/2661036</string>
+          <string name="tld">org</string>
+          <string name="hostname">www.geonames.org</string>
+          <object name="_fulltext">
+            <string name="string">https://www.geonames.org/2661036</string>
+          </object>
+          <object name="_standard">
+            <string name="text">https://www.geonames.org/2661036</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_geonames_source type="text_oneline">wd:Q66142</pl_nc_indentifier_geonames_source>
+        <pl_nc_indentifier_swisstopo_source type="text_oneline"/>
+        <pl_nc_indentifier_gnd_source type="text_oneline"/>
+        <custom name="pl_nc_indentifier_viaf" type="custom:base.custom-data-type-link.link">
+          <string name="url">http://viaf.org/viaf/234309117</string>
+          <string name="tld">org</string>
+          <string name="hostname">viaf.org</string>
+          <object name="_fulltext">
+            <string name="string">http://viaf.org/viaf/234309117</string>
+          </object>
+          <object name="_standard">
+            <string name="text">http://viaf.org/viaf/234309117</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_viaf_source type="text_oneline">wd:Q66142</pl_nc_indentifier_viaf_source>
+        <custom name="pl_nc_indentifier_dbpedia" type="custom:base.custom-data-type-link.link">
+          <string name="url">http://dbpedia.org/resource/Deitingen</string>
+          <string name="tld">org</string>
+          <string name="hostname">dbpedia.org</string>
+          <object name="_fulltext">
+            <string name="string">http://dbpedia.org/resource/Deitingen</string>
+          </object>
+          <object name="_standard">
+            <string name="text">http://dbpedia.org/resource/Deitingen</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_dbpedia_source type="text_oneline">wd:Q66142</pl_nc_indentifier_dbpedia_source>
+        <custom name="pl_nc_indentifier_tgn" type="custom:base.custom-data-type-link.link">
+          <string name="url">http://vocab.getty.edu/page/tgn/8705471</string>
+          <string name="tld">edu</string>
+          <string name="hostname">vocab.getty.edu</string>
+          <object name="_fulltext">
+            <string name="string">http://vocab.getty.edu/page/tgn/8705471</string>
+          </object>
+          <object name="_standard">
+            <string name="text">http://vocab.getty.edu/page/tgn/8705471</string>
+          </object>
+        </custom>
+        <pl_nc_indentifier_tgn_source type="text_oneline"/>
+        <pl_name_display type="text_oneline">Deitingen</pl_name_display>
+        <pl_parent_string type="text_oneline">Solothurn, Schweiz, Europe, World</pl_parent_string>
+        <pl_uuid_parent type="string"/>
+      </pl>
+    </oeu_exist_destruct_place>
+    <oeu_exist_destruct_timespan type="daterange">
+      <from>2020-02-01</from>
+      <to>2020-02-01</to>
+    </oeu_exist_destruct_timespan>
+    <oeu_descr_description_scientificcomment type="text_l10n">
+      <de-DE>WISSENSCHAFTLICHER KOMMENTAR DE</de-DE>
+      <en-US>WISSENSCHAFTLICHER KOMMENTAR EN</en-US>
+    </oeu_descr_description_scientificcomment>
+    <oeu_descr_description_notes type="text">BEMERKUNG</oeu_descr_description_notes>
+    <_nested__oeu__oeu_descr_description>
+      <oeu__oeu_descr_description>
+        <oeu_descr_description_literal type="text_l10n">
+          <de-DE>DESCRIPTION DE</de-DE>
+          <en-US>DESCRIPTION EN</en-US>
+        </oeu_descr_description_literal>
+        <oeu_descr_description_source>
+          <generic_contributor>
+            <_version>1</_version>
+            <_id>4</_id>
+            <_system_object_id>111577</_system_object_id>
+            <_standard>
+              <de-DE>Isler Project</de-DE>
+              <en-US>Isler Project</en-US>
+            </_standard>
+            <_objecttype>generic_contributor</_objecttype>
+            <_global_object_id>111577@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>adeac04c-e608-41e3-84ea-daae26695b2a</_uuid>
+            <generic_contributor_uri type="string"/>
+            <generic_contributor_name type="text_l10n_oneline">
+              <de-DE>Isler Project</de-DE>
+              <en-US>Isler Project</en-US>
+            </generic_contributor_name>
+          </generic_contributor>
+        </oeu_descr_description_source>
+      </oeu__oeu_descr_description>
+    </_nested__oeu__oeu_descr_description>
+    <_nested__oeu__oeu_subst_shell>
+      <oeu__oeu_subst_shell>
+        <oeu_subst_shell_nr type="number">12</oeu_subst_shell_nr>
+        <oeu_subst_shell_type>
+          <typology_shell>
+            <_version>3</_version>
+            <_id>5</_id>
+            <_system_object_id>131572</_system_object_id>
+            <_standard>
+              <de-DE>Buckelschale</de-DE>
+              <en-US>Humpback shell</en-US>
+            </_standard>
+            <_objecttype>typology_shell</_objecttype>
+            <_global_object_id>131572@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>2f1f3516-4214-462b-b6a6-11ad3bce7ab2</_uuid>
+            <typology_shell_uri type="string"/>
+          </typology_shell>
+        </oeu_subst_shell_type>
+        <oeu_subst_shell_dimension_value type="string">20</oeu_subst_shell_dimension_value>
+        <oeu_subst_shell_dimension_dimension type="string">m</oeu_subst_shell_dimension_dimension>
+      </oeu__oeu_subst_shell>
+      <oeu__oeu_subst_shell>
+        <oeu_subst_shell_nr type="number">16</oeu_subst_shell_nr>
+        <oeu_subst_shell_type>
+          <typology_shell>
+            <_version>3</_version>
+            <_id>4</_id>
+            <_system_object_id>131571</_system_object_id>
+            <_standard>
+              <de-DE>HIB-Schale</de-DE>
+              <en-US>HIB-Shell</en-US>
+            </_standard>
+            <_objecttype>typology_shell</_objecttype>
+            <_global_object_id>131571@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
+            <_uuid>2f37c1b5-f2bb-4f02-9436-b07c279e50e9</_uuid>
+            <typology_shell_uri type="string"/>
+          </typology_shell>
+        </oeu_subst_shell_type>
+        <oeu_subst_shell_dimension_value type="string">24</oeu_subst_shell_dimension_value>
+        <oeu_subst_shell_dimension_dimension type="string">m</oeu_subst_shell_dimension_dimension>
+      </oeu__oeu_subst_shell>
+    </_nested__oeu__oeu_subst_shell>
+    <oeu_subst_surface_value type="integer.2">625.00</oeu_subst_surface_value>
+    <oeu_subst_surface_dimension type="string">m2</oeu_subst_surface_dimension>
+    <custom name="oeu_loc_georeference" type="custom:base.custom-data-type-georef.georef">
+      <object name="_fulltext">
+        <string name="string">Polygon</string>
+      </object>
+      <string name="conceptURI">{"type":"Feature","properties":{},"geometry":{"coordinates":[[[8.56418428552459,47.363278888539014],[8.56428354421908,47.36331427413549],[8.564320078343002,47.36328419641228],[8.564406276686299,47.36333019767616],[8.564440233628716,47.36331427416823],[8.564500311247173,47.363342582628235],[8.564523819868413,47.36331958201481],[8.564609919956041,47.3633549010317],[8.564630816528734,47.363342516082554],[8.564681751906505,47.36336020887916],[8.564679139816235,47.36336374744289],[8.564822803736973,47.36324343644398],[8.564679139816235,47.363188588699074],[8.564653019128599,47.36321335866188],[8.564525027626559,47.36316912658404],[8.564483234489444,47.36319212727042],[8.56430300158135,47.36313020232191],[8.564242923965935,47.36322397434918],[8.56418428552459,47.363278888539014]]],"type":"Polygon"}}</string>
+      <string name="conceptName">Polygon</string>
+      <object name="_standard">
+        <string name="text">Polygon</string>
+      </object>
+      <string name="conceptFulltext">Polygon</string>
+    </custom>
+    <oeu_loc_coordinates type="string"/>
+  </oeu>
+</objects>
