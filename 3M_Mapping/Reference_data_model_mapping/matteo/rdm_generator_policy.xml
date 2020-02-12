@@ -50,11 +50,11 @@
     <pattern>Projected_Place/{term}</pattern>
   </generator>
   <!-- Oeuvre -->
-  <generator name="OeuvreURI" prefix="sari" shorten="yes">
+  <generator name="OeuvreURI" prefix="sari" shorten="no">
     <pattern>Oeuvre/{term}</pattern>
   </generator>
-  <generator name="OeuvreNameURI" prefix="sari" shorten="yes">
-    <pattern>Oeuvre_Name/{term}</pattern>
+  <generator name="OeuvreAppellationURI" prefix="sari" shorten="yes">
+    <pattern>Oeuvre_Appellation/{term}</pattern>
   </generator>
   <generator name="Oeuvre_AlternativeURI" prefix="sari" shorten="yes">
     <pattern>Alternative_Name/{term}</pattern>
@@ -130,6 +130,9 @@
   </generator>
   <generator name="TimeSpanEndURI" prefix="sari" shorten="yes">
     <pattern>End_Date/{term}</pattern>
+  </generator>
+  <generator name="TimeSpan" prefix="sari" shorten="yes">
+    <pattern>Chronology/{term}</pattern>
   </generator>
   <!-- ID -->
   <generator name="IdURI" prefix="sari" shorten="yes">
