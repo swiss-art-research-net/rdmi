@@ -1,0 +1,137 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:crmpc="http://www.cidoc-crm.org/crmpc/"
+    xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+    xmlns:sari="https://www.resources.swissartresearch.net/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:crmdig="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"
+    xmlns:cpr="https://www.schema.swissartresearch.net/cpr/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:frbr="http://iflastandards.info/ns/fr/frbr/frbroo/">
+  <crm:E22_Man-Made_Object rdf:about="uuid:AA">
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="https://www.resources.swissartresearch.net/u7p1j67x16id"/>
+    </crm:P1_is_identified_by>
+    <crm:P13i_was_destroyed_by>
+      <crm:E6_Destruction rdf:about="uuid:AD">
+        <crm:P4_has_time-span>
+          <crm:E52_Time-Span rdf:about="uuid:AI">
+            <crm:P82b_end_of_the_end xml:lang="en">2020-02-01</crm:P82b_end_of_the_end>
+          </crm:E52_Time-Span>
+        </crm:P4_has_time-span>
+        <crm:P4_has_time-span>
+          <crm:E52_Time-Span rdf:about="uuid:AH">
+            <crm:P82a_begin_of_the_begin xml:lang="en">2020-02-01</crm:P82a_begin_of_the_begin>
+          </crm:E52_Time-Span>
+        </crm:P4_has_time-span>
+        <crm:P7_took_place_at>
+          <crm:E53_Place rdf:about="uuid:AE"/>
+        </crm:P7_took_place_at>
+      </crm:E6_Destruction>
+    </crm:P13i_was_destroyed_by>
+    <crm:P2_has_type>
+      <crm:E55_Type rdf:about="https://www.resources.swissartresearch.net/s18cxwfpm7vp">
+        <rdfs:label>Gebautes Werk Built Work</rdfs:label>
+      </crm:E55_Type>
+    </crm:P2_has_type>
+    <crm:P108i_was_produced_by>
+      <cpr:CC2_Construction rdf:about="uuid:AC">
+        <crm:P4_has_time-span>
+          <crm:E52_Time-Span rdf:about="uuid:AG">
+            <crm:P82b_end_of_the_end xml:lang="en">2001</crm:P82b_end_of_the_end>
+          </crm:E52_Time-Span>
+        </crm:P4_has_time-span>
+        <crm:P4_has_time-span>
+          <crm:E52_Time-Span rdf:about="uuid:AF">
+            <crm:P82a_begin_of_the_begin xml:lang="en">1999</crm:P82a_begin_of_the_begin>
+          </crm:E52_Time-Span>
+        </crm:P4_has_time-span>
+        <crm:P14_carried_out_by>
+          <crm:E39_Actor rdf:about="https://www.resources.swissartresearch.net/ublxnwugzmuc">
+            <crmpc:P01i_is_domain_of>
+              <crmpc:PC14_carried_out_by rdf:about="uuid:AJ">
+                <crmpc:P14.1_in_the_role_of>
+                  <crm:E39_Actor rdf:about="https://www.resources.swissartresearch.net/ubuqixsabtit">
+                    <rdfs:label xml:lang="de">Isler Project</rdfs:label>
+                    <rdfs:label xml:lang="de">Ingenieur</rdfs:label>
+                    <rdf:type rdf:resource="http://www.cidoc-crm.org/crmpc/E55_Type"/>
+                  </crm:E39_Actor>
+                </crmpc:P14.1_in_the_role_of>
+              </crmpc:PC14_carried_out_by>
+            </crmpc:P01i_is_domain_of>
+          </crm:E39_Actor>
+        </crm:P14_carried_out_by>
+        <crm:P7_took_place_at>
+          <crm:E53_Place rdf:about="https://www.resources.swissartresearch.net/Place/text%28%29">
+            <rdfs:label>9e1101f8-b27e-42b5-b568-d91d2899a808</rdfs:label>
+          </crm:E53_Place>
+        </crm:P7_took_place_at>
+      </cpr:CC2_Construction>
+    </crm:P108i_was_produced_by>
+    <crm:P53_has_former_or_current_location>
+      <crm:E53_Place rdf:about="uuid:AM">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="https://www.resources.swissartresearch.net/1iyq1ya3ap3jl">
+            <rdfs:label>Polygon</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P168_place_is_defined_by xml:lang="en">Polygon</crm:P168_place_is_defined_by>
+        <crm:P168_place_is_defined_by xml:lang="en">{"type":"Feature","properties":{},"geometry":{"coordinates":[[[8.56418428552459,47.363278888539014],[8.56428354421908,47.36331427413549],[8.564320078343002,47.36328419641228],[8.564406276686299,47.36333019767616],[8.564440233628716,47.36331427416823],[8.564500311247173,47.363342582628235],[8.564523819868413,47.36331958201481],[8.564609919956041,47.3633549010317],[8.564630816528734,47.363342516082554],[8.564681751906505,47.36336020887916],[8.564679139816235,47.36336374744289],[8.564822803736973,47.36324343644398],[8.564679139816235,47.363188588699074],[8.564653019128599,47.36321335866188],[8.564525027626559,47.36316912658404],[8.564483234489444,47.36319212727042],[8.56430300158135,47.36313020232191],[8.564242923965935,47.36322397434918],[8.56418428552459,47.363278888539014]]],"type":"Polygon"}}</crm:P168_place_is_defined_by>
+      </crm:E53_Place>
+    </crm:P53_has_former_or_current_location>
+    <crm:P1_is_identified_by>
+      <crm:E42_Identifier rdf:about="https://www.resources.swissartresearch.net/u82cx1upe910"/>
+    </crm:P1_is_identified_by>
+    <crm:P129i_is_subject_of>
+      <crm:E73_Information_Object rdf:about="uuid:AK">
+        <crm:P105_right_held_by rdf:resource="https://www.resources.swissartresearch.net/ubuqixsabtit"/>
+        <crm:P3_has_note xml:lang="en">DESCRIPTION EN</crm:P3_has_note>
+        <crm:P3_has_note xml:lang="de">DESCRIPTION DE</crm:P3_has_note>
+      </crm:E73_Information_Object>
+    </crm:P129i_is_subject_of>
+    <crm:P1_is_identified_by>
+      <crm:E41_Appellation rdf:about="https://www.resources.swissartresearch.net/Title/text%28%29">
+        <rdfs:label xml:lang="en">BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</rdfs:label>
+        <rdfs:label xml:lang="de">BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</rdfs:label>
+      </crm:E41_Appellation>
+    </crm:P1_is_identified_by>
+    <crm:P129i_is_subject_of>
+      <crm:E73_Information_Object rdf:about="uuid:AB">
+        <crm:P3_has_note xml:lang="en">WISSENSCHAFTLICHER KOMMENTAR EN</crm:P3_has_note>
+        <crm:P3_has_note xml:lang="de">WISSENSCHAFTLICHER KOMMENTAR DE</crm:P3_has_note>
+      </crm:E73_Information_Object>
+    </crm:P129i_is_subject_of>
+    <crm:P43_has_dimension>
+      <crm:E54_Dimension rdf:about="uuid:AL">
+        <crm:P90_has_value>625.00</crm:P90_has_value>
+        <crm:P2_has_type>
+          <crm:E58_Measurement_Unit rdf:about="https://www.resources.swissartresearch.net/urxy8p01bip2">
+            <rdfs:label>m2</rdfs:label>
+          </crm:E58_Measurement_Unit>
+        </crm:P2_has_type>
+      </crm:E54_Dimension>
+    </crm:P43_has_dimension>
+    <crm:P46_is_composed_of>
+      <crm:E22_Man-Made_Object rdf:about="uuid:AN">
+        <crm:P2_has_type>
+          <crm:E55_Type rdf:about="https://www.resources.swissartresearch.net/s50ntol4ixcx">
+            <rdfs:label>typology_shell</rdfs:label>
+          </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P1_is_identified_by>
+          <crm:E41_Appellation rdf:about="https://www.resources.swissartresearch.net/s4xe4ln75ap0">
+            <rdfs:label xml:lang="en">HIB-Shell</rdfs:label>
+            <rdfs:label xml:lang="en">Humpback shell</rdfs:label>
+          </crm:E41_Appellation>
+        </crm:P1_is_identified_by>
+        <crm:P1_is_identified_by>
+          <crm:E41_Appellation rdf:about="https://www.resources.swissartresearch.net/ubgc5vbrtquv">
+            <rdfs:label xml:lang="de">HIB-Schale</rdfs:label>
+            <rdfs:label xml:lang="de">Buckelschale</rdfs:label>
+          </crm:E41_Appellation>
+        </crm:P1_is_identified_by>
+      </crm:E22_Man-Made_Object>
+    </crm:P46_is_composed_of>
+  </crm:E22_Man-Made_Object>
+</rdf:RDF>
+
