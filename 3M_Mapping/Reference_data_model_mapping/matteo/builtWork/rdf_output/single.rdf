@@ -1,0 +1,136 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:frbr="http://www.cidoc-crm.org/frbr/"
+    xmlns:crmpc="http://www.cidoc-crm.org/cidoc-crm/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:crmdig="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"
+    xmlns:cpr="https://www.schema.swissartresearch.net/cpr/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sari="https://resource.swissartresearch.net/">
+  <crmpc:E22_Man-Made_Object rdf:about="urn:uuid:25b5d3e8-3fe7-47cc-b273-9e10c501cfaa">
+    <crmpc:P53_has_former_or_current_location>
+      <crmpc:E53_Place rdf:about="urn:uuid:7efe8f79-d9cb-4b3d-9c6c-df3d1946749c">
+        <crmpc:P2_has_type>
+          <crmpc:E55_Type rdf:about="https://resource.swissartresearch.net/Projected_Place/F5089827-5B22-306B-905B-007FD152C623">
+            <rdfs:label>Polygon</rdfs:label>
+          </crmpc:E55_Type>
+        </crmpc:P2_has_type>
+        <crmpc:P168_place_is_defined_by xml:lang="en">Polygon</crmpc:P168_place_is_defined_by>
+        <crmpc:P168_place_is_defined_by xml:lang="en">{"type":"Feature","properties":{},"geometry":{"coordinates":[[[8.56418428552459,47.363278888539014],[8.56428354421908,47.36331427413549],[8.564320078343002,47.36328419641228],[8.564406276686299,47.36333019767616],[8.564440233628716,47.36331427416823],[8.564500311247173,47.363342582628235],[8.564523819868413,47.36331958201481],[8.564609919956041,47.3633549010317],[8.564630816528734,47.363342516082554],[8.564681751906505,47.36336020887916],[8.564679139816235,47.36336374744289],[8.564822803736973,47.36324343644398],[8.564679139816235,47.363188588699074],[8.564653019128599,47.36321335866188],[8.564525027626559,47.36316912658404],[8.564483234489444,47.36319212727042],[8.56430300158135,47.36313020232191],[8.564242923965935,47.36322397434918],[8.56418428552459,47.363278888539014]]],"type":"Polygon"}}</crmpc:P168_place_is_defined_by>
+      </crmpc:E53_Place>
+    </crmpc:P53_has_former_or_current_location>
+    <crmpc:P1_is_identified_by>
+      <crmpc:E41_Appellation rdf:about="https://resource.swissartresearch.net/Title/text%28%29">
+        <rdfs:label xml:lang="en">BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</rdfs:label>
+        <rdfs:label xml:lang="de">BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</rdfs:label>
+      </crmpc:E41_Appellation>
+    </crmpc:P1_is_identified_by>
+    <crmpc:P129i_is_subject_of>
+      <crmpc:E73_Information_Object rdf:about="urn:uuid:e6fa3e04-721a-40a9-a235-160b82fdf7f6">
+        <crmpc:P105_right_held_by>
+          <crmpc:E39_Actor rdf:about="https://resource.swissartresearch.net/Actor/F5089827-5B22-306B-905B-007FD152C623">
+            <rdfs:label xml:lang="de">Isler Project</rdfs:label>
+            <rdfs:label xml:lang="de">Ingenieur</rdfs:label>
+            <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+          </crmpc:E39_Actor>
+        </crmpc:P105_right_held_by>
+        <crmpc:P3_has_note xml:lang="en">DESCRIPTION EN</crmpc:P3_has_note>
+        <crmpc:P3_has_note xml:lang="de">DESCRIPTION DE</crmpc:P3_has_note>
+      </crmpc:E73_Information_Object>
+    </crmpc:P129i_is_subject_of>
+    <crmpc:P1_is_identified_by>
+      <crmpc:E42_Identifier rdf:about="https://resource.swissartresearch.net/Id/FFAFD4A6-E57D-3474-8338-1F143481FD51"/>
+    </crmpc:P1_is_identified_by>
+    <crmpc:P1_is_identified_by>
+      <crmpc:E42_Identifier rdf:about="https://resource.swissartresearch.net/Id/87962196-B592-33B0-833F-85B4A5B088F1"/>
+    </crmpc:P1_is_identified_by>
+    <crmpc:P13i_was_destroyed_by>
+      <crmpc:E6_Destruction rdf:about="urn:uuid:138564fb-ac4b-430e-b735-efcbf32ef264">
+        <crmpc:P4_has_time-span>
+          <crmpc:E52_Time-Span rdf:about="urn:uuid:8027895f-b8af-4936-8aaf-42b16a4d6d7d">
+            <crmpc:P82b_end_of_the_end xml:lang="en">2020-02-01</crmpc:P82b_end_of_the_end>
+          </crmpc:E52_Time-Span>
+        </crmpc:P4_has_time-span>
+        <crmpc:P4_has_time-span>
+          <crmpc:E52_Time-Span rdf:about="urn:uuid:021bdfd9-25f9-4d3b-8b56-f86fde6cebfa">
+            <crmpc:P82a_begin_of_the_begin xml:lang="en">2020-02-01</crmpc:P82a_begin_of_the_begin>
+          </crmpc:E52_Time-Span>
+        </crmpc:P4_has_time-span>
+        <crmpc:P7_took_place_at>
+          <crmpc:E53_Place rdf:about="urn:uuid:cee2bd4c-7d60-4eed-bfb2-b1181ac20e00"/>
+        </crmpc:P7_took_place_at>
+      </crmpc:E6_Destruction>
+    </crmpc:P13i_was_destroyed_by>
+    <crmpc:P108i_was_produced_by>
+      <cpr:CC2_Construction rdf:about="urn:uuid:48559b87-f9f6-43af-9346-ad30bbcecba6">
+        <crmpc:P4_has_time-span>
+          <crmpc:E52_Time-Span rdf:about="urn:uuid:e1b5c44e-5b2f-4da5-a720-96b46c0f9fb2">
+            <crmpc:P82b_end_of_the_end xml:lang="en">2001</crmpc:P82b_end_of_the_end>
+          </crmpc:E52_Time-Span>
+        </crmpc:P4_has_time-span>
+        <crmpc:P4_has_time-span>
+          <crmpc:E52_Time-Span rdf:about="urn:uuid:23fb5bdd-3929-4cd7-9351-0dc452236957">
+            <crmpc:P82a_begin_of_the_begin xml:lang="en">1999</crmpc:P82a_begin_of_the_begin>
+          </crmpc:E52_Time-Span>
+        </crmpc:P4_has_time-span>
+        <crmpc:P14_carried_out_by>
+          <crmpc:E39_Actor rdf:about="https://resource.swissartresearch.net/Actor/0270C22D-9725-3DBB-99AE-FE6E16CBBC8E">
+            <crmpc:P01i_is_domain_of>
+              <crmpc:PC14_carried_out_by rdf:about="urn:uuid:ecfff7f1-4f94-48f4-a915-1a89df102605">
+                <crmpc:P14.1_in_the_role_of rdf:resource="https://resource.swissartresearch.net/Actor/F5089827-5B22-306B-905B-007FD152C623"/>
+              </crmpc:PC14_carried_out_by>
+            </crmpc:P01i_is_domain_of>
+          </crmpc:E39_Actor>
+        </crmpc:P14_carried_out_by>
+        <crmpc:P7_took_place_at>
+          <crmpc:E53_Place rdf:about="https://resource.swissartresearch.net/Place/text%28%29">
+            <rdfs:label>9e1101f8-b27e-42b5-b568-d91d2899a808</rdfs:label>
+          </crmpc:E53_Place>
+        </crmpc:P7_took_place_at>
+      </cpr:CC2_Construction>
+    </crmpc:P108i_was_produced_by>
+    <crmpc:P2_has_type>
+      <crmpc:E55_Type rdf:about="https://resource.swissartresearch.net/Final_Status/F5089827-5B22-306B-905B-007FD152C623">
+        <rdfs:label>Gebautes Werk Built Work</rdfs:label>
+      </crmpc:E55_Type>
+    </crmpc:P2_has_type>
+    <crmpc:P46_is_composed_of>
+      <crmpc:E22_Man-Made_Object rdf:about="urn:uuid:60653b81-db6b-4799-a87f-e1a582cbfbcf">
+        <crmpc:P2_has_type>
+          <crmpc:E55_Type rdf:about="https://resource.swissartresearch.net/Type/599DCCE2-998A-3B40-B1E3-8E8C6006CB0A">
+            <rdfs:label>typology_shell</rdfs:label>
+          </crmpc:E55_Type>
+        </crmpc:P2_has_type>
+        <crmpc:P1_is_identified_by>
+          <crmpc:E41_Appellation rdf:about="https://resource.swissartresearch.net/Appellation/9CFEFED8-FB94-37BA-A5CD-519D7D2BB5D7">
+            <rdfs:label xml:lang="en">HIB-Shell</rdfs:label>
+            <rdfs:label xml:lang="en">Humpback shell</rdfs:label>
+          </crmpc:E41_Appellation>
+        </crmpc:P1_is_identified_by>
+        <crmpc:P1_is_identified_by>
+          <crmpc:E41_Appellation rdf:about="https://resource.swissartresearch.net/Appellation/5F02F088-9301-3D7B-A1AC-972C11BF3E7D">
+            <rdfs:label xml:lang="de">HIB-Schale</rdfs:label>
+            <rdfs:label xml:lang="de">Buckelschale</rdfs:label>
+          </crmpc:E41_Appellation>
+        </crmpc:P1_is_identified_by>
+      </crmpc:E22_Man-Made_Object>
+    </crmpc:P46_is_composed_of>
+    <crmpc:P43_has_dimension>
+      <crmpc:E54_Dimension rdf:about="urn:uuid:cb2c8ecd-40f6-4bb6-8c03-33d3b6f278a0">
+        <crmpc:P90_has_value>625.00</crmpc:P90_has_value>
+        <crmpc:P2_has_type>
+          <crmpc:E58_Measurement_Unit rdf:about="https://resource.swissartresearch.net/Type/F5089827-5B22-306B-905B-007FD152C623">
+            <rdfs:label>m2</rdfs:label>
+          </crmpc:E58_Measurement_Unit>
+        </crmpc:P2_has_type>
+      </crmpc:E54_Dimension>
+    </crmpc:P43_has_dimension>
+    <crmpc:P129i_is_subject_of>
+      <crmpc:E73_Information_Object rdf:about="urn:uuid:605f5f5d-1324-488e-90e9-fb33b562aff7">
+        <crmpc:P3_has_note xml:lang="en">WISSENSCHAFTLICHER KOMMENTAR EN</crmpc:P3_has_note>
+        <crmpc:P3_has_note xml:lang="de">WISSENSCHAFTLICHER KOMMENTAR DE</crmpc:P3_has_note>
+      </crmpc:E73_Information_Object>
+    </crmpc:P129i_is_subject_of>
+  </crmpc:E22_Man-Made_Object>
+</rdf:RDF>
+

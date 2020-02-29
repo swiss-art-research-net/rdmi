@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<objects xmlns="https://schema.easydb.de/EASYDB/1.0/objects/" instance="gta_collections" uuid="8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5" base-schema="226" user-schema="78" timestamp="2020-02-12T16:08:52+01:00">
+<objects>
   <oeu>
     <_version>1</_version>
     <_id>22433</_id>
@@ -14,7 +14,7 @@
     <pool id="9">
       <de-DE>Test Datasets</de-DE>
     </pool>
-    <_exported_at>2020-02-12T16:08:51+01:00</_exported_at>
+    <_exported_at>2020-02-21T09:14:28+01:00</_exported_at>
     <_mask>oeu__all_fields</_mask>
     <_last_modified>2020-01-17T10:05:24Z</_last_modified>
     <_created>2020-01-17T10:05:24Z</_created>
@@ -218,6 +218,9 @@
         </oeu_nc_name_alt_used_timepan>
       </oeu__oeu_nc_name_alt>
     </_nested__oeu__oeu_nc_name_alt>
+    <oeu_descr_legacy_person type="text"/>
+    <oeu_descr_legacy_places type="text"/>
+    <oeu_descr_legacy_chronology type="text"/>
     <_nested__oeu__oeu_ar_creation>
       <oeu__oeu_ar_creation>
         <oeu_ar_creation_actor>
@@ -1254,25 +1257,6 @@
             </_nested__act__act_activity_occupation>
             <_nested__act__act_doc_bibliogr>
               <act__act_doc_bibliogr>
-                <act_doc_bibliogr_bi>
-                  <bi>
-                    <_version>2</_version>
-                    <_id>2</_id>
-                    <_system_object_id>117080</_system_object_id>
-                    <_standard>
-                      <de-DE>#117080</de-DE>
-                    </_standard>
-                    <_objecttype>bi</_objecttype>
-                    <_global_object_id>117080@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-                    <_uuid>fedb25dd-96b6-4759-b7c8-d24bebef51a9</_uuid>
-                    <pool id="4">
-                      <de-DE>gta Research Portal</de-DE>
-                      <en-US>gta Research Portal</en-US>
-                    </pool>
-                    <bi_uuid type="string"/>
-                    <bi_substance_pages type="number"/>
-                  </bi>
-                </act_doc_bibliogr_bi>
                 <act_doc_bibliogr_bi_page type="text_oneline">S. 263</act_doc_bibliogr_bi_page>
                 <act_doc_bibliogr_bi_note type="text_l10n_oneline">
                   <de-DE>Todesanzeige</de-DE>
@@ -1446,9 +1430,6 @@
         </oeu_ar_creation_actor_role>
       </oeu__oeu_ar_creation>
     </_nested__oeu__oeu_ar_creation>
-    <oeu_descr_legacy_person type="text"/>
-    <oeu_descr_legacy_places type="text"/>
-    <oeu_descr_legacy_chronology type="text"/>
     <oeu_exist_construct_place>
       <pl>
         <_version>6</_version>
@@ -1824,11 +1805,10 @@
         </oeu_descr_description_source>
       </oeu__oeu_descr_description>
     </_nested__oeu__oeu_descr_description>
-    <oeu_subst_surface_dimension type="string"/>
     <oeu_loc_coordinates type="string"/>
   </oeu>
   <oeu>
-    <_version>2</_version>
+    <_version>4</_version>
     <_id>22438</_id>
     <_system_object_id>149838</_system_object_id>
     <_standard>
@@ -1841,9 +1821,9 @@
     <pool id="9">
       <de-DE>Test Datasets</de-DE>
     </pool>
-    <_exported_at>2020-02-12T16:08:52+01:00</_exported_at>
+    <_exported_at>2020-02-21T09:14:28+01:00</_exported_at>
     <_mask>oeu__all_fields</_mask>
-    <_last_modified>2020-02-11T13:26:17Z</_last_modified>
+    <_last_modified>2020-02-13T13:46:33Z</_last_modified>
     <_created>2020-02-11T13:25:16Z</_created>
     <owner type="user">
       <id>1</id>
@@ -2300,6 +2280,9 @@
         </oeu_nc_identifier_usedby>
       </oeu__oeu_nc_identifier>
     </_nested__oeu__oeu_nc_identifier>
+    <oeu_descr_legacy_person type="text"/>
+    <oeu_descr_legacy_places type="text"/>
+    <oeu_descr_legacy_chronology type="text"/>
     <_nested__oeu__oeu_ar_creation>
       <oeu__oeu_ar_creation>
         <oeu_ar_creation_actor>
@@ -2528,9 +2511,6 @@
         </oeu_ar_creation_actor_role>
       </oeu__oeu_ar_creation>
     </_nested__oeu__oeu_ar_creation>
-    <oeu_descr_legacy_person type="text"/>
-    <oeu_descr_legacy_places type="text"/>
-    <oeu_descr_legacy_chronology type="text"/>
     <oeu_exist_construct_place>
       <pl>
         <_version>6</_version>
@@ -2899,50 +2879,6 @@
         </oeu_descr_description_source>
       </oeu__oeu_descr_description>
     </_nested__oeu__oeu_descr_description>
-    <_nested__oeu__oeu_subst_shell>
-      <oeu__oeu_subst_shell>
-        <oeu_subst_shell_nr type="number">12</oeu_subst_shell_nr>
-        <oeu_subst_shell_type>
-          <typology_shell>
-            <_version>3</_version>
-            <_id>5</_id>
-            <_system_object_id>131572</_system_object_id>
-            <_standard>
-              <de-DE>Buckelschale</de-DE>
-              <en-US>Humpback shell</en-US>
-            </_standard>
-            <_objecttype>typology_shell</_objecttype>
-            <_global_object_id>131572@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>2f1f3516-4214-462b-b6a6-11ad3bce7ab2</_uuid>
-            <typology_shell_uri type="string"/>
-          </typology_shell>
-        </oeu_subst_shell_type>
-        <oeu_subst_shell_dimension_value type="string">20</oeu_subst_shell_dimension_value>
-        <oeu_subst_shell_dimension_dimension type="string">m</oeu_subst_shell_dimension_dimension>
-      </oeu__oeu_subst_shell>
-      <oeu__oeu_subst_shell>
-        <oeu_subst_shell_nr type="number">16</oeu_subst_shell_nr>
-        <oeu_subst_shell_type>
-          <typology_shell>
-            <_version>3</_version>
-            <_id>4</_id>
-            <_system_object_id>131571</_system_object_id>
-            <_standard>
-              <de-DE>HIB-Schale</de-DE>
-              <en-US>HIB-Shell</en-US>
-            </_standard>
-            <_objecttype>typology_shell</_objecttype>
-            <_global_object_id>131571@8ef36ec7-a3a5-4d62-acd5-1ee839f35aa5</_global_object_id>
-            <_uuid>2f37c1b5-f2bb-4f02-9436-b07c279e50e9</_uuid>
-            <typology_shell_uri type="string"/>
-          </typology_shell>
-        </oeu_subst_shell_type>
-        <oeu_subst_shell_dimension_value type="string">24</oeu_subst_shell_dimension_value>
-        <oeu_subst_shell_dimension_dimension type="string">m</oeu_subst_shell_dimension_dimension>
-      </oeu__oeu_subst_shell>
-    </_nested__oeu__oeu_subst_shell>
-    <oeu_subst_surface_value type="integer.2">625.00</oeu_subst_surface_value>
-    <oeu_subst_surface_dimension type="string">m2</oeu_subst_surface_dimension>
     <custom name="oeu_loc_georeference" type="custom:base.custom-data-type-georef.georef">
       <object name="_fulltext">
         <string name="string">Polygon</string>

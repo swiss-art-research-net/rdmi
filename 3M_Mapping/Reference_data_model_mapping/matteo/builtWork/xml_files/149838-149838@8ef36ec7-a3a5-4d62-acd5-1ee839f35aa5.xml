@@ -37,7 +37,7 @@
     </_urls>
     <oeu_uuid type="string"/>
     <oeu_uuid_hierarchical type="string"/>
-    <oeu_nc_name type="text_l10n_oneline">
+    <oeu_nc_name type="text_l10n_oneline">  
       <de-DE>BUILT WORK SAMPLE TEST FOR MODELLING GERMAN</de-DE>
       <en-US>BUILT WORK SAMPLE TEST FOR MODELLING ENGLISH</en-US>
     </oeu_nc_name>
