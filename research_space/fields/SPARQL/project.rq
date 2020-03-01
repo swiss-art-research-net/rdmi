@@ -1,0 +1,37 @@
+#project --> appellation
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmarch: <http://www.tobedetermined.org/CRMarch/>
+PREFIX frbr: <http://www.cidoc-crm.org/frbr/>
+
+SELECT ?subject ?value ?label
+
+WHERE {
+
+  $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value .
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?value  rdfs:label ?label .
+
+}
+
+
+#project --> note
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmarch: <http://www.tobedetermined.org/CRMarch/>
+PREFIX frbr: <http://www.cidoc-crm.org/frbr/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?a ?value
+
+WHERE {
+  $subject    a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>;
+                <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?a.
+             ?a <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?value
+
+
+
+}
