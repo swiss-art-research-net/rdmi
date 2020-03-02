@@ -6,10 +6,16 @@
 #https://resource.swissartresearch.net/fieldDefinition/built_work_appellation
 
 #Insert
-INSERT {  $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-          ?subject  rdfs:label ?value}
-
-          WHERE {}
+INSERT {  
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+			 <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?appellation.
+  ?appellation a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+    rdfs:label $value.
+  
+} WHERE {
+      BIND(IRI(CONCAT(STR($subject),"/built-works-appellation/", MD5($value))
+	) as ?appellation)
+}
 
 #SELECT
 
