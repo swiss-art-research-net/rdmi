@@ -1,0 +1,113 @@
+
+
+
+<div style="clear:both;"></div>
+<div class="page">
+  <div class='page__body'>
+    <div style="margin-bottom:50px;">
+       	[[> :SimpleSearchInclude searchPlaceholder="Type at least 3 characters to search e.g. Basel, Münster" searchPattern="?subject a ?type. FILTER(?type in (crm:E22_Man-Made_Object,crm:E21_Person,crm:E78_Collection,crm:E53_Place)). ?subject rdfs:label ?label. ?label bds:search ?__token__ ; bds:minRelevance \"0.3\" ; bds:relevance ?sc ; bds:matchAllTerms \"true\" . BIND(STRLEN(?label) as ?length). BIND((IF(?type=crm:E21_Person,100,IF(?type=crm:E22_Man-Made_Object,50,IF(?type=crm:E53_Place,10,1))) * ?sc) as ?score) "]] 
+      [[!-- ?subject rdfs:label|skos:prefLabel|crm:P3_has_note|(crm:P1_is_identified_by/crm:P3_has_note) ?label  --]]
+    </div>
+   
+    <bs-tabs id="tabs" unmount-on-exit=true>
+      <bs-tab event-key="1" title="Persons">
+        <p><br /><i>Selected artists from the collection of the Institute for Art History.</i></p>
+        <semantic-carousel
+query="
+prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+SELECT distinct ?subject ?thumbnail ?label WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+$subject  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?thumbnail .
+$subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?id .
+  ?id a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+?id rdfs:label ?label
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:300px;">
+    <div style="width:280px;height:280px;margin: 50px auto;" class="text-center">
+      <img src="{{thumbnail.value}}" style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative; border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>'
+
+></semantic-carousel>   
+			</bs-tab>
+      
+      <bs-tab event-key="2" title="Places">
+                <p><br /><i>Selected places of artworks.</i></p>
+<semantic-carousel
+query="
+prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+SELECT distinct ?subject ?label WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>.
+?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+?value rdfs:label ?label.
+?value a  crm:E41_Appellation 
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:300px;">
+    <div style="width:280px;height:280px;margin: 50px auto;" class="text-center">
+      <img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Checkin01-512.png" style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative; border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>'
+
+></semantic-carousel>
+      </bs-tab>
+
+      <bs-tab event-key="3" title="Builtworks">
+                <p><br /><i>Selected builtworks.</i></p>
+      
+      <semantic-carousel
+query="
+prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+SELECT ?subject ?label WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+$subject  rdfs:label ?label .
+
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:280px;">
+    <div style="width:250px;height:300px;margin: 50px auto;" class="text-center">
+      <img src="http://www.iconarchive.com/download/i91910/icons8/windows-8/Travel-Us-Capitol.ico" style="max-height:230px; max-width:300px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative;  border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>
+'
+></semantic-carousel>
+      
+        </bs-tab>
+      
+     </bs-tabs>
+
+    <div style="margin-top:100px;"></div>
+  </div>
+</div>
+
+
+
+
