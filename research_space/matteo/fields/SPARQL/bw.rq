@@ -38,3 +38,45 @@ DELETE {
   ?appellation rdfs:label $value.
   ?appellation ?p ?o.
 }
+
+
+#https://resource.swissartresearch.net/fieldDefinition/built_work_type
+
+#Insert
+
+INSERT {  
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+			 <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+  ?type a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    rdfs:label $value.
+  
+} WHERE {
+      BIND(IRI(CONCAT(STR($subject),"/built-works-type/", MD5($value))
+	) as ?type)
+}
+
+#Select
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+SELECT   ?label ?value
+WHERE {
+ 
+ $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+          crm:P2_has_type ?type.
+ ?type a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+              rdfs:label ?value.
+
+}
+
+#Delete
+
+DELETE { 
+  $subject crm:P2_has_type ?type. 
+  ?type ?p ?o.
+} WHERE {
+  $subject crm:P2_has_type ?type. 
+  ?type rdfs:label $value.
+  ?type ?p ?o.
+}
