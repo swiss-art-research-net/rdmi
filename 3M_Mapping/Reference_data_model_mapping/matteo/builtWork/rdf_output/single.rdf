@@ -21,7 +21,8 @@
     </crm:P43_has_dimension>
     <crm:P2_has_type>
       <crm:E55_Type rdf:about="https://resource.swissartresearch.net/s18cxwfpm7vp">
-        <rdfs:label>Gebautes Werk Built Work</rdfs:label>
+        <rdfs:label xml:lang="en">Built Work</rdfs:label>
+        <rdfs:label xml:lang="de">Gebautes Werk</rdfs:label>
       </crm:E55_Type>
     </crm:P2_has_type>
     <crm:P108i_was_produced_by>
