@@ -22,7 +22,7 @@
                     		<arg name="id" type="xpath">_01_actor_nameclass_identifier_identifier/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">../_01_actor_nameclass_name/text()</arg>
+							<arg name="text" type="xpath">_01_actor_nameclass_name/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
@@ -30,10 +30,10 @@
 								<type>crm:E55_Type</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="xpath">../_01_actor_nameclass_gender/text()</arg>
+									<arg name="id" type="xpath">_01_actor_nameclass_gender/text()</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="xpath">../_01_actor_nameclass_gender/text()</arg>
+									<arg name="text" type="xpath">_01_actor_nameclass_gender/text()</arg>
 								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -128,7 +128,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="personAppellationUri">
 								<arg name="person_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
-								<arg name="appellation_id" type="">text()</arg>
+								<arg name="appellation_id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -236,7 +236,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_birthDate_p81a</relation>
+						<relation>_02_actor_existence_birthDate_p82a</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P98i_was_born</relationship>
@@ -258,7 +258,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_birthDate_p81a</source_node>
+					<source_node>_02_actor_existence_birthDate_p82a</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -273,7 +273,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_birthDate_p81b</relation>
+						<relation>_02_actor_existence_birthDate_p82b</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P98i_was_born</relationship>
@@ -295,7 +295,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_birthDate_p81b</source_node>
+					<source_node>_02_actor_existence_birthDate_p82b</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -348,7 +348,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_birthPlace_uri</relation>
+						<relation>_02_actor_existence_birthPlace_UUID</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P98i_was_born</relationship>
@@ -362,12 +362,13 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_birthPlace_uri</source_node>
+					<source_node>_02_actor_existence_birthPlace_UUID</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">text()</arg>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -375,12 +376,15 @@
 			</link>
 			
 			<!-- Person Birth Place URI TGN-->
-			<link> 
+			<!--<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_birthPlace_uri_IMPORT_TGNURI</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P98i_was_born</relationship>
 						<entity>
 							<type>crm:E67_Birth</type>
@@ -415,13 +419,13 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<!-- Person Death Date Start -->
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_deathDate_p81a</relation>
+						<relation>_02_actor_existence_deathDate_p82a</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P100i_died_in</relationship>
@@ -443,7 +447,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_deathDate_p81a</source_node>
+					<source_node>_02_actor_existence_deathDate_p82a</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -458,7 +462,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_deathDate_p81b</relation>
+						<relation>_02_actor_existence_deathDate_p82b</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P100i_died_in</relationship>
@@ -480,7 +484,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_deathDate_p81b</source_node>
+					<source_node>_02_actor_existence_deathDate_p82b</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -533,9 +537,12 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_deathPlace_uri</relation>
+						<relation>_02_actor_existence_deathPlace_UUID</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P100i_died_in</relationship>
 						<entity>
 							<type>crm:E69_Death</type>
@@ -547,12 +554,13 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_deathPlace_uri</source_node>
+					<source_node>_02_actor_existence_deathPlace_UUID</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">text()</arg>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -560,12 +568,15 @@
 			</link>
 			
 			<!-- Person Death Place URI TGN-->
-			<link> 
+			<!--<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_deathPlace_uri_IMPORT_TGNURI</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P100i_died_in</relationship>
 						<entity>
 							<type>crm:E69_Death</type>
@@ -600,7 +611,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 		
 			<!-- Short Biography (English) -->
 			<link>  
@@ -795,7 +806,7 @@
 								<relationship>crm:P16_used_specific_object</relationship>
 								<entity>
 									<type>crm:E73_Information_Object</type>
-									<instance_generator name="URIwithGndId">
+									<instance_generator name="URIorUUID">
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
@@ -866,7 +877,7 @@
 								<entity>
 									<type>crm:E73_Information_Object</type>
 									<instance_generator name="URIwithUlanId">
-										<arg name="id" type="xpath">text()</arg>
+										<arg name="text" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="xpath">text()</arg>
@@ -935,7 +946,7 @@
 								<relationship>crm:P16_used_specific_object</relationship>
 								<entity>
 									<type>crm:E73_Information_Object</type>
-									<instance_generator name="URIwithWikidataId">
+									<instance_generator name="URIorUUID">
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
@@ -1007,7 +1018,7 @@
 								<relationship>crm:P16_used_specific_object</relationship>
 								<entity>
 									<type>crm:E73_Information_Object</type>
-									<instance_generator name="URIwithWikidataId">
+									<instance_generator name="URIorUUID">
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
