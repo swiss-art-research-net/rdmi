@@ -1,8 +1,8 @@
-   <semantic-form new-subject-template='http://grp.swissartresearch.net/work/{{UUID}}'
-        post-action='redirect'
-        browser-persistence=true
-        form-id='example-1'
-       fields='[[fieldDefinitions
+<semantic-form new-subject-template='http://grp.swissartresearch.net/work/{{UUID}}'
+post-action='redirect'
+browser-persistence=true
+form-id='example-1'
+fields='[[fieldDefinitions
 https://resource.swissartresearch.net/fieldDefinition/Creator="https://resource.swissartresearch.net/fieldDefinition/Creator"
 https://resource.swissartresearch.net/fieldDefinition/built_works_appellation="https://resource.swissartresearch.net/fieldDefinition/built_works_appellation"
 https://resource.swissartresearch.net/fieldDefinition/Place="https://resource.swissartresearch.net/fieldDefinition/Place"
@@ -11,18 +11,18 @@ https://resource.swissartresearch.net/fieldDefinition/Start_Date="https://resour
 https://resource.swissartresearch.net/fieldDefinition/End_Date="https://resource.swissartresearch.net/fieldDefinition/End_Date"
 ]]'
 >
-        <bs-panel>
-          <h4>Create new Built Works Instance</h4>
-          <semantic-form-recover-notification></semantic-form-recover-notification>
-          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Creator"></semantic-form-text-input>
-          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_appellation"></semantic-form-text-input>
-          <semantic-form-tree-picker-input for="https://resource.swissartresearch.net/fieldDefinition/Place"></semantic-form-tree-picker-input>
-          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Participant"></semantic-form-text-input>
-          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Start_Date"></semantic-form-text-input>
-          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/End_Date"></semantic-form-text-input>
-          <semantic-form-errors></semantic-form-errors>
-          <!-- save and reset button for form -->
-          <button name="submit" class="btn btn-default">Save</button>
-          <button name="reset" class="btn btn-default">Reset</button>
-        </bs-panel>
-      </semantic-form>
+<bs-panel>
+<h4>Create new Built Works Instance</h4>
+<semantic-form-recover-notification></semantic-form-recover-notification>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Creator"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_appellation"></semantic-form-text-input>
+<semantic-form-tree-picker-input for="https://resource.swissartresearch.net/fieldDefinition/Place"></semantic-form-tree-picker-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Participant"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Start_Date"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/End_Date"></semantic-form-text-input>
+<semantic-form-errors></semantic-form-errors>
+<!-- save and reset button for form -->
+<button name="submit" class="btn btn-default">Save</button>
+<button name="reset" class="btn btn-default">Reset</button>
+</bs-panel>
+</semantic-form>

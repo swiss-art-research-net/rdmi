@@ -29,3 +29,12 @@ WHERE {$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
               rdfs:label ?value.}
 
 #Delete
+
+DELETE { 
+  $subject crm:P1_is_identified_by ?appellation. 
+  ?appellation ?p ?o.
+} WHERE {
+  $subject crm:P1_is_identified_by ?appellation. 
+  ?appellation rdfs:label $value.
+  ?appellation ?p ?o.
+}
