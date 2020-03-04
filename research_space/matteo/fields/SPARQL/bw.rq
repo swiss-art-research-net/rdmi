@@ -85,6 +85,22 @@ DELETE {
 
 #Insert
 
+
+INSERT {  
+
+ $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+            crm:P129i_is_subject_of ?io.
+ ?io    a    <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>;
+          crm:P2_has_type ?type;
+            crm:P3_has_note $value.
+  ?type    a    <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+          rdfs:label ?label_type
+  
+} WHERE {
+      BIND(IRI(CONCAT(STR($subject),"/built-works-description/", MD5($value))
+  ) as ?io)
+}
+
 #Select
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -102,5 +118,20 @@ WHERE {
         	rdfs:label ?label_type
 
 }
+
+#Select without E55_Type
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+SELECT   ?label ?value
+WHERE {
+ 
+ $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+            crm:P129i_is_subject_of ?io.
+ ?io    a    <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>;
+            crm:P3_has_note ?value.
+}
+
 
 #Delete
