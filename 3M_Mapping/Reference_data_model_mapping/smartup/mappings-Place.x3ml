@@ -25,7 +25,16 @@
                     		<arg name="id" type="xpath">plIdentifier_uuid/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">plIdentifier_nameGeneric/text()</arg>
+							<arg name="text" type="xpath">plIdentifier_nameEn/text()</arg>
+						</label_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">plIdentifier_nameDe/text()</arg>
+						</label_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">plIdentifier_nameFr/text()</arg>
+						</label_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">plIdentifier_nameIT/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
@@ -177,14 +186,16 @@
 					<source_node>plSubstance_tgn_lat</source_node>
 					<target_node>
 						<entity>
-						 <type>geo:wkt</type>
-                    	<instance_generator name="Literal">
-						    <arg name="text">text()</arg>
+						 <type>geo:wktLiteral</type>
+                    	<instance_generator name="typedLiteralGen">
+						    <arg name="text">concat("POINT(",text()," ",../plSubstance_tgn_long/text(),")")</arg>
+							
 						</instance_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
+			<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -206,7 +217,7 @@
 					</target_node>
 				</range>
 			</link>
-		
+		    -->
 			<link> 
 				<path>
 					<source_relation>
@@ -277,9 +288,6 @@
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../plParthood_parentString/text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -374,7 +382,7 @@
 								<entity>
 									<type>crm:E56_Language</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1295</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="constant">German</arg>
@@ -440,7 +448,7 @@
 								<entity>
 									<type>crm:E56_Language</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/ital1282</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="constant">Italian</arg>
@@ -504,7 +512,7 @@
 								<entity>
 									<type>crm:E56_Language</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1290</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="constant">French</arg>

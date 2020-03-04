@@ -17,9 +17,8 @@
 				<target_node>
                     <entity>
                         <type>crm:E74_Group</type>
-                    	<instance_generator name="URIwithTypeAndId">
-						    <arg name="type" type="constant">group</arg>
-                    		<arg name="id" type="xpath">_01_actor_nameclass_identifier_identifier/text()</arg>
+                    	<instance_generator name="URIorUUID">
+                    		<arg name="text" type="xpath">_01_actor_nameclass_identifier_identifierURI/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">_01_actor_nameclass_name_01_actor_local_type</arg>
@@ -50,22 +49,6 @@
 								</label_generator>
 							</entity>
 						</additional>
-						<!--
-						<additional>
-							<relationship>crm:P2_has_type</relationship>
-							<entity>
-								<type>crm:E55_Type</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="xpath">../_01_actor_nameclass_gender/text()</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="xpath">../_01_actor_nameclass_gender/text()</arg>
-								</label_generator>
-								
-							</entity>
-						</additional>
-						-->
 					</entity>
 				</target_node>
 			</domain>
@@ -144,7 +127,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="groupAppellationUri">
 								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
-								<arg name="appellation_id" type="">text()</arg>
+								<arg name="appellation_id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -202,6 +185,9 @@
 						<relation>_02_actor_existence_birthDate_p81a</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -239,6 +225,9 @@
 						<relation>_02_actor_existence_birthDate_p81b</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -276,6 +265,9 @@
 						<relation>_02_actor_existence_birthDate_uncertainty</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -314,6 +306,9 @@
 						<relation>_02_actor_existence_birthPlace_uri</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -344,6 +339,9 @@
 						<relation>_02_actor_existence_birthPlace_uri_IMPORT_TGNURI</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -387,6 +385,9 @@
 						<relation>_02_actor_existence_deathDate_p81a</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -424,6 +425,9 @@
 						<relation>_02_actor_existence_deathDate_p81b</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -461,6 +465,9 @@
 						<relation>_02_actor_existence_deathDate_uncertainty</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -499,6 +506,9 @@
 						<relation>_02_actor_existence_deathPlace_uri</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -529,6 +539,9 @@
 						<relation>_02_actor_existence_deathPlace_uri_IMPORT_TGNURI</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
