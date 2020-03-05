@@ -135,3 +135,83 @@ WHERE {
 
 
 #Delete
+
+
+#https://resource.swissartresearch.net/fieldDefinition/built_works_actor
+
+#Insert
+
+
+
+#Select
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX crmpc: <http://www.cidoc-crm.org/crmpc/>
+SELECT    ?id $value
+WHERE {
+ ?subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+          crm:P108i_was_produced_by ?construction.
+ ?construction  a <https://www.schema.swissartresearch.net/cpr/CC2_Construction>;
+                crm:P14_carried_out_by ?actor.
+  ?actor a <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+            crm:P1_is_identified_by ?id;
+            crm:P1_is_identified_by ?appellation.
+  ?appellation  a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+                rdfs:label $value.
+  ?id    a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
+  
+}
+
+#Delete
+
+#https://resource.swissartresearch.net/fieldDefinition/built_works_actor_uuid
+
+#Insert
+
+#Select
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX crmpc: <http://www.cidoc-crm.org/crmpc/>
+SELECT    ?id $value
+WHERE {
+ 
+ ?subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+          crm:P108i_was_produced_by ?construction.
+ ?construction  a <https://www.schema.swissartresearch.net/cpr/CC2_Construction>;
+                crm:P14_carried_out_by ?actor.
+  ?actor a <http://www.cidoc-crm.org/cidoc-crm/E39_Actor>;
+            crm:P1_is_identified_by $value.
+   $value    a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
+  
+}
+
+
+#Delete
+
+#https://resource.swissartresearch.net/fieldDefinition/built_works_construction_from
+
+#Insert
+
+#Select
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX crmpc: <http://www.cidoc-crm.org/crmpc/>
+SELECT    ?label $value
+WHERE {
+ 
+ $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+          crm:P108i_was_produced_by ?construction.
+ ?construction  a <https://www.schema.swissartresearch.net/cpr/CC2_Construction>;
+                crm:P4_has_time-span ?ts.
+ ?ts a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>;
+      crm:P82a_begin_of_the_begin $value.
+ 
+}
+
+#Delete
