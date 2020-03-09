@@ -659,7 +659,7 @@
 										<arg name="type" type="constant">biographical_note</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">Biographical Note</arg>
+										<arg name="text" type="constant">Short Biographical Note</arg>
 									</label_generator>
 								</entity>
 							</additional>
@@ -726,7 +726,142 @@
 										<arg name="type" type="constant">biographical_note</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">Biographical Note</arg>
+										<arg name="text" type="constant">Short Biographical Note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1295</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">German</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		    <!-- Full Biography (English) -->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_05_actor_documentation_fullbio_en</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_05_actor_documentation_fullbio_en</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="personBiography">
+								<arg name="lang" type="constant">english</arg>							
+								<arg name="person_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:has_value</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+										<arg name="language" type="constant">en</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055908</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">long_biography</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Long Biographical Note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">English</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Full Biography (German) -->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_05_actor_documentation_fullbio_de</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_05_actor_documentation_fullbio_de</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="personBiography">
+								<arg name="lang" type="constant">german</arg>							
+								<arg name="person_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:has_value</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+										<arg name="language" type="constant">de</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055908</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">long_biography</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Long Biographical Note</arg>
 									</label_generator>
 								</entity>
 							</additional>
@@ -755,6 +890,9 @@
 						<relation>_99_actor_nameclass_identifierGND_identifier</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P1_is_identified_by</relationship>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -807,7 +945,7 @@
 								<entity>
 									<type>crm:E73_Information_Object</type>
 									<instance_generator name="URIorUUID">
-										<arg name="id" type="xpath">text()</arg>
+										<arg name="text" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="xpath">text()</arg>
@@ -895,6 +1033,9 @@
 						<relation>_99_actor_nameclass_identifierWikidata_identifier</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P1_is_identified_by</relationship>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -947,7 +1088,7 @@
 								<entity>
 									<type>crm:E73_Information_Object</type>
 									<instance_generator name="URIorUUID">
-										<arg name="id" type="xpath">text()</arg>
+										<arg name="text" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="xpath">text()</arg>
@@ -966,6 +1107,9 @@
 						<relation>_99_actor_nameclass_identifierSIKART_identifier</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P1_is_identified_by</relationship>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -1019,7 +1163,7 @@
 								<entity>
 									<type>crm:E73_Information_Object</type>
 									<instance_generator name="URIorUUID">
-										<arg name="id" type="xpath">text()</arg>
+										<arg name="text" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="xpath">text()</arg>
@@ -1038,6 +1182,9 @@
 						<relation>_99_actor_nameclass_identifierWikipedia_identifier</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P1_is_identified_by</relationship>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -1090,8 +1237,8 @@
 								<relationship>crm:P16_used_specific_object</relationship>
 								<entity>
 									<type>crm:E73_Information_Object</type>
-									<instance_generator name="URIwithWikidataId">
-										<arg name="id" type="xpath">text()</arg>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="xpath">text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="xpath">text()</arg>
