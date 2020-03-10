@@ -36,7 +36,7 @@
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">plIdentifier_nameIT/text()</arg>
 						</label_generator>
-						<additional>
+						<!-- <additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
 								<type>crm:E55_Type</type>
@@ -44,11 +44,38 @@
 									<arg name="text" type="xpath">plIdentifier_type/text()</arg>
 								</instance_generator>
 							</entity>
-						</additional>
+						</additional> -->
 					</entity>
 				</target_node>
 			</domain>
 			
+			<!-- E55 identifier -->
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>plIdentifier_type</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>plIdentifier_type</source_node>
+					<target_node>
+						<entity>
+						 <type>crm:E55_Type</type>
+                    	<instance_generator name="URIorUUID">
+						    <arg name="text">text()</arg>
+						</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> 
+
 			
 			<!-- place Identifier (Internal) -->
 			<link> 
@@ -251,6 +278,9 @@
 						<relation>plParthood_currentPartOf</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>	
 						<relationship>crm:P89_falls_within</relationship>
 					</target_relation>
 				</path>
@@ -271,12 +301,16 @@
 				</range>
 			</link>
 			
+			<!-- to be changed in the future as relationships between TGN entities -->
 			<link> 
 				<path>
 					<source_relation>
 						<relation>plIdentifier_tgn_parentURI</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>	
 						<relationship>crm:P89_falls_within</relationship>
 					</target_relation>
 				</path>
@@ -291,7 +325,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> 
 			
 			
 		
@@ -561,6 +595,9 @@
 						<relation>plIdentifier_geonamesURI</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P1_is_identified_by</relationship>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -637,6 +674,9 @@
 						<relation>plIdentifier_tgn_uri</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P1_is_identified_by</relationship>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -646,7 +686,7 @@
 									<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</label_generator>
-									<additional>
+							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>

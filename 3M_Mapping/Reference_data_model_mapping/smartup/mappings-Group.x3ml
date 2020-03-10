@@ -332,12 +332,16 @@
 			</link>
 			
 			<!-- Group Formation Place URI -->
+
 			<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_birthPlace_uri</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -368,6 +372,9 @@
 						<relation>_02_actor_existence_birthPlace_uri_IMPORT_TGNURI</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -523,6 +530,9 @@
 						<relation>_02_actor_existence_deathPlace_uri</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -553,6 +563,9 @@
 						<relation>_02_actor_existence_deathPlace_uri_IMPORT_TGNURI</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
