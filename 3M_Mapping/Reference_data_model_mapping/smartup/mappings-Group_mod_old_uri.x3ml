@@ -226,13 +226,97 @@
 			</link>
 
 			
-			<!-- Group Formation Date Start -->
+			<!-- Group Formation Date Start P81a -->
 			<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_birthDate_p81a</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="URIwithTypeAndId_hashed">
+								<arg name="type" type="constant">formation_timespan</arg>
+								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P81a_end_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_p81a</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Group Formation Date End P81b-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_p81b</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="URIwithTypeAndId_hashed">
+								<arg name="type" type="constant">formation_timespan</arg>
+								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P81b_begin_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_p81b</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+						<!-- Group Formation Date Start P82a-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_p82a</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -252,7 +336,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_birthDate_p81a</source_node>
+					<source_node>_02_actor_existence_birthDate_p82a</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -263,13 +347,16 @@
 					</target_node>
 				</range>
 			</link>
-			<!-- Group Formation Date End -->
+			<!-- Group Formation Date End P82b-->
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_birthDate_p81b</relation>
+						<relation>_02_actor_existence_birthDate_p82b</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -289,7 +376,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>_02_actor_existence_birthDate_p81b</source_node>
+					<source_node>_02_actor_existence_birthDate_p82b</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -300,13 +387,19 @@
 					</target_node>
 				</range>
 			</link>
+
+
+
 			<!-- Group Formation Date Uncertainty -->
 			<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_birthDate_uncertainty</relation>
 					</source_relation>
-					<target_relation>
+					<target_relation>	
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P94i_was_formed_by</relationship>
 						<entity>
 							<type>crm:E66_Formation</type>
@@ -418,13 +511,16 @@
 				</range>
 			</link>
 			
-			<!-- Group Dissolution Date Start -->
+			<!-- Group Dissolution Date Start p81a -->
 			<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_deathDate_p81a</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -436,11 +532,11 @@
 						<entity>
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="URIwithTypeAndId_hashed">
-								<arg name="type" type="constant">formation_timespan</arg>
+								<arg name="type" type="constant">dissolution_timespan</arg>
 								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P82a_begin_of_the_begin</relationship>
+						<relationship>crm:P81a_end_of_the_begin</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -455,13 +551,18 @@
 					</target_node>
 				</range>
 			</link>
-			<!-- Group Dissolution Date End -->
+
+
+			<!-- Group Dissolution Date End p81b -->
 			<link> 
 				<path>
 					<source_relation>
 						<relation>_02_actor_existence_deathDate_p81b</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -473,11 +574,11 @@
 						<entity>
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="URIwithTypeAndId_hashed">
-								<arg name="type" type="constant">formation_timespan</arg>
+								<arg name="type" type="constant">dissolution_timespan</arg>
 								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P82b_end_of_the_end</relationship>
+						<relationship>crm:P81b_begin_of_the_end</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -492,13 +593,18 @@
 					</target_node>
 				</range>
 			</link>
-			<!-- Group Dissolution Date Uncertainty -->
+
+
+		<!-- Group Dissolution Date Start p82a -->
 			<link> 
 				<path>
 					<source_relation>
-						<relation>_02_actor_existence_deathDate_uncertainty</relation>
+						<relation>_02_actor_existence_deathDate_p82a</relation>
 					</source_relation>
 					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
 						<relationship>crm:P99i_was_dissolved_by</relationship>
 						<entity>
 							<type>crm:E68_Dissolution</type>
@@ -510,7 +616,91 @@
 						<entity>
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="URIwithTypeAndId_hashed">
-								<arg name="type" type="constant">formation_timespan</arg>
+								<arg name="type" type="constant">dissolution_timespan</arg>
+								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82a_begin_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_p82a</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- Group Dissolution Date End p82b -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_p82b</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="URIwithTypeAndId_hashed">
+								<arg name="type" type="constant">dissolution_timespan</arg>
+								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82b_end_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_p82b</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+
+			<!-- Group Dissolution Date Uncertainty -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_uncertainty</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="URIwithTypeAndId_hashed">
+								<arg name="type" type="constant">dissolution_timespan</arg>
 								<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
 							</instance_generator>
 						</entity>

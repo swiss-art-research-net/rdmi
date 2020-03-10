@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x3ml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" source_type="xpath" version="1.0" xsi:noNamespaceSchemaLocation="x3ml_v1.0.xsd">
+	<namespaces>
+		<namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+		<namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+		<namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
+		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
+		<namespace prefix="sari" uri="https://resource.swissartresearch.net/"/>
+		<namespace prefix="gnd" uri="https://d-nb.info/"/>
+		<namespace prefix="ulan" uri="http://vocab.getty.edu/page/ulan/"/>
+		<namespace prefix="wikidata" uri="https://www.wikidata.org/wiki/"/>
+	</namespaces>
+	<mappings>
+		<mapping>
+			<domain>
+				<source_node>//entry</source_node>
+				<target_node>
+					<if>
+                    <not>
+                        <if>
+                            <equals value="3E1F990A-2368-4B81-9B05-10675779E790">_01_actor_nameclass_identifier_identifier/text()</equals>
+                        </if>
+                    </not>
+                </if>
+                    <entity>
+                        <type>crm:E74_Group</type>
+                    	<instance_generator name="URIwithTypeAndId">
+						    <arg name="type" type="constant">group</arg>
+                    		<arg name="id" type="xpath">_01_actor_nameclass_identifier_identifier/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">_01_actor_nameclass_name_01_actor_local_type</arg>
+						</label_generator>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">institution</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Institution</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<!-- group Identifier (Internal) -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_01_actor_nameclass_identifier_identifier</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="groupIdentifierUri">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifierType/text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">../_01_actor_nameclass_identifier_identifierType/text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P37i_was_assigned_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_01_actor_nameclass_identifier_identifier</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E15_Identifier_Assignment</type>
+							<instance_generator name="groupIdentifierUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier_assignment</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P14_carried_out_by</relationship>
+								<entity>
+									<type>crm:E39_Actor</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">group</arg>
+										<arg name="id" type="xpath">../_01_actor_nameclass_identifier_identifierProvider/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!--Type-->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_01_actor_local_type</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="E40_LegalBody">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_01_actor_local_type</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300386361</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!--Type-->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_01_actor_local_type</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="E74_Group">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_01_actor_local_type</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300025948</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+
+			<!-- group name -->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_01_actor_nameclass_name</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_01_actor_nameclass_name</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="groupAppellationUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="appellation_id" type="">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+								<arg name="language" type="constant">en</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">preffered term</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Preffered term</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">language</arg>
+										<arg name="id" type="xpath">../_01_actor_nameclass_name_language/text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">../_01_actor_nameclass_name_language/text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						<!--<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">English</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional> -->
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			
+			<!-- Group Formation Date Start P81a -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_p81a</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupFormationTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P81a_end_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_p81a</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Group Formation Date End P81b-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_p81b</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupFormationTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P81b_begin_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_p81b</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+						<!-- Group Formation Date Start P82a-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_p82a</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupFormationTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82a_begin_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_p82a</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Group Formation Date End P82b-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_p82b</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupFormationTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82b_end_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_p82b</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+
+			<!-- Group Formation Date Uncertainty -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthDate_uncertainty</relation>
+					</source_relation>
+					<target_relation>	
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupFormationTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthDate_uncertainty</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Group Formation Place URI -->
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthPlace_uri</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthPlace_uri</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Group Formation Place URI TGN-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_birthPlace_uri_IMPORT_TGNURI</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
+						<relationship>crm:P94i_was_formed_by</relationship>
+						<entity>
+							<type>crm:E66_Formation</type>
+							<instance_generator name="groupFormation">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_birthPlace_uri_IMPORT_TGNURI</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">tgn</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">TGN</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Group Dissolution Date Start p81a -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_p81a</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupDissolutionTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P81a_end_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_p81a</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- Group Dissolution Date End p81b -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_p81b</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupDissolutionTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P81b_begin_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_p81b</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+		<!-- Group Dissolution Date Start p82a -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_p82a</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupDissolutionTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82a_begin_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_p82a</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- Group Dissolution Date End p82b -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_p82b</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupDissolutionTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82b_end_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_p82b</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+
+			<!-- Group Dissolution Date Uncertainty -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathDate_uncertainty</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="groupDissolutionTimespan">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathDate_uncertainty</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="typedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Group Dissolution Place URI -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathPlace_uri</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathPlace_uri</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Group Dissolution Place URI TGN-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_02_actor_existence_deathPlace_uri_IMPORT_TGNURI</relation>
+					</source_relation>
+					<target_relation>
+					<if>
+							<exists>text()</exists>
+					</if>
+						<relationship>crm:P99i_was_dissolved_by</relationship>
+						<entity>
+							<type>crm:E68_Dissolution</type>
+							<instance_generator name="groupDissolution">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_02_actor_existence_deathPlace_uri_IMPORT_TGNURI</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">tgn</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">TGN</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			
+			<!-- Short Biography (English) -->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_05_actor_documentation_shortbio_en</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_05_actor_documentation_shortbio_en</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="groupBiography">
+								<arg name="lang" type="constant">english</arg>							
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:has_value</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+										<arg name="language" type="constant">en</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055908</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">biographical_note</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Biographical Note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">English</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Short Biography (German) -->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_05_actor_documentation_shortbio_de</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_05_actor_documentation_shortbio_de</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="groupBiography">
+								<arg name="lang" type="constant">german</arg>							
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:has_value</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+										<arg name="language" type="constant">de</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055908</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">biographical_note</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Biographical Note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1295</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">German</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_05_actor_documentation_fullbio_en</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_05_actor_documentation_fullbio_en</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="personBiography">
+								<arg name="lang" type="constant">english</arg>							
+								<arg name="person_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:has_value</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+										<arg name="language" type="constant">en</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055908</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">long_biography</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Long Biographical Note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1293</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">English</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Full Biography (German) -->
+			<link>  
+				<path>
+					<source_relation>
+						<relation>_05_actor_documentation_fullbio_de</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_05_actor_documentation_fullbio_de</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="personBiography">
+								<arg name="lang" type="constant">german</arg>							
+								<arg name="person_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:has_value</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+										<arg name="language" type="constant">de</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055908</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">long_biography</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Long Biographical Note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P72_has_language</relationship>
+								<entity>
+									<type>crm:E56_Language</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://glottolog.org/resource/languoid/id/stan1295</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">German</arg>
+										<arg name="language" type="constant">en</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- group Identifier (from Deutsche National Bibliotek GND) -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_99_actor_nameclass_identifierGND_identifier</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="groupIdentifierUri">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">../_99_actor_nameclass_identifierGND_identifierType/text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">../_99_actor_nameclass_identifierGND_identifierType/text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P37i_was_assigned_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_99_actor_nameclass_identifierGND_identifier</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E15_Identifier_Assignment</type>
+							<instance_generator name="groupIdentifierUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier_assignment</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P14_carried_out_by</relationship>
+								<entity>
+									<type>crm:E39_Actor</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://d-nb.info/</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Katalog der Deutschen Nationalbibliothek</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P16_used_specific_object</relationship>
+								<entity>
+									<type>crm:E73_Information_Object</type>
+									<instance_generator name="URIwithGndId">
+										<arg name="id" type="xpath">text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- group Identifier (from Union List of Artist Names [ULAN]) -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_99_actor_nameclass_identifierULAN_identifier</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="groupIdentifierUri">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="xpath">../_99_actor_nameclass_identifierULAN_identifierType/text()</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="xpath">../_99_actor_nameclass_identifierULAN_identifierType/text()</arg>
+										</label_generator>
+									</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P37i_was_assigned_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_99_actor_nameclass_identifierULAN_identifier</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E15_Identifier_Assignment</type>
+							<instance_generator name="groupIdentifierUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier_assignment</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P14_carried_out_by</relationship>
+								<entity>
+									<type>crm:E39_Actor</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://www.getty.edu/research/tools/vocabularies/ulan</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Union List of Artist Names</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P16_used_specific_object</relationship>
+								<entity>
+									<type>crm:E73_Information_Object</type>
+									<instance_generator name="URIwithUlanId">
+										<arg name="id" type="xpath">text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- group Identifier (from WikiData) -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_99_actor_nameclass_identifierWikidata_identifier</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="groupIdentifierUri">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="xpath">../_99_actor_nameclass_identifierWikidata_identifierType/text()</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="xpath">../_99_actor_nameclass_identifierWikidata_identifierType/text()</arg>
+										</label_generator>
+									</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P37i_was_assigned_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_99_actor_nameclass_identifierWikidata_identifier</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E15_Identifier_Assignment</type>
+							<instance_generator name="groupIdentifierUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier_assignment</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P14_carried_out_by</relationship>
+								<entity>
+									<type>crm:E39_Actor</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">https://www.wikidata.org/wiki/</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Wikidata</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P16_used_specific_object</relationship>
+								<entity>
+									<type>crm:E73_Information_Object</type>
+									<instance_generator name="URIwithWikidataId">
+										<arg name="id" type="xpath">text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- group Identifier (from SIKART) -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_99_actor_nameclass_identifierSIKART_identifier</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="groupIdentifierUri">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="xpath">../_99_actor_nameclass_identifierSIKART_identifierType/text()</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="xpath">../_99_actor_nameclass_identifierSIKART_identifierType/text()</arg>
+										</label_generator>
+									</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P37i_was_assigned_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_99_actor_nameclass_identifierSIKART_identifier</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E15_Identifier_Assignment</type>
+							<instance_generator name="groupIdentifierUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier_assignment</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P14_carried_out_by</relationship>
+								<entity>
+									<type>crm:E39_Actor</type>
+									 <instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">group</arg>
+										<arg name="id" type="xpath">../_99_actor_nameclass_identifierSIKART_identifierProvider/text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Sikart</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P16_used_specific_object</relationship>
+								<entity>
+									<type>crm:E73_Information_Object</type>
+									<instance_generator name="URIwithWikidataId">
+										<arg name="id" type="xpath">text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- group Identifier (from Wikipedia) -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>_99_actor_nameclass_identifierWikipedia_identifier</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="groupIdentifierUri">								
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="xpath">../_99_actor_nameclass_identifierWikipedia_identifierType/text()</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="xpath">../_99_actor_nameclass_identifierWikipedia_identifierType/text()</arg>
+										</label_generator>
+									</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P37i_was_assigned_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>_99_actor_nameclass_identifierWikipedia_identifier</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E15_Identifier_Assignment</type>
+							<instance_generator name="groupIdentifierUri">
+								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
+								<arg name="identifier_type" type="constant">identifier_assignment</arg>
+								<arg name="identifier" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P14_carried_out_by</relationship>
+								<entity>
+									<type>crm:E39_Actor</type>
+									 <instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">group</arg>
+										<arg name="id" type="xpath">../_99_actor_nameclass_identifierWikipedia_identifierProvider/text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Wikipedia</arg>
+									</label_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P16_used_specific_object</relationship>
+								<entity>
+									<type>crm:E73_Information_Object</type>
+									<instance_generator name="URIwithWikidataId">
+										<arg name="id" type="xpath">text()</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">text()</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+	</mappings>
+</x3ml>

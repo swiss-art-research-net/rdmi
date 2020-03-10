@@ -71,9 +71,16 @@
 <generator name="groupDissolution" prefix="sari">
 	<pattern>group/{group_id}/dissolution</pattern>
 </generator>
+<generator name="groupDissolutionTimespan" prefix="sari">
+	<pattern>group/{group_id}/dissolution/timespan</pattern>
+</generator>
 
 <generator name="groupFormation" prefix="sari">
 	<pattern>group/{group_id}/formation</pattern>
+</generator>
+
+<generator name="groupFormationTimespan" prefix="sari">
+	<pattern>group/{group_id}/formation/timespan</pattern>
 </generator>
 
 <generator name="groupBiography" prefix="sari" uuid="true">
