@@ -29,7 +29,7 @@
 						<relation>_03_actor_social_nationalAffiliationUUID</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:is_current_or_former_member_of</relationship>
+						<relationship>crm:P107_is_current_or_former_member_of</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -45,21 +45,10 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">gender</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Gender</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">https://resources.swissartresearch.net/vocab/nationalities/8E635BEB-717C-41BE-A00F-7A0ACA33D506</arg>
+									<instance_generator name="URIwith2TypesAndId">
+										<arg name="type1" type="constant">vocab</arg>
+										<arg name="type2" type="constant">nationalities</arg>
+										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
