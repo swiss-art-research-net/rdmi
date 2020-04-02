@@ -1,0 +1,70 @@
+<ol class="page-breadcrumb">
+  <li>
+    <mp-link title="Home" url="/">Home</mp-link>
+  </li>
+</ol>
+
+<div class="page">
+  
+  <bs-tabs id='record-tabs' class='page__body-navtabs--borderless' default-active-key='summary' unmount-on-exit=true>
+    <bs-tab event-key='summary' title='Summary'>
+      <div data-flex-layout='row top-stretch'>
+
+        <div class='table-responsive'>
+          <table class='table'>
+            <thead role='header'>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+  
+  <mp-field-visualization
+subject='[[this]]'
+fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Species="http://www.metaphacts.com/fieldDefinition/Species"
+
+
+
+]]'
+template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
+></mp-field-visualization>
+            </table>
+          </div>
+      </div>
+    </bs-tab>
+   
+
+   <bs-tab event-key='authoring' title='Authoring'>
+      <div> 
+        <div data-flex-layout='row top-stretch'>
+
+        <div class='authoring_section'>
+        <div>
+        <semantic-form 
+          subject='[[this]]'
+          post-action='reload'
+          persistence='sparql'            
+         fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Species="http://www.metaphacts.com/fieldDefinition/Species"
+
+]]'
+>
+
+<semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/Species">
+</semantic-form-text-input>
+
+
+          
+
+          <button name='submit' class='btn btn-default'>Save</button>
+          <button name='reset' class='btn btn-default'>Reset</button>
+        </semantic-form>
+  </div>
+        </div>
+      </div>
+      </div>
+    </bs-tab>
+
+      </bs-tabs>  
+</div>

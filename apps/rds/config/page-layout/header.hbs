@@ -1,0 +1,89 @@
+<bs-navbar data-fluid="true" class="metaphacts-header-navbar" data-fixed-top="true" data-role="navigation">
+    <bs-navbar-header>
+	    <bs-navbar-brand>
+    	  <a href="/" style='display: flex; align-items: center;'><img src="/assets/no_auth/logo_sari-v1.png" style="height: 32px; margin-top: -4px; margin-right: 25px;"> 
+        {{deploymentTitle}}
+      </a>
+    </bs-navbar-brand>
+        </bs-navbar-brand>
+        <bs-navbar-toggle/>
+    </bs-navbar-header>
+
+
+  <bs-navbar-collapse>
+    <bs-nav data-pull-right="true">
+
+		<bs-nav-dropdown title="Browse Thesaurus" id="bg-nested-dropdown">
+			</bs-menu-item>
+				<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Start'>
+					<bs-menu-item>Browse Concepts and Translations</bs-menu-item>                                                      
+				</mp-resource-link-container>
+				<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Sources'>
+					<bs-menu-item>Browse Sources</bs-menu-item>                                                      
+				</mp-resource-link-container>  
+			</bs-nav-dropdown>
+
+
+		<bs-nav-dropdown title="Example Resources" id="bg-nested-dropdown">
+			<bs-menu-item header=true>AAT Concepts and Translations</bs-menu-item>
+				<mp-resource-link-container uri='http://vocab.getty.edu/aat/300265203'>
+				<bs-menu-item>Gastronomy (ID 300265203) </bs-menu-item>
+			</mp-resource-link-container>
+			<bs-menu-item header=true>Translation Sources</bs-menu-item>
+				<mp-resource-link-container uri='https://resources.swissartresearch.net/terminology/concept/300038788/fr/source/f632272e-d869-4392-805b-474e97245458'>
+				<bs-menu-item>Lespérance, (1996). Le Dictionnaire Du Mobilier.</bs-menu-item>
+			</mp-resource-link-container>
+		</bs-nav-dropdown>
+
+
+		<bs-nav-dropdown title="Workspace" id="bg-nested-dropdown">
+			<mp-has-permission permission='rds-voc:editors:workspace:link:use'>
+				<bs-menu-item header=true>Workspace</bs-menu-item>
+			</mp-has-permission>
+			<mp-has-permission permission='rds-voc:editors:workspace:link:use'>
+				<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/main'>
+					<bs-menu-item>Workspace for Editors and Translators</bs-menu-item>                                                      
+				</mp-resource-link-container> 
+			</mp-has-permission>
+			<bs-menu-item header=true>General Guidelines</bs-menu-item>
+			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Manual-1'>
+				<bs-menu-item>General Guidelines for Translators</bs-menu-item>                                                      
+			</mp-resource-link-container>  
+			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Manual-2'>
+				<bs-menu-item>General Guidelines for Editors</bs-menu-item>                                                      
+			</mp-resource-link-container>  
+			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Manual-1'>
+				<bs-menu-item>Specific Guidelines for Institution A</bs-menu-item>                                                      
+			</mp-resource-link-container>  
+			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Manual-2'>
+				<bs-menu-item>Specific Guidelines for Institution B</bs-menu-item>                                                      
+			</mp-resource-link-container>  
+
+			<bs-menu-item header=true>Further Information</bs-menu-item>
+			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Manual-1'>
+				<bs-menu-item>Training Material of the Getty Vocabulary Program</bs-menu-item>                                                      
+			</mp-resource-link-container>  
+		</bs-nav-dropdown>
+		
+      	<mp-nav-account></mp-nav-account>
+		<mp-has-permission permission='sparql:update'>
+			<mp-resource-link-container uri="http://www.metaphacts.com/resource/admin/">
+			<li title="System Settings">
+				<a><i class="fa fa-cog"></i></a>
+			</li>
+			</mp-resource-link-container>
+		</mp-has-permission>
+      
+		<mp-has-permission permission='sparql:update'>
+			<mp-resource-link-container uri="http://help.metaphacts.com/resource/Start">
+			<li title="Help">
+				<a><i class="fa fa-question-circle"></i></a>
+			</li>
+			</mp-resource-link-container>
+		</mp-has-permission>
+      	<mp-user-language-switch></mp-user-language-switch>
+    </bs-nav>
+  </bs-navbar-collapse>
+</bs-navbar>
+
+

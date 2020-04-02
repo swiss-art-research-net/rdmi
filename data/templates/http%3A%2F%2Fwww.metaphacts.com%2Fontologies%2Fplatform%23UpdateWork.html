@@ -1,0 +1,36 @@
+<div>
+        <semantic-form 
+          subject='[[this]]'
+          post-action='reload'
+          persistence='sparql'            
+         fields='[[fieldDefinitions
+https://resource.swissartresearch.net/fieldDefinition/Creator="https://resource.swissartresearch.net/fieldDefinition/Creator"
+http://resource.swissartresearch.net/fieldDefinition/Title="http://resource.swissartresearch.net/fieldDefinition/Title"
+https://resource.swissartresearch.net/fieldDefinition/Place="https://resource.swissartresearch.net/fieldDefinition/Place"
+https://resource.swissartresearch.net/fieldDefinition/Participant="https://resource.swissartresearch.net/fieldDefinition/Participant"
+https://resource.swissartresearch.net/fieldDefinition/Start_Date="https://resource.swissartresearch.net/fieldDefinition/Start_Date"
+https://resource.swissartresearch.net/fieldDefinition/End_Date="https://resource.swissartresearch.net/fieldDefinition/End_Date"
+]]'
+>
+
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Creator" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+          
+          <semantic-form-text-input for="http://resource.swissartresearch.net/fieldDefinition/Title" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+          
+           <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Place" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+             <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Participant" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/Start_Date" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+          <semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/End_Date" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+
+     
+          <!-- save and reset button for form -->
+          <button name='submit' class='btn btn-default'>Save</button>
+          <button name='reset' class='btn btn-default'>Reset</button>
+        </semantic-form>
+  </div>

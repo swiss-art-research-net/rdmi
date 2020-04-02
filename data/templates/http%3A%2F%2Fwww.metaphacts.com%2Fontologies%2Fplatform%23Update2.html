@@ -1,0 +1,91 @@
+  <div>
+  
+        <semantic-form 
+          subject='[[this]]'
+          post-action='reload'
+          persistence='sparql'            
+         fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Person_Name="http://www.metaphacts.com/fieldDefinition/Person_Name"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"
+http://www.metaphacts.com/fieldDefinition/Name="http://www.metaphacts.com/fieldDefinition/Name"
+http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type"
+http://www.metaphacts.com/fieldDefinition/Occupation="http://www.metaphacts.com/fieldDefinition/Occupation"
+http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternate_Name_Use_Period_earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternate_Name_Use_Period_earliest"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternate_Name_Use_Period_latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternate_Name_Use_Period_latest"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender"
+http://www.metaphacts.com/fieldDefinition/Person_Birth_Place="http://www.metaphacts.com/fieldDefinition/Person_Birth_Place"
+http://www.metaphacts.com/fieldDefinition/Birth_Place="http://www.metaphacts.com/fieldDefinition/Birth_Place"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest"
+http://www.metaphacts.com/fieldDefinition/Person_Death_Place="http://www.metaphacts.com/fieldDefinition/Person_Death_Place"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Biography="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Biography"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role"
+http://www.metaphacts.com/fieldDefinition/Identifier="http://www.metaphacts.com/fieldDefinition/Identifier"
+http://www.metaphacts.com/fieldDefinition/Biography_Language="http://www.metaphacts.com/fieldDefinition/Biography_Language"
+http://www.metaphacts.com/fieldDefinition/Short_Biography="http://www.metaphacts.com/fieldDefinition/Short_Biography"
+http://www.metaphacts.com/fieldDefinition/Long_Biography="http://www.metaphacts.com/fieldDefinition/Long_Biography"
+http://www.metaphacts.com/fieldDefinition/Person_GND_URL="http://www.metaphacts.com/fieldDefinition/Person_GND_URL"
+http://www.metaphacts.com/fieldDefinition/Person_Wikidata_URL="http://www.metaphacts.com/fieldDefinition/Person_Wikidata_URL"
+http://www.metaphacts.com/fieldDefinition/Person_ULAN_URL="http://www.metaphacts.com/fieldDefinition/Person_ULAN_URL"
+]]'
+>
+
+<semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/Person_Name" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+
+
+
+<mp-overlay-dialog title="Edit Identifiers" type="lightbox">
+  <mp-overlay-dialog-trigger><a>Edit Identifiers</a></mp-overlay-dialog-trigger>
+  <mp-overlay-dialog-content>
+    <div>
+     <semantic-form 
+          subject='[[this]]'
+          post-action='reload'
+          persistence='sparql'            
+         fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Identifier="http://www.metaphacts.com/fieldDefinition/Identifier"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
+http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"]]'>
+	<semantic-form-composite-input 
+               for="http://www.metaphacts.com/fieldDefinition/Identifier"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
+http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"
+]]'>
+
+ <semantic-form-text-input 
+     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source">
+ </semantic-form-text-input>
+  <semantic-form-text-input 
+     for="http://www.metaphacts.com/fieldDefinition/Identifier_Provider">
+ </semantic-form-text-input>
+</semantic-form-composite-input>   
+       <button name='submit' class='btn btn-default'>Save</button>
+       </semantic-form>
+    </div>
+          
+  </mp-overlay-dialog-content>
+</mp-overlay-dialog> 
+          
+<semantic-form-select-input 
+  for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender">
+</semantic-form-select-input>
+
+
+          <!-- save and reset button for form -->
+          <button name='submit' class='btn btn-default'>Save</button>
+          <button name='reset' class='btn btn-default'>Reset</button>
+        </semantic-form>
+  </div>

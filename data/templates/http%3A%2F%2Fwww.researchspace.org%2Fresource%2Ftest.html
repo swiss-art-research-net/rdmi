@@ -1,0 +1,19 @@
+<div style="clear:both;"></div>
+<div class="page">
+  <div class='page__body'>
+    <bs-tabs id="tabs" unmount-on-exit=true>
+      <bs-tab event-key="1" title="Example Documents">
+        [[>sariApp:RandomDocuments]]
+      </bs-tab>
+      <bs-tab event-key="2" title="Example Persons">
+         [[!-- workaround to load this page lazily i.e. otherwise carousel width is not refresh within tabs 						[[>sari:RandomPersons]] --]]
+        <mp-page-loader iri="[[resolvePrefix "sariApp:RandomPersons"]]"></mp-page-loader>
+      </bs-tab>
+     [[!-- <bs-tab event-key="3" title="Examples Resources">
+				[[>sariApp:ExampleResources]]
+  		</bs-tab> --]]
+     </bs-tabs>
+
+    <div style="margin-top:100px;"></div>
+  </div>
+</div>

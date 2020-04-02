@@ -1,0 +1,36 @@
+<semantic-form new-subject-template='http://grp.swissartresearch.net/work/{{UUID}}'
+post-action='redirect'
+browser-persistence=true
+form-id='example-1'
+fields='[[fieldDefinitions
+https://resource.swissartresearch.net/fieldDefinition/built_works_appellation="https://resource.swissartresearch.net/fieldDefinition/built_works_appellation"
+https://resource.swissartresearch.net/fieldDefinition/built_works_type="https://resource.swissartresearch.net/fieldDefinition/built_works_type"
+https://resource.swissartresearch.net/fieldDefinition/built_works_description="https://resource.swissartresearch.net/fieldDefinition/built_works_description"
+https://resource.swissartresearch.net/fieldDefinition/built_works_construction_from="https://resource.swissartresearch.net/fieldDefinition/built_works_construction_from"
+https://resource.swissartresearch.net/fieldDefinition/built_works_construction_to="https://resource.swissartresearch.net/fieldDefinition/built_works_construction_to"
+https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_from="https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_from"
+https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to="https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to"
+https://resource.swissartresearch.net/fieldDefinition/built_works_actor="https://resource.swissartresearch.net/fieldDefinition/built_works_actor"
+
+
+]]'
+>
+<bs-panel>
+<h4>Create new Built Works Instance</h4>
+<semantic-form-recover-notification></semantic-form-recover-notification>
+
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_appellation"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_type"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_description"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_construction_from"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_construction_to"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_from"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to"></semantic-form-text-input>
+<semantic-form-text-input for="https://resource.swissartresearch.net/fieldDefinition/built_works_actor"></semantic-form-text-input>
+
+<semantic-form-errors></semantic-form-errors>
+<!-- save and reset button for form -->
+<button name="submit" class="btn btn-default">Save</button>
+<button name="reset" class="btn btn-default">Reset</button>
+</bs-panel>
+</semantic-form>

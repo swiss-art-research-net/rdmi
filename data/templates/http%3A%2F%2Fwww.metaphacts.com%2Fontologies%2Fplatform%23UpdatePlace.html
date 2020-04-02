@@ -1,0 +1,78 @@
+<div>
+        <semantic-form 
+          subject='[[this]]'
+          post-action='reload'
+          persistence='sparql'            
+         fields='[[fieldDefinitions
+http://www.researchspace.org/instances/fields/Place_Name="http://www.researchspace.org/instances/fields/Place_Name"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"
+http://www.metaphacts.com/fieldDefinition/Name="http://www.metaphacts.com/fieldDefinition/Name"
+http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type"
+http://www.metaphacts.com/fieldDefinition/Occupation="http://www.metaphacts.com/fieldDefinition/Occupation"
+http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"
+http://www.metaphacts.com/fieldDefinition/Identifier="http://www.metaphacts.com/fieldDefinition/Identifier"
+http://www.researchspace.org/instances/fields/Paren_Place="http://www.researchspace.org/instances/fields/Paren_Place"
+http://www.metaphacts.com/fieldDefinition/Place_Type="http://www.metaphacts.com/fieldDefinition/Place_Type"
+http://www.researchspace.org/instances/fields/Has_Part="http://www.researchspace.org/instances/fields/Has_Part"
+http://www.researchspace.org/instances/fields/Coordinates="http://www.researchspace.org/instances/fields/Coordinates"
+]]'
+>
+
+<semantic-form-text-input for="http://www.researchspace.org/instances/fields/Place_Name" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+
+<semantic-form-composite-input 
+               for="http://www.metaphacts.com/fieldDefinition/Identifier"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
+http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"
+]]'>
+
+ <semantic-form-text-input 
+     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source">
+ </semantic-form-text-input>
+  <semantic-form-text-input 
+     for="http://www.metaphacts.com/fieldDefinition/Identifier_Provider">
+ </semantic-form-text-input>
+</semantic-form-composite-input>   
+          
+<semantic-form-composite-input 
+               for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type"
+]]'>
+
+ <semantic-form-text-input 
+     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value"
+ languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+ </semantic-form-text-input>
+ <semantic-form-autocomplete-input 
+     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type">
+ </semantic-form-autocomplete-input>
+
+</semantic-form-composite-input>
+         
+<semantic-form-text-input 
+  for="http://www.researchspace.org/instances/fields/Paren_Place">
+</semantic-form-text-input>
+<semantic-form-text-input
+  for="http://www.metaphacts.com/fieldDefinition/Place_Type">
+</semantic-form-text-input>
+<semantic-form-text-input 
+  for="http://www.researchspace.org/instances/fields/Has_Part">
+</semantic-form-text-input>
+<semantic-form-text-input 
+  for="http://www.researchspace.org/instances/fields/Coordinates">
+</semantic-form-text-input >
+          <!-- save and reset button for form -->
+          <button name='submit' class='btn btn-default'>Save</button>
+          <button name='reset' class='btn btn-default'>Reset</button>
+        </semantic-form>
+  </div>

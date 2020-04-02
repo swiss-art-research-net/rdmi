@@ -1,0 +1,27 @@
+<!-- to be include as partial block include -->
+
+<ol class="page-breadcrumb">
+  <li>
+    <mp-link title="Home" url="/">Home</mp-link>
+  </li>
+  <li class="active">[[title]]</li>
+</ol>
+
+
+<div class="page">
+  <div class="page__header">
+    <div class='page__header-thumbnail'>
+      [[#if headerIcon]]
+      	<h2><i class="[[headerIcon]]"></i></h2>
+      [[/if]]
+    </div>
+    <div class='page__header-body'>
+      <h2>[[title]]</h2>
+    </div>
+  </div>
+  <div class='page__body'> 
+    <br/><br/>
+		[[> @partial-block ]]
+    <br /><br />
+  </div>
+</div>

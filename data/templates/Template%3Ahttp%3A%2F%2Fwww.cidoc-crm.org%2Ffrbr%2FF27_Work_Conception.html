@@ -1,0 +1,68 @@
+<ol class="page-breadcrumb">
+  <li>
+    <mp-link title="Home" url="/">Home</mp-link>
+  </li>
+   <li class="active">
+    <mp-label iri='[[this]]'></mp-label>
+  </li>
+</ol>
+
+<div class="page">
+  
+  <bs-tabs id='record-tabs' class='page__body-navtabs--borderless' default-active-key='summary' unmount-on-exit=true>
+    <bs-tab event-key='summary' title='Summary'>
+      <div data-flex-layout='row top-stretch'>
+        	<!--
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+            <img src="http://www.iconarchive.com/download/i91910/icons8/windows-8/Travel-Us-Capitol.ico" style="max-height:150px; max-width:150px; margin: 10 auto;" class="img-rounded">   
+        	</div> -->
+        <div class='table-responsive'>
+          <table class='table'>
+            <thead role='header'>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+  
+  <mp-field-visualization
+subject='[[this]]'
+fields='[[fieldDefinitions
+
+https://resource.swissartresearch.net/fieldDefinition/Project_Name="https://resource.swissartresearch.net/fieldDefinition/Project_Name"
+https://resource.swissartresearch.net/fieldDefinition/Note="https://resource.swissartresearch.net/fieldDefinition/Note"
+
+]]'
+template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
+></mp-field-visualization>
+            </table>
+          </div>
+      </div>
+    </bs-tab>
+        <bs-tab event-key='authoring' title='Authoring'>
+      <div> 
+        <div data-flex-layout='row top-stretch'>
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+                [[> Platform:RecordImage]]
+        	</div>
+        <div class='authoring_section'>
+          [[> Platform:UpdateProject]]
+        </div>
+      </div>
+      </div>
+    </bs-tab>
+    
+    
+     <bs-tab event-key='new' title='New Project'>
+      <div> 
+
+        <div class='authoring_section2'>
+          [[> Platform:NewProject]]
+        </div>
+      </div>
+    
+    </bs-tab>
+    
+    
+      </bs-tabs>  
+</div>

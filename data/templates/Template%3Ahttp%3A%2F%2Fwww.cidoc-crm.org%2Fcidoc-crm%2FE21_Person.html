@@ -1,0 +1,158 @@
+<ol class="page-breadcrumb">
+  <li>
+    <mp-link title="Home" url="https://rds-dev.swissartresearch.net/resource/Demo">Home</mp-link>
+  </li>
+   <li class="active">
+    <mp-label iri='[[this]]'></mp-label>
+  </li>
+</ol>
+
+<div class="page">
+  
+  <bs-tabs id='record-tabs' class='page__body-navtabs--borderless' default-active-key='summary' unmount-on-exit=true>
+    <bs-tab event-key='summary' title='Summary'>
+      <div data-flex-layout='row top-stretch'>
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+                [[> Platform:RecordImage]]
+        	</div>
+        <div class='table-responsive'>
+          <table class='table'>
+            <thead role='header'>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+  
+  <mp-field-visualization
+subject='[[this]]'
+fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Person_Name-readOnly="http://www.metaphacts.com/fieldDefinition/Person_Name-readOnly"
+http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender"
+http://www.metaphacts.com/fieldDefinition/Occupation="http://www.metaphacts.com/fieldDefinition/Occupation"
+http://www.metaphacts.com/fieldDefinition/Person_Birth_Date="http://www.metaphacts.com/fieldDefinition/Person_Birth_Date"
+http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly="http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly"
+http://www.metaphacts.com/fieldDefinition/Death_Place-readOnly="http://www.metaphacts.com/fieldDefinition/Death_Place-readOnly"
+http://www.metaphacts.com/fieldDefinition/Person_Death_Date="http://www.metaphacts.com/fieldDefinition/Person_Death_Date"
+http://www.researchspace.org/instances/fields/Identifiers_readOnly="http://www.researchspace.org/instances/fields/Identifiers_readOnly"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role"
+http://www.researchspace.org/instances/fields/Floruit_read_only="http://www.researchspace.org/instances/fields/Floruit_read_only"
+http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly="http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly"
+http://www.metaphacts.com/fieldDefinition/Long_Biography-readOnly="http://www.metaphacts.com/fieldDefinition/Long_Biography-readOnly"
+]]'
+template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
+></mp-field-visualization>
+            </table>
+          </div>
+      </div>
+    </bs-tab>
+    [[#if (ask 'ASK{ ?? owl:sameAs ?getty_uri. SERVICE <http://vocab.getty.edu/sparql> { ?getty_uri <http://purl.org/dc/elements/1.1/identifier> ?value.  } }')]]
+    <bs-tab event-key='more-from-getty' title='More from Getty'>
+      <div> 
+        <div data-flex-layout='row top-stretch'>
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+                [[> Platform:RecordImage]]
+        	</div>
+        <div class='table-responsive'>
+          <table class='table'>
+            <thead role='header'>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            
+<mp-field-visualization
+subject='[[this]]'
+fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Artist_ID_Getty="http://www.metaphacts.com/fieldDefinition/Artist_ID_Getty"
+http://www.metaphacts.com/fieldDefinition/Preferred_Label_Getty="http://www.metaphacts.com/fieldDefinition/Preferred_Label_Getty"
+http://www.metaphacts.com/fieldDefinition/Short_Description_Getty="http://www.metaphacts.com/fieldDefinition/Short_Description_Getty"
+http://www.metaphacts.com/fieldDefinition/Spouse_of_Getty="http://www.metaphacts.com/fieldDefinition/Spouse_of_Getty"
+http://www.metaphacts.com/fieldDefinition/Birth_Place_getty_select="http://www.metaphacts.com/fieldDefinition/Birth_Place_getty_select"
+http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty="http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty"
+http://www.metaphacts.com/fieldDefinition/Death_Date_Getty="http://www.metaphacts.com/fieldDefinition/Death_Date_Getty"
+http://www.metaphacts.com/fieldDefinition/Main_Nationality_Getty="http://www.metaphacts.com/fieldDefinition/Main_Nationality_Getty"
+]]'
+template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
+></mp-field-visualization>
+            
+             </table>
+        </div>
+      </div>
+      </div>
+    </bs-tab>
+    [[/if]]
+    [[#if (ask 'ASK { ?? owl:sameAs ?wikidata_uri. SERVICE <https://query.wikidata.org/sparql> {  ?wikidata_uri rdfs:label ?value.  } }')]]
+    <bs-tab event-key='more-from-wikidata' title='More from Wikidata'>
+      <div> 
+        <div data-flex-layout='row top-stretch'>
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+                [[> Platform:RecordImage]]
+        	</div>
+        <div class='table-responsive'>
+          <table class='table'>
+            <thead role='header'>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            
+<mp-field-visualization
+subject='[[this]]'
+fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Preferred_Label_Wikidata="http://www.metaphacts.com/fieldDefinition/Preferred_Label_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Name_in_Native_Language_Wikidata="http://www.metaphacts.com/fieldDefinition/Name_in_Native_Language_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Occupation_Wikidata="http://www.metaphacts.com/fieldDefinition/Occupation_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Field_of_Work_Wikidata="http://www.metaphacts.com/fieldDefinition/Field_of_Work_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Description_Wikidata="http://www.metaphacts.com/fieldDefinition/Description_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata="http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Movement_Wikidata="http://www.metaphacts.com/fieldDefinition/Movement_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Spouse_Wikidata="http://www.metaphacts.com/fieldDefinition/Spouse_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Birth_Date_Wikidata="http://www.metaphacts.com/fieldDefinition/Birth_Date_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Place_of_Birth_Wikidata="http://www.metaphacts.com/fieldDefinition/Place_of_Birth_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Death_Date_Wikidata="http://www.metaphacts.com/fieldDefinition/Death_Date_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Place_of_Death_Wikidata="http://www.metaphacts.com/fieldDefinition/Place_of_Death_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Manner_of_Death_Wikidata="http://www.metaphacts.com/fieldDefinition/Manner_of_Death_Wikidata"
+http://www.metaphacts.com/fieldDefinition/Cause_of_Death_Wikidata="http://www.metaphacts.com/fieldDefinition/Cause_of_Death_Wikidata"
+
+]]'
+template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
+></mp-field-visualization>
+            
+             </table>
+        </div>
+      </div>
+      </div>
+    </bs-tab>
+    [[/if]]
+    <bs-tab event-key='authoring' title='Authoring'>
+      <div> 
+        <div data-flex-layout='row top-stretch'>
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+                [[> Platform:RecordImage]]
+        	</div>
+        <div class='authoring_section'>
+          [[> Platform:Update]]
+        </div>
+      </div>
+      </div>
+    </bs-tab>
+    
+    <bs-tab event-key='new' title='New Person'>
+      <div> 
+
+        <div class='authoring_section2'>
+          [[> Platform:New]]
+        </div>
+      </div>
+    
+    </bs-tab>
+    
+    
+      </bs-tabs>  
+</div>
