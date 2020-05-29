@@ -42,6 +42,7 @@
     </div>
   </div>
   </bs-tab>
+    [[#if (hasPermission "forms:ldp:*")]] 
   <bs-tab event-key='authoring' title='Update Built Works Instance'>
   <div>
     <div data-flex-layout='row top-stretch'>
@@ -55,7 +56,8 @@
     </div>
   </div>
   </bs-tab>
-  
+  [[/if]]
+  [[#if (hasPermission "forms:ldp:*")]] 
   <bs-tab event-key='new' title='New Built Works Instance'>
   <div>
     <div class='authoring_section2'>
@@ -63,5 +65,6 @@
     </div>
   </div>
   </bs-tab>
+    [[/if]]
   </bs-tabs>
 </div>

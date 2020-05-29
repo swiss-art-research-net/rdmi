@@ -129,6 +129,7 @@ template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
       </div>
     </bs-tab>
 -->
+    [[#if (hasPermission "forms:ldp:*")]] 
     <bs-tab event-key='authoring' title='Authoring'>
       <div> 
         <div data-flex-layout='row top-stretch'>
@@ -141,7 +142,8 @@ template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
       </div>
       </div>
     </bs-tab>
-    
+    [[/if]]
+    [[#if (hasPermission "forms:ldp:*")]] 
     <bs-tab event-key='new' title='New Place'>
       <div> 
 
@@ -151,7 +153,7 @@ template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
       </div>
     
     </bs-tab>
-    
+    [[/if]]
     
       </bs-tabs>  
 </div>
