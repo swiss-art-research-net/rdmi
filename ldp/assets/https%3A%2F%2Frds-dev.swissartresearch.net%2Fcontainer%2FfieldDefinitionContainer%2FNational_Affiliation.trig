@@ -1,0 +1,79 @@
+
+<https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation/context> {
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "National Affiliation"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-F01B9AB404BC0CC5C417BDD234610350;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-AB85033CACB07097FD9B9C5C440570FB;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-F5311F526154EDD0DB0B2914AE340B5B;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-529A713A89094258C663E5CE1B230E53 .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-F5311F526154EDD0DB0B2914AE340B5B a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of> ?value} WHERE {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P107i_is_current_or_former_member_of> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E74_Group>.
+  ?value rdfs:label ?label .
+  ?value <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+  ?type a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>.
+  ?type rdfs:label \"National Group\"
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-529A713A89094258C663E5CE1B230E53 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """prefix bds: <http://www.bigdata.com/rdf/search#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+
+SELECT ?value ?label WHERE {
+ ?value a skos:Concept.
+ ?value a ontolex:lexicalConcept.
+ ?value a crm:E55_Type. 
+ ?value skos:prefLabel ?label. 
+ ?label bds:search ?__token__.
+} LIMIT 10""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-AB85033CACB07097FD9B9C5C440570FB a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+
+SELECT ?value ?label WHERE {
+?subject crm:P107i_is_current_or_former_member_of ?group_iri.
+  ?group_iri rdf:type crm:E74_Group.
+  ?group_iri crm:P2_has_type ?value .
+  ?group_iri crm:P2_has_type ?national_group_iri.
+  ?national_group_iri rdfs:label \"National Group\". 
+  ?value a skos:Concept.
+  ?value a ontolex:lexicalConcept.
+  ?value a crm:E55_Type. 
+  ?value skos:prefLabel ?label.
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-F01B9AB404BC0CC5C417BDD234610350 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> 
+prefix sariperson: <http://grp.swissartresearch.net/person/>
+prefix sarigroup: <http://grp.swissartresearch.net/group/>
+INSERT { 
+  ?subject crm:P107i_is_current_or_former_member_of ?group_iri.
+  ?group_iri rdf:type crm:E74_Group.
+  ?group_iri crm:P2_has_type ?value .
+  ?group_iri crm:P2_has_type ?national_group_iri.
+  ?national_group_iri rdfs:label \"National Group\".
+} WHERE {
+      BIND(IRI(CONCAT(STR($subject),\"/type/\", MD5(\"National Group\"))) as ?national_group_iri).
+      BIND(IRI(CONCAT(STR(\"http://grp.swissartresearch.net/group/\"),STRAFTER(STR($subject),\"http://grp.swissartresearch.net/person/\"))) as ?group_iri).
+      
+      }""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:02.381Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

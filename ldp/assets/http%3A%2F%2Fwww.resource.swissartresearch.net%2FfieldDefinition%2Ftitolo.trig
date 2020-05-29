@@ -1,0 +1,37 @@
+
+<http://www.resource.swissartresearch.net/fieldDefinition/titolo/context> {
+  <http://www.resource.swissartresearch.net/fieldDefinition/titolo> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "titolo"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-BDA9500E31AA8D62B02C44C86CA2F6B2;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-D07B9A51E892732A853FEEAFB5BE3FC2 .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-D07B9A51E892732A853FEEAFB5BE3FC2 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmarch: <http://www.tobedetermined.org/CRMarch/>
+PREFIX frbr: <http://www.cidoc-crm.org/frbr/>
+
+SELECT  ?value ?label
+
+WHERE {
+
+  $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value .
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?value  rdfs:label ?label .
+
+}
+""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-BDA9500E31AA8D62B02C44C86CA2F6B2 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.resource.swissartresearch.net/fieldDefinition/titolo> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:01.132Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.resource.swissartresearch.net/fieldDefinition/titolo> .
+  
+  <http://www.resource.swissartresearch.net/fieldDefinition/titolo> a <http://www.w3.org/ns/ldp#Resource> .
+}

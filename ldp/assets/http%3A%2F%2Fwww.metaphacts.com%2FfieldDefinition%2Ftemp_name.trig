@@ -1,0 +1,32 @@
+
+<http://www.metaphacts.com/fieldDefinition/temp_name/context> {
+  <http://www.metaphacts.com/fieldDefinition/temp_name> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "temp_name";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-9BF2C6DAD6C68AD89566AE36E53C2949;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-796D48480351B11D3C9C27AF554CB33D .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-9BF2C6DAD6C68AD89566AE36E53C2949 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { $subject <http://local_schema/has_name> ?something. 
+		?something rdfs:label ?value} 
+WHERE {
+      BIND(IRI(CONCAT(STR($subject),\"/name/\", MD5($value))
+	) as ?something)
+}
+      """ .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-796D48480351B11D3C9C27AF554CB33D a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject a <http://local_schema/Person>.
+  ?subject <http://local_schema/has_name> ?value.
+  ?value rdfs:label ?label
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/temp_name> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.541Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/temp_name> .
+  
+  <http://www.metaphacts.com/fieldDefinition/temp_name> a <http://www.w3.org/ns/ldp#Resource> .
+}

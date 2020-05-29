@@ -1,0 +1,31 @@
+
+<http://www.metaphacts.com/fieldDefinition/Person_Death_Date/context> {
+  <http://www.metaphacts.com/fieldDefinition/Person_Death_Date> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Death Date";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-A339E1FDC43CBD57C014268AAF2923C7;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-51EF4BFE02928AA64F8ECC8BF359314A;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-51EF4BFE02928AA64F8ECC8BF359314A a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+
+WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P100i_died_in> ?death_timespan . 
+  ?death_timespan a <http://www.cidoc-crm.org/cidoc-crm/E69_Death>.
+  ?death_timespan <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?value.
+  ?value <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> ?label
+}limit 1""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-A339E1FDC43CBD57C014268AAF2923C7 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Death_Date> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:02.107Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Person_Death_Date> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Death_Date> a <http://www.w3.org/ns/ldp#Resource> .
+}

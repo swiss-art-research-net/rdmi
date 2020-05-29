@@ -1,0 +1,76 @@
+
+<https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type/context> {
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name Type"@undefined;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the alternative name of a person";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-C7A19C2E64A0EF10F51120F3326585BD;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-56C332990027FCDAF94C50C07FBC0740;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-90700EF88452B9063FD3258A1DBC8D2D;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-5011917401D0D2EC47B4EEE05F45C16D;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-717530B4195340ACE3711AB158C2FCA8 .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-90700EF88452B9063FD3258A1DBC8D2D a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE {  
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alternative_identifier . 
+  ?alternative_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?alternative_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://grp.swissartresearch.net/onto/type/alternate>.
+  ?alternative_identifier rdfs:label ?value
+} WHERE {
+?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alternative_identifier .
+      ?alternative_identifier rdfs:label ?value
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-C7A19C2E64A0EF10F51120F3326585BD a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value.
+  ?value rdfs:label ?label 
+} WHERE {
+      SERVICE <http://vocab.getty.edu/sparql> {
+      ?value <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
+  	FILTER (lang(?label)=\"en\") 
+		}
+      }
+""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-56C332990027FCDAF94C50C07FBC0740 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+?subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value.
+  ?value rdfs:label ?label 
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-5011917401D0D2EC47B4EEE05F45C16D a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  SERVICE <http://vocab.getty.edu/sparql> {
+  ?value <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300404653>.
+  ?value <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
+  FILTER (lang(?label)=\"en\").
+  }
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-717530B4195340ACE3711AB158C2FCA8 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  SERVICE <http://vocab.getty.edu/sparql> {
+  ?value <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300404653>.
+  ?value <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
+  FILTER (lang(?label)=\"en\").
+    FILTER REGEX(?label,str(?__token__))
+  }
+} LIMIT 10""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:00.525Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,36 @@
+
+<http://www.metaphacts.com/fieldDefinition/Species/context> {
+  <http://www.metaphacts.com/fieldDefinition/Species> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Species"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-81733D9D2EBB51018DF318F9DC0977E2;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-6B59938472BEED9DC898AA7E9865E0DA;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-674FC383B8CB30E0889CD6CD1161EEF6 .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-81733D9D2EBB51018DF318F9DC0977E2 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT {  
+  $subject <http://rs.tdwg.org/dwc/terms/scientificName> ?value.
+  ?value rdfs:label ?label.
+} 
+      WHERE {
+
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-674FC383B8CB30E0889CD6CD1161EEF6 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject <http://rs.tdwg.org/dwc/terms/scientificName> ?value.} WHERE {$subject <http://rs.tdwg.org/dwc/terms/scientificName> ?value.}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-6B59938472BEED9DC898AA7E9865E0DA a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject <http://rs.tdwg.org/dwc/terms/scientificName> ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Species> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:57.146Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Species> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Species> a <http://www.w3.org/ns/ldp#Resource> .
+}

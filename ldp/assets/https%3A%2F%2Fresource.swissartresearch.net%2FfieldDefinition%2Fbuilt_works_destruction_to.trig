@@ -1,0 +1,41 @@
+
+<https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to/context> {
+  <https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Built Work Destruction Date - Latest -"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-E546D71AAB0BA5A9B02C42DF15D61DAB;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-026BB744F93FAED51796A2422293C397;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-E546D71AAB0BA5A9B02C42DF15D61DAB a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-026BB744F93FAED51796A2422293C397 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX crmpc: <http://www.cidoc-crm.org/crmpc/>
+SELECT     ?label $value
+WHERE {
+ 
+ ?subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+         	crm:P13i_was_destroyed_by ?destruction.
+ ?destruction a <http://www.cidoc-crm.org/cidoc-crm/E6_Destruction>;
+            crm:P4_has_time-span ?ts.
+ ?ts a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>;
+            crm:P82b_end_of_the_end $value
+
+ 
+}""" .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:57.504Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/built_works_destruction_to>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

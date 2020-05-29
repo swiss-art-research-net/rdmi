@@ -1,0 +1,40 @@
+
+<http://www.metaphacts.com/fieldDefinition/Identifier/context> {
+  <http://www.metaphacts.com/fieldDefinition/Identifier> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@undefined;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the person";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-05780FCDF2E30BAD5645291CCB9683D9;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-70A5200B151519ACF32F3845006B310D;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-BF61059A99F1DA4CE60676BEA0871CA6;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-BF61059A99F1DA4CE60676BEA0871CA6 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value} WHERE {
+ ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
+  
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-70A5200B151519ACF32F3845006B310D a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-05780FCDF2E30BAD5645291CCB9683D9 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
+} WHERE { ?s ?p ?o }
+ """ .
+  
+  <http://www.metaphacts.com/fieldDefinition/Identifier> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:00.979Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Identifier> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Identifier> a <http://www.w3.org/ns/ldp#Resource> .
+}

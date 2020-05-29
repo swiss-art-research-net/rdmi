@@ -1,0 +1,41 @@
+
+<https://resource.swissartresearch.net/fieldDefinition/Start_Date/context> {
+  <https://resource.swissartresearch.net/fieldDefinition/Start_Date> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Start Date"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-FF7651610B6E2CA0734AF40CD83CF98C;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-74D061642968086B78EC0F495D5F8E7B;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-1F0F0C02294E3CFB7232F38E2142A7D7;
+    <http://www.metaphacts.com/ontology/fields#range> <http://www.cidoc-crm.org/cidoc-crm/E52_Time_Span> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-1F0F0C02294E3CFB7232F38E2142A7D7 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE { $subject ?predicate $value} WHERE {  $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+  ?production <http://www.cidoc-crm.org/cidoc-crm/P108_produced> $subject . 
+  ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?tim .
+  ?tim <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value.}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-74D061642968086B78EC0F495D5F8E7B a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value 
+
+WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+  ?production <http://www.cidoc-crm.org/cidoc-crm/P108_produced> $subject . 
+  ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?tim .
+  ?tim <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value.
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-FF7651610B6E2CA0734AF40CD83CF98C a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT {   $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
+  ?production <http://www.cidoc-crm.org/cidoc-crm/P108_produced> $subject . 
+  ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?tim .
+  ?tim <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value.} WHERE {}""" .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/Start_Date> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:02.722Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://resource.swissartresearch.net/fieldDefinition/Start_Date> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/Start_Date> a <http://www.w3.org/ns/ldp#Resource> .
+}

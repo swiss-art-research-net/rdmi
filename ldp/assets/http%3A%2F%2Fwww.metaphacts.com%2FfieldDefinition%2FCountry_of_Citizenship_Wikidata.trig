@@ -1,0 +1,31 @@
+
+<http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata/context> {
+  <http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Country of Citizenship [Wikidata]"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-55E6CB01822B1FD03229F8C2EB805553;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-CA9D473B6743D8317DD89DDCBF8C0BFB;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-55E6CB01822B1FD03229F8C2EB805553 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-CA9D473B6743D8317DD89DDCBF8C0BFB a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+WHERE{
+  ?subject owl:sameAs ?wikidata_uri.
+ SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidata_uri <http://www.wikidata.org/prop/direct/P27> ?citizen_uri.
+       ?citizen_uri rdfs:label ?value .
+    filter(lang(?value) =\"en\")
+  }
+}  """ .
+  
+  <http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:56.788Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Country_of_Citizenship_Wikidata> a <http://www.w3.org/ns/ldp#Resource> .
+}

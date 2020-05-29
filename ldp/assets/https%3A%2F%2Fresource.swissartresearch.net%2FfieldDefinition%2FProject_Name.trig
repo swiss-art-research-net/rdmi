@@ -1,0 +1,44 @@
+
+<https://resource.swissartresearch.net/fieldDefinition/Project_Name/context> {
+  <https://resource.swissartresearch.net/fieldDefinition/Project_Name> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Project Name"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-B790EF29E8E31F21C6B20263DA8F89BA;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-A8872E0D977572E180A639A3AB65748B;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-B90A2730375E52CACFD80839998971EA;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-A8872E0D977572E180A639A3AB65748B a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmarch: <http://www.tobedetermined.org/CRMarch/>
+PREFIX frbr: <http://www.cidoc-crm.org/frbr/>
+
+SELECT   ?value
+
+WHERE {
+  $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
+  $subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value_identify . 
+  
+  ?value_identify rdfs:label ?value.
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-B90A2730375E52CACFD80839998971EA a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE {  ?value_identify rdfs:label ?value.} WHERE {  $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
+  $subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value_identify . 
+  
+  ?value_identify rdfs:label ?value.}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-B790EF29E8E31F21C6B20263DA8F89BA a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT {  ?value_identify rdfs:label ?value} WHERE {  $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>.
+  $subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value_identify . }""" .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/Project_Name> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:53.897Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://resource.swissartresearch.net/fieldDefinition/Project_Name> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/Project_Name> a <http://www.w3.org/ns/ldp#Resource> .
+}

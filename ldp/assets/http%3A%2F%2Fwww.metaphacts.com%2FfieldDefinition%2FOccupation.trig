@@ -1,0 +1,52 @@
+
+<http://www.metaphacts.com/fieldDefinition/Occupation/context> {
+  <http://www.metaphacts.com/fieldDefinition/Occupation> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Occupation";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The description of occupation of the person";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-55AD47973BF0485BB3221DA1E93D7ADD;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-636917C6E9507637C5B7101DBECCA9C2;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-0364421C9A6546C8A02424C8A3ECCE86;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-0364421C9A6546C8A02424C8A3ECCE86 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE { ?occupationUri rdfs:label ?value}
+ where { 
+    $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://grp.swissartresearch.net/hadOccupation> ?occupationUri . 
+  ?occupationUri a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>.
+  ?occupationUri rdfs:label ?value .
+  ?occupationUri <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language .
+  ?language rdfs:label ?langlabel .
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-55AD47973BF0485BB3221DA1E93D7ADD a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { ?subject <http://grp.swissartresearch.net/hadOccupation> ?occupationUri .
+  ?occupationUri a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>. 
+  ?occupationUri <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> <http://vocab.getty.edu/aat/300388277> . 
+  <http://vocab.getty.edu/aat/300388277> rdfs:label \"English\".
+  ?occupationUri rdfs:label ?value .} 
+  WHERE{
+      BIND(IRI(CONCAT(STR($subject),\"/occupation/\", MD5(str($value)))) as ?occupationUri)}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-636917C6E9507637C5B7101DBECCA9C2 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label 
+WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://grp.swissartresearch.net/hadOccupation> ?occupv . 
+  ?occupv a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>.
+  ?occupv rdfs:label ?label1 .
+  ?occupv <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language .
+  ?language rdfs:label ?langlabel .
+  BIND(CONCAT(?label1 , \" (\",?langlabel,\") \") as ?value)
+}  """ .
+  
+  <http://www.metaphacts.com/fieldDefinition/Occupation> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:02.787Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Occupation> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Occupation> a <http://www.w3.org/ns/ldp#Resource> .
+}

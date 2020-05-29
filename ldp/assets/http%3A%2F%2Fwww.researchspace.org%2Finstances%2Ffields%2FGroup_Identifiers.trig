@@ -1,0 +1,30 @@
+
+<http://www.researchspace.org/instances/fields/Group_Identifiers/context> {
+  <http://www.researchspace.org/instances/fields/Group_Identifiers> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Group Identifiers"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-3A40054B632428D35E3CBDFA03B29A30;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-476CCE845B55A97A180276EBE981EC9F;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-476CCE845B55A97A180276EBE981EC9F a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P1_is_identified_by ?identifier_iri.
+      ?identifier_iri a crm:E42_Identifier.
+      ?identifier_iri crm:P37i_was_assigned_by ?identifier_assignment_iri.
+      ?identifier_assignment_iri a crm:E15_Identifier_Assignment.
+      ?identifier_assignment_iri crm:P16_used_specific_object ?value.
+      ?value a crm:E73_Information_Object.      
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-3A40054B632428D35E3CBDFA03B29A30 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Group_Identifiers> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:57.063Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Group_Identifiers> .
+  
+  <http://www.researchspace.org/instances/fields/Group_Identifiers> a <http://www.w3.org/ns/ldp#Resource> .
+}

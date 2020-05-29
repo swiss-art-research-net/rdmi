@@ -1,0 +1,44 @@
+
+<http://www.metaphacts.com/fieldDefinition/Birth_place_getty/context> {
+  <http://www.metaphacts.com/fieldDefinition/Birth_place_getty> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-C5FB5DBA0CD6CB2CB6CD8C94D4E493AA;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-41C747F8CE1B7F37AE82E41287600CDF .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-C5FB5DBA0CD6CB2CB6CD8C94D4E493AA a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_born> ?birth . 
+   ?birth a <http://www.cidoc-crm.org/cidoc-crm/E67_Birth>.
+  ?birth  <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value.
+  ?value rdfs:label ?label.
+}  WHERE{
+      SERVICE <http://vocab.getty.edu/sparql> {
+       ?value <http://vocab.getty.edu/ontology#term> ?label
+}
+  BIND(IRI(CONCAT(STR($subject),\"/birth/\", MD5(\"qqq\"))) as ?birth)} """ .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-41C747F8CE1B7F37AE82E41287600CDF a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """  SELECT ?value ?label WHERE {
+  ?subject owl:sameAs ?getty_uri.
+ SERVICE <http://vocab.getty.edu/sparql> {
+      ?getty_uri <http://xmlns.com/foaf/0.1/focus> ?agent_uri.
+      ?agent_uri <http://vocab.getty.edu/ontology#biography> ?bio_uri.
+      ?bio_uri a <http://vocab.getty.edu/ontology#Biography>.
+      ?bio_uri <http://schema.org/birthPlace> ?place_uri.
+      ?real_place_uri  <http://xmlns.com/foaf/0.1/focus> ?place_uri.
+      ?real_place_uri <http://www.w3.org/2008/05/skos-xl#prefLabel> ?value.
+       ?value <http://vocab.getty.edu/ontology#term> ?label.
+}
+  FILTER REGEX(STR(?label), \"?token\")
+} LIMIT 10""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_place_getty> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:55.950Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Birth_place_getty> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_place_getty> a <http://www.w3.org/ns/ldp#Resource> .
+}

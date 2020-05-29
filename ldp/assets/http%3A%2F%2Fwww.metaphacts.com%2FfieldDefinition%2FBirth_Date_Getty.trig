@@ -1,0 +1,34 @@
+
+<http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty/context> {
+  <http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Date [Getty]"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-F565EAE9217DB89B9C67A089572099A3;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-D26356F6E7692D0CAF1C90C1CE6C3493;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-F565EAE9217DB89B9C67A089572099A3 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-D26356F6E7692D0CAF1C90C1CE6C3493 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+WHERE{
+  ?subject owl:sameAs ?getty_uri.
+ SERVICE <http://vocab.getty.edu/sparql> {
+    ?getty_uri <http://xmlns.com/foaf/0.1/focus> ?biography_agent_uri.
+    ?biography_agent_uri  a <http://schema.org/Person>.
+    ?biography_agent_uri <http://vocab.getty.edu/ontology#biographyPreferred> ?biography_uri.
+    ?biography_uri a <http://vocab.getty.edu/ontology#Biography>.
+      ?biography_uri <http://vocab.getty.edu/ontology#estStart> ?value
+  }
+}
+""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.841Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Date_Getty> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,31 @@
+
+<http://www.researchspace.org/instances/fields/Coordinates/context> {
+  <http://www.researchspace.org/instances/fields/Coordinates> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Coordinates"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-7A0CE54A59A31683612DAA701DD1A531;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-B3CFCC6BC1F1C15BA477036CABDE5A21;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-DC32621BCA9AF3CF163FE25E349A815E;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-B3CFCC6BC1F1C15BA477036CABDE5A21 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P168_is_approximated_by ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-DC32621BCA9AF3CF163FE25E349A815E a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject crm:P168_is_approximated_by $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-7A0CE54A59A31683612DAA701DD1A531 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject crm:P168_is_approximated_bye $value} WHERE {}" .
+  
+  <http://www.researchspace.org/instances/fields/Coordinates> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:59.745Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Coordinates> .
+  
+  <http://www.researchspace.org/instances/fields/Coordinates> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,39 @@
+
+<http://www.metaphacts.com/fieldDefinition/Person_GND_URL/context> {
+  <http://www.metaphacts.com/fieldDefinition/Person_GND_URL> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "GND Identifier"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-F0D944A4CC049F71991DC5FE98F00181;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-95D40BA93350F7984BB1B9D96A175964;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-F62A156D9B7E34C8703972078893CB29;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-F62A156D9B7E34C8703972078893CB29 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-95D40BA93350F7984BB1B9D96A175964 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?id_iri.
+  ?id_iri a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
+  ?id_iri <http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by> ?provider.
+  ?provider a <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment>.
+  ?provider <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
+  ?value rdfs:label ?id_label .
+   ?id_iri <http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by> ?provider.
+  ?provider a <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment>.
+  ?provider <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <https://d-nb.info/>. 
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-F0D944A4CC049F71991DC5FE98F00181 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate ?value } WHERE { }" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_GND_URL> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:01.738Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Person_GND_URL> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_GND_URL> a <http://www.w3.org/ns/ldp#Resource> .
+}

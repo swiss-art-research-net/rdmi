@@ -1,0 +1,96 @@
+
+<https://rds.swissartresearch.net/container/ontodiaDiagramContainer/test/context> {
+  <https://rds.swissartresearch.net/container/ontodiaDiagramContainer/test> a <http://ontodia.org/schema/v1#Diagram>;
+    <http://ontodia.org/schema/v1#layoutData> _:genid-7f7c573a0a004deab21915a332c201a8-b0;
+    <http://www.w3.org/2000/01/rdf-schema#label> "test" .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b0 a <http://ontodia.org/schema/v1#Layout>;
+    <http://ontodia.org/schema/v1#hasElement> <http://ontodia.org/data/e_2053542b9578f5e4705138f0f07ae923>,
+      <http://ontodia.org/data/e_78f3b8f5a2e02400d22125a6f24fe4bc>, <http://ontodia.org/data/e_deba967bb63093001875bfe79457aa3b>,
+      <http://ontodia.org/data/e_d542a35da9e3842ca521a4d9567288ad>;
+    <http://ontodia.org/schema/v1#hasLink> <http://ontodia.org/data/l_446963f4cc8de17e72b93c28652e7e5a>,
+      <http://ontodia.org/data/l_78154b4f14baae437a30b7151026004e>, <http://ontodia.org/data/l_93797135f25ed60abd61ce97bf4edc3f> .
+  
+  <http://ontodia.org/data/e_2053542b9578f5e4705138f0f07ae923> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> _:genid-7f7c573a0a004deab21915a332c201a8-b1;
+    <http://ontodia.org/schema/v1#resource> <https://resource.swissartresearch.net/person/17F8CE44-1997-4EEA-9285-CDD9618939F5/death>;
+    <http://ontodia.org/schema/v1#size> _:genid-7f7c573a0a004deab21915a332c201a8-b2 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b1 <http://ontodia.org/schema/v1#xCoordValue>
+      -4.3480124815801764E2;
+    <http://ontodia.org/schema/v1#yCoordValue> 1.8258159339029976E2 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b2 <http://ontodia.org/schema/v1#height>
+      68;
+    <http://ontodia.org/schema/v1#width> 180 .
+  
+  <http://ontodia.org/data/e_78f3b8f5a2e02400d22125a6f24fe4bc> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#isExpanded> true;
+    <http://ontodia.org/schema/v1#position> _:genid-7f7c573a0a004deab21915a332c201a8-b3;
+    <http://ontodia.org/schema/v1#resource> <https://resource.swissartresearch.net/person/17F8CE44-1997-4EEA-9285-CDD9618939F5>;
+    <http://ontodia.org/schema/v1#size> _:genid-7f7c573a0a004deab21915a332c201a8-b4 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b3 <http://ontodia.org/schema/v1#xCoordValue>
+      -540;
+    <http://ontodia.org/schema/v1#yCoordValue> -145 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b4 <http://ontodia.org/schema/v1#height>
+      141;
+    <http://ontodia.org/schema/v1#width> 400 .
+  
+  <http://ontodia.org/data/e_deba967bb63093001875bfe79457aa3b> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#isExpanded> true;
+    <http://ontodia.org/schema/v1#position> _:genid-7f7c573a0a004deab21915a332c201a8-b5;
+    <http://ontodia.org/schema/v1#resource> <https://resource.swissartresearch.net/death_timespan/A1151457-418B-39DD-A640-1B2233F282AC>;
+    <http://ontodia.org/schema/v1#size> _:genid-7f7c573a0a004deab21915a332c201a8-b6 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b5 <http://ontodia.org/schema/v1#xCoordValue>
+      9.938180461638075E1;
+    <http://ontodia.org/schema/v1#yCoordValue> 1.3417506517780964E2 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b6 <http://ontodia.org/schema/v1#height>
+      163;
+    <http://ontodia.org/schema/v1#width> 400 .
+  
+  <http://ontodia.org/data/e_d542a35da9e3842ca521a4d9567288ad> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> _:genid-7f7c573a0a004deab21915a332c201a8-b7;
+    <http://ontodia.org/schema/v1#resource> <https://resource.swissartresearch.net/person/17F8CE44-1997-4EEA-9285-CDD9618939F5/appellation/93FB34FF-E48B-319F-973B-C1927A712CE1>;
+    <http://ontodia.org/schema/v1#size> _:genid-7f7c573a0a004deab21915a332c201a8-b8 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b7 <http://ontodia.org/schema/v1#xCoordValue>
+      255;
+    <http://ontodia.org/schema/v1#yCoordValue> -1.115E2 .
+  
+  _:genid-7f7c573a0a004deab21915a332c201a8-b8 <http://ontodia.org/schema/v1#height>
+      68;
+    <http://ontodia.org/schema/v1#width> 232 .
+  
+  <http://ontodia.org/data/l_446963f4cc8de17e72b93c28652e7e5a> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#property> <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_78f3b8f5a2e02400d22125a6f24fe4bc>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_d542a35da9e3842ca521a4d9567288ad>;
+    <http://ontodia.org/schema/v1#vertex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+  
+  <http://ontodia.org/data/l_78154b4f14baae437a30b7151026004e> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#property> <http://www.cidoc-crm.org/cidoc-crm/P100i_died_in>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_78f3b8f5a2e02400d22125a6f24fe4bc>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_2053542b9578f5e4705138f0f07ae923>;
+    <http://ontodia.org/schema/v1#vertex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+  
+  <http://ontodia.org/data/l_93797135f25ed60abd61ce97bf4edc3f> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#property> <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_2053542b9578f5e4705138f0f07ae923>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_deba967bb63093001875bfe79457aa3b>;
+    <http://ontodia.org/schema/v1#vertex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+  
+  <https://rds.swissartresearch.net/container/ontodiaDiagramContainer/test> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-05-27T21:53:00.861Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#ontodiaDiagramContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/ontodiaDiagramContainer/test> .
+  
+  <https://rds.swissartresearch.net/container/ontodiaDiagramContainer/test> a <http://www.w3.org/ns/ldp#Resource> .
+}

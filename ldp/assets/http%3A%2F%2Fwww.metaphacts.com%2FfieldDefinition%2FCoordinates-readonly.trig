@@ -1,0 +1,26 @@
+
+<http://www.metaphacts.com/fieldDefinition/Coordinates-readonly/context> {
+  <http://www.metaphacts.com/fieldDefinition/Coordinates-readonly> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Coordinates"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-972EAD7911455C0D3F8C61AEF389AE48;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-2F96C0991023D1CFDA0F0CFECE869BA6;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-2F96C0991023D1CFDA0F0CFECE869BA6 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P168_is_approximated_by ?value.
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-972EAD7911455C0D3F8C61AEF389AE48 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Coordinates-readonly> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:00.813Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Coordinates-readonly> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Coordinates-readonly> a <http://www.w3.org/ns/ldp#Resource> .
+}

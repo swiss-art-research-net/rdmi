@@ -1,0 +1,31 @@
+
+<http://www.metaphacts.com/fieldDefinition/Place_Type/context> {
+  <http://www.metaphacts.com/fieldDefinition/Place_Type> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Place Type"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-025DABFA7C549B512EBBE7B4E2B2D0F5;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-04EBC821F4B5B16801F96946E3C9A5B6;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-A4D63146F17E138E80352C3F7FF284E9;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-A4D63146F17E138E80352C3F7FF284E9 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "DELETE { $subject crm:P2_has_type $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-025DABFA7C549B512EBBE7B4E2B2D0F5 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject crm:P2_has_type $value} WHERE {}" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-04EBC821F4B5B16801F96946E3C9A5B6 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P2_has_type ?value.
+  ?value rdfs:label ?label.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place_Type> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:57.732Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Place_Type> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place_Type> a <http://www.w3.org/ns/ldp#Resource> .
+}

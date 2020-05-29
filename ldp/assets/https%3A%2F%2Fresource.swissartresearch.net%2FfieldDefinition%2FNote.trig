@@ -1,0 +1,40 @@
+
+<https://resource.swissartresearch.net/fieldDefinition/Note/context> {
+  <https://resource.swissartresearch.net/fieldDefinition/Note> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Note"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-22B4F4D29D7F922408F8EF990C7CB91D;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-F3BD049276600C667116CC9FC6682DE9;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-26D23AC986D40F187C9969F7EBACEA75 .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-26D23AC986D40F187C9969F7EBACEA75 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE { ?a        <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?value} WHERE { $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>;
+             <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?a.
+  
+  ?a        <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?value}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-F3BD049276600C667116CC9FC6682DE9 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value 
+
+WHERE {
+  $subject a <http://www.cidoc-crm.org/frbr/F27_Work_Conception>;
+             <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?a.
+  
+  ?a        <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?value
+   
+  
+ 
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-22B4F4D29D7F922408F8EF990C7CB91D a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/Note> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:57.368Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://resource.swissartresearch.net/fieldDefinition/Note> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/Note> a <http://www.w3.org/ns/ldp#Resource> .
+}

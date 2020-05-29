@@ -1,0 +1,44 @@
+
+<http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name/context> {
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative name for the person";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-2DC2F0F7E76B7F06EEF6F465DC260CB5;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-5396A3A4D1B0EAFD3F689C42E173FF71;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-D9A794345B352FF729A96EBCBF9C1B40;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-5396A3A4D1B0EAFD3F689C42E173FF71 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?start ?end
+WHERE {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value .
+  ?value  a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?value rdfs:label ?name_label
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-2DC2F0F7E76B7F06EEF6F465DC260CB5 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  
+} WHERE {?s ?p ?o }""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-D9A794345B352FF729A96EBCBF9C1B40 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE {  
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alternative_identifier.
+   ?alternative_identifier rdfs:label ?value.
+} WHERE {
+?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alternative_identifier .
+      ?alternative_identifier rdfs:label ?value
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:48:00.102Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name> a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,54 @@
+
+<https://resource.swissartresearch.net/fieldDefinition/built_works_type/context> {
+  <https://resource.swissartresearch.net/fieldDefinition/built_works_type> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Built Work Type"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-56A73A8667DC2B669A415C1B8701F3DF;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-8A552BBB62E4766AA086E66C9FE21136;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-0994DAA8EBCC7FC2283433F6F8B19092 .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-56A73A8667DC2B669A415C1B8701F3DF a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT {  
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+			 <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+  ?type a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+    rdfs:label $value.
+  
+} WHERE {
+      BIND(IRI(CONCAT(STR($subject),\"/built-works-type/\", MD5($value))
+	) as ?type)
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-8A552BBB62E4766AA086E66C9FE21136 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+SELECT   ?label ?value
+WHERE {
+ 
+ $subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>;
+          crm:P2_has_type ?type.
+ ?type a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+              rdfs:label ?value.
+
+}""" .
+  
+  _:genid-92b9f7f71a364728a0ea7cf49ac91887-0994DAA8EBCC7FC2283433F6F8B19092 a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE { 
+  $subject crm:P2_has_type ?type. 
+  ?type ?p ?o.
+} WHERE {
+  $subject crm:P2_has_type ?type. 
+  ?type rdfs:label $value.
+  ?type ?p ?o.
+}""" .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/built_works_type> a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:59.963Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://resource.swissartresearch.net/fieldDefinition/built_works_type> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/built_works_type> a <http://www.w3.org/ns/ldp#Resource> .
+}
