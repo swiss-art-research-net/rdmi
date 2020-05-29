@@ -39,9 +39,38 @@ tuple-template= '
 </div>'
 
 ></semantic-carousel>   
-			</bs-tab>
+        </bs-tab>
+<bs-tab event-key="2" title="Groups">
+                <p><br /><i>Selected Groups</i></p>
       
-      <bs-tab event-key="2" title="Places">
+      <semantic-carousel
+query="
+SELECT distinct ?subject  ?label WHERE {
+  ?subject a <http://www.cidoc-crm.org/cidoc-crm/E74_Group>;
+	 <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?appellation .
+  ?appellation a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+             rdfs:label ?label       
+} limit 40"
+options='{ "infinite": true, "slidesToShow": 3 }'
+tuple-template= '
+<div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
+  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
+  <div class="panel-body" style="height:280px;">
+    <div style="width:250px;height:300px;margin: 50px auto;" class="text-center">
+      <img src="https://image.flaticon.com/icons/png/512/32/32441.png" style="max-height:230px; max-width:300px; margin: 10 auto;" class="img-rounded">
+    </div>
+  </div>
+  <div class="panel-footer" style="position: relative;  border: none;    margin: 20px;">
+    {{label.value}}
+  </div>
+  </semantic-link>
+</div>
+'
+></semantic-carousel>
+      
+        </bs-tab>
+      
+      <bs-tab event-key="3" title="Places">
                 <p><br /><i>Selected places of artworks.</i></p>
 <semantic-carousel
 query="
@@ -71,7 +100,7 @@ tuple-template= '
 ></semantic-carousel>
       </bs-tab>
 
-      <bs-tab event-key="3" title="Builtworks">
+      <bs-tab event-key="4" title="Builtworks">
                 <p><br /><i>Selected builtworks.</i></p>
       
       <semantic-carousel
@@ -106,7 +135,6 @@ tuple-template= '
     <div style="margin-top:100px;"></div>
   </div>
 </div>
-
 
 
 
