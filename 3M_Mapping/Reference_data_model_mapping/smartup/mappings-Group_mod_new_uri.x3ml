@@ -175,7 +175,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="groupAppellationUri">
 								<arg name="group_id" type="xpath">../_01_actor_nameclass_identifier_identifier/text()</arg>
-								<arg name="appellation_id" type="">text()</arg>
+								<arg name="appellation_id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
