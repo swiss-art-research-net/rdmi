@@ -1,0 +1,47 @@
+<ol class="page-breadcrumb">
+  <li>
+    <mp-link title="Home" url="https://rds.swissartresearch.net/resource/Demo">Home</mp-link>
+  </li>
+   <li class="active">
+    <mp-label iri='[[this]]'></mp-label>
+  </li>
+</ol>
+
+<div class="page">
+  
+  <bs-tabs id='record-tabs' class='page__body-navtabs--borderless' default-active-key='summary' unmount-on-exit=true>
+    <bs-tab event-key='summary' title='Summary'>
+      <div data-flex-layout='row top-stretch'>
+          <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
+                <!--[[> Platform:RecordImage]] -->
+            <img src="https://static.thenounproject.com/png/852208-200.png" style="max-height:200px;height:100%"> 
+        	</div>
+        <div class='table-responsive'>
+          <table class='table'>
+            <thead role='header'>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+  
+  <mp-field-visualization
+subject='[[this]]'
+fields='[[fieldDefinitions
+http://www.researchspace.org/instances/fields/Identifiers_readOnly="http://www.researchspace.org/instances/fields/Identifiers_readOnly"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Type"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Earliest_Possible_Start_Date="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Earliest_Possible_Start_Date"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Latest_Possible_End_Date="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Latest_Possible_End_Date"
+]]'
+template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
+></mp-field-visualization>
+            </table>
+          
+          </div>
+      </div>
+    </bs-tab>
+      </bs-tabs>  
+</div>

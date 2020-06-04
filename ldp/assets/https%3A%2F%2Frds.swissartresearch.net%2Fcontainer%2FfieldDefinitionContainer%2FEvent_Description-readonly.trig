@@ -1,0 +1,53 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5537f190659d4ae6967dbaadc68ce9e1-hzkwcd;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-5537f190659d4ae6967dbaadc68ce9e1-wkzta8 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-5537f190659d4ae6967dbaadc68ce9e1-hzkwcd a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Description" .
+  
+  _:genid-5537f190659d4ae6967dbaadc68ce9e1-wkzta8 <http://spinrdf.org/sp#text> """SELECT distinct ?value 
+WHERE {
+  $subject a crm:E5_Event.
+  ?subject crm:P129i_is_subject_of ?info_object_uri .
+  ?info_object_uri a crm:E73_Information_Object.
+  ?info_object_uri rdfs:label ?description_value.
+  ?info_object_uri crm:P2_has_type ?descr_type_uri.
+  ?descr_type_uri a crm:E55_Type.
+  ?descr_type_uri rdfs:label ?descr_type.
+  ?info_object_uri crm:P94i_was_created_by ?creation.
+  ?creation crm:P14_carried_out_by ?creator_uri.
+  ?creator_uri a crm:E39_Actor. 
+  ?creator_uri rdfs:label ?creator.
+  ?creation crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span.
+  ?timespan_uri crm:P82a_begin_of_the_begin ?from. 
+  ?timespan_uri crm:P82b_end_of_the_end ?until
+  BIND(CONCAT(?description_value , \" (Author: \",?creator,\") \", \" (Type: \",?descr_type,\") \", \" (Date From: \",str(?from),\") \", \" (Date Until: \",str(?until),\") \") as ?value).
+      
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-5537f190659d4ae6967dbaadc68ce9e1-wkzta8;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-5537f190659d4ae6967dbaadc68ce9e1-hzkwcd <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative name for an event";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T11:19:08.603Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description-readonly>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,31 @@
+
+<http://www.researchspace.org/instances/fields/Event_Description_Author/context> {
+  <http://www.researchspace.org/instances/fields/Event_Description_Author> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Description Author"@en;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the author of the description given of the documented instance of event.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-bcd0202830f243e8a57ca207873f3481-aagvd .
+  
+  _:genid-bcd0202830f243e8a57ca207873f3481-aagvd a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P94i_was_created_by ?creation_uri.
+      ?creation_uri a crm:E65_Creation.
+      ?creation_uri crm:P14_carried_out_by ?creator_uri.
+      ?creator_uri a crm:E39_Actor. 
+      ?creator_uri rdfs:label ?value.
+} WHERE {
+ BIND(IRI(CONCAT(STR($subject),\"/creation/\", MD5(str($subject)))) as ?creation_uri).
+ BIND(IRI(CONCAT(STR($subject),\"/creator/\", MD5(str($subject)))) as ?creator_uri).
+}""" .
+  
+  <http://www.researchspace.org/instances/fields/Event_Description_Author> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E5_Event>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T10:51:52.187Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <http://www.researchspace.org/instances/fields/Event_Description_Author> .
+  
+  <http://www.researchspace.org/instances/fields/Event_Description_Author> a <http://www.w3.org/ns/ldp#Resource> .
+}

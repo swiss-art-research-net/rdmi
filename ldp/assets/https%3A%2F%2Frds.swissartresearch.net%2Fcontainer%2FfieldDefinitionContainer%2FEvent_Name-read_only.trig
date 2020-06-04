@@ -1,0 +1,41 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-6e18bd0f7ea74aa4b7f59fc80f169f8c-mnhhnd <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-6e18bd0f7ea74aa4b7f59fc80f169f8c-xoj9wp a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6e18bd0f7ea74aa4b7f59fc80f169f8c-mnhhnd;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Name" .
+  
+  _:genid-6e18bd0f7ea74aa4b7f59fc80f169f8c-mnhhnd a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event> .
+  
+  _:genid-6e18bd0f7ea74aa4b7f59fc80f169f8c-xoj9wp <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E5_Event>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?appel_uri . 
+  ?appel_uri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+ ?appel_uri rdfs:label ?value.
+ ?appel_uri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?pref_name_type.
+  ?pref_name_type rdfs:label \"Prefered Name\".
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-6e18bd0f7ea74aa4b7f59fc80f169f8c-xoj9wp;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T10:32:46.521Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Name-read_only>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

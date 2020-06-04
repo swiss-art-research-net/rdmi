@@ -1,0 +1,38 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-859bb2d426f742c09c0aec7afdfc7527-rcd2wu .
+  
+  _:genid-859bb2d426f742c09c0aec7afdfc7527-rcd2wu a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the latest date for the creation of the description of the documented instance of event.";
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Description Date (latest)";
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:genid-859bb2d426f742c09c0aec7afdfc7527-rcd2wu <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P94i_was_created_by ?creation_uri.
+      ?creation_uri a crm:E65_Creation.
+      ?creation_uri crm:P4_has_time-span ?timespan_uri.
+      ?timespan_uri a crm:E52_Time-Span.
+      ?timespan_uri crm:P82b_end_of_the_end ?value.
+} WHERE {
+ BIND(IRI(CONCAT(STR($subject),\"/creation/\", MD5(str($subject)))) as ?creation_uri).
+ BIND(IRI(CONCAT(STR($subject),\"/timespan/\", MD5(str($subject)))) as ?timespan_uri).
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T10:58:08.224Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

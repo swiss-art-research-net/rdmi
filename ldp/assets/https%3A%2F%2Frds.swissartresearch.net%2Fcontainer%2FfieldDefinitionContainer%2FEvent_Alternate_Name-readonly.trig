@@ -1,0 +1,45 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Alternate Name" .
+  
+  _:genid-53a4a074d3284116a7a37cecba1fecea-5z9prs a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT distinct ?value 
+WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E5_Event>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alternative_identifier . 
+  ?alternative_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?alternative_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+  ?type rdfs:label ?type_label .
+  ?alternative_identifier rdfs:label ?name_value.
+  ?alternative_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri.
+  ?language_iri rdfs:label ?lang.
+  BIND(CONCAT(?name_value, \" (\",?type_label,\") \") as ?value).
+      FILTER(?type_label!=\"Prefered Name\")
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event> .
+  
+  _:genid-53a4a074d3284116a7a37cecba1fecea-o36qn6 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-53a4a074d3284116a7a37cecba1fecea-o36qn6;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative name for an event" .
+  
+  _:genid-53a4a074d3284116a7a37cecba1fecea-o36qn6 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-53a4a074d3284116a7a37cecba1fecea-5z9prs;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T10:34:06.232Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name-readonly>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

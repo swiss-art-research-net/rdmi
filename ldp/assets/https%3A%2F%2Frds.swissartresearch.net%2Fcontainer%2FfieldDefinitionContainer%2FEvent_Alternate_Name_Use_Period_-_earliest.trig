@@ -1,0 +1,64 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-beaf9ad37c484799abb8fa031f822282-m60o9;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-beaf9ad37c484799abb8fa031f822282-t8fcr .
+  
+  _:genid-beaf9ad37c484799abb8fa031f822282-m60o9 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+  ?subject <http://iflastandards.info/ns/fr/frbr/frbroo/R64i_was_name_used_by> ?name_act_end.
+  ?name_act_end a <http://iflastandards.info/ns/fr/frbr/frbroo/F52_Name_Use_Activity>.
+  ?name_act_end <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?timespan_end.
+  ?timespan_end a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>.
+  ?timespan_end <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value. 
+}""" .
+  
+  _:genid-beaf9ad37c484799abb8fa031f822282-t8fcr a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-beaf9ad37c484799abb8fa031f822282-hb5zuh <http://spinrdf.org/sp#text> """DELETE { ?timespan_uri <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> ?value} WHERE 
+{
+  ?subject  <http://iflastandards.info/ns/fr/frbr/frbroo/R64i_was_name_used_by> ?name_act. 
+  ?name_act a <http://iflastandards.info/ns/fr/frbr/frbroo/F52_Name_Use_Activity>.
+  ?name_act <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?timespan_uri.
+ ?timespan_uri a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>.
+  ?timespan_uri <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value. 
+}""" .
+  
+  _:genid-beaf9ad37c484799abb8fa031f822282-m60o9 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
+  
+  _:genid-beaf9ad37c484799abb8fa031f822282-t8fcr <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject <http://iflastandards.info/ns/fr/frbr/frbroo/R64i_was_name_used_by> ?name_act.
+  ?name_act a <http://iflastandards.info/ns/fr/frbr/frbroo/F52_Name_Use_Activity>.
+  ?name_act <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?timespan.
+  ?timespan a <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span>.
+  ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value
+} WHERE {
+  BIND(IRI(CONCAT(STR($subject),\"/name_activity/\", MD5(str($subject)))) as ?name_act).
+  BIND(IRI(CONCAT(STR($subject),\"/timespan/\", MD5(str($subject)))) as ?timespan).  
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event> .
+  
+  _:genid-beaf9ad37c484799abb8fa031f822282-hb5zuh a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name Use Period (earliest)";
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-beaf9ad37c484799abb8fa031f822282-hb5zuh;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the earliest known date for use of an alternate name for the documented instance of event.";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T10:24:14.348Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Use_Period_-_earliest>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
