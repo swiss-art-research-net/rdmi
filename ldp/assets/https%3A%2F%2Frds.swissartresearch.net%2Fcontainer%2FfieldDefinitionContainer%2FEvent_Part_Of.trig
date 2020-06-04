@@ -1,0 +1,62 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Part Of"@en;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-9e80f987923748389fdc72d0bf231515-p4ks4s .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-84qwui <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a crm:E5_Event.
+  ?value crm:P1_is_identified_by ?appel_uri . 
+  ?appel_uri a crm:E41_Appellation.
+  ?appel_uri rdfs:label ?label.
+  ?appel_uri crm:P2_has_type ?pref_name_type.
+  ?pref_name_type rdfs:label \"Prefered Name\".
+  
+  ?label bds:search ?__token__ ;
+    bds:minRelevance \"0.5\" ;
+    bds:relevance ?score ;
+    bds:matchAllTerms \"true\" .
+}""" .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-p4ks4s <http://spinrdf.org/sp#text> """DELETE { $subject crm:P10i_contains $value.} WHERE {
+  $subject crm:P10i_contains $value.
+  ?value a crm:E5_Event.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate that the broader period that the documented event falls within.";
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event> .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-84qwui a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-9e80f987923748389fdc72d0bf231515-razsmp;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9e80f987923748389fdc72d0bf231515-0mjhna;
+    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-9e80f987923748389fdc72d0bf231515-84qwui .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-0mjhna <http://spinrdf.org/sp#text> """INSERT { $subject crm:P10i_contains $value.
+} WHERE {?s ?p ?o }""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-razsmp <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P10i_contains $value.
+  ?value a crm:E5_Event.
+}""" .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-p4ks4s a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-9e80f987923748389fdc72d0bf231515-razsmp a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T12:21:26.194Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

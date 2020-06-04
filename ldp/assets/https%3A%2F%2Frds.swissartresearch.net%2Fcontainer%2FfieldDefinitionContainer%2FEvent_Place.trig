@@ -1,0 +1,37 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-9a991c1ccb7a4e698f9f3eed765f3dfe-8szhqd .
+  
+  _:genid-9a991c1ccb7a4e698f9f3eed765f3dfe-7lzejf <http://spinrdf.org/sp#text> """DELETE { ?subject crm:P7_took_place_at ?value.} WHERE { 
+      ?subject crm:P7_took_place_at ?value.
+?value a crm:E53_Place }""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-9a991c1ccb7a4e698f9f3eed765f3dfe-8szhqd a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-9a991c1ccb7a4e698f9f3eed765f3dfe-7lzejf a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-9a991c1ccb7a4e698f9f3eed765f3dfe-7lzejf .
+  
+  _:genid-9a991c1ccb7a4e698f9f3eed765f3dfe-8szhqd <http://spinrdf.org/sp#text> """INSERT { ?subject crm:P7_took_place_at ?value.
+?value a crm:E53_Place}
+WHERE { ?s ?p ?o }""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Event Place";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T12:52:14.745Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,49 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed/context> {
+  _:genid-039ec67447ca42a587d5d25e865c8710-i1thm6 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Objects Employed"@en;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate objects known to have played a role in the documented event." .
+  
+  _:genid-039ec67447ca42a587d5d25e865c8710-i1thm6 <http://spinrdf.org/sp#text> """INSERT {
+  $subject crm:P16_used_specific_object $thing.
+  ?thing a crm:E18_Physical_Thing. 
+  ?thing rdfs:label ?value }
+WHERE {BIND(IRI(CONCAT(STR($subject),\"/object/\", MD5(str($value)))) as ?thing).}""" .
+  
+  _:genid-039ec67447ca42a587d5d25e865c8710-oapy4p <http://spinrdf.org/sp#text> """DELETE { $subject crm:P16_used_specific_object $thing}
+WHERE { $subject crm:P16_used_specific_object $thing.
+  ?thing a crm:E18_Physical_Thing. 
+  ?thing rdfs:label ?value}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E5_Event>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-039ec67447ca42a587d5d25e865c8710-da7kto;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-039ec67447ca42a587d5d25e865c8710-oapy4p .
+  
+  _:genid-039ec67447ca42a587d5d25e865c8710-da7kto <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject  crm:P16_used_specific_object $value.
+  ?value a crm:E18_Physical_Thing.
+      ?value rdfs:label ?label.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-039ec67447ca42a587d5d25e865c8710-i1thm6 .
+  
+  _:genid-039ec67447ca42a587d5d25e865c8710-da7kto a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T12:32:37.178Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

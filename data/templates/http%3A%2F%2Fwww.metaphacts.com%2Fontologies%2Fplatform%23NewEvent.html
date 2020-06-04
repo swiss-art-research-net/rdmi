@@ -25,6 +25,15 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Earliest_Possible_Start_Date="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Earliest_Possible_Start_Date"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Latest_Possible_End_Date="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Latest_Possible_End_Date"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Motivating_Event="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Motivating_Event"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Documents_Employed="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Documents_Employed"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Documents_Created="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Documents_Created"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Name_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Name_Value"
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Type"
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Coordinates="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Coordinates"
       ]]'
     >
 
@@ -107,6 +116,14 @@
         	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Description_Date_-_Latest">
      		</semantic-form-datetime-input>
     </semantic-form-composite-input>
+            
+      <semantic-form-autocomplete-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Part_Of">
+      </semantic-form-autocomplete-input>
+      
+      <semantic-form-autocomplete-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Motivating_Event">
+      </semantic-form-autocomplete-input>
       
       <semantic-form-datetime-input 
         	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Earliest_Possible_Start_Date">
@@ -115,6 +132,39 @@
       <semantic-form-datetime-input 
         	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Latest_Possible_End_Date">
       </semantic-form-datetime-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Objects_Employed">
+      </semantic-form-text-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Documents_Employed">
+      </semantic-form-text-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Documents_Created">
+      </semantic-form-text-input>
+      
+      <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place"
+				new-subject-template=""
+				fields='[[fieldDefinitions
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Name_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Name_Value"
+		https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Alternate_Name_Type"
+      https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Type"
+      https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Coordinates="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Coordinates"
+			]]'>
+    		<semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Name_Value">
+     		</semantic-form-text-input>
+        <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Type">
+     		</semantic-form-text-input>
+         <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_Coordinates">
+     		</semantic-form-text-input>
+        
+    </semantic-form-composite-input>
 
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
