@@ -1,0 +1,60 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy>
+    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:t117;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:t120 a <http://spinrdf.org/sp#Query> .
+  
+  _:t119 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+  $subject <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?languageUri.
+  ?languageUri a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?languageUri rdfs:label ?value. 
+}""" .
+  
+  _:t117 a <http://spinrdf.org/sp#Query> .
+  
+  _:t118 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
+  
+  _:t119 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Language";
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:t117 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label WHERE {
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E56_Language> ;
+    rdfs:label ?label .
+}""" .
+  
+  _:t118 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?value.
+  ?value rdfs:label ?label. 
+}   
+  WHERE{
+      ?s ?p ?o
+}""" .
+  
+  _:t120 <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?value.} 
+WHERE {?subject <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?value.
+  ?value rdfs:label ?label.  }""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy>
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t120;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t118;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:t119;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-05T11:30:24.549Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/emxgMWwAjBsmUjgLsHUDyvSoEOMyETPuKAUDvxVy>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

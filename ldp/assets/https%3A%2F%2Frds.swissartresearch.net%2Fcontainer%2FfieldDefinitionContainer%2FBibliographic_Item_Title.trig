@@ -1,0 +1,70 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Title";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-45f22669df5741dfa0bb42cbec657f26-f2jw67;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the main name attributed to the documented bibliographic item. No part break down of name is here implied. The full name of an individual is expected here where available." .
+  
+  _:genid-45f22669df5741dfa0bb42cbec657f26-ghf9o8 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-45f22669df5741dfa0bb42cbec657f26-f2jw67 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?appellation_iri. 
+  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?pref_name_type.
+  ?pref_name_type rdfs:label \"Prefered Title\".
+  ?appellation_iri rdfs:label ?value.
+  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri. 
+      ?language_iri a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>. 
+}   
+WHERE {BIND(IRI(CONCAT(STR($subject),\"/type/\", MD5(\"Prefered Title\"))) as ?pref_name_type).
+      BIND(IRI(CONCAT(STR($subject),\"/appellation/\", MD5(str(?value)))) as ?appellation_iri).
+      ?language_iri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
+      BIND(lang(?value) as ?lang)
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
+  
+  _:genid-45f22669df5741dfa0bb42cbec657f26-f2jw67 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-45f22669df5741dfa0bb42cbec657f26-l7crec a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title>
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-45f22669df5741dfa0bb42cbec657f26-l7crec .
+  
+  _:genid-45f22669df5741dfa0bb42cbec657f26-l7crec <http://spinrdf.org/sp#text> """DELETE {
+  ?appellation_iri rdfs:label ?value.
+  } where { 
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?appellation_iri .
+  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?appellation_type.
+  ?appellation_type rdfs:label \"Prefered Title\".
+      ?appellation_iri rdfs:label ?value.
+}""" .
+  
+  _:genid-45f22669df5741dfa0bb42cbec657f26-ghf9o8 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?appellation_iri . 
+  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?appellation_type.
+  ?appellation_type rdfs:label \"Prefered Title\".
+      ?appellation_iri rdfs:label ?value.
+     
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-45f22669df5741dfa0bb42cbec657f26-ghf9o8;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T13:39:59.741Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

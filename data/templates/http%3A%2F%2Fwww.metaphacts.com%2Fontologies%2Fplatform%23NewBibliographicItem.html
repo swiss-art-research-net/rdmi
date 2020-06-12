@@ -12,6 +12,8 @@
         https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Type"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Type"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language"
       ]]'
     >
 
@@ -23,6 +25,7 @@
           https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Type"
           http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"
           https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Value"
+          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language"
         ]]'>
         <semantic-form-text-input 
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Value">
@@ -42,7 +45,14 @@
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Type">
      </semantic-form-text-input>
       
+       <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title"
+					languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+     </semantic-form-text-input>
       
+      <semantic-form-select-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language">
+      </semantic-form-select-input>
 
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
