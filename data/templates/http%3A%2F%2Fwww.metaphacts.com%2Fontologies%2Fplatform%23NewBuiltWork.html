@@ -1,3 +1,4 @@
+[[#if (hasPermission "forms:ldp:*")]] 
 <semantic-form new-subject-template='http://grp.swissartresearch.net/work/{{UUID}}'
 post-action='redirect'
 browser-persistence=true
@@ -34,3 +35,4 @@ https://resource.swissartresearch.net/fieldDefinition/built_works_actor="https:/
 <button name="reset" class="btn btn-default">Reset</button>
 </bs-panel>
 </semantic-form>
+[[/if]] 
