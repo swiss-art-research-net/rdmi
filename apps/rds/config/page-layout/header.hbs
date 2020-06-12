@@ -35,7 +35,7 @@
 			</mp-resource-link-container>
 		</bs-nav-dropdown>
 
-
+		<mp-has-permission permission='sparql:update'>
 		<bs-nav-dropdown title="Workspace" id="bg-nested-dropdown">
 			<mp-has-permission permission='rds-voc:editors:workspace:link:use'>
 				<bs-menu-item header=true>Workspace</bs-menu-item>
@@ -48,16 +48,27 @@
 			
 			<!-- Yannis, I would propose to add the 'New Item...' pages under this block -->
 			<bs-menu-item header=true>New Records</bs-menu-item>
-			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/add-place'>
-				<bs-menu-item>Add Place...</bs-menu-item>                                                      
-			</mp-resource-link-container>  
-			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/add-person'>
-				<bs-menu-item>Add Person...</bs-menu-item>                                                      
-			</mp-resource-link-container>  
-			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/add-group'>
-				<bs-menu-item>Add Group...</bs-menu-item>                                                      
-			</mp-resource-link-container>  
-
+			<mp-link url='/resource/Platform:NewPerson'>
+                                <bs-menu-item>&emsp;&emsp;Add Person</bs-menu-item>
+                        </mp-link>
+			<mp-link url='/resource/Platform:NewPlace'>
+				<bs-menu-item>&emsp;&emsp;Add Place</bs-menu-item>                                                      
+			</mp-link>  
+			<mp-link url='/resource/Platform:NewGroup'>
+				<bs-menu-item>&emsp;&emsp;Add Group</bs-menu-item>                                                      
+			</mp-link>
+			<mp-link url='/resource/Platform:NewBuiltWork'>
+                                <bs-menu-item>&emsp;&emsp;Add BuiltWork</bs-menu-item>
+                        </mp-link>
+			<mp-link url='/resource/Platform:NewArtwork'>
+                                <bs-menu-item>&emsp;&emsp;Add Artwork</bs-menu-item>
+                        </mp-link>
+			<mp-link url='/resource/Platform:NewBibliographicItem'>
+                                <bs-menu-item>&emsp;&emsp;Add Bibliogrpahic Item</bs-menu-item>
+                        </mp-link>	
+			<mp-link url='/resource/Platform:NewEvent'>
+                                <bs-menu-item>&emsp;&emsp;Add Event</bs-menu-item>
+                        </mp-link>
 
 			<bs-menu-item header=true>General Guidelines</bs-menu-item>
 			<mp-resource-link-container uri='http://rds-pages.swissartresearch.net/Manual-1'>
@@ -75,6 +86,7 @@
 
 
 		</bs-nav-dropdown>
+		</mp-has-permission>
 		
       	<mp-nav-account></mp-nav-account>
 		<mp-has-permission permission='sparql:update'>
