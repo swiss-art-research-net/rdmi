@@ -1,51 +1,47 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item/context> {
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item>
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-89edd7513ca242af931c6291e6ab4f5a-j7s2a;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-89edd7513ca242af931c6291e6ab4f5a-dkzz48 .
   
-  _:genid-504b7141d4da4d42ab5619812e8d6e65-wdt4c a <http://spinrdf.org/sp#Query> .
+  _:genid-89edd7513ca242af931c6291e6ab4f5a-sir4fa <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
+}""" .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item>
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-504b7141d4da4d42ab5619812e8d6e65-ovat7 .
+    <http://www.metaphacts.com/ontology/fields#domain> <frbr:F24_Publication_Expression> .
   
-  _:genid-504b7141d4da4d42ab5619812e8d6e65-aukv3 a <http://spinrdf.org/sp#Query> .
+  _:genid-89edd7513ca242af931c6291e6ab4f5a-j7s2a a <http://spinrdf.org/sp#Query> .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item>
     <http://www.w3.org/2000/01/rdf-schema#label> "Identifier (Bibliographic Item)";
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-89edd7513ca242af931c6291e6ab4f5a-sir4fa;
     <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the person" .
   
-  _:genid-504b7141d4da4d42ab5619812e8d6e65-wdt4c <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject a <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object>.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
-} WHERE { ?s ?p ?o }
- """ .
+  _:genid-89edd7513ca242af931c6291e6ab4f5a-sir4fa a <http://spinrdf.org/sp#Query> .
   
-  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item>
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object> .
-  
-  _:genid-504b7141d4da4d42ab5619812e8d6e65-ovat7 <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value} WHERE {
+  _:genid-89edd7513ca242af931c6291e6ab4f5a-dkzz48 <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value} WHERE {
  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
   ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
   
 }""" .
   
-  _:genid-504b7141d4da4d42ab5619812e8d6e65-aukv3 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-89edd7513ca242af931c6291e6ab4f5a-j7s2a <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject a frbr:F24_Publication_Expression.
   ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
-}""" .
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
+} WHERE { ?s ?p ?o }
+ """ .
+  
+  _:genid-89edd7513ca242af931c6291e6ab4f5a-dkzz48 a <http://spinrdf.org/sp#Query> .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item>
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-504b7141d4da4d42ab5619812e8d6e65-aukv3 .
-  
-  _:genid-504b7141d4da4d42ab5619812e8d6e65-ovat7 a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item>
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-504b7141d4da4d42ab5619812e8d6e65-wdt4c;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T13:21:20.354Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-15T13:58:33.395Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Bibliographic_Item> .

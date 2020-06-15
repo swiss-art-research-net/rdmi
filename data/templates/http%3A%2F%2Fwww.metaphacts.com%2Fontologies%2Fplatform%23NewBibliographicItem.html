@@ -13,7 +13,14 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Type"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Type"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bilbiographic_Item_Title_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bilbiographic_Item_Title_Part"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Part_Of="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Part_Of"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Place="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Place"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Earliest"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest"
       ]]'
     >
 
@@ -45,15 +52,56 @@
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Type">
      </semantic-form-text-input>
       
-       <semantic-form-text-input 
-          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title"
+      <semantic-form-composite-input 
+        for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title"
+        new-subject-template=""
+        fields='[[fieldDefinitions
+          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Value"
+          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Part"
+          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bilbiographic_Item_Title_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bilbiographic_Item_Title_Part"
+        ]]'>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Title_Value"
 					languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
-     </semantic-form-text-input>
+        </semantic-form-text-input>
+        
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bilbiographic_Item_Title_Part"
+					languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+        </semantic-form-text-input>
+        
+      </semantic-form-composite-input>
       
       <semantic-form-select-input 
 				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Language">
       </semantic-form-select-input>
-
+      
+		  <semantic-form-autocomplete-input  
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Part_Of">
+      </semantic-form-autocomplete-input>
+      
+     <semantic-form-composite-input 
+        for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication"
+        new-subject-template=""
+        fields='[[fieldDefinitions
+         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Place="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Place"
+         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Earliest"
+         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest"
+        ]]'>
+        <semantic-form-autocomplete-input  
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Place">
+      </semantic-form-autocomplete-input>
+        
+       <semantic-form-datetime-input 
+        	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Earliest">
+      </semantic-form-datetime-input>
+       
+       <semantic-form-datetime-input 
+        	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest">
+      </semantic-form-datetime-input>
+        
+      </semantic-form-composite-input>
+      
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
    	</semantic-form>

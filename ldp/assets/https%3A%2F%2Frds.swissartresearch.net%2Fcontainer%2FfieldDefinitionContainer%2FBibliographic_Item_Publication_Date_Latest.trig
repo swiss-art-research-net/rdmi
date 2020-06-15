@@ -1,0 +1,54 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-10fecec8f5314197961d953f9692b420-b2iibu a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Publication Date (latest)";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-10fecec8f5314197961d953f9692b420-7b10li .
+  
+  _:genid-10fecec8f5314197961d953f9692b420-hy3gfo <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  $subject crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span.
+  ?timespan_uri crm:P82b_end_of_the_end ?value.
+}""" .
+  
+  _:genid-10fecec8f5314197961d953f9692b420-b2iibu <http://spinrdf.org/sp#text> """INSERT { $subject crm:P4_has_time-span ?timespan_uri.
+      ?timespan_uri a crm:E52_Time-Span.
+      ?timespan_uri crm:P82b_end_of_the_end ?value.}
+WHERE {
+	BIND(IRI(CONCAT(STR($subject),\"/timespan/\")) as ?timespan_uri).
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-10fecec8f5314197961d953f9692b420-hy3gfo;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.metaphacts.com/ontology/fields#domain> <crm:E52_Time-span>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the latest known date for the birth of the documented bibliographic item." .
+  
+  _:genid-10fecec8f5314197961d953f9692b420-hy3gfo a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-10fecec8f5314197961d953f9692b420-7b10li <http://spinrdf.org/sp#text> """DELETE { $subject crm:P4_has_time-span ?timespan_uri.} WHERE {
+  $subject crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span.
+  ?timespan_uri crm:P82b_end_of_the_end ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-10fecec8f5314197961d953f9692b420-b2iibu .
+  
+  _:genid-10fecec8f5314197961d953f9692b420-7b10li a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-15T14:32:10.120Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication_Date_Latest>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
