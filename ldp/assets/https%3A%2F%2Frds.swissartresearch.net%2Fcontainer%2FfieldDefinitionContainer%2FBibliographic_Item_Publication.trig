@@ -1,26 +1,18 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication/context> {
-  _:genid-f5414f9421fa49068dc7a927b15ef35c-1tcpvl a <http://spinrdf.org/sp#Query> .
+  _:genid-2e0446274d45461b917fb52a79e11590-pc0q3e a <http://spinrdf.org/sp#Query> .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
-    a <http://www.metaphacts.com/ontology/fields#Field> .
-  
-  _:genid-f5414f9421fa49068dc7a927b15ef35c-94qukn a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.metaphacts.com/ontology/fields#domain> <frbr:F24_Publication_Expression> .
   
-  _:genid-f5414f9421fa49068dc7a927b15ef35c-94qukn <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
-WHERE {
- ?subject frbr:R24_created ?value. 
-  ?value a frbr:F30_Publication_Event. 
-}""" .
+  _:genid-2e0446274d45461b917fb52a79e11590-3mozni a <http://spinrdf.org/sp#Query> .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-f5414f9421fa49068dc7a927b15ef35c-1tcpvl;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-2e0446274d45461b917fb52a79e11590-pc0q3e;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-f5414f9421fa49068dc7a927b15ef35c-bj3htb <http://spinrdf.org/sp#text> """INSERT { 
+  _:genid-2e0446274d45461b917fb52a79e11590-vt5lsl <http://spinrdf.org/sp#text> """INSERT { 
   ?subject frbr:R24_created ?value. 
   ?value a frbr:F30_Publication_Event.
 }   
@@ -30,7 +22,7 @@ WHERE {?s ?p ?o
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
     <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Publication" .
   
-  _:genid-f5414f9421fa49068dc7a927b15ef35c-1tcpvl <http://spinrdf.org/sp#text> """DELETE {
+  _:genid-2e0446274d45461b917fb52a79e11590-pc0q3e <http://spinrdf.org/sp#text> """DELETE {
 ?subject frbr:R24_created ?value. 
   } where { 
 ?subject frbr:R24_created ?value. 
@@ -38,16 +30,31 @@ WHERE {?s ?p ?o
 }""" .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-f5414f9421fa49068dc7a927b15ef35c-bj3htb;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the place of birth of the documented bibliographic item.";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f5414f9421fa49068dc7a927b15ef35c-94qukn .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2e0446274d45461b917fb52a79e11590-vt5lsl .
   
-  _:genid-f5414f9421fa49068dc7a927b15ef35c-bj3htb a <http://spinrdf.org/sp#Query> .
+  _:genid-2e0446274d45461b917fb52a79e11590-3mozni <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+?subject frbr:R24_created ?pub_event. 
+  ?pub_event a frbr:F30_Publication_Event. 
+  ?pub_event crm:P7_took_place_at ?place_uri. 
+  ?place_uri a crm:E53_Place.
+  ?place_uri rdfs:label ?place.
+  ?pub_event crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri crm:P82a_begin_of_the_begin ?earliest.
+  ?timespan_uri crm:P82b_end_of_the_end ?latest. 
+   BIND(CONCAT(?place, \" from: \",str(?earliest),\" until: \",str(?latest)) as ?value)
+}""" .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the place of birth of the documented bibliographic item." .
+  
+  _:genid-2e0446274d45461b917fb52a79e11590-vt5lsl a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2e0446274d45461b917fb52a79e11590-3mozni;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-15T14:16:34.441Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-16T11:11:16.764Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Publication> .

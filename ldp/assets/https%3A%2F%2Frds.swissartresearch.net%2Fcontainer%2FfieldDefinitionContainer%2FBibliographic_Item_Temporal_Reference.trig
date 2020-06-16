@@ -1,0 +1,54 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference/context> {
+  _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-jr4nsv a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-31ti89 <http://spinrdf.org/sp#text> """DELETE {  $subject crm:P129_is_about ?temporal_uri.
+} WHERE {
+   $subject crm:P129_is_about ?temporal_uri.
+      ?temporal_uri a crm:E4_Period.
+      ?temporal_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-lhlhw6;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the temporal coverage associated with the documented bibliographic item. It is meant to capture the temporal area to which this item can be associated as having relevance." .
+  
+  _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-lhlhw6 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-31ti89 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-jr4nsv <http://spinrdf.org/sp#text> """INSERT { $subject crm:P129_is_about ?temporal_uri.
+      ?temporal_uri a crm:E4_Period.
+      ?temporal_uri rdfs:label ?value.
+}
+WHERE {
+      BIND(IRI(CONCAT(STR($subject),\"/temporal/\",MD5(str(?value)))) as ?temporal_uri).
+      
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Temporal Reference";
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-31ti89;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-jr4nsv .
+  
+  _:genid-d78fd2a65b154c1b8c0469a5c2a769fd-lhlhw6 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+    $subject crm:P129_is_about ?temporal_uri.
+      ?temporal_uri a crm:E4_Period.
+      ?temporal_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-16T11:59:53.150Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

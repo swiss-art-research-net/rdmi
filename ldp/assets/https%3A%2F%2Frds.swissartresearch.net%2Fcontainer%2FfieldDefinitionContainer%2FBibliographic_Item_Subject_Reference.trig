@@ -1,0 +1,51 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference/context> {
+  _:genid-c145e6fd4d254b85b7e7dd052d462a9f-469ucj a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Subject Reference";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-c145e6fd4d254b85b7e7dd052d462a9f-1iit8j .
+  
+  _:genid-c145e6fd4d254b85b7e7dd052d462a9f-469ucj <http://spinrdf.org/sp#text> """INSERT { $subject crm:P129_is_about ?type_uri.
+      ?type_uri a crm:E55_Type.
+      ?type_uri rdfs:label ?value.
+}
+WHERE {
+      BIND(IRI(CONCAT(STR($subject),\"/subject/\",MD5(str(?value)))) as ?type_uri).
+      
+}""" .
+  
+  _:genid-c145e6fd4d254b85b7e7dd052d462a9f-1iit8j <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+     $subject crm:P129_is_about ?type_uri.
+      ?type_uri a crm:E55_Type.
+      ?type_uri rdfs:label ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-c145e6fd4d254b85b7e7dd052d462a9f-riz1x a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the subject of representation of the documented archival item. It is meant to capture general subject areas, not particular individual items represented.";
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-c145e6fd4d254b85b7e7dd052d462a9f-riz1x;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-c145e6fd4d254b85b7e7dd052d462a9f-469ucj .
+  
+  _:genid-c145e6fd4d254b85b7e7dd052d462a9f-riz1x <http://spinrdf.org/sp#text> """DELETE {  $subject crm:P129_is_about ?type_uri.
+} WHERE {
+    $subject crm:P129_is_about ?type_uri.
+      ?type_uri a crm:E55_Type.
+      ?type_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-16T12:02:26.666Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
