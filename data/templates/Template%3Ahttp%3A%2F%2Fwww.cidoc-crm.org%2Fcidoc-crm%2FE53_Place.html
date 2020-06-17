@@ -143,17 +143,5 @@ template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
       </div>
     </bs-tab>
     [[/if]]
-    [[#if (hasPermission "forms:ldp:*")]] 
-    <bs-tab event-key='new' title='New Place'>
-      <div> 
-
-        <div class='authoring_section2'>
-          [[> Platform:NewPlace]]
-        </div>
-      </div>
-    
-    </bs-tab>
-    [[/if]]
-    
       </bs-tabs>  
 </div>

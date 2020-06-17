@@ -1,0 +1,35 @@
+<div>
+[[#if (hasPermission "forms:ldp:*")]]         
+    <semantic-form 
+      new-subject-template='https://resource.swissartresearch.net/artwork/{{UUID}}'
+      browser-persistence=true
+      persistence='ldp' 
+      form-id='artworks'         
+      fields='[[fieldDefinitions
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type"
+      ]]'
+    >
+
+      <semantic-form-composite-input 
+        for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier"
+        new-subject-template=""
+        fields='[[fieldDefinitions
+          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type"
+        ]]'>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value">
+        </semantic-form-text-input>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type">
+        </semantic-form-text-input>
+
+      </semantic-form-composite-input>
+      
+      <button name='submit' class='btn btn-default'>Save</button>
+      <button name='reset' class='btn btn-default'>Reset</button>
+   	</semantic-form>
+	[[/if]]
+</div>
