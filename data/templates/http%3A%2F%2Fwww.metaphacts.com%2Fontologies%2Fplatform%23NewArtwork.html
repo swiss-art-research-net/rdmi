@@ -7,6 +7,7 @@
       form-id='artworks'         
       fields='[[fieldDefinitions
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier"   https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value"     https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type" 
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Provider="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Provider"
       ]]'
     >
 
@@ -14,10 +15,8 @@
         for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier"
         new-subject-template=""
         fields='[[fieldDefinitions
-          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value"
+          https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value"  https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type"
           https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Provider="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Provider"
-        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type"
-
         ]]'>
         <semantic-form-text-input 
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Value">
@@ -25,14 +24,10 @@
         <semantic-form-text-input 
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Type">
         </semantic-form-text-input>
-        
-        
-
-      </semantic-form-composite-input>
-      
-      <semantic-form-text-input 
+        <semantic-form-text-input 
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Identifier_Provider">
-        </semantic-form-text-input>
+        </semantic-form-text-input> 
+      </semantic-form-composite-input>
       
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
