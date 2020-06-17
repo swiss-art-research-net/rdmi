@@ -1,0 +1,53 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-386be76a0762464ebd307008101ab174-ct3ld9 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-386be76a0762464ebd307008101ab174-syh31 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P1_is_identified_by ?appellation_uri.
+  ?appellation_uri a crm:E41_Appellation .
+  ?appellation_uri rdfs:label ?value.
+  ?appellation_uri crm:P2_has_type ?type_uri.
+  ?type_uri a crm:E55_Type .
+  ?type_uri rdfs:label \"Preferred Title\".
+} WHERE { 
+      BIND(IRI(CONCAT(STR($subject),\"/appellation/\", MD5($value))) as ?appellation_uri). 
+      BIND(IRI(CONCAT(\"rds:\",\"types/\", MD5(\"PrefferedTitle\"))) as ?type_uri).
+}
+ """ .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title>
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-386be76a0762464ebd307008101ab174-ct3ld9;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Title";
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> .
+  
+  _:genid-386be76a0762464ebd307008101ab174-ct3ld9 <http://spinrdf.org/sp#text> """DELETE {  ?subject crm:P1_is_identified_by ?appellation_uri.
+} WHERE {
+  ?subject crm:P1_is_identified_by ?appellation_uri.
+  ?appellation_uri a crm:E41_Appellation .
+  ?appellation_uri rdfs:label ?value.
+  ?appellation_uri crm:P2_has_type ?type_uri.
+  ?type_uri a crm:E55_Type .
+  ?type_uri rdfs:label \"Preferred Title\".
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-386be76a0762464ebd307008101ab174-syh31;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the main name attributed to the documented artwork." .
+  
+  _:genid-386be76a0762464ebd307008101ab174-syh31 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-17T12:19:23.122Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Title>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
