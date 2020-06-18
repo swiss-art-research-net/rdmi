@@ -1,0 +1,46 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates/context> {
+  _:t503861 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri a crm:E57_Material .
+  ?material_uri rds:label ?value.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
+} """ .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists." .
+  
+  _:t503860 <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri rds:label ?value.
+}
+WHERE {
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri a crm:E57_Material .
+  ?material_uri rds:label ?value.
+}""" .
+  
+  _:t503861 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t503861;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t503860 .
+  
+  _:t503860 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Present Location - coordinates";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T11:31:55.392Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

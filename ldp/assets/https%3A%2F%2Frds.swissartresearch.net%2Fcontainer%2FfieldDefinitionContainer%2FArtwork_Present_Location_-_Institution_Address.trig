@@ -1,0 +1,58 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-03c62595b52b48008a477c8a8b26a344-0n3jtc a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to document the address of the institution at which the documented artwork is presently located." .
+  
+  _:genid-03c62595b52b48008a477c8a8b26a344-dz48kf <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P1_is_identified_by ?address_uri.
+  ?address_uri rds:label ?value.
+  ?address_uri crm:P2_has_type ?type_uri.
+}
+WHERE {
+  ?subject crm:P1_is_identified_by ?address_uri.
+  ?address_uri a crm:E41_Appellation .
+  ?address_uri rds:label ?value.
+  ?address_uri crm:P2_has_type ?type_uri.
+  ?type_uri a crm:E55_Type.
+  ?type_uri rdfs:label \"Institution\".
+}""" .
+  
+  _:genid-03c62595b52b48008a477c8a8b26a344-0n3jtc <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P1_is_identified_by ?address_uri.
+  ?address_uri a crm:E41_Appellation .
+  ?address_uri rds:label ?value.
+  ?address_uri crm:P2_has_type ?type_uri.
+  ?type_uri a crm:E55_Type.
+  ?type_uri rdfs:label \"Institution\".
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/address/\", MD5(str($value)))) as ?address_uri).  
+  BIND(IRI(CONCAT(\"rds:\",\"types/\", MD5(\"Address\"))) as ?type_uri).
+} """ .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
+  
+  _:genid-03c62595b52b48008a477c8a8b26a344-dz48kf a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-03c62595b52b48008a477c8a8b26a344-dz48kf;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-03c62595b52b48008a477c8a8b26a344-0n3jtc;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Present Location - Institution Address";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T11:40:40.176Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
