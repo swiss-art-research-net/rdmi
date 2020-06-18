@@ -1,4 +1,15 @@
-<div>
+<div class="page">
+  <div data-flex-layout='row top-stretch'>
+     
+          <div data-flex-self='size-xsmall' class="text-center">
+            <br>
+            <font size="+2">
+            	Add a new <b>Artwork</b>
+            </font>
+            <br>
+            <img src="https://cdn2.iconfinder.com/data/icons/multimedia-26/24/multimedia-11-512.png" width="50%">
+         </div>
+        <div>
 [[#if (hasPermission "forms:ldp:*")]]         
     <semantic-form 
       new-subject-template='https://resource.swissartresearch.net/artwork/{{UUID}}'
@@ -46,3 +57,4 @@
    	</semantic-form> 
 	[[/if]]
 </div>
+  </div>
