@@ -1,40 +1,54 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type_Qualifying_Description/context> {
-  _:t504463 a <http://spinrdf.org/sp#Query> .
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type_Qualifying_Description>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Place Type Qualifying Description";
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:t504462 a <http://spinrdf.org/sp#Query> .
+  _:genid-68042ebe2403465ca49f8f9291161aae-nnrpnq a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-68042ebe2403465ca49f8f9291161aae-zykplg a <http://spinrdf.org/sp#Query> .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type_Qualifying_Description>
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t504463;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t504462;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Place Type Qualifying Description" .
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-68042ebe2403465ca49f8f9291161aae-zykplg .
   
-  _:t504463 <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
-} 
-WHERE { 
-  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
-} """ .
-  
-  _:t504462 <http://spinrdf.org/sp#text> """DELETE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri rdfs:label ?value.
+  _:genid-68042ebe2403465ca49f8f9291161aae-zykplg <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P42_assigned ?type_uri.
+  ?subject crm:P129i_is_subject_of ?information_object_uri.
+  ?information_object_uri rdf:value ?value.
+  ?information_object_uri crm:P72_has_language ?language_uri.
 }
 WHERE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
+  ?subject crm:P42_assigned ?type_uri.
+  ?type_uri a crm:E55_Type .
+  ?subject crm:P129i_is_subject_of ?information_object_uri.
+  ?information_object_uri a crm:E73_Information_Object.
+  ?information_object_uri rdf:value ?value.
+  ?information_object_uri crm:P72_has_language ?language_uri.
+  ?language_uri rdfs:label ?lang.
 }""" .
   
+  _:genid-68042ebe2403465ca49f8f9291161aae-nnrpnq <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P42_assigned ?type_uri.
+  ?type_uri a crm:E55_Type .
+  ?subject crm:P129i_is_subject_of ?information_object_uri.
+  ?information_object_uri a crm:E73_Information_Object.
+  ?information_object_uri rdf:value ?value.
+  ?information_object_uri crm:P72_has_language ?language_uri.
+  ?language_uri rdfs:label ?lang.    
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/information_object/\", MD5(str($value)))) as ?information_object_uri). 
+  BIND(IRI(CONCAT(STR($subject),\"/types/\", MD5(str(?value)))) as ?type_uri).
+  ?language_uri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
+  BIND(lang(?value) as ?lang)
+} """ .
+  
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type_Qualifying_Description>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-68042ebe2403465ca49f8f9291161aae-nnrpnq;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T13:56:35.094Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T14:01:41.889Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type_Qualifying_Description> .
