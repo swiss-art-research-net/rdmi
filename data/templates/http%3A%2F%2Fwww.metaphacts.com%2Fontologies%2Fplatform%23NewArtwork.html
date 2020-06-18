@@ -65,6 +65,11 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Cons
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Location"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Citation="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Citation"
       ]]'
     >
 
@@ -295,8 +300,30 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Cons
           multiline="true">
      	</semantic-form-text-input>
     </semantic-form-composite-input>
+     
       
+    <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Location"
+				new-subject-template=""
+				fields='[[fieldDefinitions https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates"
+			]]'>
+     	
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_Institution_Address">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Present_Location_-_coordinates">
+     	</semantic-form-text-input>
+    </semantic-form-composite-input>
 
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Citation">
+     	</semantic-form-text-input>   
       
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
