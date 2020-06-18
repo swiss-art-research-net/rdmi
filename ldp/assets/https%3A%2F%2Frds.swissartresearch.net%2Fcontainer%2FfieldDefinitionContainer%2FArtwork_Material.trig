@@ -1,0 +1,44 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-da44093762dc41c5965b31f4be364f8c-24vz2m <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri rds:label ?value.
+}
+WHERE {
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri a crm:E57_Material .
+  ?material_uri rds:label ?value.
+}""";
+    a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-da44093762dc41c5965b31f4be364f8c-vhn6h;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Material";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-da44093762dc41c5965b31f4be364f8c-24vz2m .
+  
+  _:genid-da44093762dc41c5965b31f4be364f8c-vhn6h <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri a crm:E57_Material .
+  ?material_uri rds:label ?value.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
+} """;
+    a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T10:20:27.726Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

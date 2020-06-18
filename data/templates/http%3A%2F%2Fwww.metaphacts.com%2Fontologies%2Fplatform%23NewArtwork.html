@@ -43,6 +43,11 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator_Role="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator_Role"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Owner="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Owner"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Holder="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Holder"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material"
       ]]'
     >
 
@@ -146,6 +151,8 @@
        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location"
        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest"
        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest"
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator"
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator_Role="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator_Role"
 			]]'>
      		<semantic-form-autocomplete-input 
 					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location">
@@ -156,6 +163,12 @@
      		<semantic-form-datetime-input 
         	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest">
      		</semantic-form-datetime-input>
+        <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator">
+     		</semantic-form-text-input>
+        <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Creator_Role">
+     		</semantic-form-text-input>
     </semantic-form-composite-input>
       
     <semantic-form-composite-input 
@@ -176,6 +189,18 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dest
         	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest">
      		</semantic-form-datetime-input>
     </semantic-form-composite-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Owner">
+     	</semantic-form-text-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Holder">
+     	</semantic-form-text-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material">
+     	</semantic-form-text-input>
       
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
