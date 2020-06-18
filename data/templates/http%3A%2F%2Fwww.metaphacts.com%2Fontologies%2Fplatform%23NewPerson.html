@@ -13,9 +13,10 @@
          </div>
         <div>
         <semantic-form 
-          subject='[[this]]'
-          post-action='reload'
-          persistence='sparql'            
+        new-subject-template='https://resource.swissartresearch.net/person/{{UUID}}'
+      	browser-persistence=true
+      	persistence='ldp' 
+        form-id='persons'               
          fields='[[fieldDefinitions
 http://www.metaphacts.com/fieldDefinition/Person_Name="http://www.metaphacts.com/fieldDefinition/Person_Name"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"

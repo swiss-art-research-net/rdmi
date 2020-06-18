@@ -1,0 +1,41 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type> a
+      <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-17f198ad87ab4b819b71b85d22948849-2gezevk;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-17f198ad87ab4b819b71b85d22948849-2qpeir a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Place Type" .
+  
+  _:genid-17f198ad87ab4b819b71b85d22948849-2qpeir <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P41i_was_classified_by ?value.
+}
+WHERE {
+  ?subject crm:P41i_was_classified_by ?value.
+  ?value a crm:E17_Type_Assignment .
+}""" .
+  
+  _:genid-17f198ad87ab4b819b71b85d22948849-2gezevk a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P41i_was_classified_by ?value.
+  ?value a crm:E17_Type_Assignment .
+} 
+WHERE { 
+  ?s ?p ?o 
+} """ .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-17f198ad87ab4b819b71b85d22948849-2qpeir;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T13:55:39.008Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Type> a
+      <http://www.w3.org/ns/ldp#Resource> .
+}
