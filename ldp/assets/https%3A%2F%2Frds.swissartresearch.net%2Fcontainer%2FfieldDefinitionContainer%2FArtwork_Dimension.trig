@@ -1,0 +1,50 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Dimension" .
+  
+  _:genid-876d8ddafc8e43c6bbd55db38a619814-dvfxp <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P39i_was_measured_by ?measurement_uri.
+  ?measurement_uri crm:P40_observed_dimension ?value.
+}
+WHERE {
+  ?subject crm:P39i_was_measured_by ?measurement_uri.
+  ?measurement_uri a crm:E16_Measurement .
+  ?measurement_uri crm:P40_observed_dimension ?value.
+  ?value a crm:E54_Dimension.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the measurement that the dimension of the documented instance of built work is." .
+  
+  _:genid-876d8ddafc8e43c6bbd55db38a619814-pvrq58 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P39i_was_measured_by ?measurement_uri.
+  ?measurement_uri a crm:E16_Measurement .
+  ?measurement_uri crm:P40_observed_dimension ?value.
+  ?value a crm:E54_Dimension.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/measurement/\", MD5(str($value)))) as ?measurement_uri).
+} """ .
+  
+  _:genid-876d8ddafc8e43c6bbd55db38a619814-dvfxp a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-876d8ddafc8e43c6bbd55db38a619814-pvrq58;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-876d8ddafc8e43c6bbd55db38a619814-dvfxp .
+  
+  _:genid-876d8ddafc8e43c6bbd55db38a619814-pvrq58 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T10:51:17.253Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

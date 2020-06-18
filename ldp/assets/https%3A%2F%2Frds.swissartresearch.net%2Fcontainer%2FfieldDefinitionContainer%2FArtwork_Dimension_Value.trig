@@ -1,0 +1,45 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4cccf9f9a7364a9fb8f242c83ae07a6d-ku0zi4;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the value of the measurement of the documented instance of built work.";
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+  
+  _:genid-4cccf9f9a7364a9fb8f242c83ae07a6d-wj0y2 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-4cccf9f9a7364a9fb8f242c83ae07a6d-ku0zi4 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4cccf9f9a7364a9fb8f242c83ae07a6d-wj0y2 .
+  
+  _:genid-4cccf9f9a7364a9fb8f242c83ae07a6d-ku0zi4 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P90_has_value ?value.
+} 
+WHERE { 
+  ?s ?p ?o 
+} """ .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Dimension Value" .
+  
+  _:genid-4cccf9f9a7364a9fb8f242c83ae07a6d-wj0y2 <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P90_has_value ?value.
+}
+WHERE {
+  ?subject crm:P90_has_value ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T10:45:41.492Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

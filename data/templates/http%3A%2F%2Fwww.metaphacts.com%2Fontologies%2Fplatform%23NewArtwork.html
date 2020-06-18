@@ -48,6 +48,12 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Owner="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Owner"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Holder="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Current_Holder"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Technique="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Technique"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Type"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Subject="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Subject"
       ]]'
     >
 
@@ -201,6 +207,36 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dest
       <semantic-form-text-input 
 					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Material">
      	</semantic-form-text-input>
+      
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Technique">
+     	</semantic-form-text-input>
+      
+      <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension"
+				new-subject-template=""
+				fields='[[fieldDefinitions
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Type"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit"
+			]]'>
+     	<semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Type">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit">
+     	</semantic-form-text-input>
+    </semantic-form-composite-input>
+      
+    <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Subject">
+     	</semantic-form-text-input>
+      
+      
+      
       
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
