@@ -1,4 +1,15 @@
-<div>
+<div class="page">
+  <div data-flex-layout='row top-stretch'>
+     
+          <div data-flex-self='size-xsmall' class="text-center">
+            <br>
+            <font size="+2">
+            	Add a new <b>Bibliographic Item</b>
+            </font>
+            <br>
+            <img src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519609-108_Bookmark-512.png" width="50%">
+         </div>
+        <div>
 [[#if (hasPermission "forms:ldp:*")]]         
     <semantic-form 
       new-subject-template='https://resource.swissartresearch.net/bibliographic_item/{{UUID}}'
@@ -28,6 +39,13 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Temporal_Reference"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Physical_Geographic_Reference="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Physical_Geographic_Reference"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_ID="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_ID"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Identifier="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Identifier"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Shelf="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Shelf"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institution="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institution"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institutional_Address="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institutional_Address"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_coordinates="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_coordinates"
       ]]'
     >
 
@@ -138,8 +156,41 @@
           for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Subject_Reference">
         </semantic-form-text-input>
       
+      <semantic-form-composite-input 
+        for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_ID"
+        new-subject-template=""
+        fields='[[fieldDefinitions
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Identifier="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Identifier"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Shelf="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Shelf"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institution="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institution"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institutional_Address="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institutional_Address"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_coordinates="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_coordinates"
+        ]]'>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Identifier">
+        </semantic-form-text-input>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner">
+        </semantic-form-text-input>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Shelf">
+        </semantic-form-text-input>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institution">
+        </semantic-form-text-input>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_Institutional_Address">
+        </semantic-form-text-input>
+        <semantic-form-text-input 
+          for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Present_Item_Location_-_coordinates">
+        </semantic-form-text-input>
+      </semantic-form-composite-input>
+
+      
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>
    	</semantic-form>
 	[[/if]]
+    </div>
 </div>

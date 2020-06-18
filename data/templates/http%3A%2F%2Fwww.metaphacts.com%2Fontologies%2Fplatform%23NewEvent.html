@@ -1,4 +1,15 @@
-<div>
+<div class="page">
+  <div data-flex-layout='row top-stretch'>
+     
+          <div data-flex-self='size-xsmall' class="text-center">
+            <br>
+            <font size="+2">
+            	Add a new <b>Event</b>
+            </font>
+            <br>
+            <img src="https://static.thenounproject.com/png/852208-200.png">
+         </div>
+        <div>
 [[#if (hasPermission "forms:ldp:*")]]         
     <semantic-form 
       new-subject-template='https://resource.swissartresearch.net/event/{{UUID}}'
@@ -188,4 +199,5 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Event_Place_
       <button name='reset' class='btn btn-default'>Reset</button>
    	</semantic-form>
 	[[/if]]
+    </div>
 </div>

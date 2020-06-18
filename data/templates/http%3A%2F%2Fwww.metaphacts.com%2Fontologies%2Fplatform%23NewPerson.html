@@ -1,5 +1,17 @@
 [[#if (hasPermission "forms:ldp:*")]] 
-<div>
+
+<div class="page">
+  <div data-flex-layout='row top-stretch'>
+     
+          <div data-flex-self='size-xsmall' class="text-center">
+            <br>
+            <font size="+2">
+            	Add a new <b>Person</b>
+            </font>
+            <br>
+            <img src="https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-512.png" width="50%">
+         </div>
+        <div>
         <semantic-form 
           subject='[[this]]'
           post-action='reload'
@@ -178,4 +190,6 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
           <button name='reset' class='btn btn-default'>Reset</button>
         </semantic-form>
   </div>
+  </div>
+</div>
 [[/if]]

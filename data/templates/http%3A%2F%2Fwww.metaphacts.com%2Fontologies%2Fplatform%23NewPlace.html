@@ -1,5 +1,16 @@
 [[#if (hasPermission "forms:ldp:*")]] 
-<div>       
+<div class="page">
+  <div data-flex-layout='row top-stretch'>
+     
+          <div data-flex-self='size-xsmall' class="text-center">
+            <br>
+            <font size="+2">
+            	Add a new <b>Place</b>
+            </font>
+            <br>
+            <img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Checkin01-512.png" width="50%">
+         </div>
+        <div>     
   <semantic-form 
  new-subject-template='http://data.performing-arts.ch/a/{{UUID}}'
 
@@ -80,4 +91,6 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_A
           <button name='reset' class='btn btn-default'>Reset</button>
         </semantic-form>
   </div>
+  </div>
+</div>
 [[/if]] 
