@@ -54,6 +54,17 @@
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Value"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dimension_Unit"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Subject="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Subject"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Owner="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Owner"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Description="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Description"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Earliest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Type"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description"
       ]]'
     >
 
@@ -233,10 +244,59 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Dime
       
     <semantic-form-text-input 
 					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Subject">
+    </semantic-form-text-input>
+    
+    <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance"
+				new-subject-template=""
+				fields='[[fieldDefinitions https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Owner="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Owner"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Description="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Description"
+			]]'>
+     	<semantic-form-datetime-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest">
+     	</semantic-form-datetime-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Owner">
      	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Description"
+          multiline="true">
+     	</semantic-form-text-input>
+    </semantic-form-composite-input>
+    
+    <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation"
+				new-subject-template=""
+				fields='[[fieldDefinitions   https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Earliest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Type"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description"
+			]]'>
+     	<semantic-form-datetime-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Earliest">
+     	</semantic-form-datetime-input>
+      <semantic-form-datetime-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Latest">
+     	</semantic-form-datetime-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Type">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Technique">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservator">
+     	</semantic-form-text-input>
+      <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Conservation_Event_Description"
+          multiline="true">
+     	</semantic-form-text-input>
+    </semantic-form-composite-input>
       
-      
-      
+
       
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>

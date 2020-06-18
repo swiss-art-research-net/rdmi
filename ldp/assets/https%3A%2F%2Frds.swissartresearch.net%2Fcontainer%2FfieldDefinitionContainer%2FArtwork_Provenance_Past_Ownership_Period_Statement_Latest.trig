@@ -1,0 +1,50 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Provenance Past Ownership Period Statement (latest)";
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-4027ce37b5a046f5b6d3036eff1e0460-uyz9a5d <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri crm:P82b_end_of_the_end ?value.
+}
+WHERE {
+  ?subject crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span .
+  ?timespan_uri crm:P82b_end_of_the_end ?value.
+}""" .
+  
+  _:genid-4027ce37b5a046f5b6d3036eff1e0460-ax06xi <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P4_has_time-span ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span .
+  ?timespan_uri crm:P82b_end_of_the_end ?value.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/timespan/\", MD5(str($value)))) as ?timespan_uri).  
+} """ .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
+  
+  _:genid-4027ce37b5a046f5b6d3036eff1e0460-uyz9a5d a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the latest date for an ownership period of the documented artwork.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4027ce37b5a046f5b6d3036eff1e0460-ax06xi;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4027ce37b5a046f5b6d3036eff1e0460-uyz9a5d .
+  
+  _:genid-4027ce37b5a046f5b6d3036eff1e0460-ax06xi a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date>;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T11:02:30.528Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Provenance_Past_Ownership_Period_Statement_Latest>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
