@@ -39,6 +39,10 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest"
       ]]'
     >
 
@@ -151,6 +155,25 @@
      		</semantic-form-datetime-input>
      		<semantic-form-datetime-input 
         	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest">
+     		</semantic-form-datetime-input>
+    </semantic-form-composite-input>
+      
+    <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction"
+				new-subject-template=""
+				fields='[[fieldDefinitions
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest"
+			]]'>
+     		<semantic-form-autocomplete-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Location">
+     		</semantic-form-autocomplete-input>
+     		<semantic-form-datetime-input 
+        	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Earliest">
+     		</semantic-form-datetime-input>
+     		<semantic-form-datetime-input 
+        	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Destruction_Date_Latest">
      		</semantic-form-datetime-input>
     </semantic-form-composite-input>
       
