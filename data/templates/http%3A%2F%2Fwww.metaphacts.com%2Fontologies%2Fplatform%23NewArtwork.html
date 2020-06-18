@@ -28,6 +28,17 @@
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Alternative_Title_Use_Period_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Alternative_Title_Use_Period_Latest"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Alternative_Title_Used_By="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Alternative_Title_Used_By"
         https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Style_-_Movement="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Style_-_Movement"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Type"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest"
       ]]'
     >
 
@@ -88,6 +99,60 @@
 					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Style_-_Movement">
      		</semantic-form-text-input>
       
+      <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description"
+				new-subject-template=""
+				fields='[[fieldDefinitions
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Type"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author"
+			]]'>
+    		<semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Value"
+          multiline='true'
+          languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+     		</semantic-form-text-input>
+     		<semantic-form-autocomplete-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Type">
+     		</semantic-form-autocomplete-input>
+        <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author">
+     		</semantic-form-text-input>
+    </semantic-form-composite-input>
+      
+      <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts"
+				new-subject-template=""
+				fields='[[fieldDefinitions
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts_Value"
+        https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type"
+			]]'>
+    		<semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Parts_Value">
+     		</semantic-form-text-input>
+        <semantic-form-text-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type">
+     		</semantic-form-text-input>
+    </semantic-form-composite-input>
+      
+      <semantic-form-composite-input 
+				for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production"
+				new-subject-template=""
+				fields='[[fieldDefinitions
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location"
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest"
+       https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest"
+			]]'>
+     		<semantic-form-autocomplete-input 
+					for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Location">
+     		</semantic-form-autocomplete-input>
+     		<semantic-form-datetime-input 
+        	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Earliest">
+     		</semantic-form-datetime-input>
+     		<semantic-form-datetime-input 
+        	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Production_Date_Latest">
+     		</semantic-form-datetime-input>
+    </semantic-form-composite-input>
       
       <button name='submit' class='btn btn-default'>Save</button>
       <button name='reset' class='btn btn-default'>Reset</button>

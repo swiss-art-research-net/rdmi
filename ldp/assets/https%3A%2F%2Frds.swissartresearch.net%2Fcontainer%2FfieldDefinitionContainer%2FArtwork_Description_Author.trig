@@ -1,0 +1,54 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-6056813463d740af999d77d25f0e77d7-z392jbx <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P94i_was_created_by ?creation_uri.
+  ?creation_uri a crm:E65_Creation.
+  ?creation_uri crm:P14_carried_out_by ?creator_uri.
+  ?creator_uri a crm:E39_Actor. 
+  ?creator_uri rdfs:label ?value.
+} WHERE {
+ BIND(IRI(CONCAT(STR($subject),\"/creation/\", MD5(str($value)))) as ?creation_uri).
+ BIND(IRI(CONCAT(STR($subject),\"/creator/\", MD5(str($value)))) as ?creator_uri).
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Description Author";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6056813463d740af999d77d25f0e77d7-z392jbx .
+  
+  _:genid-6056813463d740af999d77d25f0e77d7-oxvvym a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the author of the description fiven of the documented work." .
+  
+  _:genid-6056813463d740af999d77d25f0e77d7-z392jbx a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author>
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-6056813463d740af999d77d25f0e77d7-oxvvym .
+  
+  _:genid-6056813463d740af999d77d25f0e77d7-oxvvym <http://spinrdf.org/sp#text> """DELETE { 
+  ?subject crm:P94i_was_created_by ?creation_uri.
+  ?creation_uri crm:P14_carried_out_by ?creator_uri.
+} 
+WHERE {
+  ?subject crm:P94i_was_created_by ?creation_uri.
+  ?creation_uri a crm:E65_Creation.
+  ?creation_uri crm:P14_carried_out_by ?creator_uri.
+  ?creator_uri a crm:E39_Actor. 
+  ?creator_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T08:34:43.725Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Description_Author>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}

@@ -1,0 +1,41 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type/context> {
+  _:genid-4f882db0481647cc927efbd1eeab9d8e-jcak9k <http://spinrdf.org/sp#text> """DELETE { $subject crm:P2_has_type $type_uri.}
+WHERE {
+  $subject crm:P2_has_type $type_uri.
+  ?type_uri a crm:E55_Type.
+  ?type_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4f882db0481647cc927efbd1eeab9d8e-h16elgh;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Artwork Part Type" .
+  
+  _:genid-4f882db0481647cc927efbd1eeab9d8e-h16elgh a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """INSERT { 
+  $subject crm:P2_has_type $type_uri.
+  ?type_uri a crm:E55_Type.
+  ?type_uri rdfs:label ?value.
+} WHERE {
+  BIND(IRI(CONCAT(\"rds:\",\"types/\", MD5(str(?value)))) as ?type_uri).   
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate part types for the documented artwork." .
+  
+  _:genid-4f882db0481647cc927efbd1eeab9d8e-jcak9k a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4f882db0481647cc927efbd1eeab9d8e-jcak9k;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T08:47:00.254Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Artwork_Part_Type>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
