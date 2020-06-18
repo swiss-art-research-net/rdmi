@@ -1,0 +1,50 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-600f4bb708204682b70b31c9175521b5-i8rfm <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P51_has_former_or_current_owner ?actor_uri.
+  ?actor_uri a crm:E39_Actor.
+  ?actor_uri rdfs:label ?value.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/actor/\", MD5(str($value)))) as ?actor_uri).  
+} """ .
+  
+  _:genid-600f4bb708204682b70b31c9175521b5-8ax2x a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Item Owner";
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the institution possessing the library item carrying this bibliographic item.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-600f4bb708204682b70b31c9175521b5-i8rfm;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-600f4bb708204682b70b31c9175521b5-8ax2x .
+  
+  _:genid-600f4bb708204682b70b31c9175521b5-i8rfm a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-600f4bb708204682b70b31c9175521b5-8ax2x <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P51_has_former_or_current_owner ?actor_uri.
+  ?actor_uri rdfs:label ?value.
+}
+WHERE {
+  ?subject crm:P51_has_former_or_current_owner ?actor_uri.
+  ?actor_uri a crm:E39_Actor.
+  ?actor_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-18T12:40:19.284Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Bibliographic_Item_Owner>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
