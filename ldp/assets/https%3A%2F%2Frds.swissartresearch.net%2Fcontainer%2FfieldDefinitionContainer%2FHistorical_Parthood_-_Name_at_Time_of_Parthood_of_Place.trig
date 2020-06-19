@@ -1,40 +1,56 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Name_at_Time_of_Parthood_of_Place/context> {
-  _:t504463 a <http://spinrdf.org/sp#Query> .
-  
-  _:t504462 a <http://spinrdf.org/sp#Query> .
-  
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Name_at_Time_of_Parthood_of_Place>
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t504463;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t504462;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Name at Time of Parthood of Place" .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-563ce44c9c834a489e76b15b598b12a6-kn00qi .
   
-  _:t504463 <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
-} 
-WHERE { 
-  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
-} """ .
-  
-  _:t504462 <http://spinrdf.org/sp#text> """DELETE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri rdfs:label ?value.
+  _:genid-563ce44c9c834a489e76b15b598b12a6-7rjkaa <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P166i_had_presence ?presence_uri.
+  ?presence_uri crm:P10i_contains ?name_activity_uri.
+  ?name_activity_uri crm:R64_used_name ?name_uri. 
+  ?name_uri rdfs:label ?value.
+  ?name_uri crm:P1i_identifies ?presence_uri.
 }
 WHERE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
+  ?subject crm:P166i_had_presence ?presence_uri.
+  ?presence_uri a crm:E93_Presence.
+  ?presence_uri crm:P10i_contains ?name_activity_uri.
+  ?name_activity_uri a frbr:F52_Name_Use_Activity.
+  ?name_activity_uri crm:R64_used_name ?name_uri. 
+  ?name_uri a crm:E41_Appellation.
+  ?name_uri rdfs:label ?value.
+  ?name_uri crm:P1i_identifies ?presence_uri.
 }""" .
   
+  _:genid-563ce44c9c834a489e76b15b598b12a6-kn00qi <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P166i_had_presence ?presence_uri.
+  ?presence_uri a crm:E93_Presence.
+  ?presence_uri crm:P10i_contains ?name_activity_uri.
+  ?name_activity_uri a frbr:F52_Name_Use_Activity.
+  ?name_activity_uri crm:R64_used_name ?name_uri. 
+  ?name_uri a crm:E41_Appellation.
+  ?name_uri rdfs:label ?value.
+  ?name_uri crm:P1i_identifies ?presence_uri.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/presence/\", MD5(str($subject)))) as ?presence_uri).  
+  BIND(IRI(CONCAT(STR($subject),\"/name_activity/\", MD5(str($value)))) as ?name_activity_uri).  
+  BIND(IRI(CONCAT(STR($subject),\"/appellation/\", MD5(str($value)))) as ?name_uri).  
+} """ .
+  
+  _:genid-563ce44c9c834a489e76b15b598b12a6-7rjkaa a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-563ce44c9c834a489e76b15b598b12a6-kn00qi a <http://spinrdf.org/sp#Query> .
+  
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Name_at_Time_of_Parthood_of_Place>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Name at Time of Parthood of Place";
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-563ce44c9c834a489e76b15b598b12a6-7rjkaa;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T07:10:38.316Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T08:27:10.801Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Name_at_Time_of_Parthood_of_Place> .
