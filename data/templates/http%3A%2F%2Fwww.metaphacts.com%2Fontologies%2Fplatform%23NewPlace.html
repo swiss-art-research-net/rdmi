@@ -42,6 +42,8 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Altern
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Alternative_Name_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Alternative_Name_Type"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Alternative_Name_Use_Period_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Alternative_Name_Use_Period_Earliest"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Alternative_Name_Use_Period_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Alternative_Name_Use_Period_Latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Part_of="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Part_of"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Has_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Has_Part"
 ]]'
 >
 
@@ -116,16 +118,14 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Altern
      	</semantic-form-datetime-input>
 	</semantic-form-composite-input>
 
-
+  <semantic-form-autocomplete-input 
+     for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Part_of">
+ 	</semantic-form-autocomplete-input>
+	
+  <semantic-form-autocomplete-input 
+     for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Place_Has_Part">
+ 	</semantic-form-autocomplete-input>
     
-    
-<!--<semantic-form-text-input 
-  for="http://www.researchspace.org/instances/fields/Has_Part">
-</semantic-form-text-input>
-<semantic-form-text-input 
-  for="http://www.researchspace.org/instances/fields/Coordinates">
-</semantic-form-text-input >
--->
     
 	<button name='submit' class='btn btn-default'>Save</button>
   <button name='reset' class='btn btn-default'>Reset</button>

@@ -1,0 +1,44 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Part_of_Place/context> {
+  _:t504463 a <http://spinrdf.org/sp#Query> .
+  
+  _:t504462 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Part_of_Place>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t504463;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t504462;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Historically Part of Place" .
+  
+  _:t504463 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri a crm:E57_Material .
+  ?material_uri rdfs:label ?value.
+} 
+WHERE { 
+  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
+} """ .
+  
+  _:t504462 <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri rdfs:label ?value.
+}
+WHERE {
+  ?subject crm:P45_consists_of ?material_uri.
+  ?material_uri a crm:E57_Material .
+  ?material_uri rdfs:label ?value.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Part_of_Place>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T07:10:25.640Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Part_of_Place> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Part_of_Place>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
