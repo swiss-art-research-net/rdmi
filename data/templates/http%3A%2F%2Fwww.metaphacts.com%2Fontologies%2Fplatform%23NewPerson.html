@@ -42,6 +42,10 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Pl
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Value"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Role="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Role"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Earliest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Latest"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Biography="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Biography"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role"
@@ -202,10 +206,32 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Socia
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation">
 </semantic-form-text-input>
 
-<semantic-form-text-input 
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation">
-</semantic-form-text-input>
+          
+<semantic-form-composite-input 
+               for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation"
+               new-subject-template=""
+               fields='[[fieldDefinitions	https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Value"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Role="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Role"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Earliest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Earliest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Latest="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Latest"
+]]'>
+    <semantic-form-text-input 
+      for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Value">
+    </semantic-form-text-input>
+    <semantic-form-text-input 
+      for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Role">
+    </semantic-form-text-input>
+  <semantic-form-datetime-input 
+    for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Earliest">
+  </semantic-form-datetime-input>
+  <semantic-form-datetime-input 
+    for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Institutional_Affiliation_Start_Date_Latest">
+  </semantic-form-datetime-input>
+</semantic-form-composite-input>
 
+          
+          
+          
 <semantic-form-composite-input 
                for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit"
                new-subject-template=""
