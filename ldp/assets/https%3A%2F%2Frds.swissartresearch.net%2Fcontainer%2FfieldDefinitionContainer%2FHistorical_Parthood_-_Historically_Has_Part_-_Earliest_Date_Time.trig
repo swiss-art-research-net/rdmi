@@ -1,40 +1,47 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time/context> {
-  _:t504463 a <http://spinrdf.org/sp#Query> .
-  
-  _:t504462 a <http://spinrdf.org/sp#Query> .
-  
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time>
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t504463;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t504462;
     a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Historically Has Part - Earliest Date Time" .
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-5eba986018cc4e7fac87d882efd3113f-9f5rgh .
   
-  _:t504463 <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
+  _:genid-5eba986018cc4e7fac87d882efd3113f-mwqecs <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P160_has_temporal_projection ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span.
+  ?timespan_uri crm:P82a_begin_of_the_begin ?value. 
 } 
 WHERE { 
-  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
-} """ .
+  BIND(IRI(CONCAT(STR($subject),\"/timespan/\", MD5(str($subject)))) as ?timespan_uri).  
+}  """ .
   
-  _:t504462 <http://spinrdf.org/sp#text> """DELETE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri rdfs:label ?value.
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Historically Has Part - Earliest Date Time" .
+  
+  _:genid-5eba986018cc4e7fac87d882efd3113f-9f5rgh <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P160_has_temporal_projection ?timespan_uri.
+  ?timespan_uri crm:P82a_begin_of_the_begin ?value. 
 }
 WHERE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
+  ?subject crm:P160_has_temporal_projection ?timespan_uri.
+  ?timespan_uri a crm:E52_Time-Span.
+  ?timespan_uri crm:P82a_begin_of_the_begin ?value. 
 }""" .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-5eba986018cc4e7fac87d882efd3113f-mwqecs .
+  
+  _:genid-5eba986018cc4e7fac87d882efd3113f-mwqecs a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#date> .
+  
+  _:genid-5eba986018cc4e7fac87d882efd3113f-9f5rgh a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T07:12:25.515Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T08:39:48.634Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historically_Has_Part_-_Earliest_Date_Time> .

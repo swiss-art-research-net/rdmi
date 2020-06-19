@@ -1,40 +1,57 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates/context> {
-  _:t504463 a <http://spinrdf.org/sp#Query> .
-  
-  _:t504462 a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates>
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the material of which the documented instance of built work consists.";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:t504463;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:t504462;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Historicall Coordinates" .
-  
-  _:t504463 <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
+  _:genid-060f311493d0410dbddcffe326c37050-lprs2h <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P166i_had_presence ?presence_uri.
+  ?presence_uri a crm:E93_Presence.
+  ?presence_uri crm:P10i_contains ?period_uri.
+  ?period_uri a crm:E4_Period.
+  ?period_uri crm:P161_has_spatial_projection ?place_uri. 
+  ?place_uri a crm:E53_Place.
+  ?place_uri crm:P168_place_is_defined_by ?value.
 } 
 WHERE { 
-  BIND(IRI(CONCAT(STR($subject),\"/material/\", MD5(str($value)))) as ?material_uri).  
+  BIND(IRI(CONCAT(STR($subject),\"/presence/\", MD5(str($subject)))) as ?presence_uri).  
+  BIND(IRI(CONCAT(STR($subject),\"/period/\", MD5(str($value)))) as ?period_uri).  
+  BIND(IRI(CONCAT(STR($subject),\"/place/\", MD5(str($value)))) as ?place_uri).  
 } """ .
   
-  _:t504462 <http://spinrdf.org/sp#text> """DELETE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri rdfs:label ?value.
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates>
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-060f311493d0410dbddcffe326c37050-0djl6l;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-060f311493d0410dbddcffe326c37050-lprs2h .
+  
+  _:genid-060f311493d0410dbddcffe326c37050-lprs2h a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Historical Parthood - Historicall Coordinates";
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-060f311493d0410dbddcffe326c37050-0djl6l a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:genid-060f311493d0410dbddcffe326c37050-0djl6l <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P166i_had_presence ?presence_uri.
+  ?presence_uri crm:P10i_contains ?period_uri.
+  ?period_uri crm:P161_has_spatial_projection ?place_uri. 
+  ?place_uri crm:P168_place_is_defined_by ?value.
 }
 WHERE {
-  ?subject crm:P45_consists_of ?material_uri.
-  ?material_uri a crm:E57_Material .
-  ?material_uri rdfs:label ?value.
+  ?subject crm:P166i_had_presence ?presence_uri.
+  ?presence_uri a crm:E93_Presence.
+  ?presence_uri crm:P10i_contains ?period_uri.
+  ?period_uri a crm:E4_Period.
+  ?period_uri crm:P161_has_spatial_projection ?place_uri. 
+  ?place_uri a crm:E53_Place.
+  ?place_uri crm:P168_place_is_defined_by ?value.
 }""" .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates>
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T07:12:57.060Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T08:42:46.832Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Historical_Parthood_-_Historicall_Coordinates> .
