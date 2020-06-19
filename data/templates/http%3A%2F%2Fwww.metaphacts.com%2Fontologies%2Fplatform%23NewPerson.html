@@ -58,6 +58,9 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Honorific="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Honorific"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Mother="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Mother"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation_Type"
 ]]'
 >
 
@@ -179,12 +182,25 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Da
 <semantic-form-text-input 
     for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Mother">
 </semantic-form-text-input>
-          
 
+<semantic-form-composite-input 
+               for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation_Type="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation_Type"
+]]'>
+    <semantic-form-text-input 
+      for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation">
+    </semantic-form-text-input>
+    <semantic-form-text-input 
+      for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations_-_Relation_Type">
+    </semantic-form-text-input>
+</semantic-form-composite-input>
 
-<semantic-form-autocomplete-input
+<semantic-form-text-input
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation">
-</semantic-form-autocomplete-input>
+</semantic-form-text-input>
 
 <semantic-form-text-input 
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation">
