@@ -1,0 +1,52 @@
+
+<https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations/context> {
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-45e943befbc84726bea6ee8dcd2e8434-a6vl3m a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the social relations of a person.";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-45e943befbc84726bea6ee8dcd2e8434-et2gq7;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-45e943befbc84726bea6ee8dcd2e8434-yjn3ee;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Social Relations" .
+  
+  _:genid-45e943befbc84726bea6ee8dcd2e8434-yjn3ee a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject crm:P01_has_domain ?value.
+  ?value a sari:SRPC3_in_social_relation.
+}""" .
+  
+  _:genid-45e943befbc84726bea6ee8dcd2e8434-et2gq7 <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P01_has_domain ?value.
+}
+WHERE {
+  ?subject crm:P01_has_domain ?value.
+  ?value a sari:SRPC3_in_social_relation.
+}""" .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-45e943befbc84726bea6ee8dcd2e8434-a6vl3m .
+  
+  _:genid-45e943befbc84726bea6ee8dcd2e8434-a6vl3m <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P01_has_domain ?value.
+  ?value a sari:SRPC3_in_social_relation.
+} 
+WHERE { 
+  ?s ?p ?o 
+} """ .
+  
+  _:genid-45e943befbc84726bea6ee8dcd2e8434-et2gq7 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T10:57:59.475Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Social_Relations>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
