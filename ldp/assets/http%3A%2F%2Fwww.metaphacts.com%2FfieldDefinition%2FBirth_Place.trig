@@ -1,51 +1,68 @@
 
 <http://www.metaphacts.com/fieldDefinition/Birth_Place/context> {
-  <http://www.metaphacts.com/fieldDefinition/Birth_Place> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place"@undefined;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-5C135F1E61D95C5DF6389F1CAC9B1F3C;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-5690FBBDAA624D113C414A23DB04C84F;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-E1F46DB9873718ABF8873C569A74E9D5;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
-    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-85362FC4EEFB8DB944049A047781D38B .
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place> <http://www.metaphacts.com/ontology/fields#autosuggestionPattern>
+      _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-yj4tk .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-85362FC4EEFB8DB944049A047781D38B a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """prefix bds: <http://www.bigdata.com/rdf/search#>
-SELECT ?value ?label WHERE {
-    ?value a <http://www.geonames.org/ontology#Feature>.
-    ?value rdfs:label ?label.
-    ?label bds:search ?__token__.
-    ?label bds:matchAllTerms \"true\".
-} LIMIT 15""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-5C135F1E61D95C5DF6389F1CAC9B1F3C a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value . 
-  ?value rdfs:label ?label
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-bbqc9b <http://spinrdf.org/sp#text> """INSERT {
+  ?subject crm:P7_took_place_at ?value . 
+  ?value a crm:E53_Place.
 } 
 WHERE {
-    ?value rdfs:label ?label
+    ?s ?p ?o 
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-E1F46DB9873718ABF8873C569A74E9D5 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value} 
-WHERE {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value . 
-  ?value rdfs:label ?label
-}""" .
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-5690FBBDAA624D113C414A23DB04C84F a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-yj4tk a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-bbqc9b;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the place of birth of the documented person." .
+  
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-bbqc9b a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "0";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-py81d1 .
+  
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-py81d1 <http://spinrdf.org/sp#text> """SELECT ?value ?label 
 WHERE {
-  $subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value.
+  $subject crm:P7_took_place_at ?value.
+  ?value a crm:E53_Place.
   ?value rdfs:label ?label.
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Birth_Place> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-570wjp a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-py81d1 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Birth Place"@undefined .
+  
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-yj4tk <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a crm:E53_Place.
+  ?value rdfs:label ?label .
+  ?label bds:search ?__token__  ;
+  bds:minRelevance \"0.2\" ;
+  bds:relevance ?score ;
+  bds:matchAllTerms \"true\" .
+} LIMIT 10""" .
+  
+  _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-570wjp <http://spinrdf.org/sp#text> """DELETE { 
+  ?subject crm:P7_took_place_at ?value .
+} 
+WHERE {
+  ?subject crm:P7_took_place_at ?value .
+  ?value a crm:E53_Place.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-13e5bf4cfa6c441f9ebe75e15a5fc153-570wjp;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:54.974Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:54:05.021Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Birth_Place> .

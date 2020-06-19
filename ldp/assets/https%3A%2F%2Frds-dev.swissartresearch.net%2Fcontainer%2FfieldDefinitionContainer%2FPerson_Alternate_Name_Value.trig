@@ -1,51 +1,47 @@
 
 <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value/context> {
-  _:genid-4017d2fafbd744c892f2adbe92dd8bf6-dzvtgf <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject rdfs:label ?value.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri.
-  ?language_iri a crm:E56_Language .
-} WHERE {
- ?language_iri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
-      BIND(lang(?value) as ?lang)
-}""" .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-4017d2fafbd744c892f2adbe92dd8bf6-35qu9o;
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-4017d2fafbd744c892f2adbe92dd8bf6-q3jm0r;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
-  
-  _:genid-4017d2fafbd744c892f2adbe92dd8bf6-35qu9o a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-4017d2fafbd744c892f2adbe92dd8bf6-dzvtgf;
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined .
-  
-  _:genid-4017d2fafbd744c892f2adbe92dd8bf6-dzvtgf a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-4017d2fafbd744c892f2adbe92dd8bf6-q3jm0r <http://spinrdf.org/sp#text> """DELETE {  
-  ?subject rdfs:label ?value.
-} WHERE {
-	?subject rdfs:label ?value.
-}""" .
-  
-  _:genid-4017d2fafbd744c892f2adbe92dd8bf6-35qu9o <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+  _:genid-e00f907ac20f40438fa82676e1876f2c-e79n4b <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
 WHERE {
   ?subject rdfs:label ?value.
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative name for the person" .
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-4017d2fafbd744c892f2adbe92dd8bf6-q3jm0r a <http://spinrdf.org/sp#Query> .
+  _:genid-e00f907ac20f40438fa82676e1876f2c-ubc7qd <http://spinrdf.org/sp#text> """DELETE {  
+  ?subject rdfs:label ?value.
+} WHERE {
+  ?subject rdfs:label ?value.
+}""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e00f907ac20f40438fa82676e1876f2c-e79n4b;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate additional names under which the documented person is known. This can be linked to the additional name type and earliest and latest date of use of that name.";
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e00f907ac20f40438fa82676e1876f2c-qkhowf .
+  
+  _:genid-e00f907ac20f40438fa82676e1876f2c-e79n4b a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e00f907ac20f40438fa82676e1876f2c-ubc7qd a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e00f907ac20f40438fa82676e1876f2c-qkhowf a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-e00f907ac20f40438fa82676e1876f2c-ubc7qd .
+  
+  _:genid-e00f907ac20f40438fa82676e1876f2c-qkhowf <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject rdfs:label ?value.
+} WHERE {
+  ?s ?p ?o 
+}""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-04T10:44:55.884Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:36:41.731Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value> .

@@ -3,51 +3,66 @@
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place>
     a <http://www.metaphacts.com/ontology/fields#Field>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Death Place"@undefined;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-A2A968E1C4311665F256D6A331E2A9D6;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-6138D8EC167BD7CF901CF25D01A8FB75;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-B02E67B8CDAEAD80A8E8D818DBBD48A1;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
-    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-2DE9B4033EDD47CD68D88764E3EF9F8A .
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-B02E67B8CDAEAD80A8E8D818DBBD48A1 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE { ?subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value} 
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-w1k12n a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-lzgpvs <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?value a crm:E53_Place.
+  ?value rdfs:label ?label .
+  ?label bds:search ?__token__  ;
+  bds:minRelevance \"0.2\" ;
+  bds:relevance ?score ;
+  bds:matchAllTerms \"true\" .
+} LIMIT 10""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place>
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-cf49dbde0ded466ca10338c5ef53b7be-gr24af;
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-cf49dbde0ded466ca10338c5ef53b7be-lzgpvs;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-cf49dbde0ded466ca10338c5ef53b7be-w1k12n .
+  
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-w1k12n <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P7_took_place_at ?value . 
+} 
 WHERE {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value . 
-  ?value rdfs:label ?label
+  ?subject crm:P7_took_place_at ?value . 
+  ?value a crm:E53_Place.
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-6138D8EC167BD7CF901CF25D01A8FB75 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-lzgpvs a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-gr24af a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the place of death of the documented person.";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-cf49dbde0ded466ca10338c5ef53b7be-9yoz8t .
+  
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-9yoz8t <http://spinrdf.org/sp#text> """SELECT ?value ?label 
 WHERE {
-  $subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value.
+  ?subject crm:P7_took_place_at ?value . 
+  ?value a crm:E53_Place.
   ?value rdfs:label ?label.
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-2DE9B4033EDD47CD68D88764E3EF9F8A a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """prefix bds: <http://www.bigdata.com/rdf/search#>
-SELECT ?value ?label WHERE {
-    ?value a <http://www.geonames.org/ontology#Feature>.
-    ?value rdfs:label ?label.
-    ?label bds:search ?__token__.
-    ?label bds:matchAllTerms \"true\".
-} LIMIT 15""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-A2A968E1C4311665F256D6A331E2A9D6 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value . 
-  ?value rdfs:label ?label
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-gr24af <http://spinrdf.org/sp#text> """INSERT {
+  ?subject crm:P7_took_place_at ?value . 
+  ?value a crm:E53_Place.
 } 
 WHERE {
-    ?value rdfs:label ?label
+    ?s ?p ?o.
 }""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:genid-cf49dbde0ded466ca10338c5ef53b7be-9yoz8t a <http://spinrdf.org/sp#Query> .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place>
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.993Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:53:44.846Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place> .

@@ -1,20 +1,43 @@
 
 <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender/context> {
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender>
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Person Gender"@undefined;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the alternative name of a person";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-4A25BB879604F56E615576FAF0E6EEBE;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-D037DAA8CA4D909736FCBCF257AB7F26;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-C76C81AE3D4E93A173F56BCBD33BBE21;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-9471902B39CA55822A02B803F270D647;
-    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-C7553B3301699A27C5FAC9A80C946D22 .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e628feff783341a39b46bbb385903d24-wxwbpc;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-4A25BB879604F56E615576FAF0E6EEBE a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value.
+  _:genid-e628feff783341a39b46bbb385903d24-iycn38 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-wxwbpc a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender>
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-k7zscy <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  SERVICE <http://vocab.getty.edu/sparql> {
+    ?value <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300411835>.
+      ?value rdfs:label ?label.
+      FILTER(lang(?label)=\"en\")}
+}""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender>
+    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-e628feff783341a39b46bbb385903d24-k7zscy .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-iulazs <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  SERVICE <http://vocab.getty.edu/sparql> {
+    ?value <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300411835>.
+      ?value rdfs:label ?label.
+      FILTER(lang(?label)=\"en\")}
+}""" .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-k7zscy a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-iulazs a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the alternative name of a person";
+    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-e628feff783341a39b46bbb385903d24-iulazs .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-wxwbpc <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P2_has_type ?value.
   ?value rdfs:label ?label 
 } 
  WHERE{
@@ -25,37 +48,31 @@
 }
 """ .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-C76C81AE3D4E93A173F56BCBD33BBE21 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE {?subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value.} WHERE {?subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value.
-  ?value rdfs:label ?label }""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-9471902B39CA55822A02B803F270D647 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  SERVICE <http://vocab.getty.edu/sparql> {
-    ?value <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300411835>.
-      ?value rdfs:label ?label.
-      FILTER(lang(?label)=\"en\")}
-}""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-C7553B3301699A27C5FAC9A80C946D22 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  SERVICE <http://vocab.getty.edu/sparql> {
-    ?value <http://vocab.getty.edu/ontology#broaderPreferredExtended> <http://vocab.getty.edu/aat/300411835>.
-      ?value rdfs:label ?label.
-      FILTER(lang(?label)=\"en\")}
-}""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-D037DAA8CA4D909736FCBCF257AB7F26 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+  _:genid-e628feff783341a39b46bbb385903d24-iycn38 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
 WHERE {
-?subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value.
+  ?subject crm:P2_has_type ?value.
   ?value rdfs:label ?label 
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Gender"@undefined .
+  
+  _:genid-e628feff783341a39b46bbb385903d24-ioaxc a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P2_has_type ?value.
+} 
+WHERE {
+  ?subject crm:P2_has_type ?value.
+  ?value rdfs:label ?label 
+}""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e628feff783341a39b46bbb385903d24-iycn38;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-e628feff783341a39b46bbb385903d24-ioaxc;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.676Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:43:38.882Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender> .
