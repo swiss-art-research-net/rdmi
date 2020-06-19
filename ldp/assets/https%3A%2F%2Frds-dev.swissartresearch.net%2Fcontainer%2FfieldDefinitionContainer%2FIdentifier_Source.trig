@@ -1,49 +1,61 @@
 
 <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source/context> {
+  _:genid-311d0034a39a47bdad197b6a59285e81-1c1e9f <http://spinrdf.org/sp#text> """INSERT {
+  ?subject crm:P37i_was_assigned_by ?id_assign.
+  ?id_assign a crm:E15_Identifier_Assignment.
+  ?id_assign crm:P16_used_specific_object ?value.
+  ?value a crm:E73_Information_Object.
+  ?value rdfs:label ?label. 
+} 
+WHERE {
+  BIND(IRI(CONCAT(STR($subject),\"/id_assignment/\", MD5(str($value)))) as ?id_assign).
+  BIND(STR(?value) as ?label) .
+}""" .
+  
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source>
-    a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Identifier Source"@undefined;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "The Organizations/Institutions providing the Identifiers";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-36822567F03A6D7B801B9F17E037BC21;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-77D05070B83EC2C81B0795B9275B525A;
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-311d0034a39a47bdad197b6a59285e81-qc03jhk a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source>
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-311d0034a39a47bdad197b6a59285e81-y0c1bf;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-90191D7F7E9110E0152FE43D0EA0E5AC;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-311d0034a39a47bdad197b6a59285e81-1c1e9f;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Identifier Source"@undefined .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-90191D7F7E9110E0152FE43D0EA0E5AC a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE {  ?provider <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> ?value } WHERE {
- ?subject <http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by> ?provider.
-  ?provider a <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment>.
-  ?provider <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> 
+  _:genid-311d0034a39a47bdad197b6a59285e81-1c1e9f a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-311d0034a39a47bdad197b6a59285e81-qc03jhk <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label WHERE {
+  ?subject crm:P37i_was_assigned_by ?provider.
+  ?provider a crm:E15_Identifier_Assignment.
+  ?provider crm:P16_used_specific_object ?value.
+  ?value a crm:E73_Information_Object .
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-77D05070B83EC2C81B0795B9275B525A a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label WHERE {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by> ?provider.
-  ?provider a <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment>.
-  ?provider <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
-}""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-36822567F03A6D7B801B9F17E037BC21 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by> ?id_assign.
-  ?id_assign a <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment>.
-  ?id_assign <http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
-  ?value rdfs:label ?label} 
-  WHERE {
-      BIND(IRI(CONCAT(STR($subject),\"/id_assignment/\", MD5(str($subject)))) as ?id_assign).
-      BIND(STR(?value) as ?label)
+  _:genid-311d0034a39a47bdad197b6a59285e81-y0c1bf <http://spinrdf.org/sp#text> """DELETE { 
+  ?subject crm:P37i_was_assigned_by ?id_assign.
+  ?id_assign crm:P16_used_specific_object ?value.
+  ?value rdfs:label ?label. 
+} WHERE {
+  ?subject crm:P37i_was_assigned_by ?id_assign.
+  ?id_assign a crm:E15_Identifier_Assignment.
+  ?id_assign crm:P16_used_specific_object ?value.
+  ?value a crm:E73_Information_Object.
+  ?value rdfs:label ?label. 
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-311d0034a39a47bdad197b6a59285e81-qc03jhk;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the source based on which the identifer was attributed to the object." .
+  
+  _:genid-311d0034a39a47bdad197b6a59285e81-y0c1bf a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source>
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.749Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:04:40.618Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source> .

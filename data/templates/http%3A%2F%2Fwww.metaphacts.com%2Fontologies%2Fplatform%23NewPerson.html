@@ -18,7 +18,9 @@
       	persistence='ldp' 
         form-id='persons'               
          fields='[[fieldDefinitions
-http://www.metaphacts.com/fieldDefinition/Person_Name="http://www.metaphacts.com/fieldDefinition/Person_Name"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Value"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"
 http://www.metaphacts.com/fieldDefinition/Name="http://www.metaphacts.com/fieldDefinition/Name"
 http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
@@ -53,11 +55,27 @@ http://www.metaphacts.com/fieldDefinition/Person_ULAN_URL="http://www.metaphacts
 http://www.researchspace.org/instances/fields/Floruit_Place="http://www.researchspace.org/instances/fields/Floruit_Place"
 http://www.metaphacts.com/fieldDefinition/Floruit_Date_earliest="http://www.metaphacts.com/fieldDefinition/Floruit_Date_earliest"
 http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.researchspace.org/instances/fields/Floruit_Date_latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Honorific="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Honorific"
 ]]'
 >
 
-<semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/Person_Name" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
-</semantic-form-text-input>
+
+          
+<semantic-form-composite-input 
+   	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name"
+   	new-subject-template=""
+   	fields='[[fieldDefinitions
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Value="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Value"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part"
+]]'>
+  <semantic-form-text-input 
+                            for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Value"
+                            languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+  </semantic-form-text-input>
+  <semantic-form-text-input 
+                            for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part">
+  </semantic-form-text-input>
+</semantic-form-composite-input>  
 
 <semantic-form-composite-input 
    	for="http://www.metaphacts.com/fieldDefinition/Identifier"
@@ -81,8 +99,10 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Identifier_V
                             for="http://www.metaphacts.com/fieldDefinition/Identifier_Provider">
   </semantic-form-text-input>
 </semantic-form-composite-input>  
-          
-          
+
+<semantic-form-text-input 
+	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Honorific">
+</semantic-form-text-input>
           
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
