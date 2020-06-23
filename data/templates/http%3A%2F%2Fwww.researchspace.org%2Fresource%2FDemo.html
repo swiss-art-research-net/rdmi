@@ -78,14 +78,11 @@ prefix person: <http://example.com/person/>
 prefix org: <http://example.com/org/>
 SELECT distinct ?subject ?label WHERE {
 $subject a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>.
-?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
-?value rdfs:label ?label.
-?value a  crm:E41_Appellation 
+?subject rdfs:label ?label.
 } limit 40"
 options='{ "infinite": true, "slidesToShow": 3 }'
 tuple-template= '
 <div class="text-center panel panel-default" style="border:none;margin-right:20px;font-size:12px;height:300px;width: 33%;display:inline;">
-  <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
   <div class="panel-body" style="height:300px;">
     <div style="width:280px;height:280px;margin: 50px auto;" class="text-center">
       <img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Checkin01-512.png" style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
