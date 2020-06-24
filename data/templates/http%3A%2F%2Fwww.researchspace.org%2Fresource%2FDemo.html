@@ -76,9 +76,10 @@ tuple-template= '
 query="
 prefix person: <http://example.com/person/>
 prefix org: <http://example.com/org/>
-SELECT distinct ?subject ?label WHERE {
+SELECT distinct ?subject ?label ?thumbnail WHERE {
 $subject a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>.
 ?subject rdfs:label ?label.
+       ?subject crm:P138i_has_representation ?thumbnail.
 } limit 40"
 options='{ "infinite": true, "slidesToShow": 3 }'
 tuple-template= '
@@ -86,7 +87,7 @@ tuple-template= '
   <semantic-link class="grid-resource-link" title="{{label.value}}" iri="{{subject.value}}">
   <div class="panel-body" style="height:300px;">
     <div style="width:280px;height:280px;margin: 50px auto;" class="text-center">
-      <img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Checkin01-512.png" style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
+      <img src={{thumbnail.value}} style="max-height:250px; max-width:250px; margin: 10 auto;" class="img-rounded">
     </div>
   </div>
   <div class="panel-footer" style="position: relative; border: none;    margin: 20px;">
