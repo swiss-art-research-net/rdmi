@@ -1,32 +1,36 @@
 
 <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly/context> {
-  <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Place Identifiers"@en;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-BDEE0C35C513BD1C19868227EAC85293;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-4898E1A23EAD37A5C006B7FAF3073EB7;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+  _:genid-bc32ea2814e548c9bbbe1d7d1e539b49-jvll7p a <http://spinrdf.org/sp#Query> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-4898E1A23EAD37A5C006B7FAF3073EB7 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?value ?label WHERE {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
-  ?value <http://www.cidoc-crm.org/cidoc-crm/P37i_was_assigned_by> ?provider.
-  ?provider a <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment>.
-   ?value rdfs:label ?id_label.
-  ?provider <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ?actor_iri.
-  ?actor_iri a <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> .
+  <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-bc32ea2814e548c9bbbe1d7d1e539b49-7d0s7d a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Place Identifiers"@en .
+  
+  _:genid-bc32ea2814e548c9bbbe1d7d1e539b49-jvll7p <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-bc32ea2814e548c9bbbe1d7d1e539b49-7d0s7d <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  ?subject crmdig:L54_is_same-as ?value.
+  ?value a crm:E53_Place.
+  ?value rdfs:label ?id_label.
+  ?value crm:P140i_was_attributed_by ?attr_assignment_uri.
+  ?attr_assignment_uri a crm:E13_Attribute_Assignment.
+  ?attr_assignment_uri crm:P14_carried_out_by ?actor_iri.
+  ?actor_iri a crm:E39_Actor .
   ?actor_iri rdfs:label ?actor .
       BIND(CONCAT(?id_label,\" (\",?actor,\")\") as ?label)
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-BDEE0C35C513BD1C19868227EAC85293 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly> a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-bc32ea2814e548c9bbbe1d7d1e539b49-jvll7p;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-bc32ea2814e548c9bbbe1d7d1e539b49-7d0s7d;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:59.673Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-25T12:26:38.668Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Identifiers_Place_readOnly> .
