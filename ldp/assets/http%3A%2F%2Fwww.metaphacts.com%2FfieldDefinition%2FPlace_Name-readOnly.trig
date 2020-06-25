@@ -1,31 +1,37 @@
 
 <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly/context> {
-  <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Place Name"@en;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-C63BD0EAA051C98DBC030B08B886B370;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-AF3A2DDD77E8C62C674BE8F2C5E5549A;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+  <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-C63BD0EAA051C98DBC030B08B886B370 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-1b2c7e6e2e8b4ccaaab9751193a2ea6e-jzs94v <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-AF3A2DDD77E8C62C674BE8F2C5E5549A a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+  <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly> <http://www.metaphacts.com/ontology/fields#domain>
+      <http://www.cidoc-crm.org/cidoc-crm/E53_Place>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-1b2c7e6e2e8b4ccaaab9751193a2ea6e-jzs94v;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
+  
+  _:genid-1b2c7e6e2e8b4ccaaab9751193a2ea6e-phlvag <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
 WHERE {
-  $subject a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier . 
-  ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  $subject a crm:E53_Place.
+  ?subject crm:P1_is_identified_by ?name_identifier . 
+  ?name_identifier a crm:E41_Appellation.
   ?name_identifier rdfs:label ?name_label. 
-  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri.
+  ?name_identifier crm:P72_has_language ?language_iri.
       ?language_iri rdfs:label ?lang.
       BIND(CONCAT(?name_label , \" (\",?lang,\") \") as ?value)
       filter (datatype(?lang) = xsd:string)
 }""" .
   
+  _:genid-1b2c7e6e2e8b4ccaaab9751193a2ea6e-jzs94v a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-1b2c7e6e2e8b4ccaaab9751193a2ea6e-phlvag;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Place Name"@en .
+  
+  _:genid-1b2c7e6e2e8b4ccaaab9751193a2ea6e-phlvag a <http://spinrdf.org/sp#Query> .
+  
   <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.920Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-25T12:32:18.376Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Place_Name-readOnly> .
