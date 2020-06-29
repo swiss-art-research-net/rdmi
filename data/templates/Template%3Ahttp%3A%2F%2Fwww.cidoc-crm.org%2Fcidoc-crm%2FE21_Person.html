@@ -49,7 +49,7 @@ template='{{> Platform:FieldBasedVisualization subject="[[this]]"}}'
           </div>
       </div>
     </bs-tab>
-    [[#if (ask 'ASK { ?? owl:sameAs ?getty_uri	. SERVICE <http://vocab.getty.edu/sparql> {  ?getty_uri <http://purl.org/dc/elements/1.1/identifier> ?value.  } }')]]
+    [[#if (ask 'ASK { ?? owl:sameAs ?getty_uri	. SERVICE <http://vocab.getty.edu/sparql> { ?getty_uri <http://purl.org/dc/elements/1.1/identifier> ?value.  } }')]]
     <bs-tab event-key='more-from-getty' title='More from Getty'>
       <div> 
         <div data-flex-layout='row top-stretch'>
