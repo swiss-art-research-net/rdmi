@@ -76,10 +76,12 @@ tuple-template= '
 query="
 prefix person: <http://example.com/person/>
 prefix org: <http://example.com/org/>
+PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
 SELECT distinct ?subject ?label ?thumbnail WHERE {
 $subject a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>.
 ?subject rdfs:label ?label.
-       ?subject crm:P138i_has_representation ?thumbnail.
+       ?subject crmdig:L54_is_same-as ?wikidatalink.
+       ?wikidatalink crm:P138i_has_representation ?thumbnail.
 } limit 40"
 options='{ "infinite": true, "slidesToShow": 3 }'
 tuple-template= '
