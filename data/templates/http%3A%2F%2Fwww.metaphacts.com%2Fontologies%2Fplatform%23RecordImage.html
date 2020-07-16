@@ -1,12 +1,12 @@
-[[#if (ask 'ASK {??  <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image} ')]]
+[[#if (ask 'ASK {{??  crm:P138i_has_representation ?image} UNION {??crmdig:L54_is_same-as ?same_uri. ?same_uri crm:P138i_has_representation ?image} }')]]
 <div class="rs-page__summary-image">
-  <img src="[[singleValueFromSelect "SELECT ?image WHERE { ?? <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ?image}"]]" style="max-height:200px;height:100%"> 
+  <img src="[[singleValueFromSelect "SELECT ?image WHERE {{ ?? crm:P138i_has_representation ?image} UNION {?? crmdig:L54_is_same-as ?same_uri. ?same_uri crm:P138i_has_representation ?image} }"]]" style="max-height:200px;height:100%"> 
 </div>
 [[else]]
 <div class="rs-page__summary-image">
   <div data-flex-self='size-xsmall' style="color:#e8e6e6;font-weight:700;" class="text-center">
                 <i class="fa fa-file-image-o" style="font-size:70px;" aria-hidden="true"></i><br><br>
-            		No document preview available.
+            		No image preview available.
         	</div>
 </div>
 [[/if]]
