@@ -6,6 +6,7 @@
          fields='[[fieldDefinitions
 http://www.metaphacts.com/fieldDefinition/Person_Name="http://www.metaphacts.com/fieldDefinition/Person_Name"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Language"
+http://www.metaphacts.com/fieldDefinition/Person_Name_Honorific="http://www.metaphacts.com/fieldDefinition/Person_Name_Honorific"
 http://www.metaphacts.com/fieldDefinition/Name="http://www.metaphacts.com/fieldDefinition/Name"
 http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value"
@@ -44,7 +45,9 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
           
 <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/Person_Name" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
 </semantic-form-text-input>
-
+<semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/Person_Name_Honorific" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
+</semantic-form-text-input>
+          
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Identifier"
                new-subject-template=""
@@ -59,7 +62,10 @@ http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaph
   <semantic-form-text-input 
      for="http://www.metaphacts.com/fieldDefinition/Identifier_Provider">
  </semantic-form-text-input>
-</semantic-form-composite-input>   
+</semantic-form-composite-input>
+<semantic-form-select-input 
+  for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender">
+</semantic-form-select-input>
 <!--
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
@@ -87,9 +93,7 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternat
  </semantic-form-datetime-input>
 </semantic-form-composite-input>
          
-<semantic-form-select-input 
-  for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender">
-</semantic-form-select-input>
+
 
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Birth_Place"
