@@ -1,10 +1,16 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date/context> {
-  _:genid-0a581187ec1043b9b8fe3929593c15e7-v4zaop a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-ed4ac6287b1d4d0eb6f0fe8fa3057fd1-j6t5b;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Birth Date" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> a <http://www.metaphacts.com/ontology/fields#Field> .
+  _:genid-ed4ac6287b1d4d0eb6f0fe8fa3057fd1-j6t5b a <http://spinrdf.org/sp#Query> .
   
-  _:genid-0a581187ec1043b9b8fe3929593c15e7-173m2k <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-ed4ac6287b1d4d0eb6f0fe8fa3057fd1-c6tebh .
+  
+  _:genid-ed4ac6287b1d4d0eb6f0fe8fa3057fd1-c6tebh <http://spinrdf.org/sp#text> """SELECT ?value ?label 
 WHERE {
   $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
   ?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_brought_into_life> ?born_timespan . 
@@ -13,12 +19,13 @@ WHERE {
   ?value1 <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ?value
 } limit 1""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-0a581187ec1043b9b8fe3929593c15e7-173m2k;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Person Birth Date" .
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string> .
   
-  _:genid-0a581187ec1043b9b8fe3929593c15e7-v4zaop <http://spinrdf.org/sp#text> """INSERT {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_born> ?born_timespan . 
+  _:genid-ed4ac6287b1d4d0eb6f0fe8fa3057fd1-c6tebh a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-ed4ac6287b1d4d0eb6f0fe8fa3057fd1-j6t5b <http://spinrdf.org/sp#text> """INSERT {
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_brought_into_life> ?born_timespan . 
   ?born_timespan a <http://www.cidoc-crm.org/cidoc-crm/E67_Birth>.
   ?born_timespan <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ?timespan_uri. 
   ?timespan_uri rdfs:label ?value
@@ -27,14 +34,9 @@ WHERE {
     BIND(IRI(CONCAT(STR($subject),\"/timespan/\", MD5($value))) as ?timespan_uri)
 }""" .
   
-  _:genid-0a581187ec1043b9b8fe3929593c15e7-173m2k a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0a581187ec1043b9b8fe3929593c15e7-v4zaop;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T09:49:54.048Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T10:02:17.083Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Birth_Date> .

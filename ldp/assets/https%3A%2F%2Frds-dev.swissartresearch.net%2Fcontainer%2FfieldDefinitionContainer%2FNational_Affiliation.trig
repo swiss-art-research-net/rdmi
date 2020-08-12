@@ -3,50 +3,7 @@
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-ed0d11d9080742d6993c08cfac304ba6-wk1ila a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-ed0d11d9080742d6993c08cfac304ba6-pn9mi a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-ed0d11d9080742d6993c08cfac304ba6-o9jrhw a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the membership of the documented person in a nationality group. The larger group is meant as an actual existing national body of actors with their own identity." .
-  
-  _:genid-ed0d11d9080742d6993c08cfac304ba6-wk1ila <http://spinrdf.org/sp#text> """prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> 
-prefix skos: <http://www.w3.org/2004/02/skos/core#>
-prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#>
-
-SELECT ?value ?label WHERE {
-?subject crm:P107i_is_current_or_former_member_of ?group_iri.
-  ?group_iri rdf:type crm:E74_Group.
-  ?group_iri crm:P2_has_type ?value .
-  ?group_iri crm:P2_has_type ?national_group_iri.
-  ?national_group_iri rdfs:label \"National Group\". 
-  ?value a skos:Concept.
-  ?value a ontolex:lexicalConcept.
-  ?value a crm:E55_Type. 
-  ?value skos:prefLabel ?label.
-}""" .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-ed0d11d9080742d6993c08cfac304ba6-pn9mi .
-  
-  _:genid-ed0d11d9080742d6993c08cfac304ba6-pn9mi <http://spinrdf.org/sp#text> """DELETE {
-  ?subject crm:P107i_is_current_or_former_member_of ?group_iri.
-  ?group_iri rdfs:label ?value.
-  ?group_iri crm:P2_has_type ?type_uri .
-} 
-WHERE {
-  ?subject crm:P107i_is_current_or_former_member_of ?group_iri.
-  ?group_iri a crm:E74_Group.
-  ?group_iri rdfs:label ?value.
-  ?group_iri crm:P2_has_type ?type_uri .
-  ?type_uri a crm:E55_Type.
-  ?type_uri rdfs:label \"National Group\".
-}""" .
-  
-  _:genid-ed0d11d9080742d6993c08cfac304ba6-o9jrhw <http://spinrdf.org/sp#text> """INSERT { 
+  _:genid-85c5bffa7bab43509a3dd655ebdc1dff-9chl7sn <http://spinrdf.org/sp#text> """INSERT { 
   ?subject crm:P107i_is_current_or_former_member_of ?group_iri.
   ?group_iri a crm:E74_Group.
   ?group_iri rdfs:label ?value.
@@ -60,13 +17,52 @@ WHERE {
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-ed0d11d9080742d6993c08cfac304ba6-wk1ila;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the membership of the documented person in a nationality group. The larger group is meant as an actual existing national body of actors with their own identity." .
+  
+  _:genid-85c5bffa7bab43509a3dd655ebdc1dff-04apdg a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-85c5bffa7bab43509a3dd655ebdc1dff-9chl7sn;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-85c5bffa7bab43509a3dd655ebdc1dff-tblor .
+  
+  _:genid-85c5bffa7bab43509a3dd655ebdc1dff-tblor <http://spinrdf.org/sp#text> """prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+
+SELECT ?value ?label WHERE {
+?subject crm:P107i_is_current_or_former_member_of ?value.
+  ?value rdf:type crm:E74_Group.
+  ?value crm:P2_has_type <https://resource.swissartresearch.net/type/national_group>.
+}""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-85c5bffa7bab43509a3dd655ebdc1dff-04apdg .
+  
+  _:genid-85c5bffa7bab43509a3dd655ebdc1dff-9chl7sn a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-85c5bffa7bab43509a3dd655ebdc1dff-tblor a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-85c5bffa7bab43509a3dd655ebdc1dff-04apdg <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P107i_is_current_or_former_member_of ?group_iri.
+  ?group_iri rdfs:label ?value.
+  ?group_iri crm:P2_has_type ?type_uri .
+} 
+WHERE {
+  ?subject crm:P107i_is_current_or_former_member_of ?group_iri.
+  ?group_iri a crm:E74_Group.
+  ?group_iri rdfs:label ?value.
+  ?group_iri crm:P2_has_type ?type_uri .
+  ?type_uri a crm:E55_Type.
+  ?type_uri rdfs:label \"National Group\".
+}""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation>
     <http://www.w3.org/2000/01/rdf-schema#label> "National Affiliation"@undefined;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-ed0d11d9080742d6993c08cfac304ba6-o9jrhw;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T11:09:24.446Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T10:04:50.126Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation> .
