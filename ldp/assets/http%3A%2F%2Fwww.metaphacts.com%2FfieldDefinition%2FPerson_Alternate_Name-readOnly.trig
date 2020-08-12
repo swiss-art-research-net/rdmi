@@ -1,33 +1,40 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly/context> {
-  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative name for a person";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-9B05876AE51D3AC845961DF6B820FE3F;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-B93282A816274633583110C1C4C64E1E;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-B93282A816274633583110C1C4C64E1E a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT distinct ?value 
+  _:genid-989e9559161549a78dac65aedd12c902-8stodo a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-989e9559161549a78dac65aedd12c902-lp4n4h;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative name for a person" .
+  
+  _:genid-989e9559161549a78dac65aedd12c902-lp4n4h a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-989e9559161549a78dac65aedd12c902-8stodo <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-989e9559161549a78dac65aedd12c902-lp4n4h <http://spinrdf.org/sp#text> """SELECT distinct ?value 
 WHERE {
   $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alternative_identifier . 
-  ?alternative_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
-  ?alternative_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
-  ?type rdfs:label ?type_label .
-  ?alternative_identifier rdfs:label ?name_value.
-  ?alternative_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri.
-  ?language_iri rdfs:label ?lang.
-  BIND(CONCAT(?name_value, \" (\",?type_label,\") \") as ?value).
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?alt_name.
+  ?alt_name rdfs:label ?alt_name_label.
+  ?alt_name <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+  ?type rdfs:label ?type_label.
+  ?alt_name <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?lang rdfs:label ?lang_label.
+      BIND(CONCAT(?alt_name_label,\" (\",?lang_label,\")\",\" (\",?type_label,\")\") AS ?value)
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-9B05876AE51D3AC845961DF6B820FE3F a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-989e9559161549a78dac65aedd12c902-8stodo;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:58.401Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T08:57:24.262Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name-readOnly> .
