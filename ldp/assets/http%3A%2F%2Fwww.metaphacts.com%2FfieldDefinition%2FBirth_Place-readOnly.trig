@@ -1,27 +1,32 @@
 
 <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly/context> {
-  <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place"@undefined;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-46A80B29D0D6488702732B6152E5349D;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-39B2D98B16CDAB39B041EFB6939675B2;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+  _:genid-87d9b5a34ca947e69d21cbde23630df3-p51r a <http://spinrdf.org/sp#Query> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-46A80B29D0D6488702732B6152E5349D a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-39B2D98B16CDAB39B041EFB6939675B2 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+  _:genid-87d9b5a34ca947e69d21cbde23630df3-hqcno a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-87d9b5a34ca947e69d21cbde23630df3-p51r <http://spinrdf.org/sp#text> """SELECT ?value ?label 
 WHERE {
   $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_born> ?birth_event. 
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_brought_into_life> ?birth_event. 
   ?birth_event  a <http://www.cidoc-crm.org/cidoc-crm/E67_Birth>.
   ?birth_event <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E53_Place>
 } """ .
   
-  <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-87d9b5a34ca947e69d21cbde23630df3-hqcno <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-87d9b5a34ca947e69d21cbde23630df3-p51r;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Birth Place"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-87d9b5a34ca947e69d21cbde23630df3-hqcno;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:55.380Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T09:47:59.013Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Birth_Place-readOnly> .
