@@ -1,58 +1,79 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Name/context> {
-  <http://www.metaphacts.com/fieldDefinition/Person_Name> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Person Name"@undefined;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "The full name of the person";
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-EE7AF6C3ADC176B904BEB2E5E41E2040;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-6D2815315560056B1B8C16952FF8E311;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-E5C44B04AA2EDCD85A66402766B9A252;
-    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+  _:genid-c2398f4630e8423a87e36910d1d43495-lljuf a <http://spinrdf.org/sp#Query> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-6D2815315560056B1B8C16952FF8E311 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-c2398f4630e8423a87e36910d1d43495-w8enwq <http://spinrdf.org/sp#text> """#SELECT distinct ?value ?label
+#WHERE {
+#  $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+#  ?subject <http://www.cidoc-crm.org/cidoc-crm/P48_has_preffered_identifier> ?appellation_iri . 
+#  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+#  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?appellation_type.
+#  ?appellation_type rdfs:label \"Full Name\".
+#      ?appellation_iri rdfs:label ?value.
+#     
+#}
+SELECT distinct ?value ?label
 WHERE {
   $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P48_has_preffered_identifier> ?appellation_iri . 
-  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
-  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?appellation_type.
-  ?appellation_type rdfs:label \"Full Name\".
-      ?appellation_iri rdfs:label ?value.
-     
-}""" .
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier .
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?lang rdfs:label ?lang_label.
+  ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?name_identifier rdfs:label ?name.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+  ?type rdfs:label ?type_label.
+      BIND( ?name_identifier AS ?value)
+  FILTER EXISTS {?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://resource.swissartresearch.net/type/preffered%20name>.}
+}      """;
+    a <http://spinrdf.org/sp#Query> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-E5C44B04AA2EDCD85A66402766B9A252 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE {
-  ?appellation_iri rdfs:label ?value.
-  } where { 
-$subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P48_has_preffered_identifier> ?appellation_iri. 
-  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
-  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?appellation_type.
-  ?appellation_type rdfs:label \"Full Name\".
-      ?appellation_iri rdfs:label ?value.
-}""" .
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Person Name"@undefined;
+    <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-EE7AF6C3ADC176B904BEB2E5E41E2040 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P48_has_preffered_identifier> ?appellation_iri. 
-  ?appellation_iri a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
-  ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?full_name_type.
-  ?full_name_type rdfs:label \"Full Name\".
-  ?appellation_iri rdfs:label ?value.
-      ?appellation_iri <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri. 
-       ?subject rdfs:label ?value. 
-        $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  _:genid-c2398f4630e8423a87e36910d1d43495-lljuf <http://spinrdf.org/sp#text> """INSERT {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier.
+  ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?name_identifier rdfs:label ?value.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://resource.swissartresearch.net/type/preffered%20name>.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
 }   
-WHERE {BIND(IRI(CONCAT(STR($subject),\"/type/\", MD5(\"Full Name\"))) as ?full_name_type).
+WHERE {
+#      BIND(IRI(CONCAT(STR($subject),\"/type/\", MD5(\"Full Name\"))) as ?full_name_type).
       BIND(IRI(CONCAT(STR($subject),\"/appellation/\", MD5(str(?value)))) as ?appellation_iri).
-      ?language_iri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
-      BIND(lang(?value) as ?lang)
+#      BIND ( IF(lang(?value)='fr',<https://glottolog.org/resource/languoid/id/stan1290>,IF(lang(?value)='de',<https://glottolog.org/resource/languoid/id/stan1295>,IF(lang(?value)='it',<https://glottolog.org/resource/languoid/id/ital1282>,<https://glottolog.org/resource/languoid/id/stan1293>))) AS ?lang)
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Name> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-c2398f4630e8423a87e36910d1d43495-5ymsf5 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> <http://www.w3.org/2000/01/rdf-schema#comment>
+      "The full name of the person";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-c2398f4630e8423a87e36910d1d43495-5ymsf5;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-c2398f4630e8423a87e36910d1d43495-w8enwq .
+  
+  _:genid-c2398f4630e8423a87e36910d1d43495-5ymsf5 <http://spinrdf.org/sp#text> """DELETE {
+  ?name_identifier rdfs:label ?value.
+} WHERE { 
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier.
+  ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?name_identifier rdfs:label ?value.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://resource.swissartresearch.net/type/preffered%20name>.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-c2398f4630e8423a87e36910d1d43495-lljuf;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:54.784Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T11:29:02.007Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Name> .
