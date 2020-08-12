@@ -2,48 +2,48 @@
 <http://www.metaphacts.com/fieldDefinition/Identifier/context> {
   <http://www.metaphacts.com/fieldDefinition/Identifier> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-a03e2c07f2864db3a08fc05e697dad41-hqmv0w <http://spinrdf.org/sp#text> """DELETE {
-  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?identifier.
-  ?identifier <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  _:genid-b950afba934544f5a14b3d9efacab42d-rhcw5 <http://spinrdf.org/sp#text> """DELETE {
+  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?value.
 } WHERE {
-  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?identifier.
-  ?identifier <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?value.
   ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier>.
   
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Identifier> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-a03e2c07f2864db3a08fc05e697dad41-bw5yrp;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a03e2c07f2864db3a08fc05e697dad41-gjm8r8;
+  <http://www.metaphacts.com/fieldDefinition/Identifier> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-b950afba934544f5a14b3d9efacab42d-hqhw2o;
     <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
     <http://www.metaphacts.com/ontology/fields#domain> <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
     <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the person" .
   
-  _:genid-a03e2c07f2864db3a08fc05e697dad41-hqmv0w a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-a03e2c07f2864db3a08fc05e697dad41-bw5yrp a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT {
-  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?identifier.
-  ?identifier <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
-  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
-} WHERE { ?s ?p ?o }
- """ .
-  
-  _:genid-a03e2c07f2864db3a08fc05e697dad41-gjm8r8 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/Identifier> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-a03e2c07f2864db3a08fc05e697dad41-hqmv0w;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@undefined .
-  
-  _:genid-a03e2c07f2864db3a08fc05e697dad41-gjm8r8 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?identifier.
-  ?identifier <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?value.
+  _:genid-b950afba934544f5a14b3d9efacab42d-hqhw2o <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?value.
   ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Identifier> a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.metaphacts.com/fieldDefinition/Identifier> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-b950afba934544f5a14b3d9efacab42d-9nsc5a .
+  
+  _:genid-b950afba934544f5a14b3d9efacab42d-9nsc5a <http://spinrdf.org/sp#text> """INSERT {
+  ?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?value.
+  ?value a <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
+} WHERE {}
+ """ .
+  
+  _:genid-b950afba934544f5a14b3d9efacab42d-rhcw5 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-b950afba934544f5a14b3d9efacab42d-hqhw2o a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Identifier> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Identifier"@undefined .
+  
+  _:genid-b950afba934544f5a14b3d9efacab42d-9nsc5a a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Identifier> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-b950afba934544f5a14b3d9efacab42d-rhcw5;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T12:53:29.694Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T13:15:33.890Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Identifier> .

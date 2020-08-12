@@ -47,7 +47,7 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
 
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Identifier"
-               new-subject-template=""
+               new-subject-template="{{https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source}}"
                fields='[[fieldDefinitions
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Identifier_Source"
 http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaphacts.com/fieldDefinition/Identifier_Provider"
@@ -60,7 +60,7 @@ http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaph
      for="http://www.metaphacts.com/fieldDefinition/Identifier_Provider">
  </semantic-form-text-input>
 </semantic-form-composite-input>   
-
+<!--
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
                new-subject-template=""
@@ -76,7 +76,7 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternat
  languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
  </semantic-form-text-input>
  <semantic-form-autocomplete-input 
-     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value">
+     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type">
  </semantic-form-autocomplete-input>
 
  <semantic-form-datetime-input 
@@ -171,7 +171,7 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
     languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'
     multiline=true>
 </semantic-form-text-input>
-          
+          -->
           <!-- save and reset button for form -->
           <button name='submit' class='btn btn-default'>Save</button>
           <button name='reset' class='btn btn-default'>Reset</button>

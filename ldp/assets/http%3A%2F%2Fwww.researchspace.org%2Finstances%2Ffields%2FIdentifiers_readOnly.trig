@@ -1,10 +1,20 @@
 
 <http://www.researchspace.org/instances/fields/Identifiers_readOnly/context> {
-  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> a <http://www.metaphacts.com/ontology/fields#Field> .
+  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-362ea2139c3b4107a777e695d3656d0e-vpge6b a <http://spinrdf.org/sp#Query> .
+  _:genid-fcff6aac0fbf431fadcf9dd4d793321a-tvd4vr <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-362ea2139c3b4107a777e695d3656d0e-ceoco6 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-fcff6aac0fbf431fadcf9dd4d793321a-uanbdr;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-fcff6aac0fbf431fadcf9dd4d793321a-tvd4vr;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Identifiers"@en .
+  
+  _:genid-fcff6aac0fbf431fadcf9dd4d793321a-uanbdr a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-fcff6aac0fbf431fadcf9dd4d793321a-tvd4vr a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-fcff6aac0fbf431fadcf9dd4d793321a-uanbdr <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
 	?subject <http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as> ?value.
 	?value a crm:E42_Identifier.
 	?value rdfs:label ?id_label.
@@ -16,22 +26,9 @@
   	BIND(CONCAT(?actor_label,\" : \" , ?id_label) as ?label)
 }""" .
   
-  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
-      <http://www.w3.org/2001/XMLSchema#anyURI> .
-  
-  _:genid-362ea2139c3b4107a777e695d3656d0e-ceoco6 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Identifiers"@en .
-  
-  _:genid-362ea2139c3b4107a777e695d3656d0e-vpge6b <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-362ea2139c3b4107a777e695d3656d0e-vpge6b;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-362ea2139c3b4107a777e695d3656d0e-ceoco6;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.researchspace.org/instances/fields/Identifiers_readOnly> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T12:54:41.550Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T13:15:26.067Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.researchspace.org/instances/fields/Identifiers_readOnly> .
