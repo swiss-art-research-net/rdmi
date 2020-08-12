@@ -1,11 +1,32 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Name/context> {
-  <http://www.metaphacts.com/fieldDefinition/Person_Name> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-d8c2677ac17840788aaf850a81a368d7-1d0c5;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Person Name"@en;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-d8c2677ac17840788aaf850a81a368d7-56ahq8 <http://spinrdf.org/sp#text> """DELETE {
+  _:genid-34a7d463f0bc4432b25f685d28d4ad50-s7vci a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-34a7d463f0bc4432b25f685d28d4ad50-eosqt;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Name"@en;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-34a7d463f0bc4432b25f685d28d4ad50-ds4j1;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-34a7d463f0bc4432b25f685d28d4ad50-s7vci;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The full name of the person" .
+  
+  _:genid-34a7d463f0bc4432b25f685d28d4ad50-ds4j1 a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-34a7d463f0bc4432b25f685d28d4ad50-eosqt a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier.
+  ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
+  ?name_identifier rdfs:label ?value.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://resource.swissartresearch.net/type/preffered%20name>.
+  ?name_identifier <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?lang rdfs:label ?lang_label
+}""" .
+  
+  _:genid-34a7d463f0bc4432b25f685d28d4ad50-s7vci <http://spinrdf.org/sp#text> """DELETE {
   ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier.
   ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
   ?name_identifier rdfs:label ?value.
@@ -20,14 +41,7 @@
   ?lang rdfs:label ?lang_label.
 }""" .
   
-  _:genid-d8c2677ac17840788aaf850a81a368d7-1d0c5 a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/Person_Name> <http://www.w3.org/2000/01/rdf-schema#comment>
-      "The full name of the person" .
-  
-  _:genid-d8c2677ac17840788aaf850a81a368d7-56ahq8 a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-d8c2677ac17840788aaf850a81a368d7-1d0c5 <http://spinrdf.org/sp#text> """INSERT {
+  _:genid-34a7d463f0bc4432b25f685d28d4ad50-ds4j1 <http://spinrdf.org/sp#text> """INSERT {
   $subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
   ?subject <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ?name_identifier.
   ?name_identifier a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>.
@@ -59,11 +73,9 @@
 	}}
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Name> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-d8c2677ac17840788aaf850a81a368d7-56ahq8;
-    a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.metaphacts.com/fieldDefinition/Person_Name> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T12:26:39.567Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T12:45:33.927Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Name> .

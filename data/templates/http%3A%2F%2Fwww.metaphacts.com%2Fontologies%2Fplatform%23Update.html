@@ -1,5 +1,4 @@
 <div>
-  <!--"-->
         <semantic-form 
           subject='[[this]]'
           post-action='reload'
@@ -42,8 +41,10 @@ http://www.metaphacts.com/fieldDefinition/Floruit_Date_earliest="http://www.meta
 http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.researchspace.org/instances/fields/Floruit_Date_latest"
 ]]'
 >
+          
 <semantic-form-text-input for="http://www.metaphacts.com/fieldDefinition/Person_Name" languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
 </semantic-form-text-input>
+
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Identifier"
                new-subject-template=""
@@ -59,7 +60,7 @@ http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaph
      for="http://www.metaphacts.com/fieldDefinition/Identifier_Provider">
  </semantic-form-text-input>
 </semantic-form-composite-input>   
-          
+
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
                new-subject-template=""
@@ -75,7 +76,7 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternat
  languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'>
  </semantic-form-text-input>
  <semantic-form-autocomplete-input 
-     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/">
+     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value">
  </semantic-form-autocomplete-input>
 
  <semantic-form-datetime-input 
