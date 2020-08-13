@@ -66,6 +66,26 @@ http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaph
 <semantic-form-select-input 
   for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender">
 </semantic-form-select-input>
+          
+<semantic-form-composite-input 
+               for="http://www.metaphacts.com/fieldDefinition/Person_Birth_Place"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+http://www.metaphacts.com/fieldDefinition/Birth_Place="http://www.metaphacts.com/fieldDefinition/Birth_Place"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest"
+]]'>
+  <semantic-form-autocomplete-input 
+    for="http://www.metaphacts.com/fieldDefinition/Birth_Place">
+  </semantic-form-autocomplete-input>
+  <semantic-form-datetime-input 
+    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest">
+  </semantic-form-datetime-input>
+  <semantic-form-datetime-input 
+    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest">
+  </semantic-form-datetime-input>
+</semantic-form-composite-input>
+          
 <!--
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
@@ -95,24 +115,7 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternat
          
 
 
-<semantic-form-composite-input 
-               for="http://www.metaphacts.com/fieldDefinition/Person_Birth_Place"
-               new-subject-template=""
-               fields='[[fieldDefinitions
-http://www.metaphacts.com/fieldDefinition/Birth_Place="http://www.metaphacts.com/fieldDefinition/Birth_Place"
-https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest"
-https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest"
-]]'>
-  <semantic-form-autocomplete-input 
-    for="http://www.metaphacts.com/fieldDefinition/Birth_Place">
-  </semantic-form-autocomplete-input>
-  <semantic-form-datetime-input 
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest">
-  </semantic-form-datetime-input>
-  <semantic-form-datetime-input 
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest">
-  </semantic-form-datetime-input>
-</semantic-form-composite-input>
+
 
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Death_Place"

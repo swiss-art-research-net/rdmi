@@ -1,0 +1,36 @@
+
+<https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly/context> {
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly>
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-0c73fa258bf8435493a7bdc498486bcc-7zmjq;
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+  
+  _:genid-0c73fa258bf8435493a7bdc498486bcc-7zmjq a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Gender"@en .
+  
+  _:genid-0c73fa258bf8435493a7bdc498486bcc-p2zo6f <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-0c73fa258bf8435493a7bdc498486bcc-7zmjq <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+ ?subject crm:P2_has_type ?value.
+ ?subject a crm:E21_Person.
+ ?value rdfs:label ?label.
+}""" .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly>
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-0c73fa258bf8435493a7bdc498486bcc-p2zo6f .
+  
+  _:genid-0c73fa258bf8435493a7bdc498486bcc-p2zo6f a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly>
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T06:45:23.031Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender-readOnly>
+    a <http://www.w3.org/ns/ldp#Resource> .
+}
