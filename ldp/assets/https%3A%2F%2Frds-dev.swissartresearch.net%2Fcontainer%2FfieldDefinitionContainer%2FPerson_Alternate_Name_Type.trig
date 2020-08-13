@@ -1,78 +1,51 @@
 
 <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type/context> {
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-0e7kaf <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
-WHERE {
-  ?subject crm:P2_has_type ?value.
-  ?value rdfs:label ?label 
-}""" .
-  
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-uy07fa a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-05q6uu <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  SERVICE <http://vocab.getty.edu/sparql> {
-  ?value <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300404653>.
-  ?value <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
-  FILTER (lang(?label)=\"en\").
-  }
-}""" .
-  
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
     a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-serd7h <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
-  SERVICE <http://vocab.getty.edu/sparql> {
-  ?value <http://vocab.getty.edu/ontology#broaderGenericExtended> <http://vocab.getty.edu/aat/300404653>.
-  ?value <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
-  FILTER (lang(?label)=\"en\").
-    FILTER REGEX(?label,str(?__token__))
-  }
-} LIMIT 10""" .
+  _:genid-87f032060cae4fb88ddabfc993637b61-l2kv7 <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject crm:P2_has_type ?type.
+  ?type rdfs:label ?value 
+} WHERE {
+BIND(IRI(CONCAT(REPLACE(STR(?subject),\"person/[a-zA-Z0-9_-]*\",\"type/\"), MD5(str(?value)))) as ?type).
+}
+""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-uy07fa;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-fqem36;
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-0e7kaf .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-87f032060cae4fb88ddabfc993637b61-bo6s2;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-87f032060cae4fb88ddabfc993637b61-l2kv7 .
   
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-uy07fa <http://spinrdf.org/sp#text> """DELETE {  
-  ?subject crm:P2_has_type ?value.
+  _:genid-87f032060cae4fb88ddabfc993637b61-bo6s2 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name Type"@undefined .
+  
+  _:genid-87f032060cae4fb88ddabfc993637b61-z2gmd a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-87f032060cae4fb88ddabfc993637b61-l2kv7 a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the type of alternate name that is attributed to the documented person." .
+  
+  _:genid-87f032060cae4fb88ddabfc993637b61-bo6s2 <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+WHERE {
+  ?subject crm:P2_has_type ?type.
+  ?type rdfs:label ?value 
+}""" .
+  
+  _:genid-87f032060cae4fb88ddabfc993637b61-z2gmd <http://spinrdf.org/sp#text> """DELETE {  
+  ?subject crm:P2_has_type ?type.
 } WHERE {
-  ?subject crm:P2_has_type ?value.
-  ?value rdfs:label ?label 
+  ?subject crm:P2_has_type ?type.
+  ?type rdfs:label ?value 
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
-    <http://www.metaphacts.com/ontology/fields#autosuggestionPattern> _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-serd7h .
-  
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-fqem36 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT { 
-  ?subject crm:P2_has_type ?value.
-  ?value rdfs:label ?label 
-} WHERE {
-      SERVICE <http://vocab.getty.edu/sparql> {
-      ?value <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
-  	FILTER (lang(?label)=\"en\") 
-		}
-      }
-""" .
-  
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-serd7h a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
-    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name Type"@undefined;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the type of alternate name that is attributed to the documented person." .
-  
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-0e7kaf a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-05q6uu a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type>
-    <http://www.metaphacts.com/ontology/fields#valueSetPattern> _:genid-2ebd7da8ff294b0a8a9db90a6aba69ff-05q6uu;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-87f032060cae4fb88ddabfc993637b61-z2gmd;
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:37:43.413Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T09:08:33.354Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Type> .
