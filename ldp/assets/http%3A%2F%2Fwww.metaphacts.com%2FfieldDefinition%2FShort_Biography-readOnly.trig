@@ -1,31 +1,35 @@
 
 <http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly/context> {
-  _:genid-59a0ff7f589346ffbde5808dc196293a-rikwqk <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
-  ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
-  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
-  ?info_iri rdfs:value ?value
-}""" .
-  
   <http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-59a0ff7f589346ffbde5808dc196293a-w0h95n a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-59a0ff7f589346ffbde5808dc196293a-rikwqk a <http://spinrdf.org/sp#Query> .
+  _:genid-a86442cb36374949a0c1a87dd99e2612-72tuu a <http://spinrdf.org/sp#Query> .
   
   <http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
       <http://www.w3.org/2001/XMLSchema#langString>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Biography"@undefined;
     <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
   
-  _:genid-59a0ff7f589346ffbde5808dc196293a-w0h95n <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-a86442cb36374949a0c1a87dd99e2612-aalrkn <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
   <http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-59a0ff7f589346ffbde5808dc196293a-w0h95n;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-59a0ff7f589346ffbde5808dc196293a-rikwqk;
+      _:genid-a86442cb36374949a0c1a87dd99e2612-aalrkn;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-a86442cb36374949a0c1a87dd99e2612-72tuu .
+  
+  _:genid-a86442cb36374949a0c1a87dd99e2612-72tuu <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  ?subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
+  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
+  ?info_iri <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://resource.swissartresearch.net/biographical_note>.
+  ?info_iri rdfs:value ?value
+}""" .
+  
+  _:genid-a86442cb36374949a0c1a87dd99e2612-aalrkn a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly> <http://www.metaphacts.com/ontology/fields#maxOccurs>
+      "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T10:12:38.277Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T07:18:16.017Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Short_Biography-readOnly> .

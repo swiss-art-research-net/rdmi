@@ -1,58 +1,76 @@
 
 <http://www.metaphacts.com/fieldDefinition/Short_Biography/context> {
-  <http://www.metaphacts.com/fieldDefinition/Short_Biography> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Short Biography"@undefined;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-2452CB0CC5F9F1E05A6DA467122DB922;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-35DC2065FAE146DB45AF364E8C7E94C9;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-92b9f7f71a364728a0ea7cf49ac91887-55B02CB6288D5D00D11E1E80BBEB1571 .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-2452CB0CC5F9F1E05A6DA467122DB922 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """INSERT { 
-   ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
-  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>. 
-  ?info_iri <http://www.cidoc-crm.org/cidoc-crm/P129_is_about> ?bio.
-  ?bio a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/has_value> $value.
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
-  ?type rdfs:label \"Biography\". 
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?language_iri.
+  _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-qc02wn <http://spinrdf.org/sp#text> """INSERT { 
+  ?subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
+  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
+  ?info_iri crm:P2_has_type <https://resource.swissartresearch.net/biographical_note>.
+  ?info_iri rdfs:value ?value.
+  ?infor_iri <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?lang rdfs:label ?lang_label
 } 
 WHERE {
-  BIND(IRI(CONCAT(STR($subject),\"/type/\", MD5(\"Biography\"))) as ?type).
-  BIND(IRI(CONCAT(STR($subject),\"/info/\", MD5(str(?value)))) as ?info_iri).
-  BIND(IRI(CONCAT(STR($subject),\"/short_bio/\", MD5(str(?value)))) as ?bio).
-      ?language_iri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
-      BIND(lang(?value) as ?lang)
+  BIND(IRI(CONCAT(STR($subject),\"/biography/\", MD5(str(?value)))) as ?info_iri).
+  {SELECT ?lang WHERE {
+    {
+      	FILTER (lang(?value)=\"en\")
+      	BIND(\"English\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/stan1293> AS ?lang)
+	} UNION {
+		FILTER (lang(?value)=\"fr\")
+      	BIND(\"French\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/stan1290> AS ?lang)
+	} UNION {
+		FILTER (lang(?value)=\"de\")
+      	BIND(\"German\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/stan1295> AS ?lang)
+	} UNION {
+		FILTER (lang(?value)=\"it\")
+      	BIND(\"Italian\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/ital1282> AS ?lang)
+	}
+	}}
 }""" .
   
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-35DC2065FAE146DB45AF364E8C7E94C9 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  <http://www.metaphacts.com/fieldDefinition/Short_Biography> a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-lcsbwz <http://spinrdf.org/sp#text> """DELETE {
   ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
-  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>. 
-  ?info_iri <http://www.cidoc-crm.org/cidoc-crm/P129_is_about> ?bio.
-  ?bio a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/has_value> $value.
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
-  ?type rdfs:label \"Biography\"
-}""" .
-  
-  _:genid-92b9f7f71a364728a0ea7cf49ac91887-55B02CB6288D5D00D11E1E80BBEB1571 a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE { ?bio <http://www.cidoc-crm.org/cidoc-crm/has_value> $value. } 
+  ?info_iri rdfs:value ?value
+} 
 WHERE 
 {
+  ?subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
   ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
-  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>. 
-  ?info_iri <http://www.cidoc-crm.org/cidoc-crm/P129_is_about> ?bio.
-  ?bio a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/has_value> $value.
-  ?bio <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
-  ?type rdfs:label \"Biography\"
+  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
+  ?info_iri crm:P2_has_type <https://resource.swissartresearch.net/biographical_note>.
+  ?info_iri rdfs:value ?value
+}""" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Short_Biography> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-lcsbwz;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Biography"@undefined;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-qc02wn;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-ahcrcu .
+  
+  _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-qc02wn a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-lcsbwz a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-64c6b6fac3b443abb80a5ed3a2f12ff9-ahcrcu a <http://spinrdf.org/sp#Query>;
+    <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  ?subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
+  ?subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ?info_iri.
+  ?info_iri a <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object>.
+  ?info_iri crm:P2_has_type <https://resource.swissartresearch.net/biographical_note>.
+  ?info_iri rdfs:value ?value
 }""" .
   
   <http://www.metaphacts.com/fieldDefinition/Short_Biography> a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-04-02T07:47:57.221Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T07:23:01.263Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Short_Biography> .

@@ -1,28 +1,32 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Father/context> {
   <http://www.metaphacts.com/fieldDefinition/Person_Father> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Father"@en;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Father"@en .
   
-  _:genid-7481bbb0666e49bea69291ec7b4b3b00-ydmt0n <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  _:genid-35259620316e46b1b0812c34bf2ccb43-av9hws a <http://spinrdf.org/sp#Query> .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Father> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-7481bbb0666e49bea69291ec7b4b3b00-ydmt0n;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-7481bbb0666e49bea69291ec7b4b3b00-dlyar .
+  <http://www.metaphacts.com/fieldDefinition/Person_Father> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI> .
   
-  _:genid-7481bbb0666e49bea69291ec7b4b3b00-ydmt0n a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-7481bbb0666e49bea69291ec7b4b3b00-dlyar a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-35259620316e46b1b0812c34bf2ccb43-av9hws <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   	?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_brought_into_life> ?birth.
 	?birth a <http://www.cidoc-crm.org/cidoc-crm/E67_Birth>.
 	?birth <http://www.cidoc-crm.org/cidoc-crm/P96_from_father> ?value.
 	?value a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>.
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Father> a <http://www.w3.org/ns/prov#Entity>;
+  _:genid-35259620316e46b1b0812c34bf2ccb43-dn0u7v <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Father> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-35259620316e46b1b0812c34bf2ccb43-dn0u7v .
+  
+  _:genid-35259620316e46b1b0812c34bf2ccb43-dn0u7v a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Father> <http://www.metaphacts.com/ontology/fields#selectPattern>
+      _:genid-35259620316e46b1b0812c34bf2ccb43-av9hws;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T09:58:10.574Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T07:29:31.222Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Father> .

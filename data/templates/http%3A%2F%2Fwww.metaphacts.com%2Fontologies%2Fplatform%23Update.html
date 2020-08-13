@@ -85,7 +85,34 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_B
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest">
   </semantic-form-datetime-input>
 </semantic-form-composite-input>
+<semantic-form-composite-input 
+               for="http://www.metaphacts.com/fieldDefinition/Person_Death_Place"
+               new-subject-template=""
+               fields='[[fieldDefinitions
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Earliest"
+https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest"
+]]'>
+  <semantic-form-autocomplete-input 
+    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place">
+  </semantic-form-autocomplete-input>
+  <semantic-form-datetime-input 
+    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Earliest">
+  </semantic-form-datetime-input>
+  <semantic-form-datetime-input 
+    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest">
+  </semantic-form-datetime-input>
+</semantic-form-composite-input>
+
+<semantic-form-autocomplete-input
+    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation">
+</semantic-form-autocomplete-input>
           
+<semantic-form-text-input 
+    for="http://www.metaphacts.com/fieldDefinition/Short_Biography"
+    languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'
+    multiline=true>
+</semantic-form-text-input>
 <!--
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
@@ -113,33 +140,6 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Alternat
  </semantic-form-datetime-input>
 </semantic-form-composite-input>
          
-
-
-
-
-<semantic-form-composite-input 
-               for="http://www.metaphacts.com/fieldDefinition/Person_Death_Place"
-               new-subject-template=""
-               fields='[[fieldDefinitions
-https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place"
-https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Earliest"
-https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest"
-]]'>
-  <semantic-form-autocomplete-input 
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place">
-  </semantic-form-autocomplete-input>
-  <semantic-form-datetime-input 
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Earliest">
-  </semantic-form-datetime-input>
-  <semantic-form-datetime-input 
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest">
-  </semantic-form-datetime-input>
-</semantic-form-composite-input>
-
-<semantic-form-autocomplete-input
-    for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation">
-</semantic-form-autocomplete-input>
-
 <semantic-form-text-input 
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation">
 </semantic-form-text-input>
@@ -166,12 +166,6 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
 <semantic-form-autocomplete-input 
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Occupation_General_Role">
 </semantic-form-autocomplete-input>
-
-<semantic-form-text-input 
-    for="http://www.metaphacts.com/fieldDefinition/Short_Biography"
-    languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'
-    multiline=true>
-</semantic-form-text-input>
 
 <semantic-form-text-input 
     for="http://www.metaphacts.com/fieldDefinition/Long_Biography"

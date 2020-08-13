@@ -1,49 +1,51 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place/context> {
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-1038ee600af042098f5770ede9c35a09-030kn;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the birth of the documented person.";
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI>;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Person Birth"@undefined;
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> a <http://www.metaphacts.com/ontology/fields#Field> .
   
-  _:genid-1038ee600af042098f5770ede9c35a09-030kn a <http://spinrdf.org/sp#Query> .
+  _:genid-14c0fe39437d4cf1bdf55ace68aef78f-u5s99 <http://spinrdf.org/sp#text> """SELECT ?value ?label 
+WHERE {
+  ?subject crm:P98i_was_brought_into_life ?value . 
+  ?value a crm:E67_Birth.
+} limit 1""" .
   
-  _:genid-1038ee600af042098f5770ede9c35a09-mwbsyv a <http://spinrdf.org/sp#Query>;
-    <http://spinrdf.org/sp#text> """DELETE { 
-  ?subject crm:P98i_was_born ?value . 
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-14c0fe39437d4cf1bdf55ace68aef78f-171wi7;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the birth of the documented person." .
+  
+  _:genid-14c0fe39437d4cf1bdf55ace68aef78f-z1yjtb <http://spinrdf.org/sp#text> """DELETE { 
+  ?subject crm:P98i_was_brought_into_life ?value . 
 } 
 WHERE {
-  ?subject crm:P98i_was_born ?value . 
+  ?subject crm:P98i_was_brought_into_life ?value . 
   ?value a crm:E67_Birth.
 }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#deletePattern>
-      _:genid-1038ee600af042098f5770ede9c35a09-mwbsyv .
+  _:genid-14c0fe39437d4cf1bdf55ace68aef78f-u5s99 a <http://spinrdf.org/sp#Query> .
   
-  _:genid-1038ee600af042098f5770ede9c35a09-b3n3yk <http://spinrdf.org/sp#text> """INSERT {
-  ?subject crm:P98i_was_born ?value . 
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Birth"@undefined .
+  
+  _:genid-14c0fe39437d4cf1bdf55ace68aef78f-171wi7 a <http://spinrdf.org/sp#Query> .
+  
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#minOccurs>
+      "0" .
+  
+  _:genid-14c0fe39437d4cf1bdf55ace68aef78f-z1yjtb a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-14c0fe39437d4cf1bdf55ace68aef78f-171wi7 <http://spinrdf.org/sp#text> """INSERT {
+  ?subject crm:P98i_was_brought_into_life ?value . 
   ?value a crm:E67_Birth.
 } 
 WHERE {?s ?p ?o }""" .
   
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#insertPattern>
-      _:genid-1038ee600af042098f5770ede9c35a09-b3n3yk .
-  
-  _:genid-1038ee600af042098f5770ede9c35a09-030kn <http://spinrdf.org/sp#text> """SELECT ?value ?label 
-WHERE {
-  ?subject crm:P98i_was_born ?value . 
-  ?value a crm:E67_Birth.
-} limit 1""" .
-  
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#maxOccurs>
-      "1" .
-  
-  _:genid-1038ee600af042098f5770ede9c35a09-b3n3yk a <http://spinrdf.org/sp#Query> .
-  
-  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> a <http://www.w3.org/ns/prov#Entity>;
+  <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> <http://www.metaphacts.com/ontology/fields#deletePattern>
+      _:genid-14c0fe39437d4cf1bdf55ace68aef78f-z1yjtb;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-14c0fe39437d4cf1bdf55ace68aef78f-u5s99;
+    a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:46:20.341Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T07:10:46.374Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Birth_Place> .
