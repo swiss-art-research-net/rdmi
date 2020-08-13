@@ -25,6 +25,8 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_B
 http://www.metaphacts.com/fieldDefinition/Person_Death_Place="http://www.metaphacts.com/fieldDefinition/Person_Death_Place"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Place"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father"
+https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Mother="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Mother"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Institutional_Affiliation"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Floruit"
@@ -66,7 +68,7 @@ http://www.metaphacts.com/fieldDefinition/Identifier_Provider="http://www.metaph
 <semantic-form-select-input 
   for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Gender">
 </semantic-form-select-input>
-          
+<!--
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Birth_Place"
                new-subject-template=""
@@ -75,6 +77,7 @@ http://www.metaphacts.com/fieldDefinition/Birth_Place="http://www.metaphacts.com
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_earliest"
 https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Birth_Date_latest"
 ]]'>
+  
   <semantic-form-autocomplete-input 
     for="http://www.metaphacts.com/fieldDefinition/Birth_Place">
   </semantic-form-autocomplete-input>
@@ -103,7 +106,7 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Da
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Date_Latest">
   </semantic-form-datetime-input>
 </semantic-form-composite-input>
-
+-->
 <semantic-form-autocomplete-input
     for="https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/National_Affiliation">
 </semantic-form-autocomplete-input>
@@ -113,6 +116,12 @@ https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Death_Da
     languages='["en","de","fr","it","sp","ca","cs","da","nl","fi","gr","hu","no","pt","sv","ru","jp","ko"]'
     multiline=true>
 </semantic-form-text-input>
+          
+<semantic-form-text-input for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father">
+</semantic-form-text-input>
+<semantic-form-text-input for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Mother">
+</semantic-form-text-input>
+
 <!--
 <semantic-form-composite-input 
                for="http://www.metaphacts.com/fieldDefinition/Person_Alternate_Name"
