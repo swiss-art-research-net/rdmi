@@ -1,14 +1,19 @@
 
 <http://www.metaphacts.com/fieldDefinition/Person_Mother/context> {
   <http://www.metaphacts.com/fieldDefinition/Person_Mother> a <http://www.metaphacts.com/ontology/fields#Field>;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-6d14a911c64e4b6fae54051b7c530145-6ixrd3;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-752befa274624757bb6b8c1caad2ffec-lgzeqa .
   
-  _:genid-6d14a911c64e4b6fae54051b7c530145-ycv29 a <http://spinrdf.org/sp#Query> .
+  _:genid-752befa274624757bb6b8c1caad2ffec-qcevhw <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:genid-6d14a911c64e4b6fae54051b7c530145-6ixrd3 a <http://spinrdf.org/sp#Query> .
+  <http://www.metaphacts.com/fieldDefinition/Person_Mother> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#anyURI>;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-752befa274624757bb6b8c1caad2ffec-qcevhw .
   
-  _:genid-6d14a911c64e4b6fae54051b7c530145-ycv29 <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
+  _:genid-752befa274624757bb6b8c1caad2ffec-lgzeqa a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-752befa274624757bb6b8c1caad2ffec-qcevhw a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-752befa274624757bb6b8c1caad2ffec-lgzeqa <http://spinrdf.org/sp#text> """SELECT ?value ?label WHERE {
   	?subject <http://www.cidoc-crm.org/cidoc-crm/P98i_was_brought_into_life> ?birth.
 	?birth a <http://www.cidoc-crm.org/cidoc-crm/E67_Birth>.
 	?birth <http://www.cidoc-crm.org/cidoc-crm/P96_by_mother> ?value.
@@ -16,15 +21,11 @@
 }""" .
   
   <http://www.metaphacts.com/fieldDefinition/Person_Mother> <http://www.w3.org/2000/01/rdf-schema#label>
-      "Mother"@en .
-  
-  _:genid-6d14a911c64e4b6fae54051b7c530145-6ixrd3 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  <http://www.metaphacts.com/fieldDefinition/Person_Mother> <http://www.metaphacts.com/ontology/fields#selectPattern>
-      _:genid-6d14a911c64e4b6fae54051b7c530145-ycv29;
+      "Mother"@en;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-12T10:00:17.099Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T08:25:58.033Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <http://www.metaphacts.com/fieldDefinition/Person_Mother> .

@@ -1,14 +1,24 @@
 
 <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father/context> {
-  _:genid-16dd0670bcd84b93a28217ff69abff8f-iud52 <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
+  _:genid-baf3f23b291244f88b7a164490707f71-83n8cd a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father>
+    a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-baf3f23b291244f88b7a164490707f71-83n8cd;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the biological father of the documented person.";
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-baf3f23b291244f88b7a164490707f71-vg5y1o;
+    <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-baf3f23b291244f88b7a164490707f71-0vpjf .
+  
+  _:genid-baf3f23b291244f88b7a164490707f71-0vpjf <http://spinrdf.org/sp#text> """SELECT DISTINCT ?value ?label WHERE {
   ?subject crm:P98i_was_brought_into_life ?birth_uri.
   ?birth_uri a crm:E67_Birth .
   ?birth_uri crm:P97_from_father ?father_uri.
   ?father_uri a crm:E21_Person .
-  #?father_uri rdfs:label ?value.
+  ?father_uri rdfs:label ?value.
 }""" .
   
-  _:genid-16dd0670bcd84b93a28217ff69abff8f-71d57 <http://spinrdf.org/sp#text> """INSERT { 
+  _:genid-baf3f23b291244f88b7a164490707f71-vg5y1o <http://spinrdf.org/sp#text> """INSERT { 
   ?subject crm:P98i_was_brought_into_life ?birth_uri.
   ?birth_uri a crm:E67_Birth .
   ?birth_uri crm:P97_from_father ?father_uri.
@@ -17,46 +27,33 @@
 } 
 WHERE { 
   BIND(IRI(CONCAT(STR($subject),\"/birth\")) as ?birth_uri).  
-  BIND(IRI(CONCAT(\"rds:\",\"person/\", MD5(str(?value)))) as ?father_uri).  
-} """ .
+  BIND(IRI(CONCAT(REPLACE(STR(?subject),\"person/[a-zA-Z0-9_-]*\",\"person/\"), MD5(str(?value)))) as ?father_uri). 
+} """;
+    a <http://spinrdf.org/sp#Query> .
+  
+  _:genid-baf3f23b291244f88b7a164490707f71-0vpjf a <http://spinrdf.org/sp#Query> .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father>
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Person Father";
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
   
-  _:genid-16dd0670bcd84b93a28217ff69abff8f-iud52 a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father>
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-16dd0670bcd84b93a28217ff69abff8f-71d57;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate the biological father of the documented person." .
-  
-  _:genid-16dd0670bcd84b93a28217ff69abff8f-nhb53qw <http://spinrdf.org/sp#text> """DELETE {
-  ?birth_uri crm:P98i_was_brought_into_life ?father_uri.
-  ?father_uri rdfs:label ?value.
+  _:genid-baf3f23b291244f88b7a164490707f71-83n8cd <http://spinrdf.org/sp#text> """DELETE {
+  ?subject crm:P98i_was_brought_into_life ?birth_uri.
+  ?birth_uri crm:P97_from_father ?father.
 }
 WHERE {
   ?subject crm:P98i_was_brought_into_life ?birth_uri.
   ?birth_uri a crm:E67_Birth .
-  ?birth_uri crm:P97_from_father ?father_uri.
-  ?father_uri a crm:E21_Person .
-  ?father_uri rdfs:label ?value.
+  ?birth_uri crm:P97_from_father ?father.
+  ?father rdfs:label ?value.
+  ?value a crm:E21_Person .
 }""" .
   
   <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father>
-    <http://www.metaphacts.com/ontology/fields#minOccurs> "0" .
-  
-  _:genid-16dd0670bcd84b93a28217ff69abff8f-71d57 a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-16dd0670bcd84b93a28217ff69abff8f-nhb53qw a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father>
-    <http://www.w3.org/2000/01/rdf-schema#label> "Person Father";
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-16dd0670bcd84b93a28217ff69abff8f-nhb53qw;
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-16dd0670bcd84b93a28217ff69abff8f-iud52;
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T07:47:50.115Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T08:27:13.051Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Father> .
