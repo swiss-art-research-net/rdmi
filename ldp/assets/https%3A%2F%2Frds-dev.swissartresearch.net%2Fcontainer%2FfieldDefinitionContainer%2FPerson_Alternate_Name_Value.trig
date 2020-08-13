@@ -1,47 +1,76 @@
 
 <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value/context> {
-  _:genid-e00f907ac20f40438fa82676e1876f2c-e79n4b <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
+    a <http://www.metaphacts.com/ontology/fields#Field> .
+  
+  _:genid-e7c2825ef35c4c47bed3485c49190956-92fv9c <http://spinrdf.org/sp#text> """SELECT distinct ?value ?label
 WHERE {
   ?subject rdfs:label ?value.
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    a <http://www.metaphacts.com/ontology/fields#Field> .
+    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-e7c2825ef35c4c47bed3485c49190956-fx93gc;
+    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e7c2825ef35c4c47bed3485c49190956-uw03qf .
   
-  _:genid-e00f907ac20f40438fa82676e1876f2c-ubc7qd <http://spinrdf.org/sp#text> """DELETE {  
+  _:genid-e7c2825ef35c4c47bed3485c49190956-uw03qf <http://spinrdf.org/sp#text> """INSERT { 
   ?subject rdfs:label ?value.
+  ?value <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?lang rdfs:label ?lang_label
 } WHERE {
-  ?subject rdfs:label ?value.
+   {SELECT ?lang WHERE {
+    {
+      	FILTER (lang(?value)=\"en\")
+      	BIND(\"English\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/stan1293> AS ?lang)
+	} UNION {
+		FILTER (lang(?value)=\"fr\")
+      	BIND(\"French\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/stan1290> AS ?lang)
+	} UNION {
+		FILTER (lang(?value)=\"de\")
+      	BIND(\"German\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/stan1295> AS ?lang)
+	} UNION {
+		FILTER (lang(?value)=\"it\")
+      	BIND(\"Italian\" AS ?lang_label)
+      	BIND(<https://glottolog.org/resource/languoid/id/ital1282> AS ?lang)
+	}
+	}}
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e00f907ac20f40438fa82676e1876f2c-e79n4b;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-e7c2825ef35c4c47bed3485c49190956-92fv9c;
+    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#langString> .
+  
+  _:genid-e7c2825ef35c4c47bed3485c49190956-uw03qf a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
     <http://www.w3.org/2000/01/rdf-schema#comment> "This field is used to indicate additional names under which the documented person is known. This can be linked to the additional name type and earliest and latest date of use of that name.";
     <http://www.metaphacts.com/ontology/fields#minOccurs> "0";
-    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined;
-    <http://www.metaphacts.com/ontology/fields#insertPattern> _:genid-e00f907ac20f40438fa82676e1876f2c-qkhowf .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Alternate Name"@undefined .
   
-  _:genid-e00f907ac20f40438fa82676e1876f2c-e79n4b a <http://spinrdf.org/sp#Query> .
+  _:genid-e7c2825ef35c4c47bed3485c49190956-92fv9c a <http://spinrdf.org/sp#Query> .
   
-  _:genid-e00f907ac20f40438fa82676e1876f2c-ubc7qd a <http://spinrdf.org/sp#Query> .
-  
-  _:genid-e00f907ac20f40438fa82676e1876f2c-qkhowf a <http://spinrdf.org/sp#Query> .
-  
-  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    <http://www.metaphacts.com/ontology/fields#xsdDatatype> <http://www.w3.org/2001/XMLSchema#string>;
-    <http://www.metaphacts.com/ontology/fields#deletePattern> _:genid-e00f907ac20f40438fa82676e1876f2c-ubc7qd .
-  
-  _:genid-e00f907ac20f40438fa82676e1876f2c-qkhowf <http://spinrdf.org/sp#text> """INSERT { 
+  _:genid-e7c2825ef35c4c47bed3485c49190956-fx93gc <http://spinrdf.org/sp#text> """DELETE {  
   ?subject rdfs:label ?value.
+  ?value <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
 } WHERE {
-  ?s ?p ?o 
+  ?subject rdfs:label ?value.
+  ?value <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ?lang.
+  ?lang a <http://www.cidoc-crm.org/cidoc-crm/E56_Language>.
+  ?lang rdfs:label ?lang_label
 }""" .
   
   <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
-    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1";
+    <http://www.metaphacts.com/ontology/fields#maxOccurs> "1" .
+  
+  _:genid-e7c2825ef35c4c47bed3485c49190956-fx93gc a <http://spinrdf.org/sp#Query> .
+  
+  <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value>
     a <http://www.w3.org/ns/prov#Entity>;
     <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
-    <http://www.w3.org/ns/prov#generatedAtTime> "2020-06-19T09:36:41.731Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-08-13T08:57:36.173Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
   
   <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
       <https://rds-dev.swissartresearch.net/container/fieldDefinitionContainer/Person_Alternate_Name_Value> .
