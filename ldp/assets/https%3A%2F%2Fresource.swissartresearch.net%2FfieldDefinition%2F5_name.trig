@@ -1,0 +1,38 @@
+
+<https://resource.swissartresearch.net/fieldDefinition/5_name/context> {
+  <https://resource.swissartresearch.net/fieldDefinition/5_name> a <http://www.metaphacts.com/ontology/fields#Field>;
+    <http://www.metaphacts.com/ontology/fields#selectPattern> _:genid-f8e829f7fc424263bb8c8f0bb5eccc88-fykm2t .
+  
+  _:genid-f8e829f7fc424263bb8c8f0bb5eccc88-sjemx9 a <http://spinrdf.org/sp#Query> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/5_name> <http://www.w3.org/2000/01/rdf-schema#label>
+      "Name "@en .
+  
+  _:genid-f8e829f7fc424263bb8c8f0bb5eccc88-fykm2t a <http://spinrdf.org/sp#Query> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/5_name> <http://www.metaphacts.com/ontology/fields#xsdDatatype>
+      <http://www.w3.org/2001/XMLSchema#string> .
+  
+  _:genid-f8e829f7fc424263bb8c8f0bb5eccc88-sjemx9 <http://spinrdf.org/sp#text> "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:genid-f8e829f7fc424263bb8c8f0bb5eccc88-fykm2t <http://spinrdf.org/sp#text> """prefix person: <http://example.com/person/>
+prefix org: <http://example.com/org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT distinct  ?value  WHERE {
+$subject a <http://www.cidoc-crm.org/cidoc-crm/E21_Person>;
+        <http://www.cidoc-crm.org/cidoc-crm/P48_has_preffered_identifier> ?appellation.
+  ?appellation a <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation>;
+    rdfs:label ?value.
+}""" .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/5_name> <http://www.metaphacts.com/ontology/fields#insertPattern>
+      _:genid-f8e829f7fc424263bb8c8f0bb5eccc88-sjemx9;
+    a <http://www.w3.org/ns/prov#Entity>;
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2020-10-01T13:48:57.710Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <http://www.metaphacts.com/ontologies/platform#fieldDefinitionContainer> <http://www.w3.org/ns/ldp#contains>
+      <https://resource.swissartresearch.net/fieldDefinition/5_name> .
+  
+  <https://resource.swissartresearch.net/fieldDefinition/5_name> a <http://www.w3.org/ns/ldp#Resource> .
+}
