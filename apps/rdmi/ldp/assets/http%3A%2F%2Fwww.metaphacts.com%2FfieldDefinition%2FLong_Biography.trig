@@ -36,8 +36,9 @@ WHERE {
   BIND(IRI(CONCAT(STR($subject),\"/type/\", MD5(\"Long Biography\"))) as ?type).
   BIND(IRI(CONCAT(STR($subject),\"/info/\", MD5(str(?value)))) as ?info_iri).
       BIND(IRI(CONCAT(STR($subject),\"/long_bio/\", MD5(str(?value)))) as ?bio).
-      ?language_iri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
       BIND(lang(?value) as ?lang)
+      ?language_iri <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ?lang.
+      
 }""" .
   
   _:genid-92b9f7f71a364728a0ea7cf49ac91887-16576984D19B98F42564F8F80F208E52 a <http://spinrdf.org/sp#Query>;

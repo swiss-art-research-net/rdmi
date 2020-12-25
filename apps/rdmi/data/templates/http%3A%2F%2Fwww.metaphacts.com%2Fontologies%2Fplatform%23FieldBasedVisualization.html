@@ -1,0 +1,64 @@
+<tbody>
+  <style>
+    .collapsible-panel-trigger__collapsed:before{
+      content:"\f055  \A0 show all"!important;
+    }
+    .collapsible-panel-trigger__expanded:before{
+      /* content:"\f056 \A0 collapse"!important; */
+      display: none;
+    }
+    .collapsible-div-content{
+      padding: 0px!important;
+    }
+  </style>
+  {{#each fields as |field|}}
+  [[!--{{log field}} --]] 
+    {{#if field.values}}
+      <tr>
+        <td>
+          <semantic-context repository='assets'>
+            <semantic-link iri="{{field.id}}"></semantic-link> 
+          </semantic-context>
+        </td>
+        <td>
+         {{#ifCond "20" ">=" field.values.length  }}
+            <ul class="list-unstyled">
+              {{#each field.values as |value|}}
+                  <li>
+                    [[!-- show include: [[> Platform:FieldValueVisualization]] --]]
+                    {{> Platform:FieldValueVisualization field=field value=value }}
+                  </li>
+              {{/each}}
+            </ul>
+         {{else}}
+            <ul class="list-unstyled">
+              {{#each field.values as |value|}}
+                {{#ifCond "10" ">" @index}}
+                  <li>
+                    {{> Platform:FieldValueVisualization field=field value=value }}
+                  </li>
+                {{/ifCond}}
+              {{/each}}
+              <mp-collapsible-div expanded=false>
+                <mp-collapsible-div-trigger>
+                  <a></a>
+                </mp-collapsible-div-trigger>
+                <mp-collapsible-div-content>
+                  <div>
+                  {{#each field.values as |value|}}
+                    {{#ifCond "10" ">" @index}}
+                      <li>
+                        {{> Platform:FieldValueVisualization field=field value=value }}
+                      </li>
+                    {{/ifCond}}
+                  {{/each}}
+                  </div>
+                </mp-collapsible-div-content>
+              </mp-collapsible-div>
+            </ul>
+         {{/ifCond}}
+        </td>
+      </tr>
+    {{/if}}
+  {{/each}}
+</tbody>

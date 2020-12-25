@@ -16,7 +16,8 @@
         new-subject-template='https://resource.swissartresearch.net/person/{{UUID}}'
       	browser-persistence=true
       	persistence='ldp' 
-        form-id='persons'               
+        form-id='persons'
+        post-action='redirect'               
          fields='[[fieldDefinitions
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name"
 http://www.metaphacts.com/fieldDefinition/Person_Name="http://www.metaphacts.com/fieldDefinition/Person_Name"
@@ -73,7 +74,7 @@ https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Socia
       
 <semantic-form-composite-input 
    	for="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name"
-   	new-subject-template=""
+   	new-subject-template="."
    	fields='[[fieldDefinitions
 http://www.metaphacts.com/fieldDefinition/Person_Name="http://www.metaphacts.com/fieldDefinition/Person_Name"
 https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part="https://rds.swissartresearch.net/container/fieldDefinitionContainer/Person_Name_Part"
@@ -269,8 +270,8 @@ http://www.researchspace.org/instances/fields/Floruit_Date_latest="http://www.re
 </semantic-form-text-input>
           
           <!-- save and reset button for form -->
-          <button name='submit' class='btn btn-default'>Save</button>
-          <button name='reset' class='btn btn-default'>Reset</button>
+          <button name='submit' class='btn btn-secondary'>Save</button>
+          <button name='reset' class='btn btn-secondary'>Reset</button>
         </semantic-form>
   </div>
   </div>
